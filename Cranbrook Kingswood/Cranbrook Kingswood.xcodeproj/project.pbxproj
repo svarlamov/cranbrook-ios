@@ -1,0 +1,453 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		700E5D69CB37CA9A74D753D1 /* Pods_Cranbrook_Kingswood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F921898296A250D0E2257CAC /* Pods_Cranbrook_Kingswood.framework */; };
+		A07468811D568DAD00E7ACC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07468801D568DAD00E7ACC0 /* AppDelegate.swift */; };
+		A07468861D568DAD00E7ACC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A07468841D568DAD00E7ACC0 /* Main.storyboard */; };
+		A07468881D568DAD00E7ACC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A07468871D568DAD00E7ACC0 /* Assets.xcassets */; };
+		A074688B1D568DAD00E7ACC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A07468891D568DAD00E7ACC0 /* LaunchScreen.storyboard */; };
+		A07468991D568F7000E7ACC0 /* StartupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07468981D568F7000E7ACC0 /* StartupViewController.swift */; };
+		A0BD73041D56972500889331 /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BD73031D56972500889331 /* WebServices.swift */; };
+		A0BD73081D56974D00889331 /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BD73071D56974D00889331 /* DataModels.swift */; };
+		A0BD730A1D56B27B00889331 /* WebServices+Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BD73091D56B27A00889331 /* WebServices+Login.swift */; };
+		A0BD730D1D56B99A00889331 /* DateStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BD730C1D56B99A00889331 /* DateStrings.swift */; };
+		A0BD73101D56B9CA00889331 /* CranbrookAPIInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BD730F1D56B9CA00889331 /* CranbrookAPIInfo.swift */; };
+		A0BD73121D56E58E00889331 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BD73111D56E58E00889331 /* Constants.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A074687D1D568DAD00E7ACC0 /* Cranbrook Kingswood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cranbrook Kingswood.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A07468801D568DAD00E7ACC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A07468851D568DAD00E7ACC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A07468871D568DAD00E7ACC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A074688A1D568DAD00E7ACC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A074688C1D568DAD00E7ACC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A07468981D568F7000E7ACC0 /* StartupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartupViewController.swift; sourceTree = "<group>"; };
+		A0BD73031D56972500889331 /* WebServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
+		A0BD73071D56974D00889331 /* DataModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
+		A0BD73091D56B27A00889331 /* WebServices+Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+Login.swift"; sourceTree = "<group>"; };
+		A0BD730C1D56B99A00889331 /* DateStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateStrings.swift; sourceTree = "<group>"; };
+		A0BD730F1D56B9CA00889331 /* CranbrookAPIInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CranbrookAPIInfo.swift; sourceTree = "<group>"; };
+		A0BD73111D56E58E00889331 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B3DD1C0F8761A3660B544FB4 /* Pods-Cranbrook Kingswood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cranbrook Kingswood.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cranbrook Kingswood/Pods-Cranbrook Kingswood.debug.xcconfig"; sourceTree = "<group>"; };
+		BC1DCB26B33F435898567871 /* Pods-Cranbrook Kingswood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cranbrook Kingswood.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cranbrook Kingswood/Pods-Cranbrook Kingswood.release.xcconfig"; sourceTree = "<group>"; };
+		F921898296A250D0E2257CAC /* Pods_Cranbrook_Kingswood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cranbrook_Kingswood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A074687A1D568DAD00E7ACC0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				700E5D69CB37CA9A74D753D1 /* Pods_Cranbrook_Kingswood.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8676CD42D896F33CC1E5673E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F921898296A250D0E2257CAC /* Pods_Cranbrook_Kingswood.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9BD20EAC7FE38174BF320920 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B3DD1C0F8761A3660B544FB4 /* Pods-Cranbrook Kingswood.debug.xcconfig */,
+				BC1DCB26B33F435898567871 /* Pods-Cranbrook Kingswood.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A07468741D568DAD00E7ACC0 = {
+			isa = PBXGroup;
+			children = (
+				A074687F1D568DAD00E7ACC0 /* Cranbrook Kingswood */,
+				A074687E1D568DAD00E7ACC0 /* Products */,
+				9BD20EAC7FE38174BF320920 /* Pods */,
+				8676CD42D896F33CC1E5673E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A074687E1D568DAD00E7ACC0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A074687D1D568DAD00E7ACC0 /* Cranbrook Kingswood.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A074687F1D568DAD00E7ACC0 /* Cranbrook Kingswood */ = {
+			isa = PBXGroup;
+			children = (
+				A07468841D568DAD00E7ACC0 /* Main.storyboard */,
+				A07468921D568DF800E7ACC0 /* Code */,
+				A07468931D568DFD00E7ACC0 /* Supporting Files */,
+			);
+			path = "Cranbrook Kingswood";
+			sourceTree = "<group>";
+		};
+		A07468921D568DF800E7ACC0 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				A0BD730B1D56B98E00889331 /* Plugins */,
+				A07468961D568E9100E7ACC0 /* Core */,
+				A07468941D568E1700E7ACC0 /* Views */,
+				A07468971D568F0800E7ACC0 /* WebServices */,
+			);
+			name = Code;
+			sourceTree = "<group>";
+		};
+		A07468931D568DFD00E7ACC0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A07468871D568DAD00E7ACC0 /* Assets.xcassets */,
+				A07468891D568DAD00E7ACC0 /* LaunchScreen.storyboard */,
+				A074688C1D568DAD00E7ACC0 /* Info.plist */,
+				A0BD730F1D56B9CA00889331 /* CranbrookAPIInfo.swift */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A07468941D568E1700E7ACC0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A07468981D568F7000E7ACC0 /* StartupViewController.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		A07468961D568E9100E7ACC0 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A07468801D568DAD00E7ACC0 /* AppDelegate.swift */,
+				A0BD73071D56974D00889331 /* DataModels.swift */,
+				A0BD73111D56E58E00889331 /* Constants.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		A07468971D568F0800E7ACC0 /* WebServices */ = {
+			isa = PBXGroup;
+			children = (
+				A0BD73031D56972500889331 /* WebServices.swift */,
+				A0BD73091D56B27A00889331 /* WebServices+Login.swift */,
+			);
+			name = WebServices;
+			sourceTree = "<group>";
+		};
+		A0BD730B1D56B98E00889331 /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				A0BD73131D56F2AD00889331 /* Date Strings */,
+			);
+			name = Plugins;
+			sourceTree = "<group>";
+		};
+		A0BD73131D56F2AD00889331 /* Date Strings */ = {
+			isa = PBXGroup;
+			children = (
+				A0BD730C1D56B99A00889331 /* DateStrings.swift */,
+			);
+			name = "Date Strings";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A074687C1D568DAD00E7ACC0 /* Cranbrook Kingswood */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A074688F1D568DAD00E7ACC0 /* Build configuration list for PBXNativeTarget "Cranbrook Kingswood" */;
+			buildPhases = (
+				D24BD6E936FD6C4E40EDF9F4 /* 📦 Check Pods Manifest.lock */,
+				A07468791D568DAD00E7ACC0 /* Sources */,
+				A074687A1D568DAD00E7ACC0 /* Frameworks */,
+				A074687B1D568DAD00E7ACC0 /* Resources */,
+				CACB39B8E868627911BFF492 /* 📦 Embed Pods Frameworks */,
+				61D3340A0F8502357C9B123F /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Cranbrook Kingswood";
+			productName = "Cranbrook Kingswood";
+			productReference = A074687D1D568DAD00E7ACC0 /* Cranbrook Kingswood.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A07468751D568DAD00E7ACC0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = stefandeclerck;
+				TargetAttributes = {
+					A074687C1D568DAD00E7ACC0 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = A07468781D568DAD00E7ACC0 /* Build configuration list for PBXProject "Cranbrook Kingswood" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A07468741D568DAD00E7ACC0;
+			productRefGroup = A074687E1D568DAD00E7ACC0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A074687C1D568DAD00E7ACC0 /* Cranbrook Kingswood */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A074687B1D568DAD00E7ACC0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A074688B1D568DAD00E7ACC0 /* LaunchScreen.storyboard in Resources */,
+				A07468881D568DAD00E7ACC0 /* Assets.xcassets in Resources */,
+				A07468861D568DAD00E7ACC0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		61D3340A0F8502357C9B123F /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cranbrook Kingswood/Pods-Cranbrook Kingswood-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CACB39B8E868627911BFF492 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cranbrook Kingswood/Pods-Cranbrook Kingswood-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D24BD6E936FD6C4E40EDF9F4 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A07468791D568DAD00E7ACC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0BD73101D56B9CA00889331 /* CranbrookAPIInfo.swift in Sources */,
+				A07468991D568F7000E7ACC0 /* StartupViewController.swift in Sources */,
+				A07468811D568DAD00E7ACC0 /* AppDelegate.swift in Sources */,
+				A0BD730D1D56B99A00889331 /* DateStrings.swift in Sources */,
+				A0BD73081D56974D00889331 /* DataModels.swift in Sources */,
+				A0BD73041D56972500889331 /* WebServices.swift in Sources */,
+				A0BD730A1D56B27B00889331 /* WebServices+Login.swift in Sources */,
+				A0BD73121D56E58E00889331 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A07468841D568DAD00E7ACC0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A07468851D568DAD00E7ACC0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A07468891D568DAD00E7ACC0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A074688A1D568DAD00E7ACC0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A074688D1D568DAD00E7ACC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A074688E1D568DAD00E7ACC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A07468901D568DAD00E7ACC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3DD1C0F8761A3660B544FB4 /* Pods-Cranbrook Kingswood.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Cranbrook Kingswood/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stefandeclerck.Cranbrook-Kingswood";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A07468911D568DAD00E7ACC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC1DCB26B33F435898567871 /* Pods-Cranbrook Kingswood.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Cranbrook Kingswood/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stefandeclerck.Cranbrook-Kingswood";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A07468781D568DAD00E7ACC0 /* Build configuration list for PBXProject "Cranbrook Kingswood" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A074688D1D568DAD00E7ACC0 /* Debug */,
+				A074688E1D568DAD00E7ACC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A074688F1D568DAD00E7ACC0 /* Build configuration list for PBXNativeTarget "Cranbrook Kingswood" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A07468901D568DAD00E7ACC0 /* Debug */,
+				A07468911D568DAD00E7ACC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A07468751D568DAD00E7ACC0 /* Project object */;
+}
