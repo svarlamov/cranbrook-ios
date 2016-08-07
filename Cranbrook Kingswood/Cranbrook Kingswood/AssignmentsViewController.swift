@@ -1,5 +1,5 @@
 //
-//  Constants.swift
+//  AssignmentsViewController.swift
 //  Cranbrook Kingswood
 //
 //  Created by private on 8/6/16.
@@ -7,10 +7,10 @@
 //
 
 import Foundation
-import ObjectMapper
 import Alamofire
 import SwiftyJSON
+import ObjectMapper
 
-var currentSessionInfo: CurrentLoggedInUserInfo? = nil
+class AssignmentsViewController: UITableViewController {
 
-var studentClassList: [CurrentUserClasses]? = nil
+}

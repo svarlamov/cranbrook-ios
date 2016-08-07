@@ -20,7 +20,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
-                        <segue destination="UPC-nf-CfW" kind="presentation" id="7tH-Rz-ac0"/>
+                        <segue destination="UPC-nf-CfW" kind="presentation" identifier="StartupCompleteSegue" id="7tH-Rz-ac0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -47,10 +47,10 @@
             </objects>
             <point key="canvasLocation" x="540" y="373"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Settings-->
         <scene sceneID="64E-rH-fCb">
             <objects>
-                <tableViewController id="5mg-J3-iQu" sceneMemberID="viewController">
+                <tableViewController id="5mg-J3-iQu" customClass="SettingsViewController" customModule="Cranbrook_Kingswood" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="IZw-k0-Ibt">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,16 +70,16 @@
                             <outlet property="delegate" destination="5mg-J3-iQu" id="KNB-VY-igv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="WKT-YM-8fN"/>
+                    <navigationItem key="navigationItem" title="Settings" id="WKT-YM-8fN"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y3E-iJ-kkU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2018" y="1473"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Classes-->
         <scene sceneID="rok-jt-BfT">
             <objects>
-                <tableViewController id="Di1-wJ-ako" sceneMemberID="viewController">
+                <tableViewController id="Di1-wJ-ako" customClass="ClassesViewController" customModule="Cranbrook_Kingswood" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1qT-7J-5IB">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -99,16 +99,16 @@
                             <outlet property="delegate" destination="Di1-wJ-ako" id="Thl-nq-Fxn"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="ADQ-8I-hDo"/>
+                    <navigationItem key="navigationItem" title="Classes" id="ADQ-8I-hDo"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rte-Xv-Hx4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2018" y="-727"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Assignments-->
         <scene sceneID="8Y2-ky-CmP">
             <objects>
-                <tableViewController id="HhW-Tv-zFl" sceneMemberID="viewController">
+                <tableViewController id="HhW-Tv-zFl" customClass="AssignmentsViewController" customModule="Cranbrook_Kingswood" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="bWQ-6i-Kgl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -128,16 +128,16 @@
                             <outlet property="delegate" destination="HhW-Tv-zFl" id="91f-yo-jxk"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="3in-Kn-g5e"/>
+                    <navigationItem key="navigationItem" title="Assignments" id="3in-Kn-g5e"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1gx-w9-79T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2018" y="7"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Directory Search-->
         <scene sceneID="HQB-Pa-g7t">
             <objects>
-                <tableViewController id="6aC-zT-Tbw" sceneMemberID="viewController">
+                <tableViewController id="6aC-zT-Tbw" customClass="DirectorySearchViewController" customModule="Cranbrook_Kingswood" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="70l-lZ-40e">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -157,7 +157,7 @@
                             <outlet property="delegate" destination="6aC-zT-Tbw" id="neM-SW-Owz"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Xrd-4R-zAt"/>
+                    <navigationItem key="navigationItem" title="Directory Search" id="Xrd-4R-zAt"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x0r-7f-2L4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

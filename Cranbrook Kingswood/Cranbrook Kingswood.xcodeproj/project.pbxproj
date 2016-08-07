@@ -14,6 +14,11 @@
 		A074688B1D568DAD00E7ACC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A07468891D568DAD00E7ACC0 /* LaunchScreen.storyboard */; };
 		A07468991D568F7000E7ACC0 /* StartupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07468981D568F7000E7ACC0 /* StartupViewController.swift */; };
 		A09D75A61D57042900B2AA74 /* DateComparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D75A51D57042900B2AA74 /* DateComparison.swift */; };
+		A09D75A81D570F1A00B2AA74 /* WebServices+CurrentClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D75A71D570F1A00B2AA74 /* WebServices+CurrentClasses.swift */; };
+		A09D75AA1D570F8400B2AA74 /* AssignmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D75A91D570F8400B2AA74 /* AssignmentsViewController.swift */; };
+		A09D75AC1D570F8B00B2AA74 /* ClassesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D75AB1D570F8B00B2AA74 /* ClassesViewController.swift */; };
+		A09D75AE1D570F9A00B2AA74 /* DirectorySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D75AD1D570F9A00B2AA74 /* DirectorySearchViewController.swift */; };
+		A09D75B01D570FA300B2AA74 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D75AF1D570FA300B2AA74 /* SettingsViewController.swift */; };
 		A0BD73041D56972500889331 /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BD73031D56972500889331 /* WebServices.swift */; };
 		A0BD73081D56974D00889331 /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BD73071D56974D00889331 /* DataModels.swift */; };
 		A0BD730A1D56B27B00889331 /* WebServices+Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BD73091D56B27A00889331 /* WebServices+Login.swift */; };
@@ -30,6 +35,11 @@
 		A074688C1D568DAD00E7ACC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A07468981D568F7000E7ACC0 /* StartupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartupViewController.swift; sourceTree = "<group>"; };
 		A09D75A51D57042900B2AA74 /* DateComparison.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateComparison.swift; sourceTree = "<group>"; };
+		A09D75A71D570F1A00B2AA74 /* WebServices+CurrentClasses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+CurrentClasses.swift"; sourceTree = "<group>"; };
+		A09D75A91D570F8400B2AA74 /* AssignmentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentsViewController.swift; sourceTree = "<group>"; };
+		A09D75AB1D570F8B00B2AA74 /* ClassesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassesViewController.swift; sourceTree = "<group>"; };
+		A09D75AD1D570F9A00B2AA74 /* DirectorySearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectorySearchViewController.swift; sourceTree = "<group>"; };
+		A09D75AF1D570FA300B2AA74 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		A0BD73031D56972500889331 /* WebServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
 		A0BD73071D56974D00889331 /* DataModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
 		A0BD73091D56B27A00889331 /* WebServices+Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+Login.swift"; sourceTree = "<group>"; };
@@ -123,6 +133,10 @@
 			isa = PBXGroup;
 			children = (
 				A07468981D568F7000E7ACC0 /* StartupViewController.swift */,
+				A09D75B61D57125B00B2AA74 /* Classes */,
+				A09D75B51D57125300B2AA74 /* Assignments */,
+				A09D75B41D57124A00B2AA74 /* Directory Search */,
+				A09D75B31D57124300B2AA74 /* Settings */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -142,8 +156,41 @@
 			children = (
 				A0BD73031D56972500889331 /* WebServices.swift */,
 				A0BD73091D56B27A00889331 /* WebServices+Login.swift */,
+				A09D75A71D570F1A00B2AA74 /* WebServices+CurrentClasses.swift */,
 			);
 			name = WebServices;
+			sourceTree = "<group>";
+		};
+		A09D75B31D57124300B2AA74 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				A09D75AF1D570FA300B2AA74 /* SettingsViewController.swift */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		A09D75B41D57124A00B2AA74 /* Directory Search */ = {
+			isa = PBXGroup;
+			children = (
+				A09D75AD1D570F9A00B2AA74 /* DirectorySearchViewController.swift */,
+			);
+			name = "Directory Search";
+			sourceTree = "<group>";
+		};
+		A09D75B51D57125300B2AA74 /* Assignments */ = {
+			isa = PBXGroup;
+			children = (
+				A09D75A91D570F8400B2AA74 /* AssignmentsViewController.swift */,
+			);
+			name = Assignments;
+			sourceTree = "<group>";
+		};
+		A09D75B61D57125B00B2AA74 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A09D75AB1D570F8B00B2AA74 /* ClassesViewController.swift */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 		A0BD730B1D56B98E00889331 /* Plugins */ = {
@@ -277,13 +324,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0BD73101D56B9CA00889331 /* CranbrookAPIInfo.swift in Sources */,
+				A09D75A81D570F1A00B2AA74 /* WebServices+CurrentClasses.swift in Sources */,
 				A07468991D568F7000E7ACC0 /* StartupViewController.swift in Sources */,
 				A07468811D568DAD00E7ACC0 /* AppDelegate.swift in Sources */,
 				A09D75A61D57042900B2AA74 /* DateComparison.swift in Sources */,
 				A0BD73081D56974D00889331 /* DataModels.swift in Sources */,
+				A09D75AC1D570F8B00B2AA74 /* ClassesViewController.swift in Sources */,
 				A0BD73041D56972500889331 /* WebServices.swift in Sources */,
+				A09D75AE1D570F9A00B2AA74 /* DirectorySearchViewController.swift in Sources */,
 				A0BD730A1D56B27B00889331 /* WebServices+Login.swift in Sources */,
+				A09D75B01D570FA300B2AA74 /* SettingsViewController.swift in Sources */,
 				A0BD73121D56E58E00889331 /* Constants.swift in Sources */,
+				A09D75AA1D570F8400B2AA74 /* AssignmentsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

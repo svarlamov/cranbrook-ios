@@ -9,13 +9,16 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import ObjectMapper
 
 class StartupViewController: UIViewController {
 
+    let continuationSegueId: String = "StartupCompleteSegue"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         WebServices.service.loginWithParameters(username: "username", password: "password")
-        
+        SVProgress
     }
     
     override func didReceiveMemoryWarning() {
