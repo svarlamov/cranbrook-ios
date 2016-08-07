@@ -15,12 +15,15 @@ class LoginViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
-        
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
 }
+
