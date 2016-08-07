@@ -23,7 +23,7 @@ class StartupViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
-        self.performSegueWithIdentifier(loginSegueId, sender: nil)
+        self.performSegueWithIdentifier(continuationSegueId, sender: nil)
     }
     
     override func didReceiveMemoryWarning() {

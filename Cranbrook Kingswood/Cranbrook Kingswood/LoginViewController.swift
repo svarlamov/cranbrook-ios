@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 import ObjectMapper
 
-class LoginViewController: UITableViewController {
+class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,10 +19,11 @@ class LoginViewController: UITableViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
-    }
-    
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        if let font = UIFont(name: "Avenir-Next.ttf", size: 34) {
+            UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName: font]
+        }
+        
     }
     
 }
