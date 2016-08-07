@@ -1,18 +1,21 @@
 PODS:
   - Alamofire (3.4.0)
+  - BTNavigationDropdownMenu (0.3)
   - ObjectMapper (1.3.0)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - Alamofire (~> 3.4)
+  - BTNavigationDropdownMenu
   - ObjectMapper (~> 1.3)
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
+  BTNavigationDropdownMenu: c36d20785253699046fdd295698c24b1d1c18f53
   ObjectMapper: 4eb08a726e9791a93b2632049951b56a7c17e471
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: 4d7bed0d6b92c38d54327373e266b4f5ef3e0a74
+PODFILE CHECKSUM: 0b9fceff0692a610d2674956313b5ceb22a5bb57
 
 COCOAPODS: 1.0.0

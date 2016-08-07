@@ -44,7 +44,7 @@ extension WebServices {
     
     internal func loginWithParameters(username username:String, password:String) {
         let loginParameters: [String: String] = createLoginParameters(username: username, password: password)
-        let requestURL: String = endpointPath("api/SignIn")
+        let requestURL: String = endpointPath(self.loginEndpoint)
         login(headers: loginHeaders, parameters: loginParameters, requestLink: requestURL)
     }
     

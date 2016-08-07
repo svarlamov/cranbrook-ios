@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>BTNavigationDropdownMenu.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ObjectMapper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,12 +32,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2F590E5970F52151DA5689A007EDF08A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5A57474E03D3D5E5A6515B6ECED90EF1</key>
+		<key>662663F1DAF5DE936E810ED0A6A7A60A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,7 +42,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>B24F22DD661275C7D30B6CB8864E9269</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>D5D6200D4BE741574DBD4FB768A6F55B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FD23F1DA220A44C7E84F356B64871271</key>
 		<dict>
 			<key>primary</key>
 			<true/>

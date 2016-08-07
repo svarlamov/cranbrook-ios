@@ -17,6 +17,8 @@ class WebServices {
     
     static let prefix: String = "https://cranbrook.myschoolapp.com/"
     
+    let loginEndpoint: String = "api/SignIn"
+    
     let loginHeaders: [String:String] = [
         "Content-Type":"application/json",
         "Accept":"application/json, text/javascript, */*; q=0.01",

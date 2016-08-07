@@ -149,17 +149,9 @@
 		A0BD730B1D56B98E00889331 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
-				A0BD73131D56F2AD00889331 /* Date Strings */,
-			);
-			name = Plugins;
-			sourceTree = "<group>";
-		};
-		A0BD73131D56F2AD00889331 /* Date Strings */ = {
-			isa = PBXGroup;
-			children = (
 				A0BD730C1D56B99A00889331 /* DateStrings.swift */,
 			);
-			name = "Date Strings";
+			name = Plugins;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
