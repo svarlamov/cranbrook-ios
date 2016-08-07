@@ -13,12 +13,14 @@
 		A07468881D568DAD00E7ACC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A07468871D568DAD00E7ACC0 /* Assets.xcassets */; };
 		A074688B1D568DAD00E7ACC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A07468891D568DAD00E7ACC0 /* LaunchScreen.storyboard */; };
 		A07468991D568F7000E7ACC0 /* StartupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07468981D568F7000E7ACC0 /* StartupViewController.swift */; };
+		A08F66F11D57204900FBE55E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08F66F01D57204900FBE55E /* LoginViewController.swift */; };
 		A09D75A61D57042900B2AA74 /* DateComparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D75A51D57042900B2AA74 /* DateComparison.swift */; };
 		A09D75A81D570F1A00B2AA74 /* WebServices+CurrentClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D75A71D570F1A00B2AA74 /* WebServices+CurrentClasses.swift */; };
 		A09D75AA1D570F8400B2AA74 /* AssignmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D75A91D570F8400B2AA74 /* AssignmentsViewController.swift */; };
 		A09D75AC1D570F8B00B2AA74 /* ClassesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D75AB1D570F8B00B2AA74 /* ClassesViewController.swift */; };
 		A09D75AE1D570F9A00B2AA74 /* DirectorySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D75AD1D570F9A00B2AA74 /* DirectorySearchViewController.swift */; };
 		A09D75B01D570FA300B2AA74 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D75AF1D570FA300B2AA74 /* SettingsViewController.swift */; };
+		A09D75BB1D57159900B2AA74 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A09D75BA1D57159900B2AA74 /* ProgressHUD.m */; };
 		A0BD73041D56972500889331 /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BD73031D56972500889331 /* WebServices.swift */; };
 		A0BD73081D56974D00889331 /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BD73071D56974D00889331 /* DataModels.swift */; };
 		A0BD730A1D56B27B00889331 /* WebServices+Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BD73091D56B27A00889331 /* WebServices+Login.swift */; };
@@ -34,12 +36,16 @@
 		A074688A1D568DAD00E7ACC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A074688C1D568DAD00E7ACC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A07468981D568F7000E7ACC0 /* StartupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartupViewController.swift; sourceTree = "<group>"; };
+		A08F66F01D57204900FBE55E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A09D75A51D57042900B2AA74 /* DateComparison.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateComparison.swift; sourceTree = "<group>"; };
 		A09D75A71D570F1A00B2AA74 /* WebServices+CurrentClasses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+CurrentClasses.swift"; sourceTree = "<group>"; };
 		A09D75A91D570F8400B2AA74 /* AssignmentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentsViewController.swift; sourceTree = "<group>"; };
 		A09D75AB1D570F8B00B2AA74 /* ClassesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassesViewController.swift; sourceTree = "<group>"; };
 		A09D75AD1D570F9A00B2AA74 /* DirectorySearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectorySearchViewController.swift; sourceTree = "<group>"; };
 		A09D75AF1D570FA300B2AA74 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		A09D75B81D57159900B2AA74 /* Cranbrook Kingswood-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cranbrook Kingswood-Bridging-Header.h"; sourceTree = "<group>"; };
+		A09D75B91D57159900B2AA74 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
+		A09D75BA1D57159900B2AA74 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
 		A0BD73031D56972500889331 /* WebServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
 		A0BD73071D56974D00889331 /* DataModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
 		A0BD73091D56B27A00889331 /* WebServices+Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+Login.swift"; sourceTree = "<group>"; };
@@ -125,6 +131,7 @@
 				A07468891D568DAD00E7ACC0 /* LaunchScreen.storyboard */,
 				A074688C1D568DAD00E7ACC0 /* Info.plist */,
 				A0BD730F1D56B9CA00889331 /* CranbrookAPIInfo.swift */,
+				A09D75B81D57159900B2AA74 /* Cranbrook Kingswood-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -133,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				A07468981D568F7000E7ACC0 /* StartupViewController.swift */,
+				A08F66F01D57204900FBE55E /* LoginViewController.swift */,
 				A09D75B61D57125B00B2AA74 /* Classes */,
 				A09D75B51D57125300B2AA74 /* Assignments */,
 				A09D75B41D57124A00B2AA74 /* Directory Search */,
@@ -193,9 +201,19 @@
 			name = Classes;
 			sourceTree = "<group>";
 		};
+		A09D75BC1D5715C500B2AA74 /* ProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				A09D75B91D57159900B2AA74 /* ProgressHUD.h */,
+				A09D75BA1D57159900B2AA74 /* ProgressHUD.m */,
+			);
+			name = ProgressHUD;
+			sourceTree = "<group>";
+		};
 		A0BD730B1D56B98E00889331 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				A09D75BC1D5715C500B2AA74 /* ProgressHUD */,
 				A09D75A51D57042900B2AA74 /* DateComparison.swift */,
 			);
 			name = Plugins;
@@ -326,6 +344,7 @@
 				A0BD73101D56B9CA00889331 /* CranbrookAPIInfo.swift in Sources */,
 				A09D75A81D570F1A00B2AA74 /* WebServices+CurrentClasses.swift in Sources */,
 				A07468991D568F7000E7ACC0 /* StartupViewController.swift in Sources */,
+				A08F66F11D57204900FBE55E /* LoginViewController.swift in Sources */,
 				A07468811D568DAD00E7ACC0 /* AppDelegate.swift in Sources */,
 				A09D75A61D57042900B2AA74 /* DateComparison.swift in Sources */,
 				A0BD73081D56974D00889331 /* DataModels.swift in Sources */,
@@ -333,6 +352,7 @@
 				A0BD73041D56972500889331 /* WebServices.swift in Sources */,
 				A09D75AE1D570F9A00B2AA74 /* DirectorySearchViewController.swift in Sources */,
 				A0BD730A1D56B27B00889331 /* WebServices+Login.swift in Sources */,
+				A09D75BB1D57159900B2AA74 /* ProgressHUD.m in Sources */,
 				A09D75B01D570FA300B2AA74 /* SettingsViewController.swift in Sources */,
 				A0BD73121D56E58E00889331 /* Constants.swift in Sources */,
 				A09D75AA1D570F8400B2AA74 /* AssignmentsViewController.swift in Sources */,
@@ -402,6 +422,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Cranbrook Kingswood/Cranbrook-Kingswood-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -441,6 +462,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Cranbrook Kingswood/Cranbrook-Kingswood-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -451,10 +473,13 @@
 			baseConfigurationReference = B3DD1C0F8761A3660B544FB4 /* Pods-Cranbrook Kingswood.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Cranbrook Kingswood/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.stefandeclerck.Cranbrook-Kingswood";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Cranbrook Kingswood/Cranbrook Kingswood-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -463,10 +488,12 @@
 			baseConfigurationReference = BC1DCB26B33F435898567871 /* Pods-Cranbrook Kingswood.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Cranbrook Kingswood/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.stefandeclerck.Cranbrook-Kingswood";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Cranbrook Kingswood/Cranbrook Kingswood-Bridging-Header.h";
 			};
 			name = Release;
 		};

@@ -9,5 +9,6 @@ target 'Cranbrook Kingswood' do
   pod 'SwiftyJSON'
   pod 'Alamofire', '~> 3.4'  
   pod 'AlamofireObjectMapper', '~> 3.0'
+  pod 'XLForm', '~> 3.0'
 
 end

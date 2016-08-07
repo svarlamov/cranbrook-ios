@@ -14,11 +14,16 @@ import ObjectMapper
 class StartupViewController: UIViewController {
 
     let continuationSegueId: String = "StartupCompleteSegue"
+    let loginSegueId: String = "ShowLoginViewController"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         WebServices.service.loginWithParameters(username: "username", password: "password")
-        SVProgress
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        self.performSegueWithIdentifier(loginSegueId, sender: nil)
     }
     
     override func didReceiveMemoryWarning() {

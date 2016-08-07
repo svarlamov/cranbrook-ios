@@ -21,11 +21,31 @@
                     </view>
                     <connections>
                         <segue destination="UPC-nf-CfW" kind="presentation" identifier="StartupCompleteSegue" id="7tH-Rz-ac0"/>
+                        <segue destination="mIp-Sa-e7H" kind="presentation" identifier="ShowLoginViewController" id="suC-Zd-F3g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-182" y="373"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="NqG-Xn-vLk">
+            <objects>
+                <tableViewController id="i5A-5u-jlM" customClass="LoginViewController" customModule="Cranbrook_Kingswood" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="bIY-bT-5di">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="i5A-5u-jlM" id="fco-48-sMV"/>
+                            <outlet property="delegate" destination="i5A-5u-jlM" id="e5p-kK-37c"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="6zg-Oe-EW6"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R8T-oe-l9G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="540" y="-366"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="t0h-Mj-Nzv">
@@ -238,6 +258,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Tl-r4-dPD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1270" y="1476"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="U1S-7g-zdX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mIp-Sa-e7H" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EqA-rf-d8y">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="i5A-5u-jlM" kind="relationship" relationship="rootViewController" id="obt-Ab-4lD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cgz-NP-qXX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-188" y="-366"/>
         </scene>
     </scenes>
     <resources>
