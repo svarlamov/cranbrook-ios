@@ -9,7 +9,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>BTNavigationDropdownMenu.xcscheme</key>
+		<key>AlamofireObjectMapper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -32,7 +32,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>662663F1DAF5DE936E810ED0A6A7A60A</key>
+		<key>379E0BD177EB0F1BB190FD447A89D57A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,17 +42,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B24F22DD661275C7D30B6CB8864E9269</key>
+		<key>92C891E5E567118A55717A7355377887</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D5D6200D4BE741574DBD4FB768A6F55B</key>
+		<key>C5CBCAA97E951CC882334464FBDF983D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FD23F1DA220A44C7E84F356B64871271</key>
+		<key>FBD082A0D35F7917EAB9DD9D3CCA9976</key>
 		<dict>
 			<key>primary</key>
 			<true/>
