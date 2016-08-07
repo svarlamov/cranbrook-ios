@@ -1,9 +1,9 @@
 //
-//  DateStrings.swift
-//  Cranbrook
+//  DateComparison.swift
+//  Cranbrook Kingswood
 //
-//  Created by Stefan DeClerck on 10/13/15.
-//  Copyright © 2015 stefandeclerck. All rights reserved.
+//  Created by private on 8/6/16.
+//  Copyright © 2016 stefandeclerck. All rights reserved.
 //
 
 import Foundation

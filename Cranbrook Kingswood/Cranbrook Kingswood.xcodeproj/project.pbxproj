@@ -13,10 +13,10 @@
 		A07468881D568DAD00E7ACC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A07468871D568DAD00E7ACC0 /* Assets.xcassets */; };
 		A074688B1D568DAD00E7ACC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A07468891D568DAD00E7ACC0 /* LaunchScreen.storyboard */; };
 		A07468991D568F7000E7ACC0 /* StartupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07468981D568F7000E7ACC0 /* StartupViewController.swift */; };
+		A09D75A61D57042900B2AA74 /* DateComparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D75A51D57042900B2AA74 /* DateComparison.swift */; };
 		A0BD73041D56972500889331 /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BD73031D56972500889331 /* WebServices.swift */; };
 		A0BD73081D56974D00889331 /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BD73071D56974D00889331 /* DataModels.swift */; };
 		A0BD730A1D56B27B00889331 /* WebServices+Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BD73091D56B27A00889331 /* WebServices+Login.swift */; };
-		A0BD730D1D56B99A00889331 /* DateStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BD730C1D56B99A00889331 /* DateStrings.swift */; };
 		A0BD73101D56B9CA00889331 /* CranbrookAPIInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BD730F1D56B9CA00889331 /* CranbrookAPIInfo.swift */; };
 		A0BD73121D56E58E00889331 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BD73111D56E58E00889331 /* Constants.swift */; };
 /* End PBXBuildFile section */
@@ -29,10 +29,10 @@
 		A074688A1D568DAD00E7ACC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A074688C1D568DAD00E7ACC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A07468981D568F7000E7ACC0 /* StartupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartupViewController.swift; sourceTree = "<group>"; };
+		A09D75A51D57042900B2AA74 /* DateComparison.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateComparison.swift; sourceTree = "<group>"; };
 		A0BD73031D56972500889331 /* WebServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
 		A0BD73071D56974D00889331 /* DataModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
 		A0BD73091D56B27A00889331 /* WebServices+Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+Login.swift"; sourceTree = "<group>"; };
-		A0BD730C1D56B99A00889331 /* DateStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateStrings.swift; sourceTree = "<group>"; };
 		A0BD730F1D56B9CA00889331 /* CranbrookAPIInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CranbrookAPIInfo.swift; sourceTree = "<group>"; };
 		A0BD73111D56E58E00889331 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B3DD1C0F8761A3660B544FB4 /* Pods-Cranbrook Kingswood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cranbrook Kingswood.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cranbrook Kingswood/Pods-Cranbrook Kingswood.debug.xcconfig"; sourceTree = "<group>"; };
@@ -149,7 +149,7 @@
 		A0BD730B1D56B98E00889331 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
-				A0BD730C1D56B99A00889331 /* DateStrings.swift */,
+				A09D75A51D57042900B2AA74 /* DateComparison.swift */,
 			);
 			name = Plugins;
 			sourceTree = "<group>";
@@ -279,7 +279,7 @@
 				A0BD73101D56B9CA00889331 /* CranbrookAPIInfo.swift in Sources */,
 				A07468991D568F7000E7ACC0 /* StartupViewController.swift in Sources */,
 				A07468811D568DAD00E7ACC0 /* AppDelegate.swift in Sources */,
-				A0BD730D1D56B99A00889331 /* DateStrings.swift in Sources */,
+				A09D75A61D57042900B2AA74 /* DateComparison.swift in Sources */,
 				A0BD73081D56974D00889331 /* DataModels.swift in Sources */,
 				A0BD73041D56972500889331 /* WebServices.swift in Sources */,
 				A0BD730A1D56B27B00889331 /* WebServices+Login.swift in Sources */,
