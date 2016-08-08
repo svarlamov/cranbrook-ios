@@ -41,34 +41,39 @@ class ViewControllerContainer: UIViewController {
         switch tabID {
         case .ClassesTab:
             self.title = "Classes"
-            ClassesViewController.hidden = false
-            AssignmentsViewController.hidden = true
-            DirectorySearchViewController.hidden = true
-            SettingsViewController.hidden = true
+            hideTab(false, hideAssignments: true, hideSearch: true, hideSettings: true)
             
         case .AssignmentsTab:
             self.title = "Assignments"
-            ClassesViewController.hidden = true
-            AssignmentsViewController.hidden = false
-            DirectorySearchViewController.hidden = true
-            SettingsViewController.hidden = true
+            hideTab(true, hideAssignments: false, hideSearch: true, hideSettings: true)
             
         case .DirectorySearchTab:
             self.title = "Directory Search"
-            ClassesViewController.hidden = true
-            AssignmentsViewController.hidden = true
-            DirectorySearchViewController.hidden = false
-            SettingsViewController.hidden = true
+            hideTab(true, hideAssignments: true, hideSearch: false, hideSettings: true)
             
         case .SettingsTab:
             self.title = "Settings"
-            ClassesViewController.hidden = true
-            AssignmentsViewController.hidden = true
-            DirectorySearchViewController.hidden = true
-            SettingsViewController.hidden = false
+            hideTab(true, hideAssignments: true, hideSearch: true, hideSettings: false)
             
         }
         
     }
     
+    private func hideTab(hideClasses: Bool, hideAssignments: Bool, hideSearch: Bool, hideSettings: Bool) {
+        ClassesViewController.hidden = hideClasses
+        AssignmentsViewController.hidden = hideAssignments
+        DirectorySearchViewController.hidden = hideSearch
+        SettingsViewController.hidden = hideSettings
+    }
+    
 }
+
+
+
+
+
+
+
+
+
+
