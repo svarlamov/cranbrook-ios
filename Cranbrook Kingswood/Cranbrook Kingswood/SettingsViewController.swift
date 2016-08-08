@@ -11,6 +11,15 @@ import Alamofire
 import SwiftyJSON
 import ObjectMapper
 
-class SettingsViewController: UITableViewController {
+class SettingsViewController: UIViewController {
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+    }
+    
 }

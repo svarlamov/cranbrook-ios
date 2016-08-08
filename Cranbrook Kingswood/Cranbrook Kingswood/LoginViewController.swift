@@ -20,10 +20,6 @@ class LoginViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
         
-        if let font = UIFont(name: "Avenir-Next.ttf", size: 34) {
-            UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName: font]
-        }
-        
     }
     
 }
