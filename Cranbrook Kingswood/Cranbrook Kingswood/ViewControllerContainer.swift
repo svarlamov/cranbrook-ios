@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 import ObjectMapper
 
-enum SelectedTab {
+enum SelectedTabOptions {
     case ClassesTab
     case AssignmentsTab
     case DirectorySearchTab
@@ -32,10 +32,36 @@ class ViewControllerContainer: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
         
-        ClassesViewController.hidden = true
-        AssignmentsViewController.hidden = true
-        DirectorySearchViewController.hidden = false
-        SettingsViewController.hidden = true
+    }
+    
+    func setSelectedTab(tabID: SelectedTabOptions) {
+        
+        switch tabID {
+        case .ClassesTab:
+            ClassesViewController.hidden = false
+            AssignmentsViewController.hidden = true
+            DirectorySearchViewController.hidden = true
+            SettingsViewController.hidden = true
+            
+        case .AssignmentsTab:
+            ClassesViewController.hidden = true
+            AssignmentsViewController.hidden = false
+            DirectorySearchViewController.hidden = true
+            SettingsViewController.hidden = true
+            
+        case .DirectorySearchTab:
+            ClassesViewController.hidden = true
+            AssignmentsViewController.hidden = true
+            DirectorySearchViewController.hidden = false
+            SettingsViewController.hidden = true
+            
+        case .SettingsTab:
+            ClassesViewController.hidden = true
+            AssignmentsViewController.hidden = true
+            DirectorySearchViewController.hidden = true
+            SettingsViewController.hidden = false
+            
+        }
         
     }
     
