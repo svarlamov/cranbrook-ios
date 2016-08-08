@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <development version="7000" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Startup View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="StartupViewController" customModule="Cranbrook_Kingswood" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cranbrook Kingswood" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="747-4N-IGf">
+                                <rect key="frame" x="225" y="256" width="151" height="87"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="151" id="Rx9-gr-2lf"/>
+                                    <constraint firstAttribute="height" constant="87" id="W1t-no-czI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="28"/>
+                                <color key="textColor" red="0.20784313725490194" green="0.20784313725490194" blue="0.20784313725490194" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="747-4N-IGf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="28b-Uu-qGK"/>
+                            <constraint firstItem="747-4N-IGf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="beL-LG-Y84"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="mIp-Sa-e7H" kind="presentation" identifier="ShowLoginViewController" modalTransitionStyle="crossDissolve" id="suC-Zd-F3g"/>
+                        <segue destination="fhv-cY-TqV" kind="presentation" identifier="StartupCompleteSegue" modalTransitionStyle="crossDissolve" id="twR-EM-b5c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3438" y="-883"/>
+        </scene>
+        <!--Sign In-->
+        <scene sceneID="FEQ-h5-0CM">
+            <objects>
+                <viewController id="VD3-Kz-48z" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="C2k-R4-QFs"/>
+                        <viewControllerLayoutGuide type="bottom" id="EOR-TV-4wg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="shg-AU-2Pj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.82352941176470584" green="0.84313725490196079" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sign In" id="RXA-KN-Qt6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tTn-PT-Shp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2716" y="-1622"/>
+        </scene>
+        <!--View Controller Container-->
+        <scene sceneID="Chg-Un-qb5">
+            <objects>
+                <viewController id="UcJ-G7-kI3" customClass="ViewControllerContainer" customModule="Cranbrook_Kingswood" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Sa7-mb-Wzd"/>
+                        <viewControllerLayoutGuide type="bottom" id="qH7-s8-MZl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TbR-ZT-Sew">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xGr-rf-pf2">
+                                <rect key="frame" x="0.0" y="544" width="600" height="56"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="F1Z-hx-l3A"/>
+                                </constraints>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ip5-Ka-8JV">
+                                <rect key="frame" x="0.0" y="64" width="600" height="480"/>
+                                <connections>
+                                    <segue destination="tUE-51-RpT" kind="embed" id="AAm-0E-8Z9"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Hz-ND-TPd">
+                                <rect key="frame" x="0.0" y="64" width="600" height="480"/>
+                                <connections>
+                                    <segue destination="pQp-1P-qLB" kind="embed" id="Wrm-eC-2xU"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qp1-HX-BUG">
+                                <rect key="frame" x="0.0" y="64" width="600" height="480"/>
+                                <connections>
+                                    <segue destination="U0p-sd-yg3" kind="embed" id="m91-r2-wCp"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HAK-aH-7aB">
+                                <rect key="frame" x="0.0" y="64" width="600" height="480"/>
+                                <connections>
+                                    <segue destination="CZ3-Kh-nmp" kind="embed" id="wbD-8r-KUj"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qH7-s8-MZl" firstAttribute="top" secondItem="xGr-rf-pf2" secondAttribute="bottom" id="58G-Pg-KdJ"/>
+                            <constraint firstItem="xGr-rf-pf2" firstAttribute="top" secondItem="ip5-Ka-8JV" secondAttribute="bottom" id="6Pd-ps-uyR"/>
+                            <constraint firstItem="xGr-rf-pf2" firstAttribute="top" secondItem="0Hz-ND-TPd" secondAttribute="bottom" id="6iu-an-zoQ"/>
+                            <constraint firstAttribute="trailing" secondItem="HAK-aH-7aB" secondAttribute="trailing" id="AFX-0G-eFl"/>
+                            <constraint firstItem="HAK-aH-7aB" firstAttribute="leading" secondItem="TbR-ZT-Sew" secondAttribute="leading" id="Al4-Bz-FpD"/>
+                            <constraint firstItem="ip5-Ka-8JV" firstAttribute="top" secondItem="Sa7-mb-Wzd" secondAttribute="bottom" id="GGq-n5-Z5k"/>
+                            <constraint firstItem="qp1-HX-BUG" firstAttribute="top" secondItem="Sa7-mb-Wzd" secondAttribute="bottom" id="LfM-l0-r9L"/>
+                            <constraint firstItem="xGr-rf-pf2" firstAttribute="top" secondItem="HAK-aH-7aB" secondAttribute="bottom" id="Mxi-9r-Syl"/>
+                            <constraint firstAttribute="trailing" secondItem="0Hz-ND-TPd" secondAttribute="trailing" id="Ox7-XC-coL"/>
+                            <constraint firstItem="xGr-rf-pf2" firstAttribute="leading" secondItem="TbR-ZT-Sew" secondAttribute="leading" id="P0f-u7-EYl"/>
+                            <constraint firstItem="qp1-HX-BUG" firstAttribute="leading" secondItem="TbR-ZT-Sew" secondAttribute="leading" id="SuW-Ap-Cwd"/>
+                            <constraint firstItem="ip5-Ka-8JV" firstAttribute="leading" secondItem="TbR-ZT-Sew" secondAttribute="leading" id="UAy-Me-TFJ"/>
+                            <constraint firstItem="xGr-rf-pf2" firstAttribute="top" secondItem="qp1-HX-BUG" secondAttribute="bottom" id="dfg-dc-ixT"/>
+                            <constraint firstAttribute="trailing" secondItem="ip5-Ka-8JV" secondAttribute="trailing" id="hts-KV-7iw"/>
+                            <constraint firstItem="xGr-rf-pf2" firstAttribute="top" secondItem="HAK-aH-7aB" secondAttribute="bottom" id="mIK-Hj-s6a"/>
+                            <constraint firstAttribute="trailing" secondItem="qp1-HX-BUG" secondAttribute="trailing" id="qwr-5b-oY0"/>
+                            <constraint firstItem="HAK-aH-7aB" firstAttribute="top" secondItem="Sa7-mb-Wzd" secondAttribute="bottom" id="rWh-Nf-kiJ"/>
+                            <constraint firstAttribute="trailing" secondItem="xGr-rf-pf2" secondAttribute="trailing" id="rby-ZU-oP0"/>
+                            <constraint firstItem="0Hz-ND-TPd" firstAttribute="top" secondItem="Sa7-mb-Wzd" secondAttribute="bottom" id="sFZ-CM-QWl"/>
+                            <constraint firstItem="0Hz-ND-TPd" firstAttribute="leading" secondItem="TbR-ZT-Sew" secondAttribute="leading" id="yaj-xc-BoN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ahX-4g-pal"/>
+                    <connections>
+                        <outlet property="AssignmentsViewController" destination="0Hz-ND-TPd" id="PLb-GG-51F"/>
+                        <outlet property="ClassesViewController" destination="ip5-Ka-8JV" id="Rno-M9-rTV"/>
+                        <outlet property="DirectorySearchViewController" destination="qp1-HX-BUG" id="wZn-qR-0nN"/>
+                        <outlet property="SettingsViewController" destination="HAK-aH-7aB" id="OPZ-Dt-Ier"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uE8-jN-6Ga" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1978" y="-883"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="U1S-7g-zdX">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cgz-NP-qXX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mIp-Sa-e7H" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EqA-rf-d8y">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="VD3-Kz-48z" kind="relationship" relationship="rootViewController" id="v5V-oH-k1n"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-3444" y="-1622"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DaP-96-OSe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fhv-cY-TqV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7UR-WM-Axu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UcJ-G7-kI3" kind="relationship" relationship="rootViewController" id="qzm-QB-HBU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wrx-4q-Xfx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2716" y="-883"/>
+        </scene>
+        <!--Classes View Controller-->
+        <scene sceneID="8cc-NJ-L7n">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5kC-cI-eeC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="tUE-51-RpT" customClass="ClassesViewController" customModule="Cranbrook_Kingswood" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Ey-FQ-BY5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.82352941176470584" green="0.84313725490196079" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-1978" y="-143.5"/>
+        </scene>
+        <!--Assignments View Controller-->
+        <scene sceneID="tCv-1Z-dFv">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cFN-e0-yGW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="pQp-1P-qLB" customClass="AssignmentsViewController" customModule="Cranbrook_Kingswood" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GcY-fU-YCl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.82352941176470584" green="0.84313725490196079" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-1231" y="-143.5"/>
+        </scene>
+        <!--Directory Search View Controller-->
+        <scene sceneID="4Ux-ws-wmV">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kiJ-up-E3x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="U0p-sd-yg3" customClass="DirectorySearchViewController" customModule="Cranbrook_Kingswood" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="74t-Pb-wIu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.82352941176470584" green="0.84313725490196079" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-483" y="-143.5"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="6Gp-hA-kcT">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Frh-0F-irj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="CZ3-Kh-nmp" customClass="SettingsViewController" customModule="Cranbrook_Kingswood" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="217-pj-jfx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.82352941176470584" green="0.84313725490196079" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="263" y="-143.5"/>
+        </scene>
+    </scenes>
+</document>
