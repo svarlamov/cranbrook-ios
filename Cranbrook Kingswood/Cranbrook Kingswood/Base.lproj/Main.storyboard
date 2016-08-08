@@ -37,7 +37,7 @@
                     </view>
                     <connections>
                         <segue destination="mIp-Sa-e7H" kind="presentation" identifier="ShowLoginViewController" modalTransitionStyle="crossDissolve" id="suC-Zd-F3g"/>
-                        <segue destination="fhv-cY-TqV" kind="presentation" identifier="StartupCompleteSegue" id="twR-EM-b5c"/>
+                        <segue destination="fhv-cY-TqV" kind="presentation" identifier="StartupCompleteSegue" modalTransitionStyle="crossDissolve" id="twR-EM-b5c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -76,32 +76,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xGr-rf-pf2">
-                                <rect key="frame" x="0.0" y="542" width="600" height="58"/>
+                                <rect key="frame" x="0.0" y="544" width="600" height="56"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="58" id="F1Z-hx-l3A"/>
+                                    <constraint firstAttribute="height" constant="56" id="F1Z-hx-l3A"/>
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ip5-Ka-8JV">
-                                <rect key="frame" x="0.0" y="64" width="600" height="478"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="480"/>
                                 <connections>
                                     <segue destination="tUE-51-RpT" kind="embed" id="AAm-0E-8Z9"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Hz-ND-TPd">
-                                <rect key="frame" x="0.0" y="64" width="600" height="478"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="480"/>
                                 <connections>
                                     <segue destination="pQp-1P-qLB" kind="embed" id="Wrm-eC-2xU"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qp1-HX-BUG">
-                                <rect key="frame" x="0.0" y="64" width="600" height="478"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="480"/>
                                 <connections>
                                     <segue destination="U0p-sd-yg3" kind="embed" id="m91-r2-wCp"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HAK-aH-7aB">
-                                <rect key="frame" x="0.0" y="64" width="600" height="478"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="480"/>
                                 <connections>
                                     <segue destination="CZ3-Kh-nmp" kind="embed" id="wbD-8r-KUj"/>
                                 </connections>
@@ -187,7 +187,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5kC-cI-eeC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="tUE-51-RpT" customClass="ClassesViewController" customModule="Cranbrook_Kingswood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Ey-FQ-BY5">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="478"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.82352941176470584" green="0.84313725490196079" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -201,7 +201,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cFN-e0-yGW" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="pQp-1P-qLB" customClass="AssignmentsViewController" customModule="Cranbrook_Kingswood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GcY-fU-YCl">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="478"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.82352941176470584" green="0.84313725490196079" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -215,7 +215,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kiJ-up-E3x" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="U0p-sd-yg3" customClass="DirectorySearchViewController" customModule="Cranbrook_Kingswood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="74t-Pb-wIu">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="478"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.82352941176470584" green="0.84313725490196079" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -229,7 +229,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Frh-0F-irj" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="CZ3-Kh-nmp" customClass="SettingsViewController" customModule="Cranbrook_Kingswood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="217-pj-jfx">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="478"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.82352941176470584" green="0.84313725490196079" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
                     </view>

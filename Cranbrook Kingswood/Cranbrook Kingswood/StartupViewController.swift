@@ -18,7 +18,16 @@ class StartupViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        WebServices.service.loginWithParameters(username: "username", password: "password")
+        sleep(1)
+        login()
+    }
+    
+    private func login() {
+        if (recoverLastLoggedInState()) {
+            
+        } else {
+            
+        }
     }
     
     override func viewDidAppear(animated: Bool) {

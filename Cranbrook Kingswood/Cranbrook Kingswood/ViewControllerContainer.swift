@@ -27,12 +27,12 @@ class ViewControllerContainer: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController!.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "Avenir Next", size: 20)!]
+        setSelectedTab(selectedTab)
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
-        self.navigationController!.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "Avenir Next", size: 20)!]
-        setSelectedTab(selectedTab)
         
     }
     
