@@ -31,6 +31,8 @@ class ViewControllerContainer: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
+        self.navigationController!.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "Avenir Next", size: 20)!]
+        setSelectedTab(selectedTab)
         
     }
     
@@ -38,24 +40,28 @@ class ViewControllerContainer: UIViewController {
         
         switch tabID {
         case .ClassesTab:
+            self.title = "Classes"
             ClassesViewController.hidden = false
             AssignmentsViewController.hidden = true
             DirectorySearchViewController.hidden = true
             SettingsViewController.hidden = true
             
         case .AssignmentsTab:
+            self.title = "Assignments"
             ClassesViewController.hidden = true
             AssignmentsViewController.hidden = false
             DirectorySearchViewController.hidden = true
             SettingsViewController.hidden = true
             
         case .DirectorySearchTab:
+            self.title = "Directory Search"
             ClassesViewController.hidden = true
             AssignmentsViewController.hidden = true
             DirectorySearchViewController.hidden = false
             SettingsViewController.hidden = true
             
         case .SettingsTab:
+            self.title = "Settings"
             ClassesViewController.hidden = true
             AssignmentsViewController.hidden = true
             DirectorySearchViewController.hidden = true
