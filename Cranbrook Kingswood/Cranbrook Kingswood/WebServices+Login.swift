@@ -15,6 +15,11 @@ enum LoginPersistenceKeys: String {
     case LastLoggedInPassword = "LastLoggedInPassword"
 }
 
+enum CredentialValidationMessages: String {
+    case NotValid = "credentials_invalid"
+    case Valid = "credentials_valid"
+}
+
 func persistLoginData(username: String, password: String) {
     let defaults = NSUserDefaults.standardUserDefaults()
     defaults.setObject(username, forKey: LoginPersistenceKeys.LastLoggedInUsername.rawValue)
@@ -44,26 +49,31 @@ func recoverLastLoggedInState() -> Bool {
 
 extension WebServices {
     
-    internal func loginWithParameters(username username:String, password:String) {
+    internal func loginWithParameters(username username:String, password:String) -> Bool {
         let loginParameters: [String: String] = createLoginParameters(username: username, password: password)
         let requestURL: String = endpointPath(self.loginEndpoint)
-        login(headers: loginHeaders, parameters: loginParameters, requestLink: requestURL)
+        return login(headers: loginHeaders, parameters: loginParameters, requestLink: requestURL)
     }
     
-    private func login(headers headers:[String:String], parameters:[String:String], requestLink:String) {
-        
+    private func login(headers headers:[String:String], parameters:[String:String], requestLink:String) -> Bool {
+        let isLoginSuccessful: Bool = false
         Alamofire.request(.POST, requestLink, parameters: parameters, encoding: .JSON, headers: headers).responseJSON { response in
             
             if let loginResponse: JSON = JSON(response.result.value!) {
-                let isLoginSuccessful = loginResponse["LoginSuccessful"].boolValue
+                var isLoginSuccessful = loginResponse["LoginSuccessful"].boolValue
                 
                 if isLoginSuccessful {
                     let studentID = loginResponse["CurrentUserForExpired"].stringValue
                     let sessionToken = self.getKeyForUserSession(data: response)
                     currentSessionInfo = CurrentLoggedInUserInfo(userId: studentID, sessionToken: sessionToken!)
+                    isLoginSuccessful = true
+                    let username: String = parameters["Username"]!
+                    let password: String = parameters["Password"]!
+                    persistLoginData(username, password: password)
                     print("login_successful. student_id:\(studentID). session_token:\(sessionToken!)")
                     
                 } else {
+                    isLoginSuccessful = false
                     print("login_failed")
                     
                 }
@@ -72,6 +82,7 @@ extension WebServices {
                 
         }
         
+        return isLoginSuccessful
     }
     
     private func getKeyForUserSession(data cookieData: Response<AnyObject, NSError>) -> String? {

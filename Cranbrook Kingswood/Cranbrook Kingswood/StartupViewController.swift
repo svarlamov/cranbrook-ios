@@ -16,6 +16,12 @@ enum startupSegueOptions: String {
     case login = "ShowLoginViewController"
 }
 
+enum loginCurrentUserStatusPrintOptions: String {
+    case currentUser = "logged_in_user"
+    case currentUserButFailed = "logged_in_user_with_failed_credentials"
+    case noCurrentUser = "no_logged_in_user"
+}
+
 class StartupViewController: UIViewController {
     
     override func viewDidLoad() {
@@ -25,13 +31,21 @@ class StartupViewController: UIViewController {
     
     private func login() {
         if (recoverLastLoggedInState()) {
-            print("logged_in_user")
             let username: String = userLoginInfo!.username
             let password: String = userLoginInfo!.password
-            WebServices.service.loginWithParameters(username: username, password: password)
+            if (WebServices.service.loginWithParameters(username: username, password: password)) {
+                print(loginCurrentUserStatusPrintOptions.currentUser.rawValue)
+                takeSegue(.continuation)
+                
+            } else {
+                print(loginCurrentUserStatusPrintOptions.currentUserButFailed.rawValue)
+                destroyPersistedLoginData()
+                takeSegue(.login)
+                
+            }
             
         } else {
-            print("no_logged_in_user")
+            print(loginCurrentUserStatusPrintOptions.noCurrentUser.rawValue)
             takeSegue(.login)
             
         }
