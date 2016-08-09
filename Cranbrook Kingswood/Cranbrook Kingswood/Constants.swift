@@ -18,3 +18,10 @@ var studentClassList: [CurrentUserClasses]? = nil
 var selectedTab: SelectedTabOptions = SelectedTabOptions.ClassesTab
 
 var userLoginInfo: UserLoginInfoStructure? = nil;
+
+
+
+
+
+
+

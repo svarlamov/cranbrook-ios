@@ -30,3 +30,14 @@ class WebServices {
 func endpointPath(endpoint:String) -> String {
     return "\(WebServices.prefix)\(endpoint)"
 }
+
+
+
+
+
+
+
+
+
+
+
