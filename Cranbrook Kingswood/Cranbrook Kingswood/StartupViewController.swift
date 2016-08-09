@@ -11,33 +11,46 @@ import Alamofire
 import SwiftyJSON
 import ObjectMapper
 
-class StartupViewController: UIViewController {
+enum startupSegueOptions: String {
+    case continuation = "StartupCompleteSegue"
+    case login = "ShowLoginViewController"
+}
 
-    let continuationSegueId: String = "StartupCompleteSegue"
-    let loginSegueId: String = "ShowLoginViewController"
+class StartupViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        sleep(1)
-        login()
+        
     }
     
     private func login() {
         if (recoverLastLoggedInState()) {
+            print("logged_in_user")
+            
             
         } else {
+            print("no_logged_in_user")
+            takeSegue(.login)
             
         }
+        
+    }
+    
+    func takeSegue(segue: startupSegueOptions) {
+        self.performSegueWithIdentifier(segue.rawValue, sender: nil)
+        
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
-        self.performSegueWithIdentifier(continuationSegueId, sender: nil)
+        sleep(1)
+        login()
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
 
 }
