@@ -19,6 +19,7 @@ func persistLoginData(username: String, password: String) {
     let defaults = NSUserDefaults.standardUserDefaults()
     defaults.setObject(username, forKey: LoginPersistenceKeys.LastLoggedInUsername.rawValue)
     defaults.setObject(password, forKey: LoginPersistenceKeys.LastLoggedInPassword.rawValue)
+    userLoginInfo = UserLoginInfoStructure(username: username, password: password)
     defaults.synchronize()
 }
 
@@ -26,15 +27,16 @@ func destroyPersistedLoginData () {
     let defaults = NSUserDefaults.standardUserDefaults()
     defaults.removeObjectForKey(LoginPersistenceKeys.LastLoggedInUsername.rawValue)
     defaults.removeObjectForKey(LoginPersistenceKeys.LastLoggedInPassword.rawValue)
+    userLoginInfo = nil
     defaults.synchronize()
 }
 
 func recoverLastLoggedInState() -> Bool {
     let defaults = NSUserDefaults.standardUserDefaults()
-    if defaults.stringForKey(LoginPersistenceKeys.LastLoggedInUsername.rawValue) != nil {
+    if defaults.stringForKey(LoginPersistenceKeys.LastLoggedInUsername.rawValue) != nil && defaults.stringForKey(LoginPersistenceKeys.LastLoggedInPassword.rawValue) != nil {
         let currentUsername: String = defaults.stringForKey(LoginPersistenceKeys.LastLoggedInUsername.rawValue)!
         let currentPassword: String = defaults.stringForKey(LoginPersistenceKeys.LastLoggedInPassword.rawValue)!
-        WebServices.service.loginWithParameters(username: currentUsername, password: currentPassword)
+        userLoginInfo = UserLoginInfoStructure(username: currentUsername, password: currentPassword)
         return true
     }
     return false

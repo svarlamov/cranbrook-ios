@@ -22,6 +22,18 @@ struct CurrentLoggedInUserInfo {
     }
 }
 
+// MARK: - structure for user login info
+struct UserLoginInfoStructure {
+    var username: String
+    var password: String
+    
+    init(username: String, password: String) {
+        self.username = username
+        self.password = password
+    }
+    
+}
+
 
 // MARK: - structure for class list
 struct CurrentUserClasses: Mappable {
