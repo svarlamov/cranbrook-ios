@@ -39,14 +39,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         if isValidCredential(username, inputPassword: password) {
             print(CredentialValidationMessages.Valid.rawValue)
-            if (WebServices.service.loginWithParameters(username: username, password: password)) {
+            ProgressHUD.show()
+            WebServices.service.loginWithParameters(username: username, password: password, callBack: { (isLoginSuccessful) in
                 print(loginCurrentUserStatusPrintOptions.currentUser.rawValue)
-                takeSegue(.continuation)
-                
-            } else {
-                print(loginCurrentUserStatusPrintOptions.currentUserButFailed.rawValue)
-                
-            }
+                ProgressHUD.dismiss()
+                sleep(1)
+                self.takeSegue(.continuation)
+            })
             
         } else {
             print(CredentialValidationMessages.NotValid.rawValue)

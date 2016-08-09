@@ -179,7 +179,8 @@
 		label.textAlignment = NSTextAlignmentCenter;
 		label.baselineAdjustment = UIBaselineAdjustmentAlignCenters;
 		label.numberOfLines = 0;
-	}
+    }
+    
 	if (label.superview == nil) [hud addSubview:label];
 }
 

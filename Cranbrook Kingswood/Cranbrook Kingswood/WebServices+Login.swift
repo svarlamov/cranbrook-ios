@@ -49,40 +49,35 @@ func recoverLastLoggedInState() -> Bool {
 
 extension WebServices {
     
-    internal func loginWithParameters(username username:String, password:String) -> Bool {
+    internal func loginWithParameters(username username:String, password:String, callBack: (isLoginSuccessful: Bool) -> Void) {
         let loginParameters: [String: String] = createLoginParameters(username: username, password: password)
         let requestURL: String = endpointPath(self.loginEndpoint)
-        return login(headers: loginHeaders, parameters: loginParameters, requestLink: requestURL)
-    }
-    
-    private func login(headers headers:[String:String], parameters:[String:String], requestLink:String) -> Bool {
-        let isLoginSuccessful: Bool = false
-        Alamofire.request(.POST, requestLink, parameters: parameters, encoding: .JSON, headers: headers).responseJSON { response in
+        
+        Alamofire.request(.POST, requestURL, parameters: loginParameters, encoding: .JSON, headers: loginHeaders).responseJSON { response in
             
             if let loginResponse: JSON = JSON(response.result.value!) {
-                var isLoginSuccessful = loginResponse["LoginSuccessful"].boolValue
+                let isLoginSuccessful = loginResponse["LoginSuccessful"].boolValue
                 
                 if isLoginSuccessful {
                     let studentID = loginResponse["CurrentUserForExpired"].stringValue
                     let sessionToken = self.getKeyForUserSession(data: response)
                     currentSessionInfo = CurrentLoggedInUserInfo(userId: studentID, sessionToken: sessionToken!)
-                    let username: String = parameters["Username"]!
-                    let password: String = parameters["Password"]!
-                    persistLoginData(username, password: password)
-                    isLoginSuccessful = true
+                    let instanceUsername: String = loginParameters["Username"]!
+                    let instancePassword: String = loginParameters["Password"]!
+                    persistLoginData(instanceUsername, password: instancePassword)
+                    callBack(isLoginSuccessful: true)
                     print("login_successful. student_id:\(studentID). session_token:\(sessionToken!)")
                     
                 } else {
-                    isLoginSuccessful = false
+                    callBack(isLoginSuccessful: false)
                     print("login_failed")
                     
                 }
                 
             }
-                
+            
         }
         
-        return isLoginSuccessful
     }
     
     private func getKeyForUserSession(data cookieData: Response<AnyObject, NSError>) -> String? {

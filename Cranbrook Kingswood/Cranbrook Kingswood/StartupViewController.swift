@@ -33,16 +33,9 @@ class StartupViewController: UIViewController {
         if (recoverLastLoggedInState()) {
             let username: String = userLoginInfo!.username
             let password: String = userLoginInfo!.password
-            if (WebServices.service.loginWithParameters(username: username, password: password)) {
-                print(loginCurrentUserStatusPrintOptions.currentUser.rawValue)
-                takeSegue(.continuation)
-                
-            } else {
-                print(loginCurrentUserStatusPrintOptions.currentUserButFailed.rawValue)
-                destroyPersistedLoginData()
-                takeSegue(.login)
-                
-            }
+            WebServices.service.loginWithParameters(username: username, password: password, callBack: { (isLoginSuccessful) in
+                self.takeSegue(.continuation)
+            })
             
         } else {
             print(loginCurrentUserStatusPrintOptions.noCurrentUser.rawValue)
