@@ -61,10 +61,10 @@ extension WebServices {
                     let studentID = loginResponse["CurrentUserForExpired"].stringValue
                     let sessionToken = self.getKeyForUserSession(data: response)
                     currentSessionInfo = CurrentLoggedInUserInfo(userId: studentID, sessionToken: sessionToken!)
-                    print("login attempt successful. student id is: \(studentID). session token: \(sessionToken!)")
+                    print("login_successful. student_id:\(studentID). session_token:\(sessionToken!)")
                     
                 } else {
-                    print("login attempt failed")
+                    print("login_failed")
                     
                 }
                 

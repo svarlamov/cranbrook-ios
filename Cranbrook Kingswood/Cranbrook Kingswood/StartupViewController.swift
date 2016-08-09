@@ -26,7 +26,9 @@ class StartupViewController: UIViewController {
     private func login() {
         if (recoverLastLoggedInState()) {
             print("logged_in_user")
-            
+            let username: String = userLoginInfo!.username
+            let password: String = userLoginInfo!.password
+            WebServices.service.loginWithParameters(username: username, password: password)
             
         } else {
             print("no_logged_in_user")
