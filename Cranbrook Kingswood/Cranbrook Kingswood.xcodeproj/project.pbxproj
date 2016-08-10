@@ -143,7 +143,7 @@
 			children = (
 				A07468981D568F7000E7ACC0 /* StartupViewController.swift */,
 				A08F66F01D57204900FBE55E /* LoginViewController.swift */,
-				A016B6E31D57FC7600A4A68D /* ViewControllerContainer.swift */,
+				A0891DB81D5BDA530077CC5B /* Tab Bar */,
 				A09D75B61D57125B00B2AA74 /* Classes */,
 				A09D75B51D57125300B2AA74 /* Assignments */,
 				A09D75B41D57124A00B2AA74 /* Directory Search */,
@@ -170,6 +170,14 @@
 				A09D75A71D570F1A00B2AA74 /* WebServices+CurrentClasses.swift */,
 			);
 			name = WebServices;
+			sourceTree = "<group>";
+		};
+		A0891DB81D5BDA530077CC5B /* Tab Bar */ = {
+			isa = PBXGroup;
+			children = (
+				A016B6E31D57FC7600A4A68D /* ViewControllerContainer.swift */,
+			);
+			name = "Tab Bar";
 			sourceTree = "<group>";
 		};
 		A09D75B31D57124300B2AA74 /* Settings */ = {

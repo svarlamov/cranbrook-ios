@@ -43,7 +43,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             WebServices.service.loginWithParameters(username: username, password: password, callBack: { (isLoginSuccessful) in
                 print(loginCurrentUserStatusPrintOptions.currentUser.rawValue)
                 ProgressHUD.dismiss()
-                sleep(1)
                 self.takeSegue(.continuation)
             })
             
