@@ -38,6 +38,9 @@ class ViewControllerContainer: UIViewController {
     @IBOutlet weak var tabSearchIcon: UIImageView!
     @IBOutlet weak var tabSettingsIcon: UIImageView!
     
+    // Tab bar view
+    @IBOutlet weak var tabBar: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
@@ -52,6 +55,11 @@ class ViewControllerContainer: UIViewController {
         self.navigationController!.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "Avenir Next", size: 20)!]
         setSelectedTab(selectedTab)
         setupButtons()
+    }
+    
+    func setupTabBar() {
+        self.tabBar.layer.borderWidth = 1
+        self.tabBar.layer.borderColor = UIColor(red:222/255.0, green:225/255.0, blue:227/255.0, alpha: 1.0).CGColor
     }
     
     func setupButtons() {

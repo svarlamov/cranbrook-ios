@@ -274,6 +274,7 @@
                         <outlet property="SettingsViewController" destination="HAK-aH-7aB" id="OPZ-Dt-Ier"/>
                         <outlet property="tabAssignmentsButton" destination="e2u-ia-CUD" id="qfQ-XW-ykg"/>
                         <outlet property="tabAssignmentsIcon" destination="U28-0W-vsb" id="2UX-Mz-YU5"/>
+                        <outlet property="tabBar" destination="xGr-rf-pf2" id="4x5-pQ-Ovg"/>
                         <outlet property="tabClassButton" destination="NzG-8k-44U" id="szk-4u-BSQ"/>
                         <outlet property="tabClassIcon" destination="S6r-OJ-g5s" id="Qnt-PK-lPC"/>
                         <outlet property="tabSearchButton" destination="ZqX-c8-TfA" id="OMM-fI-rWo"/>
@@ -376,12 +377,53 @@
                     <view key="view" contentMode="scaleToFill" id="74t-Pb-wIu">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nVD-Jj-pWz">
+                                <rect key="frame" x="0.0" y="44" width="600" height="44"/>
+                            </navigationBar>
+                            <searchBar contentMode="redraw" placeholder="Search the Cranbrook directory" translatesAutoresizingMaskIntoConstraints="NO" id="l9l-vh-LXm">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <color key="barTintColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dcl-tH-glW">
+                                <rect key="frame" x="0.0" y="88" width="600" height="392"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="a9c-gg-MCU">
+                                <rect key="frame" x="150" y="52" width="300" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="jl2-my-CAX"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Faculty"/>
+                                    <segment title="Student's"/>
+                                    <segment title="Alumni"/>
+                                </segments>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
+                        </subviews>
                         <color key="backgroundColor" red="0.82352941176470584" green="0.84313725490196079" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="nVD-Jj-pWz" firstAttribute="leading" secondItem="74t-Pb-wIu" secondAttribute="leading" id="8kU-z5-v0Z"/>
+                            <constraint firstAttribute="trailing" secondItem="Dcl-tH-glW" secondAttribute="trailing" id="90j-g4-nKn"/>
+                            <constraint firstItem="Dcl-tH-glW" firstAttribute="top" secondItem="a9c-gg-MCU" secondAttribute="bottom" constant="8" id="IWw-zq-hUR"/>
+                            <constraint firstItem="l9l-vh-LXm" firstAttribute="top" secondItem="MlC-O9-r2k" secondAttribute="bottom" id="JEV-oY-Aqt"/>
+                            <constraint firstItem="Dcl-tH-glW" firstAttribute="top" secondItem="nVD-Jj-pWz" secondAttribute="bottom" id="Jqn-9e-c3H"/>
+                            <constraint firstAttribute="trailing" secondItem="l9l-vh-LXm" secondAttribute="trailing" id="Lwe-AO-8Zx"/>
+                            <constraint firstItem="nVD-Jj-pWz" firstAttribute="top" secondItem="l9l-vh-LXm" secondAttribute="bottom" id="Mq7-qK-Vst"/>
+                            <constraint firstItem="Dcl-tH-glW" firstAttribute="leading" secondItem="74t-Pb-wIu" secondAttribute="leading" id="Yl4-S4-HQ2"/>
+                            <constraint firstItem="a9c-gg-MCU" firstAttribute="top" secondItem="l9l-vh-LXm" secondAttribute="bottom" constant="8" id="dY6-Br-7i2"/>
+                            <constraint firstItem="l9l-vh-LXm" firstAttribute="leading" secondItem="74t-Pb-wIu" secondAttribute="leading" id="h0B-JV-GiG"/>
+                            <constraint firstItem="a9c-gg-MCU" firstAttribute="centerX" secondItem="74t-Pb-wIu" secondAttribute="centerX" id="oSz-dQ-X0b"/>
+                            <constraint firstAttribute="trailing" secondItem="nVD-Jj-pWz" secondAttribute="trailing" id="sug-cc-FA3"/>
+                            <constraint firstItem="7ou-UY-4at" firstAttribute="top" secondItem="Dcl-tH-glW" secondAttribute="bottom" id="xaa-9V-eQ8"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kiJ-up-E3x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-483" y="-143.5"/>
+            <point key="canvasLocation" x="-483" y="-144"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="6Gp-hA-kcT">
