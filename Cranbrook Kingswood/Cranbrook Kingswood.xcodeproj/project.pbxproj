@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		700E5D69CB37CA9A74D753D1 /* Pods_Cranbrook_Kingswood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F921898296A250D0E2257CAC /* Pods_Cranbrook_Kingswood.framework */; };
 		A016B6E41D57FC7600A4A68D /* ViewControllerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A016B6E31D57FC7600A4A68D /* ViewControllerContainer.swift */; };
-		A04802321D5AE35D005FD8D7 /* ColorImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04802311D5AE35D005FD8D7 /* ColorImage.swift */; };
 		A07468811D568DAD00E7ACC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07468801D568DAD00E7ACC0 /* AppDelegate.swift */; };
 		A07468861D568DAD00E7ACC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A07468841D568DAD00E7ACC0 /* Main.storyboard */; };
 		A07468881D568DAD00E7ACC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A07468871D568DAD00E7ACC0 /* Assets.xcassets */; };
@@ -32,7 +31,6 @@
 
 /* Begin PBXFileReference section */
 		A016B6E31D57FC7600A4A68D /* ViewControllerContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerContainer.swift; sourceTree = "<group>"; };
-		A04802311D5AE35D005FD8D7 /* ColorImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorImage.swift; sourceTree = "<group>"; };
 		A074687D1D568DAD00E7ACC0 /* Cranbrook Kingswood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cranbrook Kingswood.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A07468801D568DAD00E7ACC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A07468851D568DAD00E7ACC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -220,7 +218,6 @@
 			children = (
 				A09D75BC1D5715C500B2AA74 /* ProgressHUD */,
 				A09D75A51D57042900B2AA74 /* DateComparison.swift */,
-				A04802311D5AE35D005FD8D7 /* ColorImage.swift */,
 			);
 			name = Plugins;
 			sourceTree = "<group>";
@@ -359,7 +356,6 @@
 				A09D75AE1D570F9A00B2AA74 /* DirectorySearchViewController.swift in Sources */,
 				A016B6E41D57FC7600A4A68D /* ViewControllerContainer.swift in Sources */,
 				A0BD730A1D56B27B00889331 /* WebServices+Login.swift in Sources */,
-				A04802321D5AE35D005FD8D7 /* ColorImage.swift in Sources */,
 				A09D75BB1D57159900B2AA74 /* ProgressHUD.m in Sources */,
 				A09D75B01D570FA300B2AA74 /* SettingsViewController.swift in Sources */,
 				A0BD73121D56E58E00889331 /* Constants.swift in Sources */,
