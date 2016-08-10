@@ -44,7 +44,7 @@
             </objects>
             <point key="canvasLocation" x="-3438" y="-883"/>
         </scene>
-        <!--Sign In-->
+        <!--Cranbrook Kingswood-->
         <scene sceneID="FEQ-h5-0CM">
             <objects>
                 <viewController id="VD3-Kz-48z" customClass="LoginViewController" customModule="Cranbrook_Kingswood" customModuleProvider="target" sceneMemberID="viewController">
@@ -90,14 +90,14 @@
                                     <action selector="login:" destination="VD3-Kz-48z" eventType="touchUpInside" id="alP-F7-KYF"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log In With Your Cranbrook Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urL-RU-cso">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log In With Your CK Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urL-RU-cso">
                                 <rect key="frame" x="22" y="185" width="255" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="DIA-Rx-9rF"/>
                                     <constraint firstAttribute="width" constant="255" id="z1f-Le-jTH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -116,7 +116,7 @@
                             <constraint firstItem="FOM-sM-Wkm" firstAttribute="leading" secondItem="shg-AU-2Pj" secondAttribute="leading" constant="20" id="xel-IZ-stj"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Sign In" id="RXA-KN-Qt6"/>
+                    <navigationItem key="navigationItem" title="Cranbrook Kingswood" id="RXA-KN-Qt6"/>
                     <connections>
                         <outlet property="logInButton" destination="FOM-sM-Wkm" id="ho7-X2-Vjb"/>
                         <outlet property="passwordTextField" destination="QTA-GO-uK0" id="9gG-Hd-EkL"/>
@@ -142,9 +142,79 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xGr-rf-pf2">
                                 <rect key="frame" x="0.0" y="544" width="600" height="56"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NzG-8k-44U">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="56"/>
+                                        <connections>
+                                            <action selector="tabSelected:" destination="UcJ-G7-kI3" eventType="touchUpInside" id="wOq-hm-Uny"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2u-ia-CUD">
+                                        <rect key="frame" x="150" y="0.0" width="150" height="56"/>
+                                        <connections>
+                                            <action selector="tabSelected:" destination="UcJ-G7-kI3" eventType="touchUpInside" id="zbk-qJ-baL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZqX-c8-TfA">
+                                        <rect key="frame" x="300" y="0.0" width="150" height="56"/>
+                                        <connections>
+                                            <action selector="tabSelected:" destination="UcJ-G7-kI3" eventType="touchUpInside" id="D1U-ET-Cre"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0U-Wh-fMn">
+                                        <rect key="frame" x="450" y="0.0" width="150" height="56"/>
+                                        <connections>
+                                            <action selector="tabSelected:" destination="UcJ-G7-kI3" eventType="touchUpInside" id="Wj9-9t-90m"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="class_list_tab_icon" translatesAutoresizingMaskIntoConstraints="NO" id="S6r-OJ-g5s">
+                                        <rect key="frame" x="0.0" y="8" width="150" height="40"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="assignment_tab_icon" translatesAutoresizingMaskIntoConstraints="NO" id="U28-0W-vsb">
+                                        <rect key="frame" x="150" y="8" width="150" height="40"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="student_search_tab_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Mpf-Zk-uQ7">
+                                        <rect key="frame" x="300" y="8" width="150" height="40"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settings_tab_icon" translatesAutoresizingMaskIntoConstraints="NO" id="dNa-up-poN">
+                                        <rect key="frame" x="450" y="8" width="150" height="40"/>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ZqX-c8-TfA" secondAttribute="bottom" id="7LU-7b-Vum"/>
+                                    <constraint firstItem="NzG-8k-44U" firstAttribute="top" secondItem="xGr-rf-pf2" secondAttribute="top" id="7bU-kt-lb4"/>
+                                    <constraint firstItem="S6r-OJ-g5s" firstAttribute="leading" secondItem="xGr-rf-pf2" secondAttribute="leading" id="Apq-XY-Ofr"/>
+                                    <constraint firstItem="Mpf-Zk-uQ7" firstAttribute="top" secondItem="xGr-rf-pf2" secondAttribute="top" constant="8" id="Az5-MM-TQ7"/>
+                                    <constraint firstItem="ZqX-c8-TfA" firstAttribute="width" secondItem="NzG-8k-44U" secondAttribute="width" id="BN8-zG-sWj"/>
+                                    <constraint firstAttribute="bottom" secondItem="Mpf-Zk-uQ7" secondAttribute="bottom" constant="8" id="D16-w5-C2I"/>
+                                    <constraint firstAttribute="trailing" secondItem="dNa-up-poN" secondAttribute="trailing" id="E2q-4e-BtU"/>
                                     <constraint firstAttribute="height" constant="56" id="F1Z-hx-l3A"/>
+                                    <constraint firstItem="A0U-Wh-fMn" firstAttribute="width" secondItem="NzG-8k-44U" secondAttribute="width" id="GQX-OE-fEW"/>
+                                    <constraint firstItem="ZqX-c8-TfA" firstAttribute="leading" secondItem="e2u-ia-CUD" secondAttribute="trailing" id="HP9-tT-lpe"/>
+                                    <constraint firstItem="e2u-ia-CUD" firstAttribute="top" secondItem="xGr-rf-pf2" secondAttribute="top" id="MBi-eT-3VL"/>
+                                    <constraint firstItem="A0U-Wh-fMn" firstAttribute="top" secondItem="xGr-rf-pf2" secondAttribute="top" id="NNj-s1-sdD"/>
+                                    <constraint firstItem="U28-0W-vsb" firstAttribute="width" secondItem="S6r-OJ-g5s" secondAttribute="width" id="OFl-PZ-xHc"/>
+                                    <constraint firstItem="U28-0W-vsb" firstAttribute="leading" secondItem="S6r-OJ-g5s" secondAttribute="trailing" id="PfP-ax-UMZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="S6r-OJ-g5s" secondAttribute="bottom" constant="8" id="Pp0-O7-DQP"/>
+                                    <constraint firstItem="U28-0W-vsb" firstAttribute="top" secondItem="xGr-rf-pf2" secondAttribute="top" constant="8" id="RW2-2c-49c"/>
+                                    <constraint firstAttribute="bottom" secondItem="dNa-up-poN" secondAttribute="bottom" constant="8" id="Rw5-t6-BHX"/>
+                                    <constraint firstAttribute="trailing" secondItem="A0U-Wh-fMn" secondAttribute="trailing" id="VlL-QU-cOf"/>
+                                    <constraint firstItem="e2u-ia-CUD" firstAttribute="width" secondItem="NzG-8k-44U" secondAttribute="width" id="Zt6-zX-ftF"/>
+                                    <constraint firstAttribute="bottom" secondItem="e2u-ia-CUD" secondAttribute="bottom" id="aSP-pa-OXn"/>
+                                    <constraint firstItem="dNa-up-poN" firstAttribute="leading" secondItem="Mpf-Zk-uQ7" secondAttribute="trailing" id="aYN-6t-3z2"/>
+                                    <constraint firstAttribute="bottom" secondItem="U28-0W-vsb" secondAttribute="bottom" constant="8" id="fBp-uN-7ex"/>
+                                    <constraint firstItem="Mpf-Zk-uQ7" firstAttribute="leading" secondItem="U28-0W-vsb" secondAttribute="trailing" id="g3n-TQ-1nw"/>
+                                    <constraint firstItem="Mpf-Zk-uQ7" firstAttribute="width" secondItem="S6r-OJ-g5s" secondAttribute="width" id="hQh-6c-6TT"/>
+                                    <constraint firstItem="ZqX-c8-TfA" firstAttribute="top" secondItem="xGr-rf-pf2" secondAttribute="top" id="hqP-Ly-uqT"/>
+                                    <constraint firstItem="NzG-8k-44U" firstAttribute="leading" secondItem="xGr-rf-pf2" secondAttribute="leading" id="jKv-DY-gAc"/>
+                                    <constraint firstItem="A0U-Wh-fMn" firstAttribute="leading" secondItem="ZqX-c8-TfA" secondAttribute="trailing" id="kGa-GZ-CN1"/>
+                                    <constraint firstItem="e2u-ia-CUD" firstAttribute="leading" secondItem="NzG-8k-44U" secondAttribute="trailing" id="o62-eZ-rGn"/>
+                                    <constraint firstItem="S6r-OJ-g5s" firstAttribute="top" secondItem="xGr-rf-pf2" secondAttribute="top" constant="8" id="o6K-6z-Vhj"/>
+                                    <constraint firstItem="dNa-up-poN" firstAttribute="top" secondItem="xGr-rf-pf2" secondAttribute="top" constant="8" id="pD1-Me-qjf"/>
+                                    <constraint firstAttribute="bottom" secondItem="NzG-8k-44U" secondAttribute="bottom" id="smg-10-gbh"/>
+                                    <constraint firstItem="dNa-up-poN" firstAttribute="width" secondItem="S6r-OJ-g5s" secondAttribute="width" id="xoP-iE-BC2"/>
+                                    <constraint firstAttribute="bottom" secondItem="A0U-Wh-fMn" secondAttribute="bottom" id="ya3-dy-AOe"/>
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ip5-Ka-8JV">
@@ -202,6 +272,14 @@
                         <outlet property="ClassesViewController" destination="ip5-Ka-8JV" id="Rno-M9-rTV"/>
                         <outlet property="DirectorySearchViewController" destination="qp1-HX-BUG" id="wZn-qR-0nN"/>
                         <outlet property="SettingsViewController" destination="HAK-aH-7aB" id="OPZ-Dt-Ier"/>
+                        <outlet property="tabAssignmentsButton" destination="e2u-ia-CUD" id="qfQ-XW-ykg"/>
+                        <outlet property="tabAssignmentsIcon" destination="U28-0W-vsb" id="2UX-Mz-YU5"/>
+                        <outlet property="tabClassButton" destination="NzG-8k-44U" id="szk-4u-BSQ"/>
+                        <outlet property="tabClassIcon" destination="S6r-OJ-g5s" id="Qnt-PK-lPC"/>
+                        <outlet property="tabSearchButton" destination="ZqX-c8-TfA" id="OMM-fI-rWo"/>
+                        <outlet property="tabSearchIcon" destination="Mpf-Zk-uQ7" id="qW3-Sn-M3t"/>
+                        <outlet property="tabSettingsButton" destination="A0U-Wh-fMn" id="xee-Zh-Qpn"/>
+                        <outlet property="tabSettingsIcon" destination="dNa-up-poN" id="19n-yJ-eAz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uE8-jN-6Ga" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -267,7 +345,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5kC-cI-eeC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1978" y="-143.5"/>
+            <point key="canvasLocation" x="-1978" y="-144"/>
         </scene>
         <!--Assignments View Controller-->
         <scene sceneID="tCv-1Z-dFv">
@@ -324,6 +402,12 @@
             <point key="canvasLocation" x="263" y="-143.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="assignment_tab_icon" width="32" height="32"/>
+        <image name="class_list_tab_icon" width="32" height="32"/>
+        <image name="settings_tab_icon" width="32" height="32"/>
+        <image name="student_search_tab_icon" width="32" height="32"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="8ak-eE-lO9"/>
     </inferredMetricsTieBreakers>
