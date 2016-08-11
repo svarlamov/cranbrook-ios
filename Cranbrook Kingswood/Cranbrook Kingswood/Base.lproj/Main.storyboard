@@ -303,7 +303,7 @@
         <!--Classes View Controller-->
         <scene sceneID="8cc-NJ-L7n">
             <objects>
-                <viewController storyboardIdentifier="classes_tab" id="tUE-51-RpT" customClass="ClassesViewController" customModule="Cranbrook_Kingswood" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="classes_tab" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tUE-51-RpT" customClass="ClassesViewController" customModule="Cranbrook_Kingswood" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BNu-Dn-nze"/>
                         <viewControllerLayoutGuide type="bottom" id="4Qt-Wp-bgy"/>
@@ -321,7 +321,7 @@
         <!--Assignments View Controller-->
         <scene sceneID="tCv-1Z-dFv">
             <objects>
-                <viewController storyboardIdentifier="assignments_tab" id="pQp-1P-qLB" customClass="AssignmentsViewController" customModule="Cranbrook_Kingswood" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="assignments_tab" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pQp-1P-qLB" customClass="AssignmentsViewController" customModule="Cranbrook_Kingswood" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Uel-gA-qbQ"/>
                         <viewControllerLayoutGuide type="bottom" id="hFM-xb-eeO"/>
@@ -339,7 +339,7 @@
         <!--Directory Search View Controller-->
         <scene sceneID="4Ux-ws-wmV">
             <objects>
-                <viewController storyboardIdentifier="search_tab" id="U0p-sd-yg3" customClass="DirectorySearchViewController" customModule="Cranbrook_Kingswood" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="search_tab" useStoryboardIdentifierAsRestorationIdentifier="YES" id="U0p-sd-yg3" customClass="DirectorySearchViewController" customModule="Cranbrook_Kingswood" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MlC-O9-r2k"/>
                         <viewControllerLayoutGuide type="bottom" id="7ou-UY-4at"/>

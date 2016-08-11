@@ -27,18 +27,13 @@ class ViewControllerContainer: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.tabIndicationView.hidden = true
+        setupNavigationController()
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
-        setupViews()
-        
-    }
-    
-    func setupViews() {
-        setupNavigationController()
-        setTab(.AssignmentsTab)
+        setTab(.ClassesTab)
     }
     
     func setupNavigationController() {
@@ -47,23 +42,27 @@ class ViewControllerContainer: UIViewController {
     }
     
     func setTab(tab: SelectedTabOptions) {
-        setupSelectedTab(tab)
+        setupSelectedTab(tab, isAnimated: false)
         
     }
     
     @IBAction func tabButtonPress(sender: UIButton) {
         if (sender.tag == 0) {
-            setTab(.ClassesTab)
+            setupSelectedTab(.ClassesTab, isAnimated: true)
         } else if (sender.tag == 1) {
-            setTab(.AssignmentsTab)
+            setupSelectedTab(.AssignmentsTab, isAnimated: true)
         } else if (sender.tag == 2) {
-            setTab(.DirectorySearchTab)
+            setupSelectedTab(.DirectorySearchTab, isAnimated: true)
         }
     }
     
-    func setupSelectedTab(tab: SelectedTabOptions) {
+    func setupSelectedTab(tab: SelectedTabOptions, isAnimated: Bool) {
+        var animationDuration: NSTimeInterval = 0
+        if (isAnimated) {
+            animationDuration = 0.3
+        }
         
-        UIView.animateWithDuration(0.5, animations: {
+        UIView.animateWithDuration(animationDuration, animations: {
             if (tab == .ClassesTab) {
                 self.tabIndicationView.frame = CGRectMake(self.tabIndicationView.frame.origin.x, self.tabIndicationView.frame.origin.y, 78, self.tabIndicationView.frame.size.height)
                 self.tabIndicationView.center.x = self.classesTabLabel.center.x
@@ -78,7 +77,9 @@ class ViewControllerContainer: UIViewController {
                 
             }
             
-        }, completion: nil)
+        }) { (isComplete) in
+            self.tabIndicationView.hidden = false
+        }
         
         UIView.animateWithDuration(1.0, animations: {
             self.setupSelectedTabLabel(tab)
