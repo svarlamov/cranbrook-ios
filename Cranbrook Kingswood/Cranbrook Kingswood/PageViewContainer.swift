@@ -22,6 +22,8 @@ class PageViewContainer: UIPageViewController, UIPageViewControllerDataSource, U
         self.delegate = self
         self.dataSource = self
         
+        setupPageView()
+        
     }
     
     func setupPageView() {
