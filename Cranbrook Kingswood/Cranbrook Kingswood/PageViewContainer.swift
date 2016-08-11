@@ -53,7 +53,7 @@ class PageViewContainer: UIPageViewController, UIPageViewControllerDataSource, U
     }
     
     func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
-        return pages.count
+        return 0
     }
     
     func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
