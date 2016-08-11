@@ -22,21 +22,23 @@ class ViewControllerContainer: UIViewController {
     @IBOutlet weak var classesTabLabel: UILabel!
     @IBOutlet weak var assignmentsTabLabel: UILabel!
     @IBOutlet weak var searchTabLabel: UILabel!
+    
     @IBOutlet weak var tabIndicationView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupViews()
+        
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
+        setupViews()
         
     }
     
     func setupViews() {
         setupNavigationController()
-        setTab(.ClassesTab)
+        setTab(.AssignmentsTab)
     }
     
     func setupNavigationController() {
@@ -49,13 +51,30 @@ class ViewControllerContainer: UIViewController {
         
     }
     
+    @IBAction func tabButtonPress(sender: UIButton) {
+        if (sender.tag == 0) {
+            setTab(.ClassesTab)
+        } else if (sender.tag == 1) {
+            setTab(.AssignmentsTab)
+        } else if (sender.tag == 2) {
+            setTab(.DirectorySearchTab)
+        }
+    }
+    
     func setupSelectedTab(tab: SelectedTabOptions) {
+        
         UIView.animateWithDuration(0.5, animations: {
             if (tab == .ClassesTab) {
+                self.tabIndicationView.frame = CGRectMake(self.tabIndicationView.frame.origin.x, self.tabIndicationView.frame.origin.y, 78, self.tabIndicationView.frame.size.height)
+                self.tabIndicationView.center.x = self.classesTabLabel.center.x
                 
             } else if (tab == .AssignmentsTab) {
+                self.tabIndicationView.frame = CGRectMake(self.tabIndicationView.frame.origin.x, self.tabIndicationView.frame.origin.y, 115, self.tabIndicationView.frame.size.height)
+                self.tabIndicationView.center.x = self.assignmentsTabLabel.center.x
                 
             } else if (tab == .DirectorySearchTab) {
+                self.tabIndicationView.frame = CGRectMake(self.tabIndicationView.frame.origin.x, self.tabIndicationView.frame.origin.y, 69, self.tabIndicationView.frame.size.height)
+                self.tabIndicationView.center.x = self.searchTabLabel.center.x
                 
             }
             
@@ -64,10 +83,6 @@ class ViewControllerContainer: UIViewController {
         UIView.animateWithDuration(1.0, animations: {
             self.setupSelectedTabLabel(tab)
         }, completion: nil)
-    }
-    
-    func setPositionForBlueTabIndicator(tab: SelectedTabOptions) {
-        
     }
     
     func setupSelectedTabLabel(tab: SelectedTabOptions) {

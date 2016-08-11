@@ -174,17 +174,47 @@
                                         <rect key="frame" x="243" y="39" width="115" height="3"/>
                                         <color key="backgroundColor" red="0.0" green="0.58823529411764708" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qtt-Xr-oWW">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="42"/>
+                                        <connections>
+                                            <action selector="tabButtonPress:" destination="UcJ-G7-kI3" eventType="touchUpInside" id="k91-Vo-hsK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfY-mH-ifT">
+                                        <rect key="frame" x="200" y="0.0" width="200" height="42"/>
+                                        <connections>
+                                            <action selector="tabButtonPress:" destination="UcJ-G7-kI3" eventType="touchUpInside" id="Ixl-lW-lht"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bv-8Q-EOC">
+                                        <rect key="frame" x="400" y="0.0" width="200" height="42"/>
+                                        <connections>
+                                            <action selector="tabButtonPress:" destination="UcJ-G7-kI3" eventType="touchUpInside" id="GBm-yR-yhv"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Qtt-Xr-oWW" secondAttribute="bottom" id="3UN-Az-HC4"/>
                                     <constraint firstAttribute="trailing" secondItem="eGN-Iv-rpi" secondAttribute="trailing" id="CHG-Dl-pe5"/>
+                                    <constraint firstAttribute="trailing" secondItem="5bv-8Q-EOC" secondAttribute="trailing" id="IYO-Ej-QUC"/>
+                                    <constraint firstItem="Qtt-Xr-oWW" firstAttribute="leading" secondItem="8mb-T4-HlO" secondAttribute="leading" id="IpA-78-9zc"/>
                                     <constraint firstItem="qqa-im-x56" firstAttribute="leading" secondItem="CEM-ub-pvd" secondAttribute="trailing" id="LDa-Ax-W3H"/>
+                                    <constraint firstItem="gfY-mH-ifT" firstAttribute="top" secondItem="8mb-T4-HlO" secondAttribute="top" id="LOC-bJ-U0X"/>
                                     <constraint firstItem="CEM-ub-pvd" firstAttribute="leading" secondItem="8mb-T4-HlO" secondAttribute="leading" id="QgZ-Zz-nxR"/>
                                     <constraint firstItem="qqa-im-x56" firstAttribute="centerY" secondItem="8mb-T4-HlO" secondAttribute="centerY" id="TCg-tz-Uhv"/>
+                                    <constraint firstItem="5bv-8Q-EOC" firstAttribute="width" secondItem="Qtt-Xr-oWW" secondAttribute="width" id="VhY-SN-veF"/>
+                                    <constraint firstItem="5bv-8Q-EOC" firstAttribute="top" secondItem="8mb-T4-HlO" secondAttribute="top" id="YCI-WX-vEF"/>
+                                    <constraint firstItem="gfY-mH-ifT" firstAttribute="width" secondItem="Qtt-Xr-oWW" secondAttribute="width" id="Zw2-wG-eLO"/>
                                     <constraint firstAttribute="height" constant="42" id="aCY-yT-8Yu"/>
+                                    <constraint firstItem="gfY-mH-ifT" firstAttribute="leading" secondItem="Qtt-Xr-oWW" secondAttribute="trailing" id="hqI-qJ-BUc"/>
+                                    <constraint firstAttribute="bottom" secondItem="gfY-mH-ifT" secondAttribute="bottom" id="jtV-Sf-KfH"/>
+                                    <constraint firstItem="5bv-8Q-EOC" firstAttribute="leading" secondItem="gfY-mH-ifT" secondAttribute="trailing" id="lCV-su-89z"/>
                                     <constraint firstItem="eGN-Iv-rpi" firstAttribute="leading" secondItem="qqa-im-x56" secondAttribute="trailing" id="lUG-nS-hhl"/>
+                                    <constraint firstAttribute="bottom" secondItem="5bv-8Q-EOC" secondAttribute="bottom" id="m15-Mi-Oem"/>
                                     <constraint firstItem="eGN-Iv-rpi" firstAttribute="centerY" secondItem="8mb-T4-HlO" secondAttribute="centerY" constant="-1" id="mOa-kw-eE6"/>
                                     <constraint firstItem="qqa-im-x56" firstAttribute="width" secondItem="CEM-ub-pvd" secondAttribute="width" id="ndW-3k-kn3"/>
+                                    <constraint firstItem="Qtt-Xr-oWW" firstAttribute="top" secondItem="8mb-T4-HlO" secondAttribute="top" id="oAn-uP-nmL"/>
                                     <constraint firstItem="CEM-ub-pvd" firstAttribute="centerY" secondItem="8mb-T4-HlO" secondAttribute="centerY" id="ytS-Yf-gnU"/>
                                     <constraint firstItem="eGN-Iv-rpi" firstAttribute="width" secondItem="CEM-ub-pvd" secondAttribute="width" id="zS1-Fl-HuM"/>
                                 </constraints>
