@@ -43,6 +43,7 @@ class PageViewContainer: UIPageViewController, UIPageViewControllerDataSource, U
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
         let currentIndex = pages.indexOf(viewController)!
         let previousIndex = abs((currentIndex - 1) % pages.count)
+        print("just went back from current index \(currentIndex) to index \(previousIndex)")
         return pages[previousIndex]
     }
     
