@@ -347,8 +347,35 @@
                     <view key="view" contentMode="scaleToFill" id="74t-Pb-wIu">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="npK-xa-ZBU">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="68"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search the Cranbrook directory" translatesAutoresizingMaskIntoConstraints="NO" id="HvD-eG-TOd">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="JEO-S2-hHF"/>
+                                        </constraints>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                </subviews>
+                                <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="HvD-eG-TOd" firstAttribute="top" secondItem="npK-xa-ZBU" secondAttribute="top" id="4YU-uM-82F"/>
+                                    <constraint firstAttribute="trailing" secondItem="HvD-eG-TOd" secondAttribute="trailing" id="A45-mp-rWb"/>
+                                    <constraint firstItem="HvD-eG-TOd" firstAttribute="leading" secondItem="npK-xa-ZBU" secondAttribute="leading" id="W8e-34-zGd"/>
+                                    <constraint firstAttribute="height" constant="68" id="omA-vS-8ML"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="0.54071413590604023" green="0.96470588235294119" blue="0.3082005033557047" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="npK-xa-ZBU" firstAttribute="top" secondItem="MlC-O9-r2k" secondAttribute="bottom" id="1qy-NI-iVo"/>
+                            <constraint firstAttribute="trailing" secondItem="npK-xa-ZBU" secondAttribute="trailing" id="Jtc-4W-4Vc"/>
+                            <constraint firstItem="npK-xa-ZBU" firstAttribute="leading" secondItem="74t-Pb-wIu" secondAttribute="leading" id="nDW-mS-Ctt"/>
+                        </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kiJ-up-E3x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
