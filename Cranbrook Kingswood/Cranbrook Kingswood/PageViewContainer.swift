@@ -35,8 +35,8 @@ class PageViewContainer: UIPageViewController, UIPageViewControllerDataSource, U
         pages.append(classView)
         pages.append(assignmentView)
         pages.append(searchView)
-        
-        setViewControllers([classView], direction: UIPageViewControllerNavigationDirection.Forward, animated: false, completion: nil)
+		
+        self.setViewControllers([classView], direction: UIPageViewControllerNavigationDirection.Forward, animated: false, completion: nil)
         
     }
     

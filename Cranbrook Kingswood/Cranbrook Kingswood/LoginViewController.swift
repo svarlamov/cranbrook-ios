@@ -12,13 +12,13 @@ import SwiftyJSON
 import ObjectMapper
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
-    
+	
     @IBOutlet weak var logInButton: UIButton!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    
+	
     let placeholderTextColor: UIColor = UIColor(red: 192/255, green: 191/255, blue: 196/255, alpha: 1.0)
-    
+	
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()

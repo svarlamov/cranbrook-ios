@@ -24,7 +24,11 @@ class ViewControllerContainer: UIViewController {
     @IBOutlet weak var searchTabLabel: UILabel!
     
     @IBOutlet weak var tabIndicationView: UIView!
-    
+	
+	var pageViewContainerView: PageViewContainer = PageViewContainer()
+	let containerViewSegueId: String = "pageViewContainerSegue"
+	var previousDisplayedPage: SelectedTabOptions = .ClassesTab
+	
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabIndicationView.hidden = true
@@ -55,13 +59,21 @@ class ViewControllerContainer: UIViewController {
             setupSelectedTab(.DirectorySearchTab, isAnimated: true)
         }
     }
+	
+	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+		if (segue.identifier == containerViewSegueId) {
+			pageViewContainerView = segue.destinationViewController as! PageViewContainer
+		}
+	}
     
     func setupSelectedTab(tab: SelectedTabOptions, isAnimated: Bool) {
         var animationDuration: NSTimeInterval = 0
         if (isAnimated) {
             animationDuration = 0.3
         }
-        
+		
+		setPageViewCurrentDisplay(tab)
+		
         UIView.animateWithDuration(animationDuration, animations: {
             if (tab == .ClassesTab) {
                 self.tabIndicationView.frame = CGRectMake(self.tabIndicationView.frame.origin.x, self.tabIndicationView.frame.origin.y, 78, self.tabIndicationView.frame.size.height)
@@ -79,12 +91,32 @@ class ViewControllerContainer: UIViewController {
             
         }) { (isComplete) in
             self.tabIndicationView.hidden = false
+			self.previousDisplayedPage = tab
         }
         
         UIView.animateWithDuration(1.0, animations: {
             self.setupSelectedTabLabel(tab)
         }, completion: nil)
     }
+	
+	func setPageViewCurrentDisplay(tab: SelectedTabOptions) {
+		if (tab == .ClassesTab) {
+			pageViewContainerView.setViewControllers([pageViewContainerView.pages[0]], direction: .Reverse, animated: true, completion: nil)
+		
+		} else if (tab == .AssignmentsTab) {
+			var scrollDirection: UIPageViewControllerNavigationDirection = .Forward
+			if (previousDisplayedPage == .ClassesTab) {
+				scrollDirection = .Forward
+			} else if (previousDisplayedPage == .DirectorySearchTab) {
+				scrollDirection = .Reverse
+			}
+			pageViewContainerView.setViewControllers([pageViewContainerView.pages[1]], direction: scrollDirection, animated: true, completion: nil)
+			
+		} else if (tab == .DirectorySearchTab) {
+			pageViewContainerView.setViewControllers([pageViewContainerView.pages[2]], direction: .Forward, animated: true, completion: nil)
+			
+		}
+	}
     
     func setupSelectedTabLabel(tab: SelectedTabOptions) {
         let nonSelectedColor: UIColor = UIColor(red: 0.639, green: 0.639, blue: 0.682, alpha: 1.000)
