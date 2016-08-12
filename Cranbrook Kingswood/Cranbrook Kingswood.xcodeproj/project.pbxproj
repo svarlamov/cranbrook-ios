@@ -228,6 +228,7 @@
 				TargetAttributes = {
 					A074687C1D568DAD00E7ACC0 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = RJ3WS2ATT3;
 					};
 				};
 			};
@@ -450,7 +451,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Cranbrook Kingswood/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.stefandeclerck.Cranbrook-Kingswood";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -465,7 +468,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Cranbrook Kingswood/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.stefandeclerck.Cranbrook-Kingswood";
 				PRODUCT_NAME = "$(TARGET_NAME)";
