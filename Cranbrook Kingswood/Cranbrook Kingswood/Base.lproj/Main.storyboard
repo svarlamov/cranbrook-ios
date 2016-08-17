@@ -219,28 +219,51 @@
                                     <constraint firstItem="eGN-Iv-rpi" firstAttribute="width" secondItem="CEM-ub-pvd" secondAttribute="width" id="zS1-Fl-HuM"/>
                                 </constraints>
                             </view>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5W0-K2-ejW">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rvg-Nj-Rqj">
                                 <rect key="frame" x="0.0" y="106" width="600" height="494"/>
                                 <connections>
-                                    <segue destination="6vL-tb-F0e" kind="embed" identifier="pageViewContainerSegue" id="03g-iL-1G3"/>
+                                    <segue destination="tUE-51-RpT" kind="embed" id="vwP-4L-9FN"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SSk-Cx-D4i">
+                                <rect key="frame" x="0.0" y="106" width="600" height="494"/>
+                                <connections>
+                                    <segue destination="pQp-1P-qLB" kind="embed" id="UnD-KD-qhV"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S5b-Ye-HgQ">
+                                <rect key="frame" x="0.0" y="106" width="600" height="494"/>
+                                <connections>
+                                    <segue destination="U0p-sd-yg3" kind="embed" id="P3F-9m-fOC"/>
                                 </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="5W0-K2-ejW" firstAttribute="leading" secondItem="TbR-ZT-Sew" secondAttribute="leading" id="0vC-OR-NTJ"/>
+                            <constraint firstItem="Rvg-Nj-Rqj" firstAttribute="top" secondItem="8mb-T4-HlO" secondAttribute="bottom" id="4Fu-JX-HFx"/>
+                            <constraint firstItem="S5b-Ye-HgQ" firstAttribute="top" secondItem="8mb-T4-HlO" secondAttribute="bottom" id="9Dh-Pc-IGc"/>
+                            <constraint firstAttribute="trailing" secondItem="Rvg-Nj-Rqj" secondAttribute="trailing" id="MXa-fx-Mfa"/>
                             <constraint firstAttribute="trailing" secondItem="8mb-T4-HlO" secondAttribute="trailing" id="Mhe-UN-MAd"/>
                             <constraint firstItem="8mb-T4-HlO" firstAttribute="leading" secondItem="TbR-ZT-Sew" secondAttribute="leading" id="Pfc-xF-o7f"/>
-                            <constraint firstAttribute="trailing" secondItem="5W0-K2-ejW" secondAttribute="trailing" id="QO2-LX-R3v"/>
-                            <constraint firstItem="5W0-K2-ejW" firstAttribute="top" secondItem="8mb-T4-HlO" secondAttribute="bottom" id="g96-h8-SBZ"/>
-                            <constraint firstItem="qH7-s8-MZl" firstAttribute="top" secondItem="5W0-K2-ejW" secondAttribute="bottom" id="hIA-b1-SOt"/>
+                            <constraint firstItem="SSk-Cx-D4i" firstAttribute="leading" secondItem="TbR-ZT-Sew" secondAttribute="leading" id="QMV-7g-KFd"/>
+                            <constraint firstItem="qH7-s8-MZl" firstAttribute="top" secondItem="Rvg-Nj-Rqj" secondAttribute="bottom" id="div-mT-xfv"/>
+                            <constraint firstItem="S5b-Ye-HgQ" firstAttribute="leading" secondItem="TbR-ZT-Sew" secondAttribute="leading" id="eAl-lW-ODd"/>
+                            <constraint firstAttribute="trailing" secondItem="SSk-Cx-D4i" secondAttribute="trailing" id="hq3-Xp-RV7"/>
+                            <constraint firstItem="qH7-s8-MZl" firstAttribute="top" secondItem="SSk-Cx-D4i" secondAttribute="bottom" id="k2Y-kk-MQg"/>
+                            <constraint firstItem="SSk-Cx-D4i" firstAttribute="top" secondItem="8mb-T4-HlO" secondAttribute="bottom" id="mlh-jd-BuW"/>
+                            <constraint firstItem="Rvg-Nj-Rqj" firstAttribute="leading" secondItem="TbR-ZT-Sew" secondAttribute="leading" id="okh-ae-dbk"/>
+                            <constraint firstItem="qH7-s8-MZl" firstAttribute="top" secondItem="S5b-Ye-HgQ" secondAttribute="bottom" id="p0G-3C-Hhe"/>
                             <constraint firstItem="8mb-T4-HlO" firstAttribute="top" secondItem="Sa7-mb-Wzd" secondAttribute="bottom" id="qSR-Dt-3CV"/>
+                            <constraint firstAttribute="trailing" secondItem="S5b-Ye-HgQ" secondAttribute="trailing" id="zZj-3F-5PI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="CRANBROOK" id="ahX-4g-pal"/>
                     <connections>
+                        <outlet property="assignmentsContainerView" destination="SSk-Cx-D4i" id="ti6-5A-mOW"/>
                         <outlet property="assignmentsTabLabel" destination="qqa-im-x56" id="8Rl-6D-tQ0"/>
                         <outlet property="classesTabLabel" destination="CEM-ub-pvd" id="hVF-bn-uA0"/>
+                        <outlet property="classesViewContainer" destination="Rvg-Nj-Rqj" id="Ihm-KE-7Zo"/>
+                        <outlet property="searchContainerView" destination="S5b-Ye-HgQ" id="efS-qz-bV3"/>
                         <outlet property="searchTabLabel" destination="eGN-Iv-rpi" id="bmA-j1-iu4"/>
                         <outlet property="tabIndicationView" destination="BBW-Ss-end" id="0Ap-gF-bcV"/>
                     </connections>
@@ -248,14 +271,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uE8-jN-6Ga" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1978" y="-883"/>
-        </scene>
-        <!--Page View Container-->
-        <scene sceneID="d4n-u3-clB">
-            <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="6vL-tb-F0e" customClass="PageViewContainer" customModule="Cranbrook_Kingswood" customModuleProvider="target" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CoB-f9-Ua2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1231" y="-830"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="U1S-7g-zdX">
@@ -309,14 +324,14 @@
                         <viewControllerLayoutGuide type="bottom" id="4Qt-Wp-bgy"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2Ey-FQ-BY5">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="494"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.25296245805369127" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5kC-cI-eeC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1231" y="-144"/>
+            <point key="canvasLocation" x="-1978" y="-146"/>
         </scene>
         <!--Assignments View Controller-->
         <scene sceneID="tCv-1Z-dFv">
@@ -327,14 +342,14 @@
                         <viewControllerLayoutGuide type="bottom" id="hFM-xb-eeO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="GcY-fU-YCl">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="494"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.96470588235294119" green="0.64130662751677847" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cFN-e0-yGW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-484" y="-144"/>
+            <point key="canvasLocation" x="-1231" y="-146"/>
         </scene>
         <!--Directory Search View Controller-->
         <scene sceneID="4Ux-ws-wmV">
@@ -345,7 +360,7 @@
                         <viewControllerLayoutGuide type="bottom" id="7ou-UY-4at"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="74t-Pb-wIu">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="494"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="npK-xa-ZBU">
@@ -379,7 +394,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kiJ-up-E3x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="264" y="-144"/>
+            <point key="canvasLocation" x="-483" y="-146"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

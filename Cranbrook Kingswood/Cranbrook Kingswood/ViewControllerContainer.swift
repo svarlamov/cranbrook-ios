@@ -11,23 +11,25 @@ import Alamofire
 import SwiftyJSON
 import ObjectMapper
 
-enum SelectedTabOptions: String {
-    case ClassesTab = "classes_tab"
-    case AssignmentsTab = "assignments_tab"
-    case DirectorySearchTab = "search_tab"
+enum SelectedTabOptions {
+    case ClassesTab
+    case AssignmentsTab
+    case DirectorySearchTab
 }
 
 class ViewControllerContainer: UIViewController {
-
+	
+	//	Tab bar
     @IBOutlet weak var classesTabLabel: UILabel!
     @IBOutlet weak var assignmentsTabLabel: UILabel!
     @IBOutlet weak var searchTabLabel: UILabel!
-    
     @IBOutlet weak var tabIndicationView: UIView!
 	
-	var pageViewContainerView: PageViewContainer = PageViewContainer()
-	let containerViewSegueId: String = "pageViewContainerSegue"
-	var previousDisplayedPage: SelectedTabOptions = .ClassesTab
+	//	View containers
+	@IBOutlet weak var classesViewContainer: UIView!
+	@IBOutlet weak var assignmentsContainerView: UIView!
+	@IBOutlet weak var searchContainerView: UIView!
+	
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,12 +61,6 @@ class ViewControllerContainer: UIViewController {
             setupSelectedTab(.DirectorySearchTab, isAnimated: true)
         }
     }
-	
-	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-		if (segue.identifier == containerViewSegueId) {
-			pageViewContainerView = segue.destinationViewController as! PageViewContainer
-		}
-	}
     
     func setupSelectedTab(tab: SelectedTabOptions, isAnimated: Bool) {
         var animationDuration: NSTimeInterval = 0
@@ -91,7 +87,6 @@ class ViewControllerContainer: UIViewController {
             
         }) { (isComplete) in
             self.tabIndicationView.hidden = false
-			self.previousDisplayedPage = tab
         }
         
         UIView.animateWithDuration(1.0, animations: {
@@ -101,19 +96,19 @@ class ViewControllerContainer: UIViewController {
 	
 	func setPageViewCurrentDisplay(tab: SelectedTabOptions) {
 		if (tab == .ClassesTab) {
-			pageViewContainerView.setViewControllers([pageViewContainerView.pages[0]], direction: .Reverse, animated: true, completion: nil)
+			classesViewContainer.hidden = false
+			assignmentsContainerView.hidden = true
+			searchContainerView.hidden = true
 		
 		} else if (tab == .AssignmentsTab) {
-			var scrollDirection: UIPageViewControllerNavigationDirection = .Forward
-			if (previousDisplayedPage == .ClassesTab) {
-				scrollDirection = .Forward
-			} else if (previousDisplayedPage == .DirectorySearchTab) {
-				scrollDirection = .Reverse
-			}
-			pageViewContainerView.setViewControllers([pageViewContainerView.pages[1]], direction: scrollDirection, animated: true, completion: nil)
+			classesViewContainer.hidden = true
+			assignmentsContainerView.hidden = false
+			searchContainerView.hidden = true
 			
 		} else if (tab == .DirectorySearchTab) {
-			pageViewContainerView.setViewControllers([pageViewContainerView.pages[2]], direction: .Forward, animated: true, completion: nil)
+			classesViewContainer.hidden = true
+			assignmentsContainerView.hidden = true
+			searchContainerView.hidden = false
 			
 		}
 	}

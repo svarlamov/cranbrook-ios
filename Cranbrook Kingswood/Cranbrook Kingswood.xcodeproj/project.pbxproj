@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		700E5D69CB37CA9A74D753D1 /* Pods_Cranbrook_Kingswood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F921898296A250D0E2257CAC /* Pods_Cranbrook_Kingswood.framework */; };
 		A016B6E41D57FC7600A4A68D /* ViewControllerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A016B6E31D57FC7600A4A68D /* ViewControllerContainer.swift */; };
-		A01FB4CA1D5C32E4006D1173 /* PageViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01FB4C91D5C32E4006D1173 /* PageViewContainer.swift */; };
 		A07468811D568DAD00E7ACC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07468801D568DAD00E7ACC0 /* AppDelegate.swift */; };
 		A07468861D568DAD00E7ACC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A07468841D568DAD00E7ACC0 /* Main.storyboard */; };
 		A07468881D568DAD00E7ACC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A07468871D568DAD00E7ACC0 /* Assets.xcassets */; };
@@ -32,7 +31,6 @@
 
 /* Begin PBXFileReference section */
 		A016B6E31D57FC7600A4A68D /* ViewControllerContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerContainer.swift; sourceTree = "<group>"; };
-		A01FB4C91D5C32E4006D1173 /* PageViewContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewContainer.swift; sourceTree = "<group>"; };
 		A074687D1D568DAD00E7ACC0 /* Cranbrook Kingswood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cranbrook Kingswood.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A07468801D568DAD00E7ACC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A07468851D568DAD00E7ACC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -146,7 +144,6 @@
 				A07468981D568F7000E7ACC0 /* StartupViewController.swift */,
 				A08F66F01D57204900FBE55E /* LoginViewController.swift */,
 				A016B6E31D57FC7600A4A68D /* ViewControllerContainer.swift */,
-				A01FB4C91D5C32E4006D1173 /* PageViewContainer.swift */,
 				A09D75AB1D570F8B00B2AA74 /* ClassesViewController.swift */,
 				A09D75A91D570F8400B2AA74 /* AssignmentsViewController.swift */,
 				A09D75AD1D570F9A00B2AA74 /* DirectorySearchViewController.swift */,
@@ -331,7 +328,6 @@
 				A09D75BB1D57159900B2AA74 /* ProgressHUD.m in Sources */,
 				A09D75B01D570FA300B2AA74 /* SettingsViewController.swift in Sources */,
 				A0BD73121D56E58E00889331 /* Constants.swift in Sources */,
-				A01FB4CA1D5C32E4006D1173 /* PageViewContainer.swift in Sources */,
 				A09D75AA1D570F8400B2AA74 /* AssignmentsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
