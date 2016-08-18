@@ -20,8 +20,29 @@ enum SearchDirectories: String {
 
 extension WebServices {
 	
-	internal func searchDirectory(query query: String, directory: SearchDirectories) {
+	internal func searchDirectory(query query: String, directory: SearchDirectories, callBack: (isLoginSuccessful: Bool) -> Void) {
+		let searchRequestUrl: String = searchUrlForDirectorySearch(query, directory: directory)
+		let searchDirectoryRequest: NSMutableURLRequest = createSearchRequestWithUrl(searchRequestUrl)
 		
+		Alamofire.request(searchDirectoryRequest).responseJSON { response in
+			
+			if let loginResponse: JSON = JSON(response.result.value!) {
+				
+				
+			}
+			
+		}
+		
+	}
+	
+	private func createSearchRequestWithUrl(stringUrl: String) -> NSMutableURLRequest {
+		let requestUrl = NSURL(string: stringUrl)!
+		let request = NSMutableURLRequest(URL: requestUrl)
+		request.HTTPMethod = "GET"
+		if let sessionToken = currentSessionInfo?.sessionToken {
+			request.setValue("t=\(sessionToken)", forHTTPHeaderField: "Cookie")
+		}
+		return request
 	}
 	
 	private func searchUrlForDirectorySearch(query: String, directory: SearchDirectories) -> String {
