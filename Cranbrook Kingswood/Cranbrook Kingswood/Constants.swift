@@ -7,19 +7,15 @@
 //
 
 import Foundation
-import ObjectMapper
+import Unbox
 import Alamofire
 import SwiftyJSON
 
-var currentSessionInfo: CurrentLoggedInUserInfo? = nil
-
-var studentClassList: [CurrentUserClasses]? = nil
-
-var searchResults: [SearchResultResponse]? = nil
-
-var selectedTab: SelectedTabOptions = SelectedTabOptions.ClassesTab
-
-var userLoginInfo: UserLoginInfoStructure? = nil;
+var currentSessionInfo:	CurrentLoggedInUserInfo?	= nil
+var studentClassList: [CurrentUserClasses]?			= nil
+var searchResults: [SearchResultResponse?]?			= nil
+var selectedTab: SelectedTabOptions					= SelectedTabOptions.ClassesTab
+var userLoginInfo: UserLoginInfoStructure?			= nil;
 
 
 

@@ -9,16 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>AlamofireObjectMapper.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>ObjectMapper.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-Cranbrook Kingswood.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -29,10 +19,15 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Unbox.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>379E0BD177EB0F1BB190FD447A89D57A</key>
+		<key>787C27959E360D9590A47B5F153CD4F5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,17 +37,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>92C891E5E567118A55717A7355377887</key>
+		<key>7E65F499C021EFCDC76FD8C05FB80255</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C5CBCAA97E951CC882334464FBDF983D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FBD082A0D35F7917EAB9DD9D3CCA9976</key>
+		<key>AE020FEC4B73E604D37C9EFAC4B074D2</key>
 		<dict>
 			<key>primary</key>
 			<true/>

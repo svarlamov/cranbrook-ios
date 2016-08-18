@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'FBD082A0D35F7917EAB9DD9D3CCA9976'
-               BlueprintName = 'AlamofireObjectMapper'
+               BlueprintIdentifier = '7E65F499C021EFCDC76FD8C05FB80255'
+               BlueprintName = 'Unbox'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'AlamofireObjectMapper.framework'>
+               BuildableName = 'Unbox.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

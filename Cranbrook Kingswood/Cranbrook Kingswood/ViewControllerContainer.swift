@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 import SwiftyJSON
-import ObjectMapper
+import Unbox
 
 enum SelectedTabOptions {
     case ClassesTab

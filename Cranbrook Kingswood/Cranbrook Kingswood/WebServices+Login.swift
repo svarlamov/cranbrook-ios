@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 import SwiftyJSON
+import Unbox
 
 enum LoginPersistenceKeys: String {
     case LastLoggedInUsername = "LastLoggedInUsername"
@@ -16,8 +17,8 @@ enum LoginPersistenceKeys: String {
 }
 
 enum CredentialValidationMessages: String {
-    case NotValid = "credentials_invalid"
-    case Valid = "credentials_valid"
+    case NotValid	= "credentials_invalid"
+    case Valid		= "credentials_valid"
 }
 
 func persistLoginData(username: String, password: String) {

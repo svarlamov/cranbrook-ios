@@ -9,13 +9,12 @@
 import Foundation
 import Alamofire
 import SwiftyJSON
-import ObjectMapper
-import AlamofireObjectMapper
+import Unbox
 
 enum SearchDirectories: String {
-	case Alumni = "41"
-	case Students = "449"
-	case Faculty = "177"
+	case Alumni		= "41"
+	case Students	= "449"
+	case Faculty	= "177"
 }
 
 extension WebServices {
@@ -25,14 +24,24 @@ extension WebServices {
 		let searchDirectoryRequest: NSMutableURLRequest = createSearchRequestWithUrl(searchRequestUrl)
 		
 		Alamofire.request(searchDirectoryRequest).responseJSON { response in
-			
-			if let loginResponse: JSON = JSON(response.result.value!) {
-				
-				
+			if let searchQueryResponse: JSON = JSON(response.result.value!) {
+				let searchResponseDictionary: NSArray = searchQueryResponse.rawValue as! NSArray
+				for singularSearchResponseElement in searchResponseDictionary {
+					let singularResponse: NSDictionary = singularSearchResponseElement as! NSDictionary
+					let searchResult: SearchResultResponse? = self.mapDirectorySearchResult(singularResponse)
+				}
 			}
 			
 		}
 		
+	}
+	
+	private func mapDirectorySearchResult(responseObject: NSDictionary) -> SearchResultResponse? {
+		do {
+			let responseElement: SearchResultResponse = try Unbox(responseObject as! UnboxableDictionary)
+			return responseElement
+		} catch {}
+		return nil;
 	}
 	
 	private func createSearchRequestWithUrl(stringUrl: String) -> NSMutableURLRequest {
