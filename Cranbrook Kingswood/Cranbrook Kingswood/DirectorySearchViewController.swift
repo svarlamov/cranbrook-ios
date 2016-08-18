@@ -15,7 +15,7 @@ class DirectorySearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        WebServices.service.searchDirectory(query: "Stefan", directory: .Students) { (isLoginSuccessful) in
+		WebServices.service.searchDirectory(query: "An", directory: .Students) { (searchResponse) in
 			
 		}
     }

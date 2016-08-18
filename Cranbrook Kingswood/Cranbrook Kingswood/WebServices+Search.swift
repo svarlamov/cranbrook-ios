@@ -19,21 +19,31 @@ enum SearchDirectories: String {
 
 extension WebServices {
 	
-	internal func searchDirectory(query query: String, directory: SearchDirectories, callBack: (isLoginSuccessful: Bool) -> Void) {
+	internal func searchDirectory(query query: String, directory: SearchDirectories, callBack: (searchResponse: [SearchResultResponse]?) -> Void) {
 		let searchRequestUrl: String = searchUrlForDirectorySearch(query, directory: directory)
 		let searchDirectoryRequest: NSMutableURLRequest = createSearchRequestWithUrl(searchRequestUrl)
 		
 		Alamofire.request(searchDirectoryRequest).responseJSON { response in
 			if let searchQueryResponse: JSON = JSON(response.result.value!) {
 				let searchResponseDictionary: NSArray = searchQueryResponse.rawValue as! NSArray
+				var returnSearchResultArray: [SearchResultResponse] = [SearchResultResponse]()
+				
 				for singularSearchResponseElement in searchResponseDictionary {
 					let singularResponse: NSDictionary = singularSearchResponseElement as! NSDictionary
 					let searchResult: SearchResultResponse? = self.mapDirectorySearchResult(singularResponse)
+					returnSearchResultArray.append(searchResult!)
+					
 				}
+				callBack(searchResponse: returnSearchResultArray)
+				
 			}
 			
 		}
 		
+	}
+	
+	private func addSingularSearchResultToArray(result: SearchResultResponse?) {
+		searchResults?.append(result!)
 	}
 	
 	private func mapDirectorySearchResult(responseObject: NSDictionary) -> SearchResultResponse? {
