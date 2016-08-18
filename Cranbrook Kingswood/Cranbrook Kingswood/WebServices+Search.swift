@@ -12,7 +12,7 @@ import SwiftyJSON
 import Unbox
 
 enum SearchDirectories: String {
-	case Alumni		= "41"
+	case Alumni	= "41"
 	case Students	= "449"
 	case Faculty	= "177"
 }
