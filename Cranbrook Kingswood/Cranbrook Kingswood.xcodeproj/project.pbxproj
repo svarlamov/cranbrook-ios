@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31375AFF1D6534CD00B07B29 /* WebServices+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31375AFE1D6534CD00B07B29 /* WebServices+Search.swift */; };
 		700E5D69CB37CA9A74D753D1 /* Pods_Cranbrook_Kingswood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F921898296A250D0E2257CAC /* Pods_Cranbrook_Kingswood.framework */; };
 		A016B6E41D57FC7600A4A68D /* ViewControllerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A016B6E31D57FC7600A4A68D /* ViewControllerContainer.swift */; };
 		A07468811D568DAD00E7ACC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07468801D568DAD00E7ACC0 /* AppDelegate.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		31375AFE1D6534CD00B07B29 /* WebServices+Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+Search.swift"; sourceTree = "<group>"; };
 		A016B6E31D57FC7600A4A68D /* ViewControllerContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerContainer.swift; sourceTree = "<group>"; };
 		A074687D1D568DAD00E7ACC0 /* Cranbrook Kingswood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cranbrook Kingswood.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A07468801D568DAD00E7ACC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +72,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31375B001D6536F700B07B29 /* Startup View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A07468981D568F7000E7ACC0 /* StartupViewController.swift */,
+			);
+			name = "Startup View Controller";
+			sourceTree = "<group>";
+		};
+		31375B011D65372300B07B29 /* Tab Bar Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A016B6E31D57FC7600A4A68D /* ViewControllerContainer.swift */,
+			);
+			name = "Tab Bar Controller";
+			sourceTree = "<group>";
+		};
+		31375B021D65372A00B07B29 /* Login View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A08F66F01D57204900FBE55E /* LoginViewController.swift */,
+				A0BD73091D56B27A00889331 /* WebServices+Login.swift */,
+			);
+			name = "Login View Controller";
+			sourceTree = "<group>";
+		};
+		31375B031D65373B00B07B29 /* Classes View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A09D75AB1D570F8B00B2AA74 /* ClassesViewController.swift */,
+				A09D75A71D570F1A00B2AA74 /* WebServices+CurrentClasses.swift */,
+			);
+			name = "Classes View Controller";
+			sourceTree = "<group>";
+		};
+		31375B041D65374600B07B29 /* Assignments View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A09D75A91D570F8400B2AA74 /* AssignmentsViewController.swift */,
+			);
+			name = "Assignments View Controller";
+			sourceTree = "<group>";
+		};
+		31375B051D65375100B07B29 /* Search View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A09D75AD1D570F9A00B2AA74 /* DirectorySearchViewController.swift */,
+				31375AFE1D6534CD00B07B29 /* WebServices+Search.swift */,
+			);
+			name = "Search View Controller";
+			sourceTree = "<group>";
+		};
+		31375B061D65375800B07B29 /* Settings View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A09D75AF1D570FA300B2AA74 /* SettingsViewController.swift */,
+			);
+			name = "Settings View Controller";
+			sourceTree = "<group>";
+		};
 		8676CD42D896F33CC1E5673E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,8 +181,13 @@
 			children = (
 				A0BD730B1D56B98E00889331 /* Plugins */,
 				A07468961D568E9100E7ACC0 /* Core */,
-				A07468941D568E1700E7ACC0 /* Views */,
-				A07468971D568F0800E7ACC0 /* WebServices */,
+				31375B001D6536F700B07B29 /* Startup View Controller */,
+				31375B011D65372300B07B29 /* Tab Bar Controller */,
+				31375B021D65372A00B07B29 /* Login View Controller */,
+				31375B031D65373B00B07B29 /* Classes View Controller */,
+				31375B041D65374600B07B29 /* Assignments View Controller */,
+				31375B051D65375100B07B29 /* Search View Controller */,
+				31375B061D65375800B07B29 /* Settings View Controller */,
 			);
 			name = Code;
 			sourceTree = "<group>";
@@ -138,38 +204,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A07468941D568E1700E7ACC0 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				A07468981D568F7000E7ACC0 /* StartupViewController.swift */,
-				A08F66F01D57204900FBE55E /* LoginViewController.swift */,
-				A016B6E31D57FC7600A4A68D /* ViewControllerContainer.swift */,
-				A09D75AB1D570F8B00B2AA74 /* ClassesViewController.swift */,
-				A09D75A91D570F8400B2AA74 /* AssignmentsViewController.swift */,
-				A09D75AD1D570F9A00B2AA74 /* DirectorySearchViewController.swift */,
-				A09D75AF1D570FA300B2AA74 /* SettingsViewController.swift */,
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
 		A07468961D568E9100E7ACC0 /* Core */ = {
 			isa = PBXGroup;
 			children = (
 				A07468801D568DAD00E7ACC0 /* AppDelegate.swift */,
+				A0BD73031D56972500889331 /* WebServices.swift */,
 				A0BD73071D56974D00889331 /* DataModels.swift */,
 				A0BD73111D56E58E00889331 /* Constants.swift */,
 			);
 			name = Core;
-			sourceTree = "<group>";
-		};
-		A07468971D568F0800E7ACC0 /* WebServices */ = {
-			isa = PBXGroup;
-			children = (
-				A0BD73031D56972500889331 /* WebServices.swift */,
-				A0BD73091D56B27A00889331 /* WebServices+Login.swift */,
-				A09D75A71D570F1A00B2AA74 /* WebServices+CurrentClasses.swift */,
-			);
-			name = WebServices;
 			sourceTree = "<group>";
 		};
 		A09D75BC1D5715C500B2AA74 /* ProgressHUD */ = {
@@ -197,12 +240,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A074688F1D568DAD00E7ACC0 /* Build configuration list for PBXNativeTarget "Cranbrook Kingswood" */;
 			buildPhases = (
-				D24BD6E936FD6C4E40EDF9F4 /* 📦 Check Pods Manifest.lock */,
+				D24BD6E936FD6C4E40EDF9F4 /* [CP] Check Pods Manifest.lock */,
 				A07468791D568DAD00E7ACC0 /* Sources */,
 				A074687A1D568DAD00E7ACC0 /* Frameworks */,
 				A074687B1D568DAD00E7ACC0 /* Resources */,
-				CACB39B8E868627911BFF492 /* 📦 Embed Pods Frameworks */,
-				61D3340A0F8502357C9B123F /* 📦 Copy Pods Resources */,
+				CACB39B8E868627911BFF492 /* [CP] Embed Pods Frameworks */,
+				61D3340A0F8502357C9B123F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -261,14 +304,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		61D3340A0F8502357C9B123F /* 📦 Copy Pods Resources */ = {
+		61D3340A0F8502357C9B123F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,14 +319,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cranbrook Kingswood/Pods-Cranbrook Kingswood-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CACB39B8E868627911BFF492 /* 📦 Embed Pods Frameworks */ = {
+		CACB39B8E868627911BFF492 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,14 +334,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cranbrook Kingswood/Pods-Cranbrook Kingswood-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D24BD6E936FD6C4E40EDF9F4 /* 📦 Check Pods Manifest.lock */ = {
+		D24BD6E936FD6C4E40EDF9F4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,6 +371,7 @@
 				A09D75BB1D57159900B2AA74 /* ProgressHUD.m in Sources */,
 				A09D75B01D570FA300B2AA74 /* SettingsViewController.swift in Sources */,
 				A0BD73121D56E58E00889331 /* Constants.swift in Sources */,
+				31375AFF1D6534CD00B07B29 /* WebServices+Search.swift in Sources */,
 				A09D75AA1D570F8400B2AA74 /* AssignmentsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

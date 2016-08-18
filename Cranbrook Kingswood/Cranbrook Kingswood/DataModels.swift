@@ -34,6 +34,86 @@ struct UserLoginInfoStructure {
     
 }
 
+// MARK: - structure for individual search result elements
+struct SearchResultResponse: Mappable {
+	var userId: Int?
+	var suffic: String?
+	var firstName: String?
+	var middleName: String?
+	var lastName: String?
+	var publishUserProfile: String?
+	var largeFileName: String?
+	var profileImage: UIImage?
+	var email: String?
+	var emailBad: Bool?
+	var publishEmail: Bool?
+	var addressLine1: String?
+	var city: String?
+	var state: String?
+	var zip: String?
+	var homePhone: String?
+	var cellPhone: String?
+	var officePhone: String?
+	var myContactsId: Int?
+	var hasRelationships: Bool?
+	var gradYear: String?
+	var grade: String?
+	var gradeDisplay: String?
+	var department: String?
+	var departmentDisplay: String?
+	var spouseId: Int?
+	var gradeNumeric: Int?
+	var gradeNumericDisplay: String?
+	var totalCount: Int?
+	var deceased: Bool?
+	var isStudentInd: Bool?
+	var preferredAddressId: Int?
+	var preferredAddressLat: Int?
+	var preferredAddressLng: Int?
+	
+	init?(_ map: Map) {
+		
+	}
+	
+	mutating func mapping(map: Map) {
+		userId <- map["UserID"]
+		suffic <- map["UserID"]
+		firstName <- map["UserID"]
+		middleName <- map["UserID"]
+		lastName <- map["UserID"]
+		publishUserProfile <- map["UserID"]
+		largeFileName <- map["UserID"]
+		email <- map["UserID"]
+		emailBad <- map["UserID"]
+		publishEmail <- map["UserID"]
+		addressLine1 <- map["UserID"]
+		city <- map["UserID"]
+		state <- map["UserID"]
+		zip <- map["UserID"]
+		homePhone <- map["UserID"]
+		cellPhone <- map["UserID"]
+		officePhone <- map["UserID"]
+		myContactsId <- map["UserID"]
+		hasRelationships <- map["UserID"]
+		gradYear <- map["UserID"]
+		grade <- map["UserID"]
+		gradeDisplay <- map["UserID"]
+		department <- map["UserID"]
+		departmentDisplay <- map["UserID"]
+		spouseId <- map["UserID"]
+		gradeNumeric <- map["UserID"]
+		gradeNumericDisplay <- map["UserID"]
+		totalCount <- map["UserID"]
+		deceased <- map["UserID"]
+		isStudentInd <- map["UserID"]
+		preferredAddressId <- map["UserID"]
+		preferredAddressLat <- map["UserID"]
+		preferredAddressLng <- map["UserID"]
+		
+	}
+	
+}
+
 
 // MARK: - structure for class list
 struct CurrentUserClasses: Mappable {
