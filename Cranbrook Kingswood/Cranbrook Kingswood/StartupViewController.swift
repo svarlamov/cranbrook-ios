@@ -12,14 +12,14 @@ import SwiftyJSON
 import Unbox
 
 enum startupSegueOptions: String {
-    case continuation	= "StartupCompleteSegue"
-    case login			= "ShowLoginViewController"
+    case continuation   = "StartupCompleteSegue"
+    case login          = "ShowLoginViewController"
 }
 
 enum loginCurrentUserStatusPrintOptions: String {
-    case currentUser			= "logged_in_user"
-    case currentUserButFailed	= "logged_in_user_with_failed_credentials"
-    case noCurrentUser			= "no_logged_in_user"
+    case currentUser            = "logged_in_user"
+    case currentUserButFailed   = "logged_in_user_with_failed_credentials"
+    case noCurrentUser          = "no_logged_in_user"
 }
 
 class StartupViewController: UIViewController {

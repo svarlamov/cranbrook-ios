@@ -10,12 +10,12 @@ import Foundation
 
 // MARK: - structure for current student session info
 struct CurrentLoggedInUserInfo {
-	var userId:			String
-	var sessionToken:	String
+	var userId:         String
+	var sessionToken:   String
 	
 	init(userId: String, sessionToken: String) {
-		self.userId			= userId
-		self.sessionToken	= sessionToken
+		self.userId         = userId
+		self.sessionToken   = sessionToken
 	}
 }
 

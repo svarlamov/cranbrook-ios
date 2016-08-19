@@ -12,13 +12,13 @@ import SwiftyJSON
 import Unbox
 
 enum LoginPersistenceKeys: String {
-    case LastLoggedInUsername = "LastLoggedInUsername"
-    case LastLoggedInPassword = "LastLoggedInPassword"
+    case LastLoggedInUsername   = "LastLoggedInUsername"
+    case LastLoggedInPassword   = "LastLoggedInPassword"
 }
 
 enum CredentialValidationMessages: String {
-    case NotValid	= "credentials_invalid"
-    case Valid		= "credentials_valid"
+    case NotValid   = "credentials_invalid"
+    case Valid      = "credentials_valid"
 }
 
 func persistLoginData(username: String, password: String) {
