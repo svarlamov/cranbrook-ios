@@ -39,7 +39,7 @@ class ViewControllerContainer: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
-        setTab(.ClassesTab)
+        setTab(.AssignmentsTab)
     }
     
     func setupNavigationController() {
@@ -86,7 +86,9 @@ class ViewControllerContainer: UIViewController {
             }
             
         }) { (isComplete) in
-            self.tabIndicationView.hidden = false
+            UIView.animateWithDuration(1.0, animations: { 
+                self.tabIndicationView.hidden = false
+            })
         }
         
         UIView.animateWithDuration(1.0, animations: {

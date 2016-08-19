@@ -11,6 +11,8 @@
 		31C4DA9D1D65644900397716 /* LoginDataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C4DA9C1D65644900397716 /* LoginDataStructure.swift */; };
 		31C4DA9F1D65647A00397716 /* ClassesDataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C4DA9E1D65647A00397716 /* ClassesDataStructure.swift */; };
 		31C4DAA11D65649F00397716 /* SearchDataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C4DAA01D65649F00397716 /* SearchDataStructure.swift */; };
+		31CD309D1D67ABC6001C4647 /* DirectorySearchViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31CD309C1D67ABC6001C4647 /* DirectorySearchViewController+TableView.swift */; };
+		31CD309F1D67ACC7001C4647 /* DirectorySearchViewController+TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31CD309E1D67ACC7001C4647 /* DirectorySearchViewController+TabBar.swift */; };
 		700E5D69CB37CA9A74D753D1 /* Pods_Cranbrook_Kingswood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F921898296A250D0E2257CAC /* Pods_Cranbrook_Kingswood.framework */; };
 		A016B6E41D57FC7600A4A68D /* ViewControllerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A016B6E31D57FC7600A4A68D /* ViewControllerContainer.swift */; };
 		A07468811D568DAD00E7ACC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07468801D568DAD00E7ACC0 /* AppDelegate.swift */; };
@@ -37,6 +39,8 @@
 		31C4DA9C1D65644900397716 /* LoginDataStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginDataStructure.swift; sourceTree = "<group>"; };
 		31C4DA9E1D65647A00397716 /* ClassesDataStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassesDataStructure.swift; sourceTree = "<group>"; };
 		31C4DAA01D65649F00397716 /* SearchDataStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDataStructure.swift; sourceTree = "<group>"; };
+		31CD309C1D67ABC6001C4647 /* DirectorySearchViewController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DirectorySearchViewController+TableView.swift"; sourceTree = "<group>"; };
+		31CD309E1D67ACC7001C4647 /* DirectorySearchViewController+TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DirectorySearchViewController+TabBar.swift"; sourceTree = "<group>"; };
 		A016B6E31D57FC7600A4A68D /* ViewControllerContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerContainer.swift; sourceTree = "<group>"; };
 		A074687D1D568DAD00E7ACC0 /* Cranbrook Kingswood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cranbrook Kingswood.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A07468801D568DAD00E7ACC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +128,8 @@
 			isa = PBXGroup;
 			children = (
 				A09D75AD1D570F9A00B2AA74 /* DirectorySearchViewController.swift */,
+				31CD309C1D67ABC6001C4647 /* DirectorySearchViewController+TableView.swift */,
+				31CD309E1D67ACC7001C4647 /* DirectorySearchViewController+TabBar.swift */,
 				31375AFE1D6534CD00B07B29 /* WebServices+Search.swift */,
 				31C4DAA01D65649F00397716 /* SearchDataStructure.swift */,
 			);
@@ -374,7 +380,9 @@
 				31C4DA9D1D65644900397716 /* LoginDataStructure.swift in Sources */,
 				A09D75AE1D570F9A00B2AA74 /* DirectorySearchViewController.swift in Sources */,
 				A016B6E41D57FC7600A4A68D /* ViewControllerContainer.swift in Sources */,
+				31CD309D1D67ABC6001C4647 /* DirectorySearchViewController+TableView.swift in Sources */,
 				A0BD730A1D56B27B00889331 /* WebServices+Login.swift in Sources */,
+				31CD309F1D67ACC7001C4647 /* DirectorySearchViewController+TabBar.swift in Sources */,
 				A09D75BB1D57159900B2AA74 /* ProgressHUD.m in Sources */,
 				A09D75B01D570FA300B2AA74 /* SettingsViewController.swift in Sources */,
 				A0BD73121D56E58E00889331 /* Constants.swift in Sources */,

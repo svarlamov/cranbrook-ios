@@ -11,10 +11,21 @@ import Alamofire
 import SwiftyJSON
 import Unbox
 
-class DirectorySearchViewController: UIViewController {
+class DirectorySearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var currentSearchDirectory: SearchDirectories = .Students
+    
+    let searchCellIdentifier: String = "search_cell"
     
     // Directory filter tab bar
     @IBOutlet weak var searchTabView: UIView!
+    @IBOutlet weak var tabIndicationView: UIView!
+    @IBOutlet weak var alumniTabButton: UIButton!
+    @IBOutlet weak var alumniTabLabel: UILabel!
+    @IBOutlet weak var studentsTabButton: UIButton!
+    @IBOutlet weak var studentsTabLabel: UILabel!
+    @IBOutlet weak var facultyTabButton: UIButton!
+    @IBOutlet weak var facultyTabLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,21 +34,33 @@ class DirectorySearchViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
+        setTab(.Students, animated: false)
     }
     
-    private func setupViews() {
-        setupTabViewShadow()
+    func setupViews() {
+        self.tabIndicationView.hidden = true
     }
     
-    private func setupTabViewShadow() {
-        self.searchTabView.layer.shadowColor = UIColor.blackColor().CGColor;
-        self.searchTabView.layer.shadowOffset = CGSizeMake(0, 2);
-        self.searchTabView.layer.shadowOpacity = 0.3;
-        self.searchTabView.layer.shadowRadius = 1.0;
+    func setTab(tab: SearchDirectories, animated: Bool) {
+        setupSelectedTab(tab, isAnimated: animated)
+        
     }
     
-    private func searchDirectory(searchQuery: String, directoryFilter: SearchDirectories, callBack: (searchResponse: [SearchResultResponse]?) -> Void) {
-        WebServices.service.searchDirectory(query: "An", directory: .Students) { (searchResponse) in
+    @IBAction func directoryTabPressed(sender: UIButton) {
+        if (sender.tag == 0) {
+            setTab(.Faculty, animated: true)
+            
+        } else if (sender.tag == 1) {
+            setTab(.Students, animated: true)
+            
+        } else if (sender.tag == 2) {
+            setTab(.Alumni, animated: true)
+            
+        }
+    }
+    
+    private func searchDirectory(searchQuery: String, callBack: (searchResponse: [SearchResultResponse]?) -> Void) {
+        WebServices.service.searchDirectory(query: "An", directory: self.currentSearchDirectory) { (searchResponse) in
             callBack(searchResponse: searchResponse)
         }
     }
