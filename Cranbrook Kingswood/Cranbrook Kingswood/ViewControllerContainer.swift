@@ -39,7 +39,7 @@ class ViewControllerContainer: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
-        setTab(.AssignmentsTab)
+        setTab(.DirectorySearchTab)
     }
     
     func setupNavigationController() {

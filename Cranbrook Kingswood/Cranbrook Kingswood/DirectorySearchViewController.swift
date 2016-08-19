@@ -13,9 +13,12 @@ import Unbox
 
 class DirectorySearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    // Directory tab bar data source
     var currentSearchDirectory: SearchDirectories = .Students
     
+    //Table view
     let searchCellIdentifier: String = "search_cell"
+    @IBOutlet weak var tableView: UITableView!
     
     // Directory filter tab bar
     @IBOutlet weak var searchTabView: UIView!
