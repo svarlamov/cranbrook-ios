@@ -140,6 +140,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S5b-Ye-HgQ">
+                                <rect key="frame" x="0.0" y="106" width="600" height="494"/>
+                                <connections>
+                                    <segue destination="U0p-sd-yg3" kind="embed" id="P3F-9m-fOC"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SSk-Cx-D4i">
+                                <rect key="frame" x="0.0" y="106" width="600" height="494"/>
+                                <connections>
+                                    <segue destination="pQp-1P-qLB" kind="embed" id="UnD-KD-qhV"/>
+                                </connections>
+                            </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8mb-T4-HlO">
                                 <rect key="frame" x="0.0" y="64" width="600" height="42"/>
                                 <subviews>
@@ -223,18 +235,6 @@
                                 <rect key="frame" x="0.0" y="106" width="600" height="494"/>
                                 <connections>
                                     <segue destination="tUE-51-RpT" kind="embed" id="vwP-4L-9FN"/>
-                                </connections>
-                            </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SSk-Cx-D4i">
-                                <rect key="frame" x="0.0" y="106" width="600" height="494"/>
-                                <connections>
-                                    <segue destination="pQp-1P-qLB" kind="embed" id="UnD-KD-qhV"/>
-                                </connections>
-                            </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S5b-Ye-HgQ">
-                                <rect key="frame" x="0.0" y="106" width="600" height="494"/>
-                                <connections>
-                                    <segue destination="U0p-sd-yg3" kind="embed" id="P3F-9m-fOC"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -403,6 +403,9 @@
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="searchTabView" destination="npK-xa-ZBU" id="vJI-wv-jeb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kiJ-up-E3x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
