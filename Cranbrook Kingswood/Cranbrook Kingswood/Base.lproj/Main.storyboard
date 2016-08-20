@@ -374,6 +374,9 @@
                                         </constraints>
                                         <color key="barTintColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="U0p-sd-yg3" id="nsc-m1-eaO"/>
+                                        </connections>
                                     </searchBar>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alumni" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpq-C4-xdQ">
                                         <rect key="frame" x="390" y="41" width="180" height="23"/>
@@ -566,10 +569,10 @@
                                     <outlet property="delegate" destination="U0p-sd-yg3" id="Jqa-Jh-cPE"/>
                                 </connections>
                             </tableView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="table_view_shadow_2px" translatesAutoresizingMaskIntoConstraints="NO" id="ZPJ-x0-lye">
-                                <rect key="frame" x="0.0" y="65" width="600" height="5"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="table_view_shadow_2px" translatesAutoresizingMaskIntoConstraints="NO" id="ZPJ-x0-lye">
+                                <rect key="frame" x="-75" y="65" width="750" height="6"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="5" id="Hbn-rZ-Stj"/>
+                                    <constraint firstAttribute="height" constant="6" id="98p-KK-M8C"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -577,13 +580,12 @@
                         <constraints>
                             <constraint firstItem="npK-xa-ZBU" firstAttribute="top" secondItem="MlC-O9-r2k" secondAttribute="bottom" constant="-1" id="1qy-NI-iVo"/>
                             <constraint firstAttribute="trailing" secondItem="3DB-Rp-376" secondAttribute="trailing" id="4iB-0N-zc8"/>
+                            <constraint firstItem="ZPJ-x0-lye" firstAttribute="top" secondItem="3DB-Rp-376" secondAttribute="bottom" constant="20" id="7RX-wN-Dbm"/>
                             <constraint firstItem="3DB-Rp-376" firstAttribute="leading" secondItem="74t-Pb-wIu" secondAttribute="leading" id="7uA-rd-qph"/>
                             <constraint firstItem="7ou-UY-4at" firstAttribute="top" secondItem="DaB-tl-Jyk" secondAttribute="bottom" id="Cq0-79-Trh"/>
+                            <constraint firstItem="ZPJ-x0-lye" firstAttribute="centerX" secondItem="74t-Pb-wIu" secondAttribute="centerX" id="EQo-Nr-SNy"/>
                             <constraint firstAttribute="trailing" secondItem="npK-xa-ZBU" secondAttribute="trailing" id="Jtc-4W-4Vc"/>
-                            <constraint firstAttribute="trailing" secondItem="ZPJ-x0-lye" secondAttribute="trailing" id="O1y-eN-Azk"/>
-                            <constraint firstItem="ZPJ-x0-lye" firstAttribute="top" secondItem="3DB-Rp-376" secondAttribute="bottom" constant="20" id="Q3O-Vh-86t"/>
                             <constraint firstItem="3DB-Rp-376" firstAttribute="top" secondItem="MlC-O9-r2k" secondAttribute="bottom" constant="42" id="Rrs-ti-aEB"/>
-                            <constraint firstItem="ZPJ-x0-lye" firstAttribute="leading" secondItem="74t-Pb-wIu" secondAttribute="leading" id="e2U-xK-EEo"/>
                             <constraint firstItem="npK-xa-ZBU" firstAttribute="leading" secondItem="74t-Pb-wIu" secondAttribute="leading" id="nDW-mS-Ctt"/>
                             <constraint firstAttribute="trailing" secondItem="DaB-tl-Jyk" secondAttribute="trailing" id="sPB-tA-XTX"/>
                             <constraint firstItem="DaB-tl-Jyk" firstAttribute="top" secondItem="npK-xa-ZBU" secondAttribute="bottom" constant="2" id="sff-z8-jBX"/>
@@ -594,6 +596,7 @@
                     <connections>
                         <outlet property="alumniTabButton" destination="Cln-IK-kfb" id="s1w-yp-Bfw"/>
                         <outlet property="alumniTabLabel" destination="mpq-C4-xdQ" id="vyG-pQ-tUh"/>
+                        <outlet property="directorySearchBar" destination="HvD-eG-TOd" id="9dN-rn-5eg"/>
                         <outlet property="facultyTabButton" destination="L1r-yS-32S" id="OeW-bh-gW7"/>
                         <outlet property="facultyTabLabel" destination="1Nb-0N-2R6" id="3qn-Dt-EKu"/>
                         <outlet property="searchTabView" destination="npK-xa-ZBU" id="vJI-wv-jeb"/>

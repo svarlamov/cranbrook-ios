@@ -11,7 +11,10 @@ import Alamofire
 import SwiftyJSON
 import Unbox
 
-class DirectorySearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class DirectorySearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+    
+    // Search bar
+    @IBOutlet weak var directorySearchBar: UISearchBar!
     
     // Directory tab bar data source
     var currentSearchDirectory: SearchDirectories = .Students
@@ -35,9 +38,17 @@ class DirectorySearchViewController: UIViewController, UITableViewDelegate, UITa
 		setupViews()
     }
     
+    func searchDirectory(searchQuery: String) {
+        WebServices.service.searchDirectory(query: searchQuery, directory: self.currentSearchDirectory) { (searchResponse) in
+            searchResults = searchResponse!
+            self.tableView.reloadData()
+        }
+    }
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
         setTab(.Students, animated: false)
+        searchDirectory("stefan")
     }
     
     func setupViews() {
@@ -46,7 +57,6 @@ class DirectorySearchViewController: UIViewController, UITableViewDelegate, UITa
     
     func setTab(tab: SearchDirectories, animated: Bool) {
         setupSelectedTab(tab, isAnimated: animated)
-        
     }
     
     @IBAction func directoryTabPressed(sender: UIButton) {
@@ -59,12 +69,6 @@ class DirectorySearchViewController: UIViewController, UITableViewDelegate, UITa
         } else if (sender.tag == 2) {
             setTab(.Alumni, animated: true)
             
-        }
-    }
-    
-    private func searchDirectory(searchQuery: String, callBack: (searchResponse: [SearchResultResponse]?) -> Void) {
-        WebServices.service.searchDirectory(query: "An", directory: self.currentSearchDirectory) { (searchResponse) in
-            callBack(searchResponse: searchResponse)
         }
     }
     

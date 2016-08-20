@@ -19,7 +19,11 @@ extension DirectorySearchViewController {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 30
+        if searchResults == nil || searchResults?.count == 0 {
+            return 0;
+        } else {
+            return (searchResults?.count)!
+        }
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -32,6 +36,7 @@ extension DirectorySearchViewController {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(self.searchCellIdentifier, forIndexPath: indexPath) as! SearchResultTableViewCell
+        cell.userInteractionEnabled = false
         return cell
     }
     
