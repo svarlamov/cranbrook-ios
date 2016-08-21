@@ -49,7 +49,19 @@ extension DirectorySearchViewController {
         if let email = inputData.email {
             outputString = email
         } else {
-            print("no email")
+            outputString = outputString + "No email"
+            
+            if let officePhone = inputData.officePhone {
+                outputString = outputString + ", \(officePhone)"
+                return outputString
+            } else if let cellPhone = inputData.cellPhone {
+                outputString = outputString + ", \(cellPhone)"
+                return outputString
+            } else if let homePhone = inputData.homePhone {
+                outputString = outputString + ", \(homePhone)"
+                return outputString
+            }
+            
         }
         
         return outputString
