@@ -36,8 +36,57 @@ extension DirectorySearchViewController {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(self.searchCellIdentifier, forIndexPath: indexPath) as! SearchResultTableViewCell
+        let instanceSearchResult = searchResults![indexPath.row]
+        cell.titleLabel.text = getTitleLabelNameText(instanceSearchResult)
+        cell.detailLabel.text = getDetailLabelText(instanceSearchResult)
         cell.userInteractionEnabled = false
         return cell
+    }
+    
+    private func getDetailLabelText(inputData: SearchResultResponse) -> String {
+        var outputString: String = ""
+        
+        if let email = inputData.email {
+            outputString = email
+        } else {
+            print("no email")
+        }
+        
+        return outputString
+        
+    }
+    
+    private func getTitleLabelNameText(inputData: SearchResultResponse) -> String {
+        var outputString: String = ""
+        
+        if let firstName = inputData.firstName {
+            outputString = firstName
+        }
+        
+        if let middleName = inputData.middleName {
+            outputString = outputString + " \(middleName)"
+        }
+        
+        if let lastName = inputData.lastName {
+            outputString = outputString + " \(lastName)"
+        }
+        
+        if currentSearchDirectory == .Faculty {
+            if let department = inputData.departmentDisplay {
+                outputString = outputString + ", \(department)"
+            }
+        } else {
+            if let graduationYear = inputData.gradYear {
+                if graduationYear != "" && graduationYear.characters.count == 4 {
+                    let characters = [Character](graduationYear.characters)
+                    let finalGraduationString: String = " '\(characters[2])\(characters[3])"
+                    outputString = outputString + finalGraduationString
+                }
+            }
+        }
+        
+        return outputString
+        
     }
     
 }

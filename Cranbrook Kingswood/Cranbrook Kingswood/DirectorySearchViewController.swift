@@ -41,14 +41,20 @@ class DirectorySearchViewController: UIViewController, UITableViewDelegate, UITa
     func searchDirectory(searchQuery: String) {
         WebServices.service.searchDirectory(query: searchQuery, directory: self.currentSearchDirectory) { (searchResponse) in
             searchResults = searchResponse!
+            ProgressHUD.dismiss()
             self.tableView.reloadData()
         }
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        searchDirectory(searchBar.text!)
+        ProgressHUD.show()
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
         setTab(.Students, animated: false)
-        searchDirectory("stefan")
     }
     
     func setupViews() {
