@@ -32,6 +32,7 @@ extension DirectorySearchViewController {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(self.searchCellIdentifier, forIndexPath: indexPath) as! SearchResultTableViewCell
+        cell.selectionStyle = .None;
         cell.titleLabel.text = getTitleLabelNameText(searchResults![indexPath.row])
         cell.detailLabel.text = getDetailLabelText(searchResults![indexPath.row])
         if searchResults![indexPath.row].profileImage != nil {
@@ -39,7 +40,6 @@ extension DirectorySearchViewController {
         } else {
             cell.profileImageView.image = UIImage(named: "default_user_icon")
         }
-        cell.userInteractionEnabled = false
         return cell
     }
     
