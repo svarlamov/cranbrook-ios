@@ -9,6 +9,8 @@
 import Foundation
 import Unbox
 
+let searchUserImageRequestSuffix: String = "https://bbk12e1-cdn.myschoolcdn.com/ftpimages/209/user/"
+
 // MARK: - structure for individual search result elements
 struct SearchResultResponse {
 	var userId:                 Int?
@@ -18,7 +20,7 @@ struct SearchResultResponse {
 	var lastName:               String?
 	var publishUserProfile:     String?
 	var largeFileName:          String?
-	var profileImage:           UIImage?
+	var profileImage:           UIImage? = nil
 	var email:                  String?
     var emailBad:               Bool?
 	var publishEmail:           Bool?
@@ -46,7 +48,7 @@ struct SearchResultResponse {
 	var preferredAddressId:     Int?
     var preferredAddressLat:    Int?
 	var preferredAddressLng:    Int?
-	
+    
 }
 
 extension SearchResultResponse: Unboxable {
@@ -85,6 +87,14 @@ extension SearchResultResponse: Unboxable {
 		self.preferredAddressId     = unboxer.unbox("PreferredAddressId")
 		self.preferredAddressLat    = unboxer.unbox("PreferredAddressLat")
 		self.preferredAddressLng    = unboxer.unbox("PreferredAddressLng")
+        
+        if let imageAddress = self.largeFileName {
+            let urlString: String = searchUserImageRequestSuffix + imageAddress
+            let url = NSURL(string: urlString)
+            let data = NSData(contentsOfURL: url!)
+            self.profileImage = UIImage(data: data!)
+        }
+        
 	}
 }
 

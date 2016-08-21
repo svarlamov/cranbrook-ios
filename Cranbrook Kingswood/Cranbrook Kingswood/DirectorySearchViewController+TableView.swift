@@ -14,10 +14,6 @@ import Unbox
 
 extension DirectorySearchViewController {
     
-    func setupTableView() {
-        
-    }
-    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if searchResults == nil || searchResults?.count == 0 {
             return 0;
@@ -36,9 +32,13 @@ extension DirectorySearchViewController {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(self.searchCellIdentifier, forIndexPath: indexPath) as! SearchResultTableViewCell
-        let instanceSearchResult = searchResults![indexPath.row]
-        cell.titleLabel.text = getTitleLabelNameText(instanceSearchResult)
-        cell.detailLabel.text = getDetailLabelText(instanceSearchResult)
+        cell.titleLabel.text = getTitleLabelNameText(searchResults![indexPath.row])
+        cell.detailLabel.text = getDetailLabelText(searchResults![indexPath.row])
+        if searchResults![indexPath.row].profileImage != nil {
+            cell.profileImageView.image = searchResults![indexPath.row].profileImage
+        } else {
+            cell.profileImageView.image = UIImage(named: "default_user_icon")
+        }
         cell.userInteractionEnabled = false
         return cell
     }
