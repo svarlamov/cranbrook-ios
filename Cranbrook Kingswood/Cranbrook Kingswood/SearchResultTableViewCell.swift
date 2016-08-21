@@ -26,10 +26,15 @@ class SearchResultTableViewCell: UITableViewCell {
     
     func setupViews() {
         roundCellContentViewCorners()
-        addShadowToCellContentView()
+        roundImageView()
     }
     
-    func addShadowToCellContentView() {
+    func roundImageView() {
+        self.profileImageView.layer.borderWidth = 1
+        self.profileImageView.layer.masksToBounds = false
+        self.profileImageView.layer.borderColor = UIColor.clearColor().CGColor
+        self.profileImageView.layer.cornerRadius = self.profileImageView.frame.height/2
+        self.profileImageView.clipsToBounds = true
     }
     
     func roundCellContentViewCorners() {
