@@ -33,6 +33,8 @@
 		A0BD730A1D56B27B00889331 /* WebServices+Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BD73091D56B27A00889331 /* WebServices+Login.swift */; };
 		A0BD73101D56B9CA00889331 /* CranbrookAPIInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BD730F1D56B9CA00889331 /* CranbrookAPIInfo.swift */; };
 		A0BD73121D56E58E00889331 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BD73111D56E58E00889331 /* Constants.swift */; };
+		D7C10B2B1D70B8D700C9B66F /* WebServices+ClassDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C10B2A1D70B8D700C9B66F /* WebServices+ClassDetail.swift */; };
+		D7C10B2D1D70BB9700C9B66F /* ClassDetailDataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C10B2C1D70BB9700C9B66F /* ClassDetailDataStructure.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +69,8 @@
 		A0BD73111D56E58E00889331 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B3DD1C0F8761A3660B544FB4 /* Pods-Cranbrook Kingswood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cranbrook Kingswood.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cranbrook Kingswood/Pods-Cranbrook Kingswood.debug.xcconfig"; sourceTree = "<group>"; };
 		BC1DCB26B33F435898567871 /* Pods-Cranbrook Kingswood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cranbrook Kingswood.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cranbrook Kingswood/Pods-Cranbrook Kingswood.release.xcconfig"; sourceTree = "<group>"; };
+		D7C10B2A1D70B8D700C9B66F /* WebServices+ClassDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+ClassDetail.swift"; sourceTree = "<group>"; };
+		D7C10B2C1D70BB9700C9B66F /* ClassDetailDataStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassDetailDataStructure.swift; sourceTree = "<group>"; };
 		F921898296A250D0E2257CAC /* Pods_Cranbrook_Kingswood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cranbrook_Kingswood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -186,6 +190,7 @@
 				A0BD73091D56B27A00889331 /* WebServices+Login.swift */,
 				31375AFE1D6534CD00B07B29 /* WebServices+Search.swift */,
 				A09D75A71D570F1A00B2AA74 /* WebServices+CurrentClasses.swift */,
+				D7C10B2A1D70B8D700C9B66F /* WebServices+ClassDetail.swift */,
 			);
 			name = WebServices;
 			sourceTree = "<group>";
@@ -195,6 +200,7 @@
 			children = (
 				31C4DA9C1D65644900397716 /* LoginDataStructure.swift */,
 				31C4DA9E1D65647A00397716 /* ClassesDataStructure.swift */,
+				D7C10B2C1D70BB9700C9B66F /* ClassDetailDataStructure.swift */,
 				31C4DAA01D65649F00397716 /* SearchDataStructure.swift */,
 			);
 			name = "Data Models";
@@ -347,6 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7C10B2B1D70B8D700C9B66F /* WebServices+ClassDetail.swift in Sources */,
 				A0BD73101D56B9CA00889331 /* CranbrookAPIInfo.swift in Sources */,
 				31C4DAA11D65649F00397716 /* SearchDataStructure.swift in Sources */,
 				A09D75A81D570F1A00B2AA74 /* WebServices+CurrentClasses.swift in Sources */,
@@ -359,6 +366,7 @@
 				31C4DA9D1D65644900397716 /* LoginDataStructure.swift in Sources */,
 				A09D75AE1D570F9A00B2AA74 /* DirectorySearchViewController.swift in Sources */,
 				A016B6E41D57FC7600A4A68D /* ViewControllerContainer.swift in Sources */,
+				D7C10B2D1D70BB9700C9B66F /* ClassDetailDataStructure.swift in Sources */,
 				31CD30AB1D67BEB2001C4647 /* SearchResultTableViewCell.swift in Sources */,
 				31CD309D1D67ABC6001C4647 /* DirectorySearchViewController+TableView.swift in Sources */,
 				A0BD730A1D56B27B00889331 /* WebServices+Login.swift in Sources */,
