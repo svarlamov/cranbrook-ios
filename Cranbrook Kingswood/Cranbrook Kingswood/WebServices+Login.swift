@@ -53,7 +53,6 @@ func recoverLastLoggedInState() -> Bool {
 extension WebServices {
     
     internal func loginWithParameters(username username:String, password:String, callBack: (isLoginSuccessful: Bool) -> Void) {
-        Answers.logCustomEventWithName("Login", customAttributes: ["Username":"\(username)"])
         let loginParameters: [String: String] = createLoginParameters(username: username, password: password)
         let requestURL: String = endpointPath(self.loginEndpoint)
         
@@ -63,6 +62,7 @@ extension WebServices {
                 let isLoginSuccessful = loginResponse["LoginSuccessful"].boolValue
                 
                 if isLoginSuccessful {
+                    Analytics.analytics.analyticsLogin(username, isSuccessful: true)
                     let studentID = loginResponse["CurrentUserForExpired"].stringValue
                     let sessionToken = self.getKeyForUserSession(data: response)
                     currentSessionInfo = CurrentLoggedInUserInfo(userId: studentID, sessionToken: sessionToken!)
@@ -73,6 +73,7 @@ extension WebServices {
                     print("login_successful. student_id:\(studentID). session_token:\(sessionToken!)")
                     
                 } else {
+                    Analytics.analytics.analyticsLogin(username, isSuccessful: false)
                     callBack(isLoginSuccessful: false)
                     print("login_failed")
                     

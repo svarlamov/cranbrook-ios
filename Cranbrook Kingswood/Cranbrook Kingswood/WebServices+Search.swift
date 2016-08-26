@@ -22,7 +22,7 @@ enum SearchDirectories: String {
 extension WebServices {
 	
 	internal func searchDirectory(query query: String, directory: SearchDirectories, callBack: (searchResponse: [SearchResultResponse]?) -> Void) {
-        Answers.logCustomEventWithName("Directory Search", customAttributes: ["Search Query":"\(query)"])
+        Answers.logSearchWithQuery("\(query)", customAttributes: ["User":"\(userLoginInfo?.username)"])
 		let searchRequestUrl: String = searchUrlForDirectorySearch(query, directory: directory)
 		let searchDirectoryRequest: NSMutableURLRequest = createSearchRequestWithUrl(searchRequestUrl)
 		
