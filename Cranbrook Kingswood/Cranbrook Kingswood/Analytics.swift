@@ -24,30 +24,46 @@ class Analytics {
         } else {
             boolNumber = 0
         }
-        if isAnalyticsEnabled {
-            Answers.logLoginWithMethod("Login", success: boolNumber, customAttributes: ["Username":"\(username)"])
-        }
+        dispatch_async(dispatch_get_main_queue(),{
+            if self.isAnalyticsEnabled {
+                Answers.logLoginWithMethod("Login", success: boolNumber, customAttributes: ["Username":"\(username)"])
+            }
+        })
     }
     
     //  Search Analytics Method
     internal func logSearch(searchQuery: String) {
-        if isAnalyticsEnabled {
-            Answers.logSearchWithQuery("\(searchQuery)", customAttributes: ["User":"\(userLoginInfo?.username)"])
-        }
+        dispatch_async(dispatch_get_main_queue(), {
+            if self.isAnalyticsEnabled {
+                Answers.logSearchWithQuery("\(searchQuery)", customAttributes: ["User":"\(userLoginInfo?.username)"])
+            }
+        })
     }
     
     //  User Session Analytics Method
     internal func logUserSession() {
-        if isAnalyticsEnabled {
-            Answers.logCustomEventWithName("Application Launches", customAttributes: nil)
-        }
+        dispatch_async(dispatch_get_main_queue(), {
+            if self.isAnalyticsEnabled {
+                Answers.logCustomEventWithName("Application Launches", customAttributes: nil)
+            }
+        })
     }
     
     //  Tab Switches Analytics Method
     internal func logTabSelection(selectedTab: String) {
-        if isAnalyticsEnabled {
-            Answers.logCustomEventWithName("Tab Selection", customAttributes: ["Selected Tab":"\(selectedTab)"])
-        }
+        dispatch_async(dispatch_get_main_queue(), {
+            if self.isAnalyticsEnabled {
+                Answers.logCustomEventWithName("Tab Selection", customAttributes: ["Selected Tab":"\(selectedTab)"])
+            }
+        })
     }
     
 }
+
+
+
+
+
+
+
+
