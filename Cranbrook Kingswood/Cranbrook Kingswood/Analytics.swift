@@ -12,7 +12,7 @@ import Crashlytics
 
 class Analytics {
     
-    private var isAnalyticsEnabled: Bool = false
+    private var isAnalyticsEnabled: Bool = true
     
     static let analytics = Analytics()
     
