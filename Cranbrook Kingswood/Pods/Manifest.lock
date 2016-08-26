@@ -1,21 +1,18 @@
 PODS:
   - Alamofire (3.4.1)
-  - SwiftMessages (1.1.1)
   - SwiftyJSON (2.3.2)
-  - Unbox (1.8)
+  - Unbox (1.9)
 
 DEPENDENCIES:
   - Alamofire (~> 3.4)
-  - SwiftMessages
   - SwiftyJSON
   - Unbox
 
 SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
-  SwiftMessages: 5419699a94516ddf2af21c0e067f2e7e3c2b6b29
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
-  Unbox: 6d65ec8ae5fcf35ba6850c8c6dff290b08465673
+  Unbox: a6f56a1682b5fd2ba6aea96d7b1ec17599db4f05
 
-PODFILE CHECKSUM: fd4537d058c5229563a4d3ca4c9df523eaad9f3d
+PODFILE CHECKSUM: e7a6f265152b9f7a79f6e2316ed4895e753a9a3e
 
 COCOAPODS: 1.0.1

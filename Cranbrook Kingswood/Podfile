@@ -9,6 +9,5 @@ target 'Cranbrook Kingswood' do
   pod 'SwiftyJSON'
   pod 'Alamofire', '~> 3.4'  
   pod "Unbox"
-  pod 'SwiftMessages'
 
 end
