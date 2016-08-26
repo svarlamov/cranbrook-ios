@@ -10,8 +10,6 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import Unbox
-import Crashlytics
-import Fabric
 
 enum startupSegueOptions: String {
     case continuation   = "StartupCompleteSegue"

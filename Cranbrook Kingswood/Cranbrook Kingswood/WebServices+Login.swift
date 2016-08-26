@@ -10,8 +10,6 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 import Unbox
-import Fabric
-import Crashlytics
 
 enum LoginPersistenceKeys: String {
     case LastLoggedInUsername   = "LastLoggedInUsername"

@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         Fabric.with([Crashlytics.self])
-        Answers.logCustomEventWithName("Application Launches", customAttributes: nil)
+        Analytics.analytics.logUserSession()
         return true
     }
 

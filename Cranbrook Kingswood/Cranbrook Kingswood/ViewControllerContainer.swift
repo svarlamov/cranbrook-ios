@@ -11,10 +11,10 @@ import Alamofire
 import SwiftyJSON
 import Unbox
 
-enum SelectedTabOptions {
-    case ClassesTab
-    case AssignmentsTab
-    case DirectorySearchTab
+enum SelectedTabOptions: String {
+    case ClassesTab             = "Classes Tab"
+    case AssignmentsTab         = "Assignments Tab"
+    case DirectorySearchTab     = "Directory Search Tab"
 }
 
 class ViewControllerContainer: UIViewController {
@@ -63,6 +63,7 @@ class ViewControllerContainer: UIViewController {
     }
     
     func setupSelectedTab(tab: SelectedTabOptions, isAnimated: Bool) {
+        Analytics.analytics.logTabSelection(tab.rawValue)
         var animationDuration: NSTimeInterval = 0
         if (isAnimated) {
             animationDuration = 0.3
