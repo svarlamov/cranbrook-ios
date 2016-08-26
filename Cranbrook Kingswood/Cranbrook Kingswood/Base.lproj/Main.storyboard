@@ -119,6 +119,7 @@
                     <navigationItem key="navigationItem" title="CRANBROOK" id="RXA-KN-Qt6"/>
                     <connections>
                         <outlet property="logInButton" destination="FOM-sM-Wkm" id="ho7-X2-Vjb"/>
+                        <outlet property="loginMessageLabel" destination="urL-RU-cso" id="r0k-EC-yzs"/>
                         <outlet property="passwordTextField" destination="QTA-GO-uK0" id="9gG-Hd-EkL"/>
                         <outlet property="usernameTextField" destination="6BT-wP-L6q" id="Ma5-UG-yPH"/>
                         <segue destination="fhv-cY-TqV" kind="presentation" identifier="StartupCompleteSegue" modalTransitionStyle="crossDissolve" id="8ak-eE-lO9"/>
@@ -626,6 +627,6 @@
         <image name="table_view_shadow_2px" width="750" height="6"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="twR-EM-b5c"/>
+        <segue reference="8ak-eE-lO9"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -16,6 +16,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var logInButton: UIButton!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginMessageLabel: UILabel!
 	
     let placeholderTextColor: UIColor = UIColor(red: 192/255, green: 191/255, blue: 196/255, alpha: 1.0)
 	
@@ -47,15 +48,22 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     self.takeSegue(.continuation)
                 } else {
                     ProgressHUD.dismiss()
+                    self.displayLoginError(withMessage: "Error: Login Credentials Invalid")
                     print(loginCurrentUserStatusPrintOptions.currentUser.rawValue)
                 }
             })
             
         } else {
+            self.displayLoginError(withMessage: "Error: Username and Password Blank")
             print(CredentialValidationMessages.NotValid.rawValue)
             
         }
         
+    }
+    
+    func displayLoginError(withMessage withText: String!) {
+        loginMessageLabel.text = withText
+        loginMessageLabel.textColor = UIColor.redColor()
     }
     
     private func isValidCredential(inputUsername: String, inputPassword: String) -> Bool {
