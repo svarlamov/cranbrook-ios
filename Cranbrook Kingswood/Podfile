@@ -8,6 +8,8 @@ target 'Cranbrook Kingswood' do
   # Pods for Cranbrook Kingswood
   pod 'SwiftyJSON'
   pod 'Alamofire', '~> 3.4'  
-  pod "Unbox"
+  pod 'Unbox'
+  pod 'Fabric'
+  pod 'Crashlytics'
 
 end

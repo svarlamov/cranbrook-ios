@@ -25,7 +25,6 @@ enum loginCurrentUserStatusPrintOptions: String {
 class StartupViewController: UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

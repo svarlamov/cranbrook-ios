@@ -10,6 +10,8 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 import Unbox
+import Fabric
+import Crashlytics
 
 enum SearchDirectories: String {
 	case Alumni     = "41"
@@ -20,6 +22,7 @@ enum SearchDirectories: String {
 extension WebServices {
 	
 	internal func searchDirectory(query query: String, directory: SearchDirectories, callBack: (searchResponse: [SearchResultResponse]?) -> Void) {
+        Answers.logCustomEventWithName("Directory Search", customAttributes: ["Search Query":"\(query)", "Searched Directory":"\(directory.rawValue)"])
 		let searchRequestUrl: String = searchUrlForDirectorySearch(query, directory: directory)
 		let searchDirectoryRequest: NSMutableURLRequest = createSearchRequestWithUrl(searchRequestUrl)
 		

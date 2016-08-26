@@ -10,6 +10,8 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 import Unbox
+import Fabric
+import Crashlytics
 
 enum LoginPersistenceKeys: String {
     case LastLoggedInUsername   = "LastLoggedInUsername"
@@ -51,6 +53,7 @@ func recoverLastLoggedInState() -> Bool {
 extension WebServices {
     
     internal func loginWithParameters(username username:String, password:String, callBack: (isLoginSuccessful: Bool) -> Void) {
+        Answers.logCustomEventWithName("Login", customAttributes: ["Username":"\(username)"])
         let loginParameters: [String: String] = createLoginParameters(username: username, password: password)
         let requestURL: String = endpointPath(self.loginEndpoint)
         
