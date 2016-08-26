@@ -21,8 +21,8 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cranbrook Kingswood" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="747-4N-IGf">
                                 <rect key="frame" x="225" y="256" width="151" height="87"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="151" id="Rx9-gr-2lf"/>
-                                    <constraint firstAttribute="height" constant="87" id="W1t-no-czI"/>
+                                    <constraint firstAttribute="height" constant="87" id="bCu-sc-rPx"/>
+                                    <constraint firstAttribute="width" constant="151" id="h2Z-uD-0o4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="28"/>
                                 <color key="textColor" red="0.20784313725490194" green="0.20784313725490194" blue="0.20784313725490194" alpha="1" colorSpace="calibratedRGB"/>
@@ -31,11 +31,12 @@
                         </subviews>
                         <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="747-4N-IGf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="28b-Uu-qGK"/>
-                            <constraint firstItem="747-4N-IGf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="beL-LG-Y84"/>
+                            <constraint firstItem="747-4N-IGf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="034-eR-kUw"/>
+                            <constraint firstItem="747-4N-IGf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jLJ-LW-y56"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="titleLabel" destination="747-4N-IGf" id="E0I-Wv-DET"/>
                         <segue destination="mIp-Sa-e7H" kind="presentation" identifier="ShowLoginViewController" modalTransitionStyle="crossDissolve" id="suC-Zd-F3g"/>
                         <segue destination="fhv-cY-TqV" kind="presentation" identifier="StartupCompleteSegue" modalTransitionStyle="crossDissolve" id="twR-EM-b5c"/>
                     </connections>
@@ -57,7 +58,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="6BT-wP-L6q">
-                                <rect key="frame" x="20" y="80" width="560" height="44"/>
+                                <rect key="frame" x="20" y="73" width="560" height="44"/>
                                 <color key="backgroundColor" red="0.90588235294117647" green="0.90588235294117647" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="88E-t4-Mgs"/>
@@ -67,7 +68,7 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="QTA-GO-uK0">
-                                <rect key="frame" x="20" y="133" width="560" height="44"/>
+                                <rect key="frame" x="20" y="126" width="560" height="44"/>
                                 <color key="backgroundColor" red="0.90601668552036196" green="0.90601668552036196" blue="0.90601668552036196" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="xpb-tR-CH3"/>
@@ -77,7 +78,7 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FOM-sM-Wkm">
-                                <rect key="frame" x="20" y="233" width="560" height="50"/>
+                                <rect key="frame" x="20" y="226" width="560" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="gMQ-KY-4mU"/>
@@ -91,7 +92,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log In With Your CK Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urL-RU-cso">
-                                <rect key="frame" x="22" y="185" width="255" height="21"/>
+                                <rect key="frame" x="22" y="178" width="255" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="DIA-Rx-9rF"/>
                                     <constraint firstAttribute="width" constant="255" id="z1f-Le-jTH"/>
@@ -108,7 +109,7 @@
                             <constraint firstAttribute="trailing" secondItem="FOM-sM-Wkm" secondAttribute="trailing" constant="20" id="IQN-FC-JhD"/>
                             <constraint firstAttribute="trailing" secondItem="6BT-wP-L6q" secondAttribute="trailing" constant="20" id="Lnx-C0-gO7"/>
                             <constraint firstItem="QTA-GO-uK0" firstAttribute="leading" secondItem="shg-AU-2Pj" secondAttribute="leading" constant="20" id="NR1-VQ-lfq"/>
-                            <constraint firstItem="6BT-wP-L6q" firstAttribute="top" secondItem="C2k-R4-QFs" secondAttribute="bottom" constant="16" id="Sfe-bi-csC"/>
+                            <constraint firstItem="6BT-wP-L6q" firstAttribute="top" secondItem="C2k-R4-QFs" secondAttribute="bottom" constant="9" id="Sfe-bi-csC"/>
                             <constraint firstItem="6BT-wP-L6q" firstAttribute="leading" secondItem="shg-AU-2Pj" secondAttribute="leading" constant="20" id="XpN-Gg-l0c"/>
                             <constraint firstItem="FOM-sM-Wkm" firstAttribute="top" secondItem="urL-RU-cso" secondAttribute="bottom" constant="27" id="vdo-Re-BHx"/>
                             <constraint firstItem="urL-RU-cso" firstAttribute="top" secondItem="QTA-GO-uK0" secondAttribute="bottom" constant="8" id="x5V-fZ-HYR"/>
@@ -626,6 +627,6 @@
         <image name="table_view_shadow_2px" width="750" height="6"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8ak-eE-lO9"/>
+        <segue reference="twR-EM-b5c"/>
     </inferredMetricsTieBreakers>
 </document>
