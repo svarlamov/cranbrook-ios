@@ -36,7 +36,9 @@ class DirectorySearchViewController: UIViewController, UITableViewDelegate, UITa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        searchDirectory("")
+        dispatch_async(dispatch_get_main_queue(),{
+            self.searchDirectory("")
+        })
 		setupViews()
     }
     
