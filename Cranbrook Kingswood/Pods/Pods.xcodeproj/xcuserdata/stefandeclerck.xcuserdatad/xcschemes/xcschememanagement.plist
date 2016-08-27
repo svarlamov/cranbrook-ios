@@ -4,12 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Alamofire.xcscheme</key>
+		<key>AKPickerView-Swift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>CVCalendar.xcscheme</key>
+		<key>Alamofire.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -32,27 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>736C294665B16F931DC63244FB2C07A0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BA14B622689766F6B8A4F42FD9DE552F</key>
+		<key>7EC1417298041145E9B1A4C7B395C179</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F1F5579B34CAEFD3ED2DDA29ECAAC4EF</key>
+		<key>855E501A7865C926E50E90376060F31C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F9D15795B36491A06B4D0DDD2AEBF66F</key>
+		<key>D0D540DF2FE3BA5359D2B97F3989C838</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D533ECEEDA5ABF0E37159F69C6838BA1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
