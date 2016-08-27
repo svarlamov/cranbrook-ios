@@ -19,6 +19,14 @@ class AssignmentsViewController: UIViewController, AKPickerViewDataSource, AKPic
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViews()
+    }
+    
+    func setupViews() {
+        setupPickerView()
+    }
+    
+    func setupPickerView() {
         self.pickerView.delegate = self
         self.pickerView.dataSource = self
         self.pickerView.font = UIFont(name: "Avenir Next", size: 17)!
@@ -30,6 +38,7 @@ class AssignmentsViewController: UIViewController, AKPickerViewDataSource, AKPic
         self.pickerView.reloadData()
     }
     
+    //  MARK: - AKPickerView setup
     func numberOfItemsInPickerView(pickerView: AKPickerView) -> Int {
         return self.titles.count
     }
