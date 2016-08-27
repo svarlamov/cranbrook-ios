@@ -22,7 +22,7 @@ class DirectorySearchViewController: UIViewController, UITableViewDelegate, UITa
     //Table view
     let searchCellIdentifier: String = "search_cell"
     @IBOutlet weak var tableView: UITableView!
-    var emptyTableViewText: String = ""
+    var emptyTableViewText: String = "Search the CK Directory"
     
     // Directory filter tab bar
     @IBOutlet weak var searchTabView: UIView!
@@ -36,9 +36,6 @@ class DirectorySearchViewController: UIViewController, UITableViewDelegate, UITa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        dispatch_async(dispatch_get_main_queue(),{
-            self.searchDirectory("")
-        })
 		setupViews()
     }
     
@@ -48,6 +45,7 @@ class DirectorySearchViewController: UIViewController, UITableViewDelegate, UITa
             searchResults = searchResponse!
             ProgressHUD.dismiss()
             self.tableView.reloadData()
+            self.tableView.setContentOffset(CGPointZero, animated:true)
         }
     }
     

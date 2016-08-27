@@ -66,8 +66,9 @@ extension WebServices {
 	}
 	
 	private func searchUrlForDirectorySearch(query: String, directory: SearchDirectories) -> String {
+        let instanceEndpoint: String = endpointPath(searchEndpoint)
 		let searchString = query.stringByReplacingOccurrencesOfString(" ", withString: "+", options: NSStringCompareOptions.LiteralSearch, range: nil)
-		return "https://cranbrook.myschoolapp.com/api/directory/directoryresultsget?directoryId=\(directory.rawValue)&searchVal=\(searchString)&facets=&searchAll=false"
+		return "\(instanceEndpoint)\(directory.rawValue)&searchVal=\(searchString)&facets=&searchAll=false"
 	}
 	
 }

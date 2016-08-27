@@ -18,6 +18,7 @@ class WebServices {
     static let prefix: String = "https://cranbrook.myschoolapp.com/"
     
     let loginEndpoint: String = "api/SignIn"
+    let searchEndpoint: String = "api/directory/directoryresultsget?directoryId="
     
     let loginHeaders: [String:String] = [
         "Content-Type":"application/json",

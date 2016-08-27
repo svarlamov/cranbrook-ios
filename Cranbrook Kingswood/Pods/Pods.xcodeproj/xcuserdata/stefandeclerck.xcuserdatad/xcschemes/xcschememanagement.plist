@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>CVCalendar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Cranbrook Kingswood.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,7 +32,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>787C27959E360D9590A47B5F153CD4F5</key>
+		<key>736C294665B16F931DC63244FB2C07A0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -37,12 +42,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7E65F499C021EFCDC76FD8C05FB80255</key>
+		<key>BA14B622689766F6B8A4F42FD9DE552F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AE020FEC4B73E604D37C9EFAC4B074D2</key>
+		<key>F1F5579B34CAEFD3ED2DDA29ECAAC4EF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F9D15795B36491A06B4D0DDD2AEBF66F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
