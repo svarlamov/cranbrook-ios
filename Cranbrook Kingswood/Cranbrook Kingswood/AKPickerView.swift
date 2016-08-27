@@ -315,7 +315,7 @@ public class AKPickerView: UIView, UICollectionViewDataSource, UICollectionViewD
 		self.collectionView?.removeFromSuperview()
 		self.collectionView = UICollectionView(frame: self.bounds, collectionViewLayout: self.collectionViewLayout)
 		self.collectionView.showsHorizontalScrollIndicator = false
-		self.collectionView.backgroundColor = UIColor.clearColor()
+		self.collectionView.backgroundColor = UIColor(red: 246/255, green: 246/255, blue: 246/255, alpha: 1.0)
 		self.collectionView.decelerationRate = UIScrollViewDecelerationRateFast
 		self.collectionView.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleHeight]
 		self.collectionView.dataSource = self
