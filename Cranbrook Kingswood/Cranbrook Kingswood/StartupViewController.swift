@@ -35,7 +35,12 @@ class StartupViewController: UIViewController {
             let username: String = userLoginInfo!.username
             let password: String = userLoginInfo!.password
             WebServices.service.loginWithParameters(username: username, password: password, callBack: { (isLoginSuccessful) in
-                self.takeSegue(.continuation)
+                if isLoginSuccessful {
+                    self.takeSegue(.continuation)
+                } else {
+                    destroyPersistedLoginData()
+                    self.takeSegue(.login)
+                }
             })
             
         } else {

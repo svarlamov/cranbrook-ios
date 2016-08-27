@@ -65,7 +65,7 @@ class ViewControllerContainer: UIViewController {
     }
     
     @IBAction func logout(sender: UIButton) {
-        Analytics.analytics.logSignOut()
+        Analytics.analytics.logSignOut(userLoginInfo!.username)
         destroyPersistedLoginData()
         self.performSegueWithIdentifier(self.logoutSegue, sender: nil)
     }

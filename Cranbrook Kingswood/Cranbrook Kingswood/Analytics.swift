@@ -32,10 +32,10 @@ class Analytics {
     }
     
     //  Sign Out Method
-    internal func logSignOut() {
+    internal func logSignOut(username: String) {
         dispatch_async(dispatch_get_main_queue(),{
             if self.isAnalyticsEnabled {
-                Answers.logCustomEventWithName("SignOut", customAttributes: ["User":"\(userLoginInfo!.username)"])
+                Answers.logCustomEventWithName("SignOut", customAttributes: ["User":"\(username)"])
             }
         })
     }
