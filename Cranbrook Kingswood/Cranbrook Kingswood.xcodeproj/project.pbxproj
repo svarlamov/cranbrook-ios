@@ -33,6 +33,10 @@
 		A0BD730A1D56B27B00889331 /* WebServices+Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BD73091D56B27A00889331 /* WebServices+Login.swift */; };
 		A0BD73101D56B9CA00889331 /* CranbrookAPIInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BD730F1D56B9CA00889331 /* CranbrookAPIInfo.swift */; };
 		A0BD73121D56E58E00889331 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BD73111D56E58E00889331 /* Constants.swift */; };
+		D72685FF1D7133F00081E4C7 /* WebServices+Assignments.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72685FE1D7133F00081E4C7 /* WebServices+Assignments.swift */; };
+		D72686011D7133F90081E4C7 /* WebServices+AssignmentDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72686001D7133F90081E4C7 /* WebServices+AssignmentDetail.swift */; };
+		D72686061D71344D0081E4C7 /* AssignmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72686051D71344D0081E4C7 /* AssignmentTableViewCell.swift */; };
+		D72686081D7134630081E4C7 /* ClassesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72686071D7134630081E4C7 /* ClassesTableViewCell.swift */; };
 		D7C10B2B1D70B8D700C9B66F /* WebServices+ClassDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C10B2A1D70B8D700C9B66F /* WebServices+ClassDetail.swift */; };
 		D7C10B2D1D70BB9700C9B66F /* ClassDetailDataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C10B2C1D70BB9700C9B66F /* ClassDetailDataStructure.swift */; };
 		D7C10B331D70ED0800C9B66F /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C10B321D70ED0800C9B66F /* Analytics.swift */; };
@@ -70,6 +74,10 @@
 		A0BD73111D56E58E00889331 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B3DD1C0F8761A3660B544FB4 /* Pods-Cranbrook Kingswood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cranbrook Kingswood.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cranbrook Kingswood/Pods-Cranbrook Kingswood.debug.xcconfig"; sourceTree = "<group>"; };
 		BC1DCB26B33F435898567871 /* Pods-Cranbrook Kingswood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cranbrook Kingswood.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cranbrook Kingswood/Pods-Cranbrook Kingswood.release.xcconfig"; sourceTree = "<group>"; };
+		D72685FE1D7133F00081E4C7 /* WebServices+Assignments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+Assignments.swift"; sourceTree = "<group>"; };
+		D72686001D7133F90081E4C7 /* WebServices+AssignmentDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+AssignmentDetail.swift"; sourceTree = "<group>"; };
+		D72686051D71344D0081E4C7 /* AssignmentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentTableViewCell.swift; sourceTree = "<group>"; };
+		D72686071D7134630081E4C7 /* ClassesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassesTableViewCell.swift; sourceTree = "<group>"; };
 		D7C10B2A1D70B8D700C9B66F /* WebServices+ClassDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+ClassDetail.swift"; sourceTree = "<group>"; };
 		D7C10B2C1D70BB9700C9B66F /* ClassDetailDataStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassDetailDataStructure.swift; sourceTree = "<group>"; };
 		D7C10B321D70ED0800C9B66F /* Analytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
@@ -194,6 +202,8 @@
 				31375AFE1D6534CD00B07B29 /* WebServices+Search.swift */,
 				A09D75A71D570F1A00B2AA74 /* WebServices+CurrentClasses.swift */,
 				D7C10B2A1D70B8D700C9B66F /* WebServices+ClassDetail.swift */,
+				D72685FE1D7133F00081E4C7 /* WebServices+Assignments.swift */,
+				D72686001D7133F90081E4C7 /* WebServices+AssignmentDetail.swift */,
 			);
 			name = WebServices;
 			sourceTree = "<group>";
@@ -228,6 +238,8 @@
 		D7C10B291D70B39600C9B66F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D72686051D71344D0081E4C7 /* AssignmentTableViewCell.swift */,
+				D72686071D7134630081E4C7 /* ClassesTableViewCell.swift */,
 				31CD30AA1D67BEB2001C4647 /* SearchResultTableViewCell.swift */,
 			);
 			name = Views;
@@ -373,14 +385,17 @@
 				D7C10B2B1D70B8D700C9B66F /* WebServices+ClassDetail.swift in Sources */,
 				A0BD73101D56B9CA00889331 /* CranbrookAPIInfo.swift in Sources */,
 				31C4DAA11D65649F00397716 /* SearchDataStructure.swift in Sources */,
+				D72685FF1D7133F00081E4C7 /* WebServices+Assignments.swift in Sources */,
 				A09D75A81D570F1A00B2AA74 /* WebServices+CurrentClasses.swift in Sources */,
 				A07468991D568F7000E7ACC0 /* StartupViewController.swift in Sources */,
 				A08F66F11D57204900FBE55E /* LoginViewController.swift in Sources */,
 				A07468811D568DAD00E7ACC0 /* AppDelegate.swift in Sources */,
 				A09D75A61D57042900B2AA74 /* DateComparison.swift in Sources */,
+				D72686081D7134630081E4C7 /* ClassesTableViewCell.swift in Sources */,
 				A09D75AC1D570F8B00B2AA74 /* ClassesViewController.swift in Sources */,
 				A0BD73041D56972500889331 /* WebServices.swift in Sources */,
 				31C4DA9D1D65644900397716 /* LoginDataStructure.swift in Sources */,
+				D72686011D7133F90081E4C7 /* WebServices+AssignmentDetail.swift in Sources */,
 				A09D75AE1D570F9A00B2AA74 /* DirectorySearchViewController.swift in Sources */,
 				A016B6E41D57FC7600A4A68D /* ViewControllerContainer.swift in Sources */,
 				D7C10B331D70ED0800C9B66F /* Analytics.swift in Sources */,
@@ -392,6 +407,7 @@
 				A09D75BB1D57159900B2AA74 /* ProgressHUD.m in Sources */,
 				A09D75B01D570FA300B2AA74 /* SettingsViewController.swift in Sources */,
 				A0BD73121D56E58E00889331 /* Constants.swift in Sources */,
+				D72686061D71344D0081E4C7 /* AssignmentTableViewCell.swift in Sources */,
 				31C4DA9F1D65647A00397716 /* ClassesDataStructure.swift in Sources */,
 				31375AFF1D6534CD00B07B29 /* WebServices+Search.swift in Sources */,
 				A09D75AA1D570F8400B2AA74 /* AssignmentsViewController.swift in Sources */,
