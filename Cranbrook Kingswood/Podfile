@@ -7,9 +7,10 @@ target 'Cranbrook Kingswood' do
 
   # Pods for Cranbrook Kingswood
   pod 'SwiftyJSON'
-  pod 'Alamofire', '~> 3.4'  
+  pod 'Alamofire'  
   pod 'Unbox'
-  pod 'Fabric'
-  pod 'Crashlytics'
+  pod 'Firebase/Core'
+  pod 'Firebase/RemoteConfig'
+  pod 'Firebase'
 
 end

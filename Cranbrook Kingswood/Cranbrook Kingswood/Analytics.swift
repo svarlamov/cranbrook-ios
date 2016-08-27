@@ -7,8 +7,7 @@
 //
 
 import Foundation
-import Fabric
-import Crashlytics
+import Firebase
 
 class Analytics {
     
@@ -17,16 +16,10 @@ class Analytics {
     static let analytics = Analytics()
     
     //  Login Analytics Method
-    internal func analyticsLogin(username: String, isSuccessful: Bool) {
-        var boolNumber: NSNumber = NSNumber()
-        if isSuccessful {
-            boolNumber = 1
-        } else {
-            boolNumber = 0
-        }
+    internal func logUserSignIn(username: String, isSuccessful: Bool) {
         dispatch_async(dispatch_get_main_queue(),{
             if self.isAnalyticsEnabled {
-                Answers.logLoginWithMethod("Login", success: boolNumber, customAttributes: ["Username":"\(username)"])
+                FIRAnalytics.logEventWithName("LoginRequest", parameters: ["Username": username, "success": String(isSuccessful)])
             }
         })
     }
@@ -35,7 +28,7 @@ class Analytics {
     internal func logSearch(searchQuery: String) {
         dispatch_async(dispatch_get_main_queue(), {
             if self.isAnalyticsEnabled {
-                Answers.logSearchWithQuery("\(searchQuery)", customAttributes: ["User":"\(userLoginInfo?.username)"])
+                FIRAnalytics.logEventWithName("DirectorySearch", parameters: ["SearchQuery":searchQuery, "User":"\(userLoginInfo!.username)"])
             }
         })
     }
@@ -44,7 +37,7 @@ class Analytics {
     internal func logUserSession() {
         dispatch_async(dispatch_get_main_queue(), {
             if self.isAnalyticsEnabled {
-                Answers.logCustomEventWithName("Application Launches", customAttributes: nil)
+                FIRAnalytics.logEventWithName("UserSession", parameters: nil)
             }
         })
     }
@@ -53,7 +46,7 @@ class Analytics {
     internal func logTabSelection(selectedTab: String) {
         dispatch_async(dispatch_get_main_queue(), {
             if self.isAnalyticsEnabled {
-                Answers.logCustomEventWithName("Tab Selection", customAttributes: ["Selected Tab":"\(selectedTab)"])
+                FIRAnalytics.logEventWithName("TabSelection", parameters: ["SelectedTab":"\(selectedTab)"])
             }
         })
     }
