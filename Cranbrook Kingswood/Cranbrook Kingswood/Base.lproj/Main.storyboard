@@ -623,8 +623,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ksb-Bo-vuO" customClass="AKPickerView" customModule="Cranbrook_Kingswood" customModuleProvider="target">
-                                <rect key="frame" x="50" y="50" width="500" height="394"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="45"/>
+                                <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="rj3-D0-nUp"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="interitemSpacing">
                                         <real key="value" value="20"/>
@@ -635,12 +638,11 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="ksb-Bo-vuO" firstAttribute="top" secondItem="j1n-UW-EgB" secondAttribute="top" constant="50" id="3tR-oc-FJW"/>
-                            <constraint firstAttribute="trailing" secondItem="ksb-Bo-vuO" secondAttribute="trailing" constant="50" id="S2i-4e-3xm"/>
-                            <constraint firstAttribute="bottom" secondItem="ksb-Bo-vuO" secondAttribute="bottom" constant="50" id="SUm-jr-Sr1"/>
-                            <constraint firstItem="ksb-Bo-vuO" firstAttribute="leading" secondItem="j1n-UW-EgB" secondAttribute="leading" constant="50" id="USY-cC-gSk"/>
+                            <constraint firstItem="ksb-Bo-vuO" firstAttribute="top" secondItem="s0g-b9-AEg" secondAttribute="bottom" id="BGp-31-mxd"/>
+                            <constraint firstItem="ksb-Bo-vuO" firstAttribute="leading" secondItem="j1n-UW-EgB" secondAttribute="leading" id="KfP-4h-YO7"/>
+                            <constraint firstAttribute="trailing" secondItem="ksb-Bo-vuO" secondAttribute="trailing" id="my7-N0-e20"/>
                         </constraints>
                     </view>
                     <connections>

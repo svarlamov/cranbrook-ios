@@ -21,9 +21,9 @@ class AssignmentsViewController: UIViewController, AKPickerViewDataSource, AKPic
         super.viewDidLoad()
         self.pickerView.delegate = self
         self.pickerView.dataSource = self
-        
-        self.pickerView.font = UIFont(name: "HelveticaNeue-Light", size: 20)!
-        self.pickerView.highlightedFont = UIFont(name: "HelveticaNeue", size: 20)!
+        self.pickerView.font = UIFont(name: "Avenir Next", size: 17)!
+        self.pickerView.highlightedFont = UIFont(name: "AvenirNext-Medium", size: 17)!
+        self.pickerView.textColor = UIColor(red: 21/255, green: 41/255, blue: 53/255, alpha: 1.0)
         self.pickerView.pickerViewStyle = .Wheel
         self.pickerView.maskDisabled = false
         self.pickerView.reloadData()
