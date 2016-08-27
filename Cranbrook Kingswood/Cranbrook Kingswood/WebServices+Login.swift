@@ -60,7 +60,7 @@ extension WebServices {
                 let isLoginSuccessful = loginResponse["LoginSuccessful"].boolValue
                 
                 if isLoginSuccessful {
-                    Analytics.analytics.logUserSignIn(username, isSuccessful: true)
+                    Analytics.analytics.analyticsLogin(username, isSuccessful: true)
                     let studentID = loginResponse["CurrentUserForExpired"].stringValue
                     let sessionToken = self.getKeyForUserSession(data: response)
                     currentSessionInfo = CurrentLoggedInUserInfo(userId: studentID, sessionToken: sessionToken!)
@@ -71,7 +71,7 @@ extension WebServices {
                     print("login_successful. student_id:\(studentID). session_token:\(sessionToken!)")
                     
                 } else {
-                    Analytics.analytics.logUserSignIn(username, isSuccessful: false)
+                    Analytics.analytics.analyticsLogin(username, isSuccessful: false)
                     callBack(isLoginSuccessful: false)
                     print("login_failed")
                     

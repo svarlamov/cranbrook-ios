@@ -13,10 +13,4 @@ import Unbox
 
 extension WebServices {
     
-    internal func getClasses(callBack: (classListResponse: [CurrentUserClasses]?) -> Void) {
-        
-    }
-    
-//    (query query: String, directory: SearchDirectories, callBack: (searchResponse: [SearchResultResponse]?) -> Void)
-    
 }

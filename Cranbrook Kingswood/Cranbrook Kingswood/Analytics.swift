@@ -7,7 +7,8 @@
 //
 
 import Foundation
-import Firebase
+import Fabric
+import Crashlytics
 
 class Analytics {
     
@@ -16,10 +17,16 @@ class Analytics {
     static let analytics = Analytics()
     
     //  Login Analytics Method
-    internal func logUserSignIn(username: String, isSuccessful: Bool) {
+    internal func analyticsLogin(username: String, isSuccessful: Bool) {
+        var boolNumber: NSNumber = NSNumber()
+        if isSuccessful {
+            boolNumber = 1
+        } else {
+            boolNumber = 0
+        }
         dispatch_async(dispatch_get_main_queue(),{
             if self.isAnalyticsEnabled {
-                FIRAnalytics.logEventWithName("LoginRequest", parameters: ["Username": username, "success": String(isSuccessful)])
+                Answers.logLoginWithMethod("Login", success: boolNumber, customAttributes: ["Username":"\(username)"])
             }
         })
     }
@@ -28,7 +35,7 @@ class Analytics {
     internal func logSearch(searchQuery: String) {
         dispatch_async(dispatch_get_main_queue(), {
             if self.isAnalyticsEnabled {
-                FIRAnalytics.logEventWithName("DirectorySearch", parameters: ["SearchQuery":searchQuery, "User":"\(userLoginInfo!.username)"])
+                Answers.logSearchWithQuery("\(searchQuery)", customAttributes: ["User":"\(userLoginInfo?.username)"])
             }
         })
     }
@@ -37,7 +44,7 @@ class Analytics {
     internal func logUserSession() {
         dispatch_async(dispatch_get_main_queue(), {
             if self.isAnalyticsEnabled {
-                FIRAnalytics.logEventWithName("UserSession", parameters: nil)
+                Answers.logCustomEventWithName("Application Launches", customAttributes: nil)
             }
         })
     }
@@ -46,7 +53,7 @@ class Analytics {
     internal func logTabSelection(selectedTab: String) {
         dispatch_async(dispatch_get_main_queue(), {
             if self.isAnalyticsEnabled {
-                FIRAnalytics.logEventWithName("TabSelection", parameters: ["SelectedTab":"\(selectedTab)"])
+                Answers.logCustomEventWithName("Tab Selection", customAttributes: ["Selected Tab":"\(selectedTab)"])
             }
         })
     }
