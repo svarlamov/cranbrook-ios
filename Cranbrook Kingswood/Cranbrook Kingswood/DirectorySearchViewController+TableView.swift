@@ -16,8 +16,15 @@ extension DirectorySearchViewController {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if searchResults == nil || searchResults?.count == 0 {
+            let noDataLabel: UILabel = UILabel(frame: CGRectMake(0, 0, self.tableView.bounds.size.width, self.tableView.bounds.size.height))
+            noDataLabel.text = self.emptyTableViewText
+            noDataLabel.font = UIFont(name: "AvenirNext-Medium", size: 20)
+            noDataLabel.textColor = UIColor(red: 0.639, green: 0.639, blue: 0.682, alpha: 1.000)
+            noDataLabel.textAlignment = .Center
+            self.tableView.backgroundView = noDataLabel
             return 0;
         } else {
+            self.tableView.backgroundView = nil
             return (searchResults?.count)!
         }
     }

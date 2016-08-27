@@ -22,6 +22,7 @@ class DirectorySearchViewController: UIViewController, UITableViewDelegate, UITa
     //Table view
     let searchCellIdentifier: String = "search_cell"
     @IBOutlet weak var tableView: UITableView!
+    var emptyTableViewText: String = ""
     
     // Directory filter tab bar
     @IBOutlet weak var searchTabView: UIView!
@@ -35,11 +36,13 @@ class DirectorySearchViewController: UIViewController, UITableViewDelegate, UITa
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchDirectory("")
 		setupViews()
     }
     
     func searchDirectory(searchQuery: String) {
         WebServices.service.searchDirectory(query: searchQuery, directory: self.currentSearchDirectory) { (searchResponse) in
+            self.emptyTableViewText = "No search results"
             searchResults = searchResponse!
             ProgressHUD.dismiss()
             self.tableView.reloadData()
