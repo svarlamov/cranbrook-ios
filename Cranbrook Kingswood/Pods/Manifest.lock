@@ -1,5 +1,4 @@
 PODS:
-  - AKPickerView-Swift (1.0.1)
   - Alamofire (3.4.1)
   - Crashlytics (3.7.3):
     - Fabric (~> 1.6.3)
@@ -8,7 +7,6 @@ PODS:
   - Unbox (1.9)
 
 DEPENDENCIES:
-  - AKPickerView-Swift
   - Alamofire (~> 3.4)
   - Crashlytics
   - Fabric
@@ -16,13 +14,12 @@ DEPENDENCIES:
   - Unbox
 
 SPEC CHECKSUMS:
-  AKPickerView-Swift: 8509d472bb257649383c276506334a7373d3cb33
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
   Crashlytics: 76f6beaff70acf226139582c09c78461597c2b98
   Fabric: 5755268d0171435ab167e3d0878a28a777deaf10
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
   Unbox: a6f56a1682b5fd2ba6aea96d7b1ec17599db4f05
 
-PODFILE CHECKSUM: 7bb6761bc7a04e8acee9b7fc3c5ff6331f321937
+PODFILE CHECKSUM: aad15ed0feae81f9398c81c563a8ec5c3ed347c2
 
 COCOAPODS: 1.0.1

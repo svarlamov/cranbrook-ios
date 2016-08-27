@@ -37,6 +37,7 @@
 		D72686011D7133F90081E4C7 /* WebServices+AssignmentDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72686001D7133F90081E4C7 /* WebServices+AssignmentDetail.swift */; };
 		D72686061D71344D0081E4C7 /* AssignmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72686051D71344D0081E4C7 /* AssignmentTableViewCell.swift */; };
 		D72686081D7134630081E4C7 /* ClassesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72686071D7134630081E4C7 /* ClassesTableViewCell.swift */; };
+		D72CF3291D72388A00B2116C /* AKPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72CF3281D72388A00B2116C /* AKPickerView.swift */; };
 		D7C10B2B1D70B8D700C9B66F /* WebServices+ClassDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C10B2A1D70B8D700C9B66F /* WebServices+ClassDetail.swift */; };
 		D7C10B2D1D70BB9700C9B66F /* ClassDetailDataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C10B2C1D70BB9700C9B66F /* ClassDetailDataStructure.swift */; };
 		D7C10B331D70ED0800C9B66F /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C10B321D70ED0800C9B66F /* Analytics.swift */; };
@@ -78,6 +79,7 @@
 		D72686001D7133F90081E4C7 /* WebServices+AssignmentDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+AssignmentDetail.swift"; sourceTree = "<group>"; };
 		D72686051D71344D0081E4C7 /* AssignmentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentTableViewCell.swift; sourceTree = "<group>"; };
 		D72686071D7134630081E4C7 /* ClassesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassesTableViewCell.swift; sourceTree = "<group>"; };
+		D72CF3281D72388A00B2116C /* AKPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKPickerView.swift; sourceTree = "<group>"; };
 		D7C10B2A1D70B8D700C9B66F /* WebServices+ClassDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+ClassDetail.swift"; sourceTree = "<group>"; };
 		D7C10B2C1D70BB9700C9B66F /* ClassDetailDataStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassDetailDataStructure.swift; sourceTree = "<group>"; };
 		D7C10B321D70ED0800C9B66F /* Analytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			children = (
 				A09D75BC1D5715C500B2AA74 /* ProgressHUD */,
 				A09D75A51D57042900B2AA74 /* DateComparison.swift */,
+				D72CF3281D72388A00B2116C /* AKPickerView.swift */,
 			);
 			name = Plugins;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				D7C10B2D1D70BB9700C9B66F /* ClassDetailDataStructure.swift in Sources */,
 				31CD30AB1D67BEB2001C4647 /* SearchResultTableViewCell.swift in Sources */,
 				31CD309D1D67ABC6001C4647 /* DirectorySearchViewController+TableView.swift in Sources */,
+				D72CF3291D72388A00B2116C /* AKPickerView.swift in Sources */,
 				A0BD730A1D56B27B00889331 /* WebServices+Login.swift in Sources */,
 				31CD309F1D67ACC7001C4647 /* DirectorySearchViewController+TabBar.swift in Sources */,
 				A09D75BB1D57159900B2AA74 /* ProgressHUD.m in Sources */,

@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>AKPickerView-Swift.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Alamofire.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,27 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>787C27959E360D9590A47B5F153CD4F5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7EC1417298041145E9B1A4C7B395C179</key>
+		<key>7E65F499C021EFCDC76FD8C05FB80255</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>855E501A7865C926E50E90376060F31C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D0D540DF2FE3BA5359D2B97F3989C838</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D533ECEEDA5ABF0E37159F69C6838BA1</key>
+		<key>AE020FEC4B73E604D37C9EFAC4B074D2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
