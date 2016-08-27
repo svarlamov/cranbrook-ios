@@ -31,11 +31,20 @@ class Analytics {
         })
     }
     
+    //  Sign Out Method
+    internal func logSignOut() {
+        dispatch_async(dispatch_get_main_queue(),{
+            if self.isAnalyticsEnabled {
+                Answers.logCustomEventWithName("SignOut", customAttributes: ["User":"\(userLoginInfo!.username)"])
+            }
+        })
+    }
+    
     //  Search Analytics Method
     internal func logSearch(searchQuery: String) {
         dispatch_async(dispatch_get_main_queue(), {
             if self.isAnalyticsEnabled {
-                Answers.logSearchWithQuery("\(searchQuery)", customAttributes: ["User":"\(userLoginInfo?.username)"])
+                Answers.logSearchWithQuery("\(searchQuery)", customAttributes: ["User":"\(userLoginInfo!.username)"])
             }
         })
     }

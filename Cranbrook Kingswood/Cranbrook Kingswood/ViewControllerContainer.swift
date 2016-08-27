@@ -48,7 +48,9 @@ class ViewControllerContainer: UIViewController {
     }
     
     func setupNavigationController() {
-        self.navigationController!.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "Avenir Next", size: 20)!]
+        if let font = UIFont(name: "Avenir Next", size: 20) {
+            self.navigationController!.navigationBar.titleTextAttributes = [NSFontAttributeName: font]
+        }
         
     }
     
@@ -60,10 +62,10 @@ class ViewControllerContainer: UIViewController {
     
     func setTab(tab: SelectedTabOptions) {
         setupSelectedTab(tab, isAnimated: false)
-        
     }
     
     @IBAction func logout(sender: UIButton) {
+        Analytics.analytics.logSignOut()
         destroyPersistedLoginData()
         self.performSegueWithIdentifier(self.logoutSegue, sender: nil)
     }
