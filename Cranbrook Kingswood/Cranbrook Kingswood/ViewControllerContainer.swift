@@ -18,7 +18,11 @@ enum SelectedTabOptions: String {
 }
 
 class ViewControllerContainer: UIViewController {
-	
+    
+    //  Logout
+    @IBOutlet weak var logoutButton: UIBarButtonItem!
+    let logoutSegue: String = "logout_segue"
+    
 	//	Tab bar
     @IBOutlet weak var classesTabLabel: UILabel!
     @IBOutlet weak var assignmentsTabLabel: UILabel!
@@ -35,6 +39,7 @@ class ViewControllerContainer: UIViewController {
         super.viewDidLoad()
         self.tabIndicationView.hidden = true
         setupNavigationController()
+        setupLogoutButton()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -47,9 +52,20 @@ class ViewControllerContainer: UIViewController {
         
     }
     
+    func setupLogoutButton() {
+        if let font = UIFont(name: "AvenirNext-Medium", size: 17) {
+            self.logoutButton.setTitleTextAttributes([NSFontAttributeName: font], forState: UIControlState.Normal)
+        }
+    }
+    
     func setTab(tab: SelectedTabOptions) {
         setupSelectedTab(tab, isAnimated: false)
         
+    }
+    
+    @IBAction func logout(sender: UIButton) {
+        destroyPersistedLoginData()
+        self.performSegueWithIdentifier(self.logoutSegue, sender: nil)
     }
     
     @IBAction func tabButtonPress(sender: UIButton) {

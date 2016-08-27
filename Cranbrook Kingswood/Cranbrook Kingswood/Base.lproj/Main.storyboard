@@ -258,15 +258,23 @@
                             <constraint firstAttribute="trailing" secondItem="S5b-Ye-HgQ" secondAttribute="trailing" id="zZj-3F-5PI"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="CRANBROOK" id="ahX-4g-pal"/>
+                    <navigationItem key="navigationItem" title="CRANBROOK" id="ahX-4g-pal">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="cjL-Ak-R2G">
+                            <connections>
+                                <action selector="logout:" destination="UcJ-G7-kI3" id="bUf-BO-9eg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="assignmentsContainerView" destination="SSk-Cx-D4i" id="ti6-5A-mOW"/>
                         <outlet property="assignmentsTabLabel" destination="qqa-im-x56" id="8Rl-6D-tQ0"/>
                         <outlet property="classesTabLabel" destination="CEM-ub-pvd" id="hVF-bn-uA0"/>
                         <outlet property="classesViewContainer" destination="Rvg-Nj-Rqj" id="Ihm-KE-7Zo"/>
+                        <outlet property="logoutButton" destination="cjL-Ak-R2G" id="LmH-1X-WT3"/>
                         <outlet property="searchContainerView" destination="S5b-Ye-HgQ" id="efS-qz-bV3"/>
                         <outlet property="searchTabLabel" destination="eGN-Iv-rpi" id="bmA-j1-iu4"/>
                         <outlet property="tabIndicationView" destination="BBW-Ss-end" id="0Ap-gF-bcV"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="logout_segue" modalTransitionStyle="crossDissolve" id="Xqp-fM-tlL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uE8-jN-6Ga" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -627,6 +635,6 @@
         <image name="table_view_shadow_2px" width="750" height="6"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8ak-eE-lO9"/>
+        <segue reference="twR-EM-b5c"/>
     </inferredMetricsTieBreakers>
 </document>
