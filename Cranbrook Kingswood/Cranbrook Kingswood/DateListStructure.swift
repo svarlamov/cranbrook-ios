@@ -10,14 +10,5 @@ import Foundation
 
 struct DateListStructure {
     var mutableDateList: Array<NSDate> = Array<NSDate>()
-   
-    init() {
-        
-    }
-    
-    func returnDatesBetweenDates() -> [NSDate] {
-        var instanceDateList: NSDate = NSDate()
-        return instanceDateList
-    }
     
 }
