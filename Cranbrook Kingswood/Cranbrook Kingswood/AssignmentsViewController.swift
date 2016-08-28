@@ -15,7 +15,7 @@ class AssignmentsViewController: UIViewController, AKPickerViewDataSource, AKPic
     
     @IBOutlet var pickerView: AKPickerView!
     
-    let titles = ["Tokyo", "Kanagawa", "Osaka", "Aichi", "Saitama", "Chiba", "Hyogo", "Hokkaido", "Fukuoka", "Shizuoka"]
+    let dates = assignmentsDateList.mutableDateList
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +32,7 @@ class AssignmentsViewController: UIViewController, AKPickerViewDataSource, AKPic
         self.pickerView.font = UIFont(name: "Avenir Next", size: 17)!
         self.pickerView.highlightedFont = UIFont(name: "Avenir Next", size: 17)!
         self.pickerView.textColor = UIColor(red: 21/255, green: 41/255, blue: 53/255, alpha: 1.0)
-        self.pickerView.interitemSpacing = self.view.frame.size.width/5
+        self.pickerView.interitemSpacing = self.view.frame.size.width/6
         self.pickerView.pickerViewStyle = .Wheel
         self.pickerView.maskDisabled = false
         self.pickerView.reloadData()
@@ -40,19 +40,19 @@ class AssignmentsViewController: UIViewController, AKPickerViewDataSource, AKPic
     
     //  MARK: - AKPickerView setup
     func numberOfItemsInPickerView(pickerView: AKPickerView) -> Int {
-        return self.titles.count
+        return self.dates.count
     }
     
     func pickerView(pickerView: AKPickerView, titleForItem item: Int) -> String {
-        return self.titles[item]
+        return self.dates[item]
     }
     
     func pickerView(pickerView: AKPickerView, imageForItem item: Int) -> UIImage {
-        return UIImage(named: self.titles[item])!
+        return UIImage(named: self.dates[item])!
     }
     
     func pickerView(pickerView: AKPickerView, didSelectItem item: Int) {
-        print("Your favorite city is \(self.titles[item])")
+        print("Selected date is \(self.dates[item])")
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {}

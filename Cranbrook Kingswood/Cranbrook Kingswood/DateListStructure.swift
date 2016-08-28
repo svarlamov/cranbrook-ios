@@ -9,32 +9,38 @@
 import Foundation
 
 struct DateListStructure {
-    var mutableDateList: Array<NSDate> = Array<NSDate>()
+    var mutableDateList: Array<String> = Array<String>()
     
     init() {
         let startDate: NSDate = self.getReferenceDate(isForStartDate: true)
         let endDate: NSDate = self.getReferenceDate(isForStartDate: false)
-        self.daysBetweenDates(startDate, endDate: endDate)
+        self.mutableDateList = self.daysBetweenDates(startDate, endDate: endDate)
     }
     
     func getReferenceDate(isForStartDate isForStartDate: Bool) -> NSDate {
         var strDate: String = String()
         if isForStartDate {
-            strDate = "2016-01-01"
+            strDate = "2016-08-01"
         } else {
-            strDate = "2018-01-01"
+            strDate = "2017-08-01"
         }
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         return dateFormatter.dateFromString(strDate)!
     }
     
-    func daysBetweenDates(startDate: NSDate, endDate: NSDate) -> Int
-    {
+    func daysBetweenDates(startDate: NSDate, endDate: NSDate) -> Array<String> {
+        var returnedDateArray: Array<String> = []
         let calendar = NSCalendar.currentCalendar()
-        let components = calendar.components([.Day], fromDate: startDate, toDate: endDate, options: [])
-        print(components.date)
-        return components.day
+        var mainStartDate: NSDate = startDate
+        let mainEndDate: NSDate = endDate
+        let fmt = NSDateFormatter()
+        fmt.dateFormat = "EEEE, MM/dd/yyyy"
+        while mainStartDate.compare(mainEndDate) != .OrderedDescending {
+            returnedDateArray.append(fmt.stringFromDate(mainStartDate))
+            mainStartDate = calendar.dateByAddingUnit(.Day, value: 1, toDate: mainStartDate, options: [])!
+        }
+        return returnedDateArray
     }
     
 }
