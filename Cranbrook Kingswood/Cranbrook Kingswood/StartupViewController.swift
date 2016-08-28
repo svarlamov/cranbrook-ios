@@ -28,6 +28,8 @@ class StartupViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let dateList: DateListStructure = DateListStructure()
+        print("hello")
     }
     
     private func login() {

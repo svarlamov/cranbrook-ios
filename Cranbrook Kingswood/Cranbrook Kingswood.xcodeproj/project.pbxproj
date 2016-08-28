@@ -38,6 +38,7 @@
 		D72686061D71344D0081E4C7 /* AssignmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72686051D71344D0081E4C7 /* AssignmentTableViewCell.swift */; };
 		D72686081D7134630081E4C7 /* ClassesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72686071D7134630081E4C7 /* ClassesTableViewCell.swift */; };
 		D72CF3291D72388A00B2116C /* AKPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72CF3281D72388A00B2116C /* AKPickerView.swift */; };
+		D72CF32E1D7258A900B2116C /* DateListStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72CF32D1D7258A900B2116C /* DateListStructure.swift */; };
 		D7C10B2B1D70B8D700C9B66F /* WebServices+ClassDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C10B2A1D70B8D700C9B66F /* WebServices+ClassDetail.swift */; };
 		D7C10B2D1D70BB9700C9B66F /* ClassDetailDataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C10B2C1D70BB9700C9B66F /* ClassDetailDataStructure.swift */; };
 		D7C10B331D70ED0800C9B66F /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C10B321D70ED0800C9B66F /* Analytics.swift */; };
@@ -80,6 +81,7 @@
 		D72686051D71344D0081E4C7 /* AssignmentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentTableViewCell.swift; sourceTree = "<group>"; };
 		D72686071D7134630081E4C7 /* ClassesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassesTableViewCell.swift; sourceTree = "<group>"; };
 		D72CF3281D72388A00B2116C /* AKPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKPickerView.swift; sourceTree = "<group>"; };
+		D72CF32D1D7258A900B2116C /* DateListStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateListStructure.swift; sourceTree = "<group>"; };
 		D7C10B2A1D70B8D700C9B66F /* WebServices+ClassDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+ClassDetail.swift"; sourceTree = "<group>"; };
 		D7C10B2C1D70BB9700C9B66F /* ClassDetailDataStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassDetailDataStructure.swift; sourceTree = "<group>"; };
 		D7C10B321D70ED0800C9B66F /* Analytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				D7C10B271D70B2F800C9B66F /* Data Models */,
 				D7C10B281D70B39000C9B66F /* View Controllers */,
 				D7C10B291D70B39600C9B66F /* Views */,
+				D72CF32A1D7257ED00B2116C /* Custom Classes */,
 			);
 			name = Code;
 			sourceTree = "<group>";
@@ -158,7 +161,6 @@
 		A07468931D568DFD00E7ACC0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A0BD730B1D56B98E00889331 /* Plugins */,
 				A07468871D568DAD00E7ACC0 /* Assets.xcassets */,
 				A07468891D568DAD00E7ACC0 /* LaunchScreen.storyboard */,
 				A074688C1D568DAD00E7ACC0 /* Info.plist */,
@@ -187,14 +189,14 @@
 			name = ProgressHUD;
 			sourceTree = "<group>";
 		};
-		A0BD730B1D56B98E00889331 /* Plugins */ = {
+		D72CF32A1D7257ED00B2116C /* Custom Classes */ = {
 			isa = PBXGroup;
 			children = (
 				A09D75BC1D5715C500B2AA74 /* ProgressHUD */,
 				A09D75A51D57042900B2AA74 /* DateComparison.swift */,
 				D72CF3281D72388A00B2116C /* AKPickerView.swift */,
 			);
-			name = Plugins;
+			name = "Custom Classes";
 			sourceTree = "<group>";
 		};
 		D7C10B261D70B2E900C9B66F /* WebServices */ = {
@@ -218,6 +220,7 @@
 				31C4DA9E1D65647A00397716 /* ClassesDataStructure.swift */,
 				D7C10B2C1D70BB9700C9B66F /* ClassDetailDataStructure.swift */,
 				31C4DAA01D65649F00397716 /* SearchDataStructure.swift */,
+				D72CF32D1D7258A900B2116C /* DateListStructure.swift */,
 			);
 			name = "Data Models";
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				A09D75AC1D570F8B00B2AA74 /* ClassesViewController.swift in Sources */,
 				A0BD73041D56972500889331 /* WebServices.swift in Sources */,
 				31C4DA9D1D65644900397716 /* LoginDataStructure.swift in Sources */,
+				D72CF32E1D7258A900B2116C /* DateListStructure.swift in Sources */,
 				D72686011D7133F90081E4C7 /* WebServices+AssignmentDetail.swift in Sources */,
 				A09D75AE1D570F9A00B2AA74 /* DirectorySearchViewController.swift in Sources */,
 				A016B6E41D57FC7600A4A68D /* ViewControllerContainer.swift in Sources */,
