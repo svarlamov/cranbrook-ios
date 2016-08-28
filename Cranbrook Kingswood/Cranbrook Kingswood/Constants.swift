@@ -17,6 +17,7 @@ var searchResults: [SearchResultResponse]?              = [SearchResultResponse]
 var selectedTab: SelectedTabOptions                     = SelectedTabOptions.ClassesTab
 var userLoginInfo: UserLoginInfoStructure?              = nil;
 var classDetailsArray: [[CurrentUserClassDetail]]?      = nil;
+let assignmenstDateList: DateListStructure              = DateListStructure()
 
 
 
