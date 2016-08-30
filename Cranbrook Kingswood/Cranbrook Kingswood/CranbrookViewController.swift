@@ -22,11 +22,6 @@ class CranbrookViewController: UIViewController {
         self.setupReachability()
     }
     
-    override func viewDidDisappear(animated: Bool) {
-        super.viewDidDisappear(true)
-        NSNotificationCenter.defaultCenter().removeObserver(self)
-    }
-    
     //  MARK: - Reachability
     func setupReachability() {
         self.reach = Reachability.reachabilityForInternetConnection()
