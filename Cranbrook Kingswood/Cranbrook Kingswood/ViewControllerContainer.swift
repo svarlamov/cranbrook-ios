@@ -17,7 +17,10 @@ enum SelectedTabOptions: String {
     case DirectorySearchTab     = "Directory Search Tab"
 }
 
-class ViewControllerContainer: CranbrookViewController {
+class ViewControllerContainer: UIViewController {
+    
+    //  Reachability
+    var reach: Reachability?
     
     //  Logout
     @IBOutlet weak var logoutButton: UIBarButtonItem!
@@ -44,6 +47,7 @@ class ViewControllerContainer: CranbrookViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
+        self.setupReachability()
         setTab(.ClassesTab)
     }
     
@@ -155,6 +159,22 @@ class ViewControllerContainer: CranbrookViewController {
             
         }
         
+    }
+    
+    //  MARK: - Reachability
+    func setupReachability() {
+        self.reach = Reachability.reachabilityForInternetConnection()
+        self.reach!.reachableOnWWAN = false
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewControllerContainer.reachabilityChanged(_:)), name: kReachabilityChangedNotification, object: nil)
+        self.reach!.startNotifier()
+    }
+    
+    func reachabilityChanged(notification: NSNotification) {
+        if self.reach!.isReachableViaWiFi() || self.reach!.isReachableViaWWAN() {
+            print("network_available")
+        } else {
+            print("no_network_available")
+        }
     }
     
 }

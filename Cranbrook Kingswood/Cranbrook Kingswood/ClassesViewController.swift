@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 import Unbox
 
-class ClassesViewController: CranbrookViewController {
+class ClassesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 import Unbox
 
-class LoginViewController: CranbrookViewController, UITextFieldDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 	
     @IBOutlet weak var logInButton: UIButton!
     @IBOutlet weak var usernameTextField: UITextField!
