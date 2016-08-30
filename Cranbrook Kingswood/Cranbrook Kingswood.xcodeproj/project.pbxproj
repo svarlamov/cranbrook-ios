@@ -33,6 +33,7 @@
 		A0BD730A1D56B27B00889331 /* WebServices+Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BD73091D56B27A00889331 /* WebServices+Login.swift */; };
 		A0BD73101D56B9CA00889331 /* CranbrookAPIInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BD730F1D56B9CA00889331 /* CranbrookAPIInfo.swift */; };
 		A0BD73121D56E58E00889331 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BD73111D56E58E00889331 /* Constants.swift */; };
+		D71DEFE31D75F31B0006E6B6 /* AssignmentsViewController+Selector.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71DEFE21D75F31B0006E6B6 /* AssignmentsViewController+Selector.swift */; };
 		D72685FF1D7133F00081E4C7 /* WebServices+Assignments.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72685FE1D7133F00081E4C7 /* WebServices+Assignments.swift */; };
 		D72686011D7133F90081E4C7 /* WebServices+AssignmentDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72686001D7133F90081E4C7 /* WebServices+AssignmentDetail.swift */; };
 		D72686061D71344D0081E4C7 /* AssignmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72686051D71344D0081E4C7 /* AssignmentTableViewCell.swift */; };
@@ -80,6 +81,7 @@
 		A0BD73111D56E58E00889331 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B3DD1C0F8761A3660B544FB4 /* Pods-Cranbrook Kingswood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cranbrook Kingswood.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cranbrook Kingswood/Pods-Cranbrook Kingswood.debug.xcconfig"; sourceTree = "<group>"; };
 		BC1DCB26B33F435898567871 /* Pods-Cranbrook Kingswood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cranbrook Kingswood.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cranbrook Kingswood/Pods-Cranbrook Kingswood.release.xcconfig"; sourceTree = "<group>"; };
+		D71DEFE21D75F31B0006E6B6 /* AssignmentsViewController+Selector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AssignmentsViewController+Selector.swift"; sourceTree = "<group>"; };
 		D72685FE1D7133F00081E4C7 /* WebServices+Assignments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+Assignments.swift"; sourceTree = "<group>"; };
 		D72686001D7133F90081E4C7 /* WebServices+AssignmentDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+AssignmentDetail.swift"; sourceTree = "<group>"; };
 		D72686051D71344D0081E4C7 /* AssignmentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentTableViewCell.swift; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 				A08F66F01D57204900FBE55E /* LoginViewController.swift */,
 				A09D75AB1D570F8B00B2AA74 /* ClassesViewController.swift */,
 				A09D75A91D570F8400B2AA74 /* AssignmentsViewController.swift */,
+				D71DEFE21D75F31B0006E6B6 /* AssignmentsViewController+Selector.swift */,
 				A09D75AD1D570F9A00B2AA74 /* DirectorySearchViewController.swift */,
 				31CD309C1D67ABC6001C4647 /* DirectorySearchViewController+TableView.swift */,
 				31CD309E1D67ACC7001C4647 /* DirectorySearchViewController+TabBar.swift */,
@@ -434,6 +437,7 @@
 				D7C10B2D1D70BB9700C9B66F /* ClassDetailDataStructure.swift in Sources */,
 				31CD30AB1D67BEB2001C4647 /* SearchResultTableViewCell.swift in Sources */,
 				31CD309D1D67ABC6001C4647 /* DirectorySearchViewController+TableView.swift in Sources */,
+				D71DEFE31D75F31B0006E6B6 /* AssignmentsViewController+Selector.swift in Sources */,
 				D72CF3291D72388A00B2116C /* AKPickerView.swift in Sources */,
 				A0BD730A1D56B27B00889331 /* WebServices+Login.swift in Sources */,
 				31CD309F1D67ACC7001C4647 /* DirectorySearchViewController+TabBar.swift in Sources */,
