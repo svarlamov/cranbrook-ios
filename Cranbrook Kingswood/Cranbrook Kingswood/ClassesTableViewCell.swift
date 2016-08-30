@@ -10,4 +10,8 @@ import UIKit
 
 class ClassesTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var teacherLabel: UILabel!
+    @IBOutlet weak var gradeLabel: UILabel!
+    
 }

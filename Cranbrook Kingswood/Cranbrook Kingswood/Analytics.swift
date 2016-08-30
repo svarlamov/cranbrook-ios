@@ -31,6 +31,15 @@ class Analytics {
         })
     }
     
+    //  Date Selection Method
+    internal func assignmentDateSelection(date: String) {
+        dispatch_async(dispatch_get_main_queue(),{
+            if self.isAnalyticsEnabled {
+                Answers.logCustomEventWithName("AssignmentDateSelection", customAttributes: ["User":"\(userLoginInfo!.username)", "Date Selected":"\(date)"])
+            }
+        })
+    }
+    
     //  Sign Out Method
     internal func logSignOut(username: String) {
         dispatch_async(dispatch_get_main_queue(),{

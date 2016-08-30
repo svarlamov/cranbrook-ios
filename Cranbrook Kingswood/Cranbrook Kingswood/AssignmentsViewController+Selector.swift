@@ -38,7 +38,7 @@ extension AssignmentsViewController {
     }
     
     func pickerView(pickerView: AKPickerView, didSelectItem item: Int) {
-        print("Selected date is \(self.dates[item])")
+        Analytics.analytics.assignmentDateSelection(self.dates[item])
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {}

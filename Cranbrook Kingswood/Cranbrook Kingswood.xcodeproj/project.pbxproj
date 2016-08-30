@@ -38,6 +38,7 @@
 		D71DEFE71D75F50D0006E6B6 /* AssignmentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D71DEFE61D75F50D0006E6B6 /* AssignmentsTableViewCell.xib */; };
 		D71DEFE91D75F5F90006E6B6 /* AssignmentsViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71DEFE81D75F5F80006E6B6 /* AssignmentsViewController+TableView.swift */; };
 		D71DEFED1D75F7A10006E6B6 /* ClassesViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71DEFEC1D75F7A10006E6B6 /* ClassesViewController+TableView.swift */; };
+		D71DEFF01D76099A0006E6B6 /* NetworkStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71DEFEF1D76099A0006E6B6 /* NetworkStatus.swift */; };
 		D72685FF1D7133F00081E4C7 /* WebServices+Assignments.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72685FE1D7133F00081E4C7 /* WebServices+Assignments.swift */; };
 		D72686011D7133F90081E4C7 /* WebServices+AssignmentDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72686001D7133F90081E4C7 /* WebServices+AssignmentDetail.swift */; };
 		D72686061D71344D0081E4C7 /* AssignmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72686051D71344D0081E4C7 /* AssignmentTableViewCell.swift */; };
@@ -90,6 +91,7 @@
 		D71DEFE61D75F50D0006E6B6 /* AssignmentsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AssignmentsTableViewCell.xib; sourceTree = "<group>"; };
 		D71DEFE81D75F5F80006E6B6 /* AssignmentsViewController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AssignmentsViewController+TableView.swift"; sourceTree = "<group>"; };
 		D71DEFEC1D75F7A10006E6B6 /* ClassesViewController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ClassesViewController+TableView.swift"; sourceTree = "<group>"; };
+		D71DEFEF1D76099A0006E6B6 /* NetworkStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkStatus.swift; sourceTree = "<group>"; };
 		D72685FE1D7133F00081E4C7 /* WebServices+Assignments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+Assignments.swift"; sourceTree = "<group>"; };
 		D72686001D7133F90081E4C7 /* WebServices+AssignmentDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+AssignmentDetail.swift"; sourceTree = "<group>"; };
 		D72686051D71344D0081E4C7 /* AssignmentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentTableViewCell.swift; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 				A09D75BC1D5715C500B2AA74 /* ProgressHUD */,
 				A09D75A51D57042900B2AA74 /* DateComparison.swift */,
 				D72CF3281D72388A00B2116C /* AKPickerView.swift */,
+				D71DEFEF1D76099A0006E6B6 /* NetworkStatus.swift */,
 			);
 			name = "Custom Classes";
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 				A09D75AC1D570F8B00B2AA74 /* ClassesViewController.swift in Sources */,
 				A0BD73041D56972500889331 /* WebServices.swift in Sources */,
 				31C4DA9D1D65644900397716 /* LoginDataStructure.swift in Sources */,
+				D71DEFF01D76099A0006E6B6 /* NetworkStatus.swift in Sources */,
 				D72CF32E1D7258A900B2116C /* DateListStructure.swift in Sources */,
 				D72686011D7133F90081E4C7 /* WebServices+AssignmentDetail.swift in Sources */,
 				A09D75AE1D570F9A00B2AA74 /* DirectorySearchViewController.swift in Sources */,

@@ -27,14 +27,37 @@
                                 <color key="textColor" red="0.20784313725490194" green="0.20784313725490194" blue="0.20784313725490194" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="gu7-4O-hAB">
+                                <rect key="frame" x="290" y="361" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="2yy-GL-TXr"/>
+                                    <constraint firstAttribute="width" constant="20" id="qXk-FW-IIq"/>
+                                </constraints>
+                            </activityIndicatorView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No network found" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ya-3l-WXX">
+                                <rect key="frame" x="226" y="398" width="148" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="148" id="TCa-pm-MOB"/>
+                                    <constraint firstAttribute="height" constant="21" id="gaE-tn-TBW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                <color key="textColor" red="0.70632340604026844" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="747-4N-IGf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="034-eR-kUw"/>
+                            <constraint firstItem="gu7-4O-hAB" firstAttribute="top" secondItem="747-4N-IGf" secondAttribute="bottom" constant="18" id="GVt-pq-Nl7"/>
+                            <constraint firstItem="3ya-3l-WXX" firstAttribute="top" secondItem="gu7-4O-hAB" secondAttribute="bottom" constant="17" id="PZn-dT-PYA"/>
                             <constraint firstItem="747-4N-IGf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jLJ-LW-y56"/>
+                            <constraint firstItem="3ya-3l-WXX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nHf-46-BX7"/>
+                            <constraint firstItem="gu7-4O-hAB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="z42-lM-DNX"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="gu7-4O-hAB" id="J35-9f-6dr"/>
+                        <outlet property="networkMessageLabel" destination="3ya-3l-WXX" id="ifa-Sh-Tkb"/>
                         <outlet property="titleLabel" destination="747-4N-IGf" id="E0I-Wv-DET"/>
                         <segue destination="mIp-Sa-e7H" kind="presentation" identifier="ShowLoginViewController" modalTransitionStyle="crossDissolve" id="suC-Zd-F3g"/>
                         <segue destination="fhv-cY-TqV" kind="presentation" identifier="StartupCompleteSegue" modalTransitionStyle="crossDissolve" id="twR-EM-b5c"/>
