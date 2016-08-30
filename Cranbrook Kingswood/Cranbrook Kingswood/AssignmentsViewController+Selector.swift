@@ -25,7 +25,6 @@ extension AssignmentsViewController {
         self.pickerView.reloadData()
     }
     
-    //  MARK: - AKPickerView setup
     func numberOfItemsInPickerView(pickerView: AKPickerView) -> Int {
         return self.dates.count
     }

@@ -11,11 +11,15 @@ import Alamofire
 import SwiftyJSON
 import Unbox
 
-class AssignmentsViewController: UIViewController, AKPickerViewDataSource, AKPickerViewDelegate {
+class AssignmentsViewController: UIViewController, AKPickerViewDataSource, AKPickerViewDelegate, UITableViewDelegate, UITableViewDataSource {
     
+    //  Picker view
     @IBOutlet var pickerView: AKPickerView!
-    
     let dates = assignmentsDateList.mutableDateList
+    
+    //  Table view
+    @IBOutlet weak var tableView: UITableView!
+    let assignmentsCellIdentifier: String = "assignments_cell"
     
     override func viewDidLoad() {
         super.viewDidLoad()

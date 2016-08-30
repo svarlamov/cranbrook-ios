@@ -335,8 +335,37 @@
                     <view key="view" contentMode="scaleToFill" id="2Ey-FQ-BY5">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="494"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RVP-er-uuC">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="494"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="classes_cell" id="fuT-em-HRA">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fuT-em-HRA" id="pyz-Wa-Vym">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="tUE-51-RpT" id="gsc-fc-OSa"/>
+                                    <outlet property="delegate" destination="tUE-51-RpT" id="BGv-r2-3Hj"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="4Qt-Wp-bgy" firstAttribute="top" secondItem="RVP-er-uuC" secondAttribute="bottom" id="LkE-NB-GA9"/>
+                            <constraint firstAttribute="trailing" secondItem="RVP-er-uuC" secondAttribute="trailing" id="Rno-E4-mGk"/>
+                            <constraint firstItem="RVP-er-uuC" firstAttribute="top" secondItem="BNu-Dn-nze" secondAttribute="bottom" id="kmg-TC-fey"/>
+                            <constraint firstItem="RVP-er-uuC" firstAttribute="leading" secondItem="2Ey-FQ-BY5" secondAttribute="leading" id="t3c-On-owb"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="RVP-er-uuC" id="sh4-5n-byL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5kC-cI-eeC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -622,13 +651,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="494"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="table_view_shadow_2px" translatesAutoresizingMaskIntoConstraints="NO" id="lO7-9O-TbI">
-                                <rect key="frame" x="-75" y="36" width="750" height="6"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="750" id="FK0-Se-LhD"/>
-                                    <constraint firstAttribute="height" constant="6" id="Gbj-je-h76"/>
-                                </constraints>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ksb-Bo-vuO" customClass="AKPickerView" customModule="Cranbrook_Kingswood" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="37"/>
                                 <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
@@ -644,12 +666,41 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sA6-v1-QgZ">
+                                <rect key="frame" x="0.0" y="37" width="600" height="457"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="assignments_cell" id="JwW-te-VEp">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JwW-te-VEp" id="1bw-8P-BhG">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ew4-Mq-n3v" id="UcW-Tm-arz"/>
+                                    <outlet property="delegate" destination="Ew4-Mq-n3v" id="lXh-Xd-NjP"/>
+                                </connections>
+                            </tableView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="table_view_shadow_2px" translatesAutoresizingMaskIntoConstraints="NO" id="lO7-9O-TbI">
+                                <rect key="frame" x="-75" y="36" width="750" height="6"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="750" id="FK0-Se-LhD"/>
+                                    <constraint firstAttribute="height" constant="6" id="Gbj-je-h76"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="ksb-Bo-vuO" firstAttribute="top" secondItem="s0g-b9-AEg" secondAttribute="bottom" id="BGp-31-mxd"/>
+                            <constraint firstItem="ou3-0Z-gGm" firstAttribute="top" secondItem="sA6-v1-QgZ" secondAttribute="bottom" id="BlO-Vz-cRr"/>
+                            <constraint firstItem="sA6-v1-QgZ" firstAttribute="top" secondItem="s0g-b9-AEg" secondAttribute="bottom" constant="37" id="FC2-eB-SRJ"/>
                             <constraint firstItem="ksb-Bo-vuO" firstAttribute="leading" secondItem="j1n-UW-EgB" secondAttribute="leading" id="KfP-4h-YO7"/>
                             <constraint firstItem="lO7-9O-TbI" firstAttribute="top" secondItem="s0g-b9-AEg" secondAttribute="bottom" constant="36" id="ObN-rT-Vgu"/>
+                            <constraint firstAttribute="trailing" secondItem="sA6-v1-QgZ" secondAttribute="trailing" id="Q4O-Rx-dWm"/>
+                            <constraint firstItem="sA6-v1-QgZ" firstAttribute="leading" secondItem="j1n-UW-EgB" secondAttribute="leading" id="bFv-pG-5V4"/>
                             <constraint firstItem="lO7-9O-TbI" firstAttribute="centerX" secondItem="j1n-UW-EgB" secondAttribute="centerX" id="isd-DT-NGm"/>
                             <constraint firstAttribute="trailing" secondItem="ksb-Bo-vuO" secondAttribute="trailing" id="my7-N0-e20"/>
                         </constraints>

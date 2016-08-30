@@ -11,8 +11,12 @@ import Alamofire
 import SwiftyJSON
 import Unbox
 
-class ClassesViewController: UIViewController {
+class ClassesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    //  Table view
+    @IBOutlet weak var tableView: UITableView!
+    let classesCellIdentifier: String = "classes_cell"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
