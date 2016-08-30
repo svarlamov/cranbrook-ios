@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 import Unbox
 
-class DirectorySearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+class DirectorySearchViewController: CranbrookViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     // Search bar
     @IBOutlet weak var directorySearchBar: UISearchBar!

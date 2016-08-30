@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 import Unbox
 
-class AssignmentsViewController: UIViewController, AKPickerViewDataSource, AKPickerViewDelegate {
+class AssignmentsViewController: CranbrookViewController, AKPickerViewDataSource, AKPickerViewDelegate {
     
     @IBOutlet var pickerView: AKPickerView!
     

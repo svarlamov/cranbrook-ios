@@ -22,7 +22,7 @@ enum loginCurrentUserStatusPrintOptions: String {
     case noCurrentUser          = "no_logged_in_user"
 }
 
-class StartupViewController: UIViewController {
+class StartupViewController: CranbrookViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     

@@ -44,6 +44,7 @@
 		D7C10B331D70ED0800C9B66F /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C10B321D70ED0800C9B66F /* Analytics.swift */; };
 		D7C689881D750E360088FCA5 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C689871D750E360088FCA5 /* Reachability.swift */; };
 		D7C6898A1D750E860088FCA5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C689891D750E860088FCA5 /* SystemConfiguration.framework */; };
+		D7EEDB5D1D751B39007B48AC /* CranbrookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EEDB5C1D751B39007B48AC /* CranbrookViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +90,7 @@
 		D7C10B321D70ED0800C9B66F /* Analytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
 		D7C689871D750E360088FCA5 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		D7C689891D750E860088FCA5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D7EEDB5C1D751B39007B48AC /* CranbrookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CranbrookViewController.swift; sourceTree = "<group>"; };
 		F921898296A250D0E2257CAC /* Pods_Cranbrook_Kingswood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cranbrook_Kingswood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -235,6 +237,7 @@
 		D7C10B281D70B39000C9B66F /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D7EEDB5C1D751B39007B48AC /* CranbrookViewController.swift */,
 				A07468981D568F7000E7ACC0 /* StartupViewController.swift */,
 				A016B6E31D57FC7600A4A68D /* ViewControllerContainer.swift */,
 				A08F66F01D57204900FBE55E /* LoginViewController.swift */,
@@ -396,6 +399,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7C10B2B1D70B8D700C9B66F /* WebServices+ClassDetail.swift in Sources */,
+				D7EEDB5D1D751B39007B48AC /* CranbrookViewController.swift in Sources */,
 				A0BD73101D56B9CA00889331 /* CranbrookAPIInfo.swift in Sources */,
 				31C4DAA11D65649F00397716 /* SearchDataStructure.swift in Sources */,
 				D72685FF1D7133F00081E4C7 /* WebServices+Assignments.swift in Sources */,
