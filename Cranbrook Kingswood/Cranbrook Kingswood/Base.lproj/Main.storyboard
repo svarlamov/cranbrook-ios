@@ -145,7 +145,7 @@
                         <outlet property="loginMessageLabel" destination="urL-RU-cso" id="r0k-EC-yzs"/>
                         <outlet property="passwordTextField" destination="QTA-GO-uK0" id="9gG-Hd-EkL"/>
                         <outlet property="usernameTextField" destination="6BT-wP-L6q" id="Ma5-UG-yPH"/>
-                        <segue destination="fhv-cY-TqV" kind="presentation" identifier="StartupCompleteSegue" modalTransitionStyle="crossDissolve" id="8ak-eE-lO9"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="StartupCompleteSegue" modalTransitionStyle="crossDissolve" id="BVR-do-nOz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tTn-PT-Shp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -743,6 +743,6 @@
         <image name="table_view_shadow_2px" width="750" height="6"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="twR-EM-b5c"/>
+        <segue reference="BVR-do-nOz"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -10,11 +10,13 @@ import Foundation
 
 struct DateListStructure {
     var mutableDateList: Array<String> = Array<String>()
+    var mutableNSDateList: Array<NSDate> = Array<NSDate>()
     
     init() {
         let startDate: NSDate = self.getReferenceDate(isForStartDate: true)
         let endDate: NSDate = self.getReferenceDate(isForStartDate: false)
         self.mutableDateList = self.daysBetweenDates(startDate, endDate: endDate)
+        self.mutableNSDateList = self.mainDaysBetweenDates(mutableDateList)
     }
     
     func getReferenceDate(isForStartDate isForStartDate: Bool) -> NSDate {
@@ -27,6 +29,18 @@ struct DateListStructure {
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         return dateFormatter.dateFromString(strDate)!
+    }
+    
+    func mainDaysBetweenDates(stringDates: Array<String>) -> Array<NSDate> {
+        var returnedDateArray: Array<NSDate> = []
+        let mainStringDates: Array<String> = stringDates
+        let fmt = NSDateFormatter()
+        fmt.dateFormat = "EEEE, MM/dd/yyyy"
+        for stringDate in mainStringDates {
+            let instanceDate: NSDate = fmt.dateFromString(stringDate)!
+            returnedDateArray.append(instanceDate)
+        }
+        return returnedDateArray
     }
     
     func daysBetweenDates(startDate: NSDate, endDate: NSDate) -> Array<String> {

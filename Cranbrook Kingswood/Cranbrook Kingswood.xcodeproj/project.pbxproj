@@ -45,6 +45,8 @@
 		D72686081D7134630081E4C7 /* ClassesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72686071D7134630081E4C7 /* ClassesTableViewCell.swift */; };
 		D72CF3291D72388A00B2116C /* AKPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72CF3281D72388A00B2116C /* AKPickerView.swift */; };
 		D72CF32E1D7258A900B2116C /* DateListStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72CF32D1D7258A900B2116C /* DateListStructure.swift */; };
+		D7B35EE31D779BD100690868 /* StudentGroupTermList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B35EE21D779BD100690868 /* StudentGroupTermList.swift */; };
+		D7B35EE51D779DD600690868 /* StartupViewController+SetupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B35EE41D779DD600690868 /* StartupViewController+SetupData.swift */; };
 		D7C10B2B1D70B8D700C9B66F /* WebServices+ClassDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C10B2A1D70B8D700C9B66F /* WebServices+ClassDetail.swift */; };
 		D7C10B2D1D70BB9700C9B66F /* ClassDetailDataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C10B2C1D70BB9700C9B66F /* ClassDetailDataStructure.swift */; };
 		D7C10B331D70ED0800C9B66F /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C10B321D70ED0800C9B66F /* Analytics.swift */; };
@@ -98,6 +100,8 @@
 		D72686071D7134630081E4C7 /* ClassesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassesTableViewCell.swift; sourceTree = "<group>"; };
 		D72CF3281D72388A00B2116C /* AKPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKPickerView.swift; sourceTree = "<group>"; };
 		D72CF32D1D7258A900B2116C /* DateListStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateListStructure.swift; sourceTree = "<group>"; };
+		D7B35EE21D779BD100690868 /* StudentGroupTermList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentGroupTermList.swift; sourceTree = "<group>"; };
+		D7B35EE41D779DD600690868 /* StartupViewController+SetupData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StartupViewController+SetupData.swift"; sourceTree = "<group>"; };
 		D7C10B2A1D70B8D700C9B66F /* WebServices+ClassDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+ClassDetail.swift"; sourceTree = "<group>"; };
 		D7C10B2C1D70BB9700C9B66F /* ClassDetailDataStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassDetailDataStructure.swift; sourceTree = "<group>"; };
 		D7C10B321D70ED0800C9B66F /* Analytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
@@ -255,6 +259,15 @@
 			name = "Custom Classes";
 			sourceTree = "<group>";
 		};
+		D7B35EE61D779DDC00690868 /* Startup */ = {
+			isa = PBXGroup;
+			children = (
+				A07468981D568F7000E7ACC0 /* StartupViewController.swift */,
+				D7B35EE41D779DD600690868 /* StartupViewController+SetupData.swift */,
+			);
+			name = Startup;
+			sourceTree = "<group>";
+		};
 		D7C10B261D70B2E900C9B66F /* WebServices */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,6 +289,7 @@
 				31C4DA9E1D65647A00397716 /* ClassesDataStructure.swift */,
 				D7C10B2C1D70BB9700C9B66F /* ClassDetailDataStructure.swift */,
 				31C4DAA01D65649F00397716 /* SearchDataStructure.swift */,
+				D7B35EE21D779BD100690868 /* StudentGroupTermList.swift */,
 				D72CF32D1D7258A900B2116C /* DateListStructure.swift */,
 			);
 			name = "Data Models";
@@ -285,9 +299,9 @@
 			isa = PBXGroup;
 			children = (
 				D7CF02201D75B8FE00145F4B /* CranbrookViewController.swift */,
-				A07468981D568F7000E7ACC0 /* StartupViewController.swift */,
 				A016B6E31D57FC7600A4A68D /* ViewControllerContainer.swift */,
 				A08F66F01D57204900FBE55E /* LoginViewController.swift */,
+				D7B35EE61D779DDC00690868 /* Startup */,
 				D71DEFEE1D75F7CA0006E6B6 /* Classes */,
 				D71DEFEB1D75F6D00006E6B6 /* Assignments */,
 				D71DEFEA1D75F6C10006E6B6 /* Directory Search */,
@@ -459,6 +473,7 @@
 				D7C10B2B1D70B8D700C9B66F /* WebServices+ClassDetail.swift in Sources */,
 				D7CF02211D75B8FE00145F4B /* CranbrookViewController.swift in Sources */,
 				A0BD73101D56B9CA00889331 /* CranbrookAPIInfo.swift in Sources */,
+				D7B35EE51D779DD600690868 /* StartupViewController+SetupData.swift in Sources */,
 				31C4DAA11D65649F00397716 /* SearchDataStructure.swift in Sources */,
 				D72685FF1D7133F00081E4C7 /* WebServices+Assignments.swift in Sources */,
 				A09D75A81D570F1A00B2AA74 /* WebServices+CurrentClasses.swift in Sources */,
@@ -473,6 +488,7 @@
 				31C4DA9D1D65644900397716 /* LoginDataStructure.swift in Sources */,
 				D71DEFF01D76099A0006E6B6 /* NetworkStatus.swift in Sources */,
 				D72CF32E1D7258A900B2116C /* DateListStructure.swift in Sources */,
+				D7B35EE31D779BD100690868 /* StudentGroupTermList.swift in Sources */,
 				D72686011D7133F90081E4C7 /* WebServices+AssignmentDetail.swift in Sources */,
 				A09D75AE1D570F9A00B2AA74 /* DirectorySearchViewController.swift in Sources */,
 				A016B6E41D57FC7600A4A68D /* ViewControllerContainer.swift in Sources */,

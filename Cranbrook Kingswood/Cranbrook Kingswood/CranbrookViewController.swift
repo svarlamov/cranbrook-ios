@@ -14,7 +14,6 @@ class CranbrookViewController: UIViewController {
     //  Reachability
     var reach: Reachability?
     var networkMessage: UIAlertController = UIAlertController()
-    internal var isConnectionAvailable: Bool = Bool()
     
     override func viewDidLoad() { super.viewDidLoad() }
     
@@ -34,10 +33,10 @@ class CranbrookViewController: UIViewController {
     func reachabilityChanged(notification: NSNotification) {
         if self.reach!.isReachableViaWiFi() || self.reach!.isReachableViaWWAN() {
             self.removeNetworkMessage()
-            self.isConnectionAvailable = true
+            isNetworkAvailable = true
         } else {
             self.displayNoNetworkMessage()
-            self.isConnectionAvailable = false
+            isNetworkAvailable = false
         }
     }
     

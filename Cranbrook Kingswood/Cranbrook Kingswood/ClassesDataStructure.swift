@@ -9,6 +9,8 @@
 import Foundation
 import Unbox
 
+//  https://cranbrook.myschoolapp.com/api/datadirect/ParentStudentUserAcademicGroupsGet?userId=3254976&schoolYearLabel=2016+-+2017&memberLevel=3&persona=2&durationList=66106&markingPeriodId=
+
 // MARK: - structure for class list
 struct CurrentUserClasses {
 	var albumId:                    Int?

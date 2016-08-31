@@ -18,6 +18,7 @@ var selectedTab: SelectedTabOptions                     = SelectedTabOptions.Cla
 var userLoginInfo: UserLoginInfoStructure?              = nil;
 var classDetailsArray: [[CurrentUserClassDetail]]?      = nil;
 let assignmentsDateList: DateListStructure              = DateListStructure()
+var isNetworkAvailable: Bool                            = Bool()
 
 
 
