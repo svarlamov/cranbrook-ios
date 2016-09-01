@@ -13,6 +13,23 @@ import Unbox
 
 extension AssignmentsViewController {
     
+    internal func indexOfCurrentDate() -> Int? {
+        let calendar: NSCalendar = NSCalendar.currentCalendar()
+        for date in mainDates {
+            if calendar.isDateInToday(date) {
+                let indexOfDate: Int = mainDates.indexOf(date)!
+                return indexOfDate
+            }
+        }
+        return nil
+    }
+    
+    func goToDateIndex() {
+        if let dateIndex = self.indexOfCurrentDate() {
+            self.pickerView.scrollToItem(dateIndex)
+        }
+    }
+    
     func setupPickerView() {
         self.pickerView.delegate = self
         self.pickerView.dataSource = self

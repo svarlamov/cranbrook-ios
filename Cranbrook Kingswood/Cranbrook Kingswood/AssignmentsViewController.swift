@@ -16,6 +16,7 @@ class AssignmentsViewController: UIViewController, AKPickerViewDataSource, AKPic
     //  Picker view
     @IBOutlet var pickerView: AKPickerView!
     let dates = assignmentsDateList.mutableDateList
+    let mainDates = assignmentsDateList.mutableNSDateList
     
     //  Table view
     @IBOutlet weak var tableView: UITableView!
@@ -24,6 +25,11 @@ class AssignmentsViewController: UIViewController, AKPickerViewDataSource, AKPic
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        goToDateIndex()
     }
     
     func setupViews() {
