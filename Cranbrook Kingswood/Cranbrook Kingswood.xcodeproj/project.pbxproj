@@ -34,8 +34,6 @@
 		A0BD73101D56B9CA00889331 /* CranbrookAPIInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BD730F1D56B9CA00889331 /* CranbrookAPIInfo.swift */; };
 		A0BD73121D56E58E00889331 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BD73111D56E58E00889331 /* Constants.swift */; };
 		D71DEFE31D75F31B0006E6B6 /* AssignmentsViewController+Selector.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71DEFE21D75F31B0006E6B6 /* AssignmentsViewController+Selector.swift */; };
-		D71DEFE51D75F4F70006E6B6 /* ClassesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D71DEFE41D75F4F70006E6B6 /* ClassesTableViewCell.xib */; };
-		D71DEFE71D75F50D0006E6B6 /* AssignmentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D71DEFE61D75F50D0006E6B6 /* AssignmentsTableViewCell.xib */; };
 		D71DEFE91D75F5F90006E6B6 /* AssignmentsViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71DEFE81D75F5F80006E6B6 /* AssignmentsViewController+TableView.swift */; };
 		D71DEFED1D75F7A10006E6B6 /* ClassesViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71DEFEC1D75F7A10006E6B6 /* ClassesViewController+TableView.swift */; };
 		D71DEFF01D76099A0006E6B6 /* NetworkStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71DEFEF1D76099A0006E6B6 /* NetworkStatus.swift */; };
@@ -89,8 +87,6 @@
 		B3DD1C0F8761A3660B544FB4 /* Pods-Cranbrook Kingswood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cranbrook Kingswood.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cranbrook Kingswood/Pods-Cranbrook Kingswood.debug.xcconfig"; sourceTree = "<group>"; };
 		BC1DCB26B33F435898567871 /* Pods-Cranbrook Kingswood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cranbrook Kingswood.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cranbrook Kingswood/Pods-Cranbrook Kingswood.release.xcconfig"; sourceTree = "<group>"; };
 		D71DEFE21D75F31B0006E6B6 /* AssignmentsViewController+Selector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AssignmentsViewController+Selector.swift"; sourceTree = "<group>"; };
-		D71DEFE41D75F4F70006E6B6 /* ClassesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClassesTableViewCell.xib; sourceTree = "<group>"; };
-		D71DEFE61D75F50D0006E6B6 /* AssignmentsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AssignmentsTableViewCell.xib; sourceTree = "<group>"; };
 		D71DEFE81D75F5F80006E6B6 /* AssignmentsViewController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AssignmentsViewController+TableView.swift"; sourceTree = "<group>"; };
 		D71DEFEC1D75F7A10006E6B6 /* ClassesViewController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ClassesViewController+TableView.swift"; sourceTree = "<group>"; };
 		D71DEFEF1D76099A0006E6B6 /* NetworkStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkStatus.swift; sourceTree = "<group>"; };
@@ -314,9 +310,7 @@
 			isa = PBXGroup;
 			children = (
 				D72686051D71344D0081E4C7 /* AssignmentTableViewCell.swift */,
-				D71DEFE61D75F50D0006E6B6 /* AssignmentsTableViewCell.xib */,
 				D72686071D7134630081E4C7 /* ClassesTableViewCell.swift */,
-				D71DEFE41D75F4F70006E6B6 /* ClassesTableViewCell.xib */,
 				31CD30AA1D67BEB2001C4647 /* SearchResultTableViewCell.swift */,
 			);
 			name = Views;
@@ -395,9 +389,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A074688B1D568DAD00E7ACC0 /* LaunchScreen.storyboard in Resources */,
-				D71DEFE71D75F50D0006E6B6 /* AssignmentsTableViewCell.xib in Resources */,
 				A07468881D568DAD00E7ACC0 /* Assets.xcassets in Resources */,
-				D71DEFE51D75F4F70006E6B6 /* ClassesTableViewCell.xib in Resources */,
 				A07468861D568DAD00E7ACC0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
