@@ -46,6 +46,7 @@
 		D7B35EE31D779BD100690868 /* StudentGroupTermStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B35EE21D779BD100690868 /* StudentGroupTermStructure.swift */; };
 		D7B35EE51D779DD600690868 /* StartupViewController+SetupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B35EE41D779DD600690868 /* StartupViewController+SetupData.swift */; };
 		D7B481BB1D79EF9B0033C58D /* WebServices+StudentGroupTerm.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B481BA1D79EF9B0033C58D /* WebServices+StudentGroupTerm.swift */; };
+		D7B481BD1D7A309B0033C58D /* AssignmentDataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B481BC1D7A309B0033C58D /* AssignmentDataStructure.swift */; };
 		D7C10B2B1D70B8D700C9B66F /* WebServices+ClassDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C10B2A1D70B8D700C9B66F /* WebServices+ClassDetail.swift */; };
 		D7C10B2D1D70BB9700C9B66F /* ClassDetailDataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C10B2C1D70BB9700C9B66F /* ClassDetailDataStructure.swift */; };
 		D7C10B331D70ED0800C9B66F /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C10B321D70ED0800C9B66F /* Analytics.swift */; };
@@ -100,6 +101,7 @@
 		D7B35EE21D779BD100690868 /* StudentGroupTermStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentGroupTermStructure.swift; sourceTree = "<group>"; };
 		D7B35EE41D779DD600690868 /* StartupViewController+SetupData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StartupViewController+SetupData.swift"; sourceTree = "<group>"; };
 		D7B481BA1D79EF9B0033C58D /* WebServices+StudentGroupTerm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+StudentGroupTerm.swift"; sourceTree = "<group>"; };
+		D7B481BC1D7A309B0033C58D /* AssignmentDataStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentDataStructure.swift; sourceTree = "<group>"; };
 		D7C10B2A1D70B8D700C9B66F /* WebServices+ClassDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+ClassDetail.swift"; sourceTree = "<group>"; };
 		D7C10B2C1D70BB9700C9B66F /* ClassDetailDataStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassDetailDataStructure.swift; sourceTree = "<group>"; };
 		D7C10B321D70ED0800C9B66F /* Analytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 				D7B35EE21D779BD100690868 /* StudentGroupTermStructure.swift */,
 				31C4DA9E1D65647A00397716 /* ClassesDataStructure.swift */,
 				D7C10B2C1D70BB9700C9B66F /* ClassDetailDataStructure.swift */,
+				D7B481BC1D7A309B0033C58D /* AssignmentDataStructure.swift */,
 				31C4DAA01D65649F00397716 /* SearchDataStructure.swift */,
 				D72CF32D1D7258A900B2116C /* DateListStructure.swift */,
 			);
@@ -342,6 +345,7 @@
 				CACB39B8E868627911BFF492 /* [CP] Embed Pods Frameworks */,
 				61D3340A0F8502357C9B123F /* [CP] Copy Pods Resources */,
 				D7C10B311D70E7FD00C9B66F /* ShellScript */,
+				D7B481C21D7A35000033C58D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -445,6 +449,19 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		D7B481C21D7A35000033C58D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "TAGS=\"TODO:|FIXME:\"\necho \"searching ${SRCROOT} for ${TAGS}\"\nfind \"${SRCROOT}\" \\( -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\"";
+		};
 		D7C10B311D70E7FD00C9B66F /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -484,6 +501,7 @@
 				D71DEFF01D76099A0006E6B6 /* NetworkStatus.swift in Sources */,
 				D72CF32E1D7258A900B2116C /* DateListStructure.swift in Sources */,
 				D7B35EE31D779BD100690868 /* StudentGroupTermStructure.swift in Sources */,
+				D7B481BD1D7A309B0033C58D /* AssignmentDataStructure.swift in Sources */,
 				D72686011D7133F90081E4C7 /* WebServices+AssignmentDetail.swift in Sources */,
 				A09D75AE1D570F9A00B2AA74 /* DirectorySearchViewController.swift in Sources */,
 				A016B6E41D57FC7600A4A68D /* ViewControllerContainer.swift in Sources */,
