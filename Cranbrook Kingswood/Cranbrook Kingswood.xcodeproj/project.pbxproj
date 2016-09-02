@@ -176,8 +176,8 @@
 			isa = PBXGroup;
 			children = (
 				A07468961D568E9100E7ACC0 /* Core */,
-				D7C10B261D70B2E900C9B66F /* WebServices */,
 				D7C10B271D70B2F800C9B66F /* Data Models */,
+				D7C10B261D70B2E900C9B66F /* WebServices */,
 				D7C10B281D70B39000C9B66F /* View Controllers */,
 				D7C10B291D70B39600C9B66F /* Views */,
 				D72CF32A1D7257ED00B2116C /* Custom Classes */,

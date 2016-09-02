@@ -9,8 +9,6 @@
 import Foundation
 import Unbox
 
-//  https://cranbrook.myschoolapp.com/api/DataDirect/StudentGroupTermList/?studentUserId=3254976&schoolYearLabel=2016+-+2017&personaId=2
-
 struct StudentGroupTermStructure {
     var offeringType:           Int?
     var durationId:             Int?
