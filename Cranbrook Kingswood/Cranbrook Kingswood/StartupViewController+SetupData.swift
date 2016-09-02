@@ -35,8 +35,14 @@ extension StartupViewController {
     
     private func getStudentGroupTerm() {
         WebServices.service.getStudentGroupTermList({ (isRequestSuccessful) in
-            self.takeSegue(.continuation)
+            self.getStudentClasses()
         })
+    }
+    
+    private func getStudentClasses() {
+        WebServices.service.getCurrentUserClasses(true) { (isRequestSuccessful) in
+            self.takeSegue(.continuation)
+        }
     }
     
 }

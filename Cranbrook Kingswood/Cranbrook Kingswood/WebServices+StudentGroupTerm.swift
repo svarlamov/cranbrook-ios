@@ -14,6 +14,16 @@ import Alamofire
 extension WebServices {
  
     internal func getStudentGroupTermList(callBack: (isRequestSuccessful: Bool) -> Void) {
+        getStudentGroupTermListSubMethod { (isRequestSuccessful) in
+            if isRequestSuccessful {
+                callBack(isRequestSuccessful: true)
+            } else {
+                callBack(isRequestSuccessful: false)
+            }
+        }
+    }
+    
+    private func getStudentGroupTermListSubMethod(callBack: (isRequestSuccessful: Bool) -> Void) {
         let studentGroupTermRequest: NSMutableURLRequest = createStudentGroupTermRequest()
         var studentGroupArray: [StudentGroupTermStructure] = [StudentGroupTermStructure]()
         
@@ -46,11 +56,8 @@ extension WebServices {
     }
     
     private func createStudentGroupTermRequest() -> NSMutableURLRequest {
-        var userid: String = String()
-        if let mainUserId: String = currentSessionInfo?.userId {
-            userid = mainUserId
-        }
-        let requestUrl = NSURL(string: "https://cranbrook.myschoolapp.com/api/DataDirect/StudentGroupTermList/?studentUserId=\(userid)&schoolYearLabel=2016+-+2017&personaId=2")!
+        let requestStringURL: String = createStudentGroupTermRequestURL()
+        let requestUrl = NSURL(string: requestStringURL)!
         let request = NSMutableURLRequest(URL: requestUrl)
         request.HTTPMethod = "GET"
         if let sessionToken = currentSessionInfo?.sessionToken {
@@ -59,4 +66,24 @@ extension WebServices {
         return request
     }
     
+    private func createStudentGroupTermRequestURL() -> String {
+        var returnString: String = String()
+        var userid: String = String()
+        if let mainUserId: String = currentSessionInfo?.userId {
+            userid = mainUserId
+        }
+        returnString = "https://cranbrook.myschoolapp.com/api/DataDirect/StudentGroupTermList/?studentUserId=\(userid)&schoolYearLabel=2016+-+2017&personaId=2"
+        return returnString
+    }
+    
 }
+
+
+
+
+
+
+
+
+
+
