@@ -19,15 +19,13 @@ var searchResults: [SearchResultResponse]?              = [SearchResultResponse]
 //
 var selectedTab: SelectedTabOptions                     = SelectedTabOptions.ClassesTab
 //
-var userLoginInfo: UserLoginInfoStructure?              = nil
+var userLoginInfo: UserLoginInfoStructure?              = nil;
 //
-var classDetailsArray: [[CurrentUserClassDetail]]?      = nil
+var classDetailsArray: [[CurrentUserClassDetail]]?      = nil;
 //
 let assignmentsDateList: DateListStructure              = DateListStructure()
 //
 var isNetworkAvailable: Bool                            = Bool()
-//
-var studentGroupTermList: [StudentGroupTermList]?       = nil
 
 
 

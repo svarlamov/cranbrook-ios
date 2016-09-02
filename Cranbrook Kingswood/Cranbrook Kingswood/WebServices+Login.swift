@@ -83,6 +83,25 @@ extension WebServices {
         
     }
     
+    private func getKeyForUserSession(data cookieData: Response<AnyObject, NSError>) -> String? {
+        
+        if let headerFields = cookieData.response?.allHeaderFields as? [String: String], URL = cookieData.request?.URL {
+            let cookies = NSHTTPCookie.cookiesWithResponseHeaderFields(headerFields, forURL: URL)
+            
+            for cookie in cookies {
+                let name = cookie.name
+                if name == "t" {
+                    let value = cookie.value
+                    return value
+                }
+            }
+            
+        }
+        
+        return nil
+        
+    }
+    
     private func createLoginParameters(username username:String, password:String) -> [String:String] {
         return ["From": "", "Username": "\(username)", "Password": "\(password)", "remember": "false", "InterfaceSource": "WebApp"]
     }
