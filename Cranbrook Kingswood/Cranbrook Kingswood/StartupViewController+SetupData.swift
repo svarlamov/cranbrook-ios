@@ -13,4 +13,30 @@ import Unbox
 
 extension StartupViewController {
     
+    func login() {
+        if (recoverLastLoggedInState()) {
+            let username: String = userLoginInfo!.username
+            let password: String = userLoginInfo!.password
+            WebServices.service.loginWithParameters(username: username, password: password, callBack: { (isLoginSuccessful) in
+                if isLoginSuccessful {
+                    self.getStudentGroupTerm()
+                } else {
+                    destroyPersistedLoginData()
+                    self.takeSegue(.login)
+                }
+            })
+            
+        } else {
+            print(loginCurrentUserStatusPrintOptions.noCurrentUser.rawValue)
+            takeSegue(.login)
+            
+        }
+    }
+    
+    private func getStudentGroupTerm() {
+        WebServices.service.getStudentGroupTermList({ (isRequestSuccessful) in
+            self.takeSegue(.continuation)
+        })
+    }
+    
 }

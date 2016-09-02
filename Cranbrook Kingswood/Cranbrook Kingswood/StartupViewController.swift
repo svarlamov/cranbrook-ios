@@ -69,26 +69,6 @@ class StartupViewController: UIViewController {
         }
     }
     
-    private func login() {
-        if (recoverLastLoggedInState()) {
-            let username: String = userLoginInfo!.username
-            let password: String = userLoginInfo!.password
-            WebServices.service.loginWithParameters(username: username, password: password, callBack: { (isLoginSuccessful) in
-                if isLoginSuccessful {
-                    self.takeSegue(.continuation)
-                } else {
-                    destroyPersistedLoginData()
-                    self.takeSegue(.login)
-                }
-            })
-            
-        } else {
-            print(loginCurrentUserStatusPrintOptions.noCurrentUser.rawValue)
-            takeSegue(.login)
-            
-        }
-    }
-    
     //  MARK: - Reachability
     func setupReachability() {
         self.reach = Reachability.reachabilityForInternetConnection()

@@ -40,18 +40,24 @@ class LoginViewController: CranbrookViewController, UITextFieldDelegate {
         
         if isValidCredential(username, inputPassword: password) {
             print(CredentialValidationMessages.Valid.rawValue)
-            ProgressHUD.show()
-            WebServices.service.loginWithParameters(username: username, password: password, callBack: { (isLoginSuccessful) in
-                if isLoginSuccessful {
-                    print(loginCurrentUserStatusPrintOptions.currentUser.rawValue)
-                    ProgressHUD.dismiss()
-                    self.takeSegue(.continuation)
-                } else {
-                    ProgressHUD.dismiss()
-                    self.displayLoginError(withMessage: "Error: Login Credentials Invalid")
-                    print(loginCurrentUserStatusPrintOptions.currentUser.rawValue)
-                }
-            })
+            ProgressHUD.dismiss()
+            if NetworkStatus.networkStatus.isConnectedToNetwork() {
+                WebServices.service.loginWithParameters(username: username, password: password, callBack: { (isLoginSuccessful) in
+                    if isLoginSuccessful {
+                        print(loginCurrentUserStatusPrintOptions.currentUser.rawValue)
+                        ProgressHUD.dismiss()
+                        self.takeSegue(.continuation)
+                    } else {
+                        ProgressHUD.dismiss()
+                        self.displayLoginError(withMessage: "Error: Login Credentials Invalid")
+                        print(loginCurrentUserStatusPrintOptions.currentUser.rawValue)
+                    }
+                })
+            } else {
+                ProgressHUD.dismiss()
+                self.displayLoginError(withMessage: "Error: No Network Connection")
+                print(loginCurrentUserStatusPrintOptions.currentUser.rawValue)
+            }
             
         } else {
             self.displayLoginError(withMessage: "Error: Username and Password Blank")

@@ -23,7 +23,7 @@ extension WebServices {
         Analytics.analytics.logSearch(query)
 		let searchRequestUrl: String = searchUrlForDirectorySearch(query, directory: directory)
 		let searchDirectoryRequest: NSMutableURLRequest = createSearchRequestWithUrl(searchRequestUrl)
-		
+        
 		Alamofire.request(searchDirectoryRequest).responseJSON { response in
 			if let searchQueryResponse: JSON = JSON(response.result.value!) {
 				let searchResponseDictionary: NSArray = searchQueryResponse.rawValue as! NSArray

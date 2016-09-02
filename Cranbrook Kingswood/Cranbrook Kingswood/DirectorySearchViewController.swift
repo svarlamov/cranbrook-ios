@@ -40,12 +40,16 @@ class DirectorySearchViewController: UIViewController, UITableViewDelegate, UITa
     }
     
     func searchDirectory(searchQuery: String) {
-        WebServices.service.searchDirectory(query: searchQuery, directory: self.currentSearchDirectory) { (searchResponse) in
-            self.emptyTableViewText = "No search results"
-            searchResults = searchResponse!
+        if NetworkStatus.networkStatus.isConnectedToNetwork() {
+            WebServices.service.searchDirectory(query: searchQuery, directory: self.currentSearchDirectory) { (searchResponse) in
+                self.emptyTableViewText = "No search results"
+                searchResults = searchResponse!
+                ProgressHUD.dismiss()
+                self.tableView.reloadData()
+                self.tableView.setContentOffset(CGPointZero, animated:true)
+            }
+        } else {
             ProgressHUD.dismiss()
-            self.tableView.reloadData()
-            self.tableView.setContentOffset(CGPointZero, animated:true)
         }
     }
     

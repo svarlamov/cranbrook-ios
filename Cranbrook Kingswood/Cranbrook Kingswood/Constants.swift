@@ -11,21 +11,23 @@ import Unbox
 import Alamofire
 import SwiftyJSON
 
-var currentSessionInfo: CurrentLoggedInUserInfo?        = nil
+var currentSessionInfo: CurrentLoggedInUserInfo?                = nil
 //
-var studentClassArray: [CurrentUserClasses]?            = nil
+var studentClassArray: [CurrentUserClasses]?                    = nil
 //
-var searchResults: [SearchResultResponse]?              = [SearchResultResponse]?()
+var searchResults: [SearchResultResponse]?                      = [SearchResultResponse]?()
 //
-var selectedTab: SelectedTabOptions                     = SelectedTabOptions.ClassesTab
+var selectedTab: SelectedTabOptions                             = SelectedTabOptions.ClassesTab
 //
-var userLoginInfo: UserLoginInfoStructure?              = nil;
+var userLoginInfo: UserLoginInfoStructure?                      = nil;
 //
-var classDetailsArray: [[CurrentUserClassDetail]]?      = nil;
+var classDetailsArray: [[CurrentUserClassDetail]]?              = nil;
 //
-let assignmentsDateList: DateListStructure              = DateListStructure()
+let assignmentsDateList: DateListStructure                      = DateListStructure()
 //
-var isNetworkAvailable: Bool                            = Bool()
+var isNetworkAvailable: Bool                                    = Bool()
+//
+var studentGroupTermListArray: [StudentGroupTermStructure]?     = nil
 
 
 

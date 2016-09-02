@@ -11,14 +11,14 @@ import Unbox
 
 //  https://cranbrook.myschoolapp.com/api/DataDirect/StudentGroupTermList/?studentUserId=3254976&schoolYearLabel=2016+-+2017&personaId=2
 
-struct StudentGroupTermList {
+struct StudentGroupTermStructure {
     var offeringType:           Int?
     var durationId:             Int?
     var durationDescription:    String?
     var currendInd:             Int?
 }
 
-extension StudentGroupTermList: Unboxable {
+extension StudentGroupTermStructure: Unboxable {
     init(unboxer: Unboxer) {
         self.offeringType           = unboxer.unbox("OfferingType")
         self.durationId             = unboxer.unbox("DurationId")
