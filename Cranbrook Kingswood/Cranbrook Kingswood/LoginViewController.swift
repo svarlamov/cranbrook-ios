@@ -41,24 +41,27 @@ class LoginViewController: CranbrookViewController, UITextFieldDelegate {
         if isValidCredential(username, inputPassword: password) {
             print(CredentialValidationMessages.Valid.rawValue)
             ProgressHUD.show()
-            WebServices.service.loginWithParameters(username: username, password: password, callBack: { (isLoginSuccessful) in
-                if isLoginSuccessful {
-                    print(loginCurrentUserStatusPrintOptions.currentUser.rawValue)
-                    ProgressHUD.dismiss()
-                    self.takeSegue(.continuation)
-                } else {
-                    ProgressHUD.dismiss()
-                    self.displayLoginError(withMessage: "Error: Login Credentials Invalid")
-                    print(loginCurrentUserStatusPrintOptions.currentUser.rawValue)
-                }
-            })
-            
+            mainLogin(username, password: password)
         } else {
             self.displayLoginError(withMessage: "Error: Username and Password Blank")
             print(CredentialValidationMessages.NotValid.rawValue)
             
         }
         
+    }
+    
+    func mainLogin(username: String, password: String) {
+        WebServices.service.loginWithParameters(username: username, password: password, callBack: { (isLoginSuccessful) in
+            if isLoginSuccessful {
+                ProgressHUD.dismiss()
+                self.takeSegue(.continuation)
+                print(loginCurrentUserStatusPrintOptions.currentUser.rawValue)
+            } else {
+                ProgressHUD.dismiss()
+                self.displayLoginError(withMessage: "Error: Login Credentials Invalid")
+                print("\(loginCurrentUserStatusPrintOptions.currentUser.rawValue): Failed during login")
+            }
+        })
     }
     
     func displayLoginError(withMessage withText: String!) {
