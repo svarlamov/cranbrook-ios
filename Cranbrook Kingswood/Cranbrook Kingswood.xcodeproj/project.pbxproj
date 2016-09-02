@@ -43,7 +43,7 @@
 		D72686081D7134630081E4C7 /* ClassesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72686071D7134630081E4C7 /* ClassesTableViewCell.swift */; };
 		D72CF3291D72388A00B2116C /* AKPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72CF3281D72388A00B2116C /* AKPickerView.swift */; };
 		D72CF32E1D7258A900B2116C /* DateListStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72CF32D1D7258A900B2116C /* DateListStructure.swift */; };
-		D7B35EE31D779BD100690868 /* StudentGroupTermList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B35EE21D779BD100690868 /* StudentGroupTermList.swift */; };
+		D7B35EE31D779BD100690868 /* StudentGroupTermStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B35EE21D779BD100690868 /* StudentGroupTermStructure.swift */; };
 		D7B35EE51D779DD600690868 /* StartupViewController+SetupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B35EE41D779DD600690868 /* StartupViewController+SetupData.swift */; };
 		D7C10B2B1D70B8D700C9B66F /* WebServices+ClassDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C10B2A1D70B8D700C9B66F /* WebServices+ClassDetail.swift */; };
 		D7C10B2D1D70BB9700C9B66F /* ClassDetailDataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C10B2C1D70BB9700C9B66F /* ClassDetailDataStructure.swift */; };
@@ -96,7 +96,7 @@
 		D72686071D7134630081E4C7 /* ClassesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassesTableViewCell.swift; sourceTree = "<group>"; };
 		D72CF3281D72388A00B2116C /* AKPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKPickerView.swift; sourceTree = "<group>"; };
 		D72CF32D1D7258A900B2116C /* DateListStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateListStructure.swift; sourceTree = "<group>"; };
-		D7B35EE21D779BD100690868 /* StudentGroupTermList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentGroupTermList.swift; sourceTree = "<group>"; };
+		D7B35EE21D779BD100690868 /* StudentGroupTermStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentGroupTermStructure.swift; sourceTree = "<group>"; };
 		D7B35EE41D779DD600690868 /* StartupViewController+SetupData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StartupViewController+SetupData.swift"; sourceTree = "<group>"; };
 		D7C10B2A1D70B8D700C9B66F /* WebServices+ClassDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+ClassDetail.swift"; sourceTree = "<group>"; };
 		D7C10B2C1D70BB9700C9B66F /* ClassDetailDataStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassDetailDataStructure.swift; sourceTree = "<group>"; };
@@ -269,11 +269,11 @@
 			children = (
 				A0BD73031D56972500889331 /* WebServices.swift */,
 				A0BD73091D56B27A00889331 /* WebServices+Login.swift */,
-				31375AFE1D6534CD00B07B29 /* WebServices+Search.swift */,
 				A09D75A71D570F1A00B2AA74 /* WebServices+CurrentClasses.swift */,
 				D7C10B2A1D70B8D700C9B66F /* WebServices+ClassDetail.swift */,
 				D72685FE1D7133F00081E4C7 /* WebServices+Assignments.swift */,
 				D72686001D7133F90081E4C7 /* WebServices+AssignmentDetail.swift */,
+				31375AFE1D6534CD00B07B29 /* WebServices+Search.swift */,
 			);
 			name = WebServices;
 			sourceTree = "<group>";
@@ -282,10 +282,10 @@
 			isa = PBXGroup;
 			children = (
 				31C4DA9C1D65644900397716 /* LoginDataStructure.swift */,
+				D7B35EE21D779BD100690868 /* StudentGroupTermStructure.swift */,
 				31C4DA9E1D65647A00397716 /* ClassesDataStructure.swift */,
 				D7C10B2C1D70BB9700C9B66F /* ClassDetailDataStructure.swift */,
 				31C4DAA01D65649F00397716 /* SearchDataStructure.swift */,
-				D7B35EE21D779BD100690868 /* StudentGroupTermList.swift */,
 				D72CF32D1D7258A900B2116C /* DateListStructure.swift */,
 			);
 			name = "Data Models";
@@ -480,7 +480,7 @@
 				31C4DA9D1D65644900397716 /* LoginDataStructure.swift in Sources */,
 				D71DEFF01D76099A0006E6B6 /* NetworkStatus.swift in Sources */,
 				D72CF32E1D7258A900B2116C /* DateListStructure.swift in Sources */,
-				D7B35EE31D779BD100690868 /* StudentGroupTermList.swift in Sources */,
+				D7B35EE31D779BD100690868 /* StudentGroupTermStructure.swift in Sources */,
 				D72686011D7133F90081E4C7 /* WebServices+AssignmentDetail.swift in Sources */,
 				A09D75AE1D570F9A00B2AA74 /* DirectorySearchViewController.swift in Sources */,
 				A016B6E41D57FC7600A4A68D /* ViewControllerContainer.swift in Sources */,
