@@ -56,6 +56,9 @@ extension AssignmentsViewController {
     
     func pickerView(pickerView: AKPickerView, didSelectItem item: Int) {
         Analytics.analytics.assignmentDateSelection(self.dates[item])
+        WebServices.service.getAssignmentsForDate(date: NSDate()) { (isRequestSuccessful) in
+            
+        }
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {}
