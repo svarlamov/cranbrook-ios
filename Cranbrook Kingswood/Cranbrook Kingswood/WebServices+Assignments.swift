@@ -28,7 +28,14 @@ extension WebServices {
         var assignmentsForDateListArray: [AssignmentDataStructure] = [AssignmentDataStructure]()
         Alamofire.request(getAssignmentsForDateRequest).responseJSON { response in
             if let assignmentRequestResponse: JSON = JSON(response.result.value!) {
-                print(assignmentRequestResponse)
+                let dateAssignmentResponseArray: [NSDictionary] = assignmentRequestResponse.rawValue as! [NSDictionary]
+                for responseObject in dateAssignmentResponseArray {
+                    let singularResponse: NSDictionary = responseObject
+                    let singularAssignment: AssignmentDataStructure? = self.mapAssignmentsForDate(singularResponse)
+                    assignmentsForDateListArray.append(singularAssignment!)
+                }
+                specificDateAssignments = nil
+                specificDateAssignments = assignmentsForDateListArray
                 callBack(isRequestSuccessful: true)
             } else {
                 callBack(isRequestSuccessful: false)
@@ -58,8 +65,25 @@ extension WebServices {
     
     private func createAssignmentsForDateRequestURL(forDate: NSDate) -> String {
         var returnString: String = String()
-        returnString = "https://cranbrook.myschoolapp.com/api/DataDirect/AssignmentCenterAssignments/?format=json&filter=1&dateStart=9%2F8%2F2016&dateEnd=9%2F8%2F2016&persona=2&statusList=&sectionList="
+        let urlDateString: String = setupAssignmentDateString(date: forDate)
+        returnString = "https://cranbrook.myschoolapp.com/api/DataDirect/AssignmentCenterAssignments/?format=json&filter=1&dateStart=\(urlDateString)&dateEnd=\(urlDateString)&persona=2&statusList=&sectionList="
+        return returnString
+    }
+    
+    private func setupAssignmentDateString(date date: NSDate) -> String {
+        var returnString: String = String()
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+        returnString = dateFormatter.stringFromDate(date)
+        returnString = returnString.stringByReplacingOccurrencesOfString("/", withString: "%2F", options: NSStringCompareOptions.LiteralSearch, range: nil)
         return returnString
     }
     
 }
+
+
+
+
+
+
+

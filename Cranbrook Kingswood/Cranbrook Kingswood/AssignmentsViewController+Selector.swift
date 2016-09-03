@@ -56,8 +56,8 @@ extension AssignmentsViewController {
     
     func pickerView(pickerView: AKPickerView, didSelectItem item: Int) {
         Analytics.analytics.assignmentDateSelection(self.dates[item])
-        WebServices.service.getAssignmentsForDate(date: NSDate()) { (isRequestSuccessful) in
-            
+        WebServices.service.getAssignmentsForDate(date: self.mainDates[item]) { (isRequestSuccessful) in
+            print(specificDateAssignments)
         }
     }
     

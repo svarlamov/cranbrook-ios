@@ -28,7 +28,8 @@ let assignmentsDateList: DateListStructure                      = DateListStruct
 var isNetworkAvailable: Bool                                    = Bool()
 //
 var studentGroupTermListArray: [StudentGroupTermStructure]?     = nil
-
+//
+var specificDateAssignments: [AssignmentDataStructure]?         = nil
 
 
 
