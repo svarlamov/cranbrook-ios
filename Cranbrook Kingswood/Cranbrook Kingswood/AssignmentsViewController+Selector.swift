@@ -13,7 +13,7 @@ import Unbox
 
 extension AssignmentsViewController {
     
-    internal func indexOfCurrentDate() -> Int? {
+    func indexOfCurrentDate() -> Int? {
         let calendar: NSCalendar = NSCalendar.currentCalendar()
         for date in mainDates {
             if calendar.isDateInToday(date) {
@@ -27,6 +27,7 @@ extension AssignmentsViewController {
     func goToDateIndex() {
         if let dateIndex = self.indexOfCurrentDate() {
             self.pickerView.scrollToItem(dateIndex)
+            getAssignmentsForDate(date: self.mainDates[dateIndex])
         }
     }
     
@@ -56,11 +57,28 @@ extension AssignmentsViewController {
     
     func pickerView(pickerView: AKPickerView, didSelectItem item: Int) {
         Analytics.analytics.assignmentDateSelection(self.dates[item])
-        WebServices.service.getAssignmentsForDate(date: self.mainDates[item]) { (isRequestSuccessful) in
-            print(specificDateAssignments)
-        }
+        self.getAssignmentsForDate(date: self.mainDates[item])
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {}
     
+    func getAssignmentsForDate(date date: NSDate) {
+        WebServices.service.getAssignmentsForDate(date: date) { (isRequestSuccessful) in
+            self.tableView.reloadData()
+            print(specificDateAssignments)
+        }
+    }
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+

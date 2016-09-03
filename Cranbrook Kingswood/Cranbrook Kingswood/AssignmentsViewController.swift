@@ -21,6 +21,7 @@ class AssignmentsViewController: UIViewController, AKPickerViewDataSource, AKPic
     //  Table view
     @IBOutlet weak var tableView: UITableView!
     let assignmentsCellIdentifier: String = "assignments_cell"
+    var emptyTableViewText: String = "No Assignments"
     
     override func viewDidLoad() {
         super.viewDidLoad()
