@@ -38,14 +38,12 @@ class SearchResultTableViewCell: UITableViewCell {
     }
     
     func roundCellContentViewCorners() {
-        self.cellContentView.layer.cornerRadius = 3
+        self.cellContentView.layer.cornerRadius = 1
         self.cellContentView.layer.masksToBounds = true
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
 }

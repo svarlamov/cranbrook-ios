@@ -37,7 +37,19 @@ extension ClassesViewController {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(self.classesCellIdentifier, forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier(self.classesCellIdentifier, forIndexPath: indexPath) as! ClassesTableViewCell
+        cell.selectionStyle = .None
+        if let titleText = studentClassArray![indexPath.row].sectionIdentifier {
+            cell.titleLabel.text = titleText
+        }
+        if let groupOwnerTitleName = studentClassArray![indexPath.row].groupOwnerName {
+            cell.teacherLabel.text = groupOwnerTitleName
+        }
+        if let titleGrade = studentClassArray![indexPath.row].cumGrade {
+            cell.gradeLabel.text = titleGrade
+        } else {
+            cell.gradeLabel.text = "--"
+        }
         return cell
     }
     

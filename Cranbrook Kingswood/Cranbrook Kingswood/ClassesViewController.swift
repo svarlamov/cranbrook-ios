@@ -27,6 +27,16 @@ class ClassesViewController: UIViewController, UITableViewDataSource, UITableVie
         super.viewDidAppear(true)
     }
     
+    func setupViews() {
+        setupTableView()
+    }
+    
+    func setupTableView() {
+        self.tableView.estimatedRowHeight = 116
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.reloadData()
+    }
+    
 }
 
 

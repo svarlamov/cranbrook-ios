@@ -315,8 +315,8 @@
 		D7C10B291D70B39600C9B66F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D72686051D71344D0081E4C7 /* AssignmentTableViewCell.swift */,
 				D72686071D7134630081E4C7 /* ClassesTableViewCell.swift */,
+				D72686051D71344D0081E4C7 /* AssignmentTableViewCell.swift */,
 				31CD30AA1D67BEB2001C4647 /* SearchResultTableViewCell.swift */,
 			);
 			name = Views;
