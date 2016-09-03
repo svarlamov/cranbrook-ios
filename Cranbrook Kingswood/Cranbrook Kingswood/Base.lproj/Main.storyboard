@@ -376,10 +376,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="116"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g1N-YV-OBv">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g1N-YV-OBv" customClass="ShadowView" customModule="Cranbrook_Kingswood" customModuleProvider="target">
                                                     <rect key="frame" x="11" y="0.0" width="578" height="102"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stefan DeClerck Stefan DeClerck Stefan DeClerck Stefan DeClerc" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ve-ar-JdM">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stefan DeClerck Stefan DeClerck Stefan DeClerck Stefan DeClerc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ve-ar-JdM">
                                                             <rect key="frame" x="22" y="7" width="542" height="25"/>
                                                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                                                             <color key="textColor" red="0.1647058824" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -450,6 +450,17 @@
                                                         <constraint firstItem="5Ve-ar-JdM" firstAttribute="top" secondItem="g1N-YV-OBv" secondAttribute="top" constant="7" id="wj2-hs-W0g"/>
                                                         <constraint firstItem="FQl-cB-kCN" firstAttribute="top" secondItem="5Ve-ar-JdM" secondAttribute="bottom" id="z5a-Nc-UxG"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                            <color key="value" red="0.52477964743589745" green="0.52477964743589745" blue="0.52477964743589745" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                            <real key="value" value="0.10000000000000001"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
                                             <constraints>
@@ -461,7 +472,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <outlet property="cellContentView" destination="g1N-YV-OBv" id="35M-69-Ha6"/>
+                                            <outlet property="cellContentView" destination="g1N-YV-OBv" id="Ies-6e-Dpo"/>
                                             <outlet property="gradeLabel" destination="tT9-wg-Qiv" id="B1f-e7-NXn"/>
                                             <outlet property="teacherLabel" destination="FQl-cB-kCN" id="6Rd-OT-k6v"/>
                                             <outlet property="titleLabel" destination="5Ve-ar-JdM" id="yQz-co-Z7e"/>
@@ -635,7 +646,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vA0-JA-BpZ">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="90"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3sJ-OX-z6R">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3sJ-OX-z6R" customClass="ShadowView" customModule="Cranbrook_Kingswood" customModuleProvider="target">
                                                             <rect key="frame" x="11" y="0.0" width="578" height="76"/>
                                                             <subviews>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_user_icon" translatesAutoresizingMaskIntoConstraints="NO" id="53S-fc-nzv">
@@ -686,6 +697,17 @@
                                                                 <constraint firstAttribute="trailing" secondItem="br8-K4-Uff" secondAttribute="trailing" constant="15" id="rVI-4o-3jD"/>
                                                                 <constraint firstAttribute="bottom" secondItem="53S-fc-nzv" secondAttribute="bottom" constant="13" id="yFL-4D-kgW"/>
                                                             </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                                    <color key="value" red="0.4823529411764706" green="0.4823529411764706" blue="0.4823529411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                                    <real key="value" value="2"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                                    <real key="value" value="0.10000000000000001"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
                                                         </view>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -705,7 +727,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <outlet property="cellContentView" destination="3sJ-OX-z6R" id="FFu-nQ-V6Z"/>
+                                            <outlet property="cellContentView" destination="3sJ-OX-z6R" id="GZI-3T-vnq"/>
                                             <outlet property="detailLabel" destination="VLm-Eg-R2r" id="qXI-4I-sWr"/>
                                             <outlet property="profileImageView" destination="53S-fc-nzv" id="lYY-Jm-20I"/>
                                             <outlet property="titleLabel" destination="kG9-Y9-DcV" id="SDP-2f-hTw"/>

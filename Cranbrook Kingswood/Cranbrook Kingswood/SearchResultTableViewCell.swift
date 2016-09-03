@@ -9,24 +9,25 @@
 import UIKit
 
 class SearchResultTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var cellContentView: UIView!
+    
+    @IBOutlet weak var cellContentView: ShadowView!
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var detailLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.cellContentView.layer.shadowColor = UIColor.blackColor().CGColor
-        self.cellContentView.layer.shadowOffset = CGSizeMake(0, 2)
-        self.cellContentView.layer.shadowOpacity = 0.30
-        self.cellContentView.layer.shadowRadius = 1.0
         setupViews()
     }
     
     func setupViews() {
-        roundCellContentViewCorners()
         roundImageView()
+        setupViewCorner()
+    }
+    
+    func setupViewCorner() {
+        self.cellContentView.layer.cornerRadius = 0.5
+        self.cellContentView.layer.masksToBounds = true
     }
     
     func roundImageView() {
@@ -35,11 +36,6 @@ class SearchResultTableViewCell: UITableViewCell {
         self.profileImageView.layer.borderColor = UIColor.clearColor().CGColor
         self.profileImageView.layer.cornerRadius = self.profileImageView.frame.height/2
         self.profileImageView.clipsToBounds = true
-    }
-    
-    func roundCellContentViewCorners() {
-        self.cellContentView.layer.cornerRadius = 1
-        self.cellContentView.layer.masksToBounds = true
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

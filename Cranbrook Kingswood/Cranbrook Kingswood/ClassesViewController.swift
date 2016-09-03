@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 import Unbox
+import QuartzCore
 
 class ClassesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 

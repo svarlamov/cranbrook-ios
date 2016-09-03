@@ -47,6 +47,9 @@
 		D7B35EE51D779DD600690868 /* StartupViewController+SetupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B35EE41D779DD600690868 /* StartupViewController+SetupData.swift */; };
 		D7B481BB1D79EF9B0033C58D /* WebServices+StudentGroupTerm.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B481BA1D79EF9B0033C58D /* WebServices+StudentGroupTerm.swift */; };
 		D7B481BD1D7A309B0033C58D /* AssignmentDataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B481BC1D7A309B0033C58D /* AssignmentDataStructure.swift */; };
+		D7B481C61D7B2A340033C58D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B481C51D7B2A340033C58D /* QuartzCore.framework */; };
+		D7B481C81D7B2A410033C58D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B481C71D7B2A410033C58D /* UIKit.framework */; };
+		D7B481CA1D7B2B950033C58D /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B481C91D7B2B950033C58D /* ShadowView.swift */; };
 		D7C10B2B1D70B8D700C9B66F /* WebServices+ClassDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C10B2A1D70B8D700C9B66F /* WebServices+ClassDetail.swift */; };
 		D7C10B2D1D70BB9700C9B66F /* ClassDetailDataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C10B2C1D70BB9700C9B66F /* ClassDetailDataStructure.swift */; };
 		D7C10B331D70ED0800C9B66F /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C10B321D70ED0800C9B66F /* Analytics.swift */; };
@@ -102,6 +105,9 @@
 		D7B35EE41D779DD600690868 /* StartupViewController+SetupData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StartupViewController+SetupData.swift"; sourceTree = "<group>"; };
 		D7B481BA1D79EF9B0033C58D /* WebServices+StudentGroupTerm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+StudentGroupTerm.swift"; sourceTree = "<group>"; };
 		D7B481BC1D7A309B0033C58D /* AssignmentDataStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentDataStructure.swift; sourceTree = "<group>"; };
+		D7B481C51D7B2A340033C58D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D7B481C71D7B2A410033C58D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D7B481C91D7B2B950033C58D /* ShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		D7C10B2A1D70B8D700C9B66F /* WebServices+ClassDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+ClassDetail.swift"; sourceTree = "<group>"; };
 		D7C10B2C1D70BB9700C9B66F /* ClassDetailDataStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassDetailDataStructure.swift; sourceTree = "<group>"; };
 		D7C10B321D70ED0800C9B66F /* Analytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
@@ -118,6 +124,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7B481C81D7B2A410033C58D /* UIKit.framework in Frameworks */,
+				D7B481C61D7B2A340033C58D /* QuartzCore.framework in Frameworks */,
 				D7CF021C1D7558B700145F4B /* CoreGraphics.framework in Frameworks */,
 				D7C6898A1D750E860088FCA5 /* SystemConfiguration.framework in Frameworks */,
 				700E5D69CB37CA9A74D753D1 /* Pods_Cranbrook_Kingswood.framework in Frameworks */,
@@ -130,6 +138,8 @@
 		8676CD42D896F33CC1E5673E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D7B481C71D7B2A410033C58D /* UIKit.framework */,
+				D7B481C51D7B2A340033C58D /* QuartzCore.framework */,
 				D7CF021B1D7558B700145F4B /* CoreGraphics.framework */,
 				D7C689891D750E860088FCA5 /* SystemConfiguration.framework */,
 				F921898296A250D0E2257CAC /* Pods_Cranbrook_Kingswood.framework */,
@@ -318,6 +328,7 @@
 				D72686071D7134630081E4C7 /* ClassesTableViewCell.swift */,
 				D72686051D71344D0081E4C7 /* AssignmentTableViewCell.swift */,
 				31CD30AA1D67BEB2001C4647 /* SearchResultTableViewCell.swift */,
+				D7B481C91D7B2B950033C58D /* ShadowView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -488,6 +499,7 @@
 				D7B35EE51D779DD600690868 /* StartupViewController+SetupData.swift in Sources */,
 				31C4DAA11D65649F00397716 /* SearchDataStructure.swift in Sources */,
 				D72685FF1D7133F00081E4C7 /* WebServices+Assignments.swift in Sources */,
+				D7B481CA1D7B2B950033C58D /* ShadowView.swift in Sources */,
 				A09D75A81D570F1A00B2AA74 /* WebServices+CurrentClasses.swift in Sources */,
 				A07468991D568F7000E7ACC0 /* StartupViewController.swift in Sources */,
 				D71DEFED1D75F7A10006E6B6 /* ClassesViewController+TableView.swift in Sources */,
@@ -652,6 +664,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Cranbrook Kingswood/Cranbrook Kingswood-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -671,6 +684,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Cranbrook Kingswood/Cranbrook Kingswood-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
