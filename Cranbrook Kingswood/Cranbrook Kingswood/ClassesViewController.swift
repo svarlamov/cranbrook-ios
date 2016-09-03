@@ -16,6 +16,7 @@ class ClassesViewController: UIViewController, UITableViewDataSource, UITableVie
     //  Table view
     @IBOutlet weak var tableView: UITableView!
     let classesCellIdentifier: String = "classes_cell"
+    var emptyTableViewText: String = "No Classes"
     
     override func viewDidLoad() {
         super.viewDidLoad()
