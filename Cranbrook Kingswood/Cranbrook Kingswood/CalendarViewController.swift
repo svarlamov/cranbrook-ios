@@ -20,10 +20,16 @@ class CalendarViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupTableView()
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
+    }
+    
+    func setupTableView() {
+        self.tableView.estimatedRowHeight = 73.0
+        self.tableView.rowHeight = UITableViewAutomaticDimension
     }
     
     func convertDateToText(dateString: String) -> String {

@@ -314,7 +314,7 @@
         <scene sceneID="7OC-4R-4st">
             <objects>
                 <tableViewController id="beh-cK-WjY" customClass="CalendarViewController" customModule="Cranbrook_Kingswood" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="73" sectionHeaderHeight="28" sectionFooterHeight="28" id="7SI-DX-wjG">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="61" sectionHeaderHeight="28" sectionFooterHeight="28" id="7SI-DX-wjG">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
@@ -335,20 +335,14 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0zg-ck-wBc">
                                             <rect key="frame" x="11" y="0.0" width="578" height="61"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stefan DeClerck Stefan DeClerck Stefan DeClerck Stefan DeClerc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mik-u0-UVX">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stefan DeClerck Stefan DeClerck Stefan DeClerck Stefan DeClerc" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mik-u0-UVX">
                                                     <rect key="frame" x="22" y="7" width="542" height="25"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="25" id="7do-Ml-pLj"/>
-                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                                                     <color key="textColor" red="0.1647058824" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stefan DeClerck Stefan DeClerck Stefan DeClerck Stefan DeClerck Stefan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hT5-a6-umw">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Stefan DeClerck Stefan DeClerck Stefan DeClerck Stefan DeClerck Stefan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hT5-a6-umw">
                                                     <rect key="frame" x="22" y="32" width="542" height="23"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="23" id="ucn-DR-aio"/>
-                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.58823529409999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -363,15 +357,16 @@
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="hT5-a6-umw" secondAttribute="trailing" constant="14" id="ITL-TZ-JNi"/>
-                                                <constraint firstItem="Mik-u0-UVX" firstAttribute="top" secondItem="0zg-ck-wBc" secondAttribute="top" constant="7" id="JvT-z1-No8"/>
+                                                <constraint firstItem="Mik-u0-UVX" firstAttribute="leading" secondItem="gXO-9v-64W" secondAttribute="trailing" constant="17" id="IDg-Cq-b8U"/>
                                                 <constraint firstItem="gXO-9v-64W" firstAttribute="top" secondItem="0zg-ck-wBc" secondAttribute="top" id="L6D-jx-VO5"/>
-                                                <constraint firstItem="hT5-a6-umw" firstAttribute="leading" secondItem="gXO-9v-64W" secondAttribute="trailing" constant="17" id="OIg-Xa-73e"/>
+                                                <constraint firstAttribute="bottom" secondItem="hT5-a6-umw" secondAttribute="bottom" constant="6" id="ROp-Ev-utc"/>
+                                                <constraint firstItem="hT5-a6-umw" firstAttribute="leading" secondItem="gXO-9v-64W" secondAttribute="trailing" constant="17" id="Tdh-Hv-wwI"/>
+                                                <constraint firstItem="Mik-u0-UVX" firstAttribute="top" secondItem="0zg-ck-wBc" secondAttribute="top" constant="7" id="Tox-Mw-7KU"/>
                                                 <constraint firstAttribute="bottom" secondItem="gXO-9v-64W" secondAttribute="bottom" id="VgJ-fG-IQc"/>
-                                                <constraint firstItem="hT5-a6-umw" firstAttribute="top" secondItem="Mik-u0-UVX" secondAttribute="bottom" id="gMU-iW-hY3"/>
-                                                <constraint firstItem="Mik-u0-UVX" firstAttribute="leading" secondItem="gXO-9v-64W" secondAttribute="trailing" constant="17" id="sSi-Rd-2gL"/>
+                                                <constraint firstItem="hT5-a6-umw" firstAttribute="top" secondItem="Mik-u0-UVX" secondAttribute="bottom" id="aUa-kM-iJY"/>
+                                                <constraint firstAttribute="trailing" secondItem="Mik-u0-UVX" secondAttribute="trailing" constant="14" id="mU2-NC-ya8"/>
                                                 <constraint firstItem="gXO-9v-64W" firstAttribute="leading" secondItem="0zg-ck-wBc" secondAttribute="leading" id="swc-EI-aB8"/>
-                                                <constraint firstAttribute="trailing" secondItem="Mik-u0-UVX" secondAttribute="trailing" constant="14" id="x8o-Eu-yle"/>
+                                                <constraint firstAttribute="trailing" secondItem="hT5-a6-umw" secondAttribute="trailing" constant="14" id="xpw-nA-xx0"/>
                                             </constraints>
                                         </view>
                                     </subviews>
