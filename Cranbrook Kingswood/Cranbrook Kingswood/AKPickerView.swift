@@ -221,7 +221,6 @@ private class AKPickerViewDelegateIntercepter: NSObject, UICollectionViewDelegat
 }
 
 // MARK: - AKPickerView
-// TODO: Make these delegate conformation private
 /**
 Horizontal picker view. This is just a subclass of UIView, contains a UICollectionView.
 */

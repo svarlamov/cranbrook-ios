@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 import Unbox
+import SwiftMessages
 
 enum SelectedTabOptions: String {
     case ClassesTab             = "Classes Tab"
@@ -22,6 +23,9 @@ class ViewControllerContainer: CranbrookViewController {
     //  Logout
     @IBOutlet weak var logoutButton: UIBarButtonItem!
     let logoutSegue: String = "logout_segue"
+    
+    //  Calendar
+    let calendarSegue: String = "display_calendar_view"
     
 	//	Tab bar
     @IBOutlet weak var classesTabLabel: UILabel!
@@ -57,6 +61,21 @@ class ViewControllerContainer: CranbrookViewController {
     func setupLogoutButton() {
         if let font = UIFont(name: "AvenirNext-Medium", size: 17) {
             self.logoutButton.setTitleTextAttributes([NSFontAttributeName: font], forState: UIControlState.Normal)
+        }
+    }
+    
+    @IBAction func showCalendarButtonClicked(sender: AnyObject) {
+        if calendarTasksForDate?.count > 0 {
+            self.performSegueWithIdentifier(calendarSegue, sender: nil)
+        } else {
+            var config = SwiftMessages.Config()
+            let error = MessageView.viewFromNib(layout: .CardView)
+            error.configureContent(title: "Info", body: "No Schedule Today", iconImage: nil, iconText: nil, buttonImage: nil, buttonTitle: "Hide", buttonTapHandler: { _ in SwiftMessages.hide() })
+            config.presentationStyle = .Bottom
+            error.configureTheme(.Warning, iconStyle: .Default)
+            config.interactiveHide = true
+            config.dimMode = .Gray(interactive: true)
+            SwiftMessages.show(config: config, view: error)
         }
     }
     

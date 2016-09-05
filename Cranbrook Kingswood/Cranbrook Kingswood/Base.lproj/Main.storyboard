@@ -289,7 +289,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="calendar_bar_button_icon" id="Ur0-Yi-Tqk">
                             <connections>
-                                <segue destination="beh-cK-WjY" kind="show" id="meC-PN-lD9"/>
+                                <action selector="showCalendarButtonClicked:" destination="UcJ-G7-kI3" id="vLZ-eg-0O3"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -303,13 +303,14 @@
                         <outlet property="searchTabLabel" destination="eGN-Iv-rpi" id="bmA-j1-iu4"/>
                         <outlet property="tabIndicationView" destination="BBW-Ss-end" id="0Ap-gF-bcV"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="logout_segue" modalTransitionStyle="crossDissolve" id="Xqp-fM-tlL"/>
+                        <segue destination="beh-cK-WjY" kind="show" identifier="display_calendar_view" id="iqu-tv-vJI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uE8-jN-6Ga" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1978" y="-883"/>
         </scene>
-        <!--Schedule-->
+        <!--TODAY-->
         <scene sceneID="7OC-4R-4st">
             <objects>
                 <tableViewController id="beh-cK-WjY" customClass="CalendarViewController" customModule="Cranbrook_Kingswood" customModuleProvider="target" sceneMemberID="viewController">
@@ -393,7 +394,7 @@
                             <outlet property="delegate" destination="beh-cK-WjY" id="bz2-Sf-UhP"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Schedule" id="9Rr-aW-G2K"/>
+                    <navigationItem key="navigationItem" title="TODAY" id="9Rr-aW-G2K"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OMm-HX-c42" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
