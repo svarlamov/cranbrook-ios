@@ -12,8 +12,6 @@ class TaskList {
     
     //  TODO: - 1: Update the assignment return value
     
-    //  TODO: - 2: Get rid of no network error notification and display a SwiftMessage error view
-    
     //  TODO: - 3: Build assignment table view cell
     
     //  TODO: - 4: Get all the table view cells to expand 

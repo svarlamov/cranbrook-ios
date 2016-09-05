@@ -21,7 +21,7 @@ class ClassesViewController: UIViewController, UITableViewDataSource, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupTableView()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -33,7 +33,7 @@ class ClassesViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func setupTableView() {
-        self.tableView.estimatedRowHeight = 116
+        self.tableView.estimatedRowHeight = 116.0
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.reloadData()
     }
