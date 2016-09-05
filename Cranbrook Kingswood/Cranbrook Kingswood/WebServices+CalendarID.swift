@@ -15,7 +15,6 @@ extension WebServices {
     
     internal func getCalendarIdForDate(date date: NSDate, callBack: (isRequestSuccessful: Bool) -> Void) {
         getCalendarIdForDateSubMethod(date) { (isRequestSuccessful) in
-            print(userCalendarId)
             if isRequestSuccessful {
                 callBack(isRequestSuccessful: true)
             } else {

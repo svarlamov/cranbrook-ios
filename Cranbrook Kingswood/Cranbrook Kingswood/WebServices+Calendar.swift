@@ -64,13 +64,11 @@ extension WebServices {
     }
     
     private func createCalendarTasksForDateRequestURL(forDate: NSDate) -> String {
-        
-        //  TODO: - Displaying only my calendar for everyone
-        
         var returnString: String = String()
         let urlDateString: String = setupCalendarDateString(date: forDate)
-        returnString = "https://cranbrook.myschoolapp.com/api/mycalendar/schedule?startDate=09%2F13%2F2016&endDate=09%2F13%2F2016&scheduleString=3254976_2"
-//        returnString = "https://cranbrook.myschoolapp.com/api/mycalendar/schedule?startDate=\(urlDateString)&endDate=\(urlDateString)&scheduleString=3254976_2"
+        var calendarId: String = String()
+        if let id = userCalendarId {calendarId = id}
+        returnString = "https://cranbrook.myschoolapp.com/api/mycalendar/schedule?startDate=\(urlDateString)&endDate=\(urlDateString)&scheduleString=\(calendarId)_2"
         return returnString
     }
     
