@@ -65,7 +65,6 @@ extension AssignmentsViewController {
     func getAssignmentsForDate(date date: NSDate) {
         WebServices.service.getAssignmentsForDate(date: date) { (isRequestSuccessful) in
             self.tableView.reloadData()
-            print(specificDateAssignments)
         }
     }
     

@@ -31,11 +31,20 @@ class Analytics {
         })
     }
     
-    //  Date Selection Method
+    //  Date Selection Method for Assignment
     internal func assignmentDateSelection(date: String) {
         dispatch_async(dispatch_get_main_queue(),{
             if self.isAnalyticsEnabled {
                 Answers.logCustomEventWithName("AssignmentDateSelection", customAttributes: ["User":"\(userLoginInfo!.username)", "Date Selected":"\(date)"])
+            }
+        })
+    }
+    
+    //  Date Selection Method for Calendar
+    internal func calendarDateSelection(date: String) {
+        dispatch_async(dispatch_get_main_queue(),{
+            if self.isAnalyticsEnabled {
+                Answers.logCustomEventWithName("CalendarDateSelection", customAttributes: ["User":"\(userLoginInfo!.username)", "Date Selected":"\(date)"])
             }
         })
     }

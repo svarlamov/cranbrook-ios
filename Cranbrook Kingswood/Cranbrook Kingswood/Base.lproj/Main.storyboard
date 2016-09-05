@@ -287,7 +287,11 @@
                                 <action selector="logout:" destination="UcJ-G7-kI3" id="bUf-BO-9eg"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="calendar_bar_button_icon" id="Ur0-Yi-Tqk"/>
+                        <barButtonItem key="rightBarButtonItem" image="calendar_bar_button_icon" id="Ur0-Yi-Tqk">
+                            <connections>
+                                <segue destination="beh-cK-WjY" kind="show" id="meC-PN-lD9"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="assignmentsContainerView" destination="SSk-Cx-D4i" id="ti6-5A-mOW"/>
@@ -304,6 +308,96 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uE8-jN-6Ga" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1978" y="-883"/>
+        </scene>
+        <!--Schedule-->
+        <scene sceneID="7OC-4R-4st">
+            <objects>
+                <tableViewController id="beh-cK-WjY" customClass="CalendarViewController" customModule="Cranbrook_Kingswood" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="62" sectionHeaderHeight="28" sectionFooterHeight="28" id="7SI-DX-wjG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="THb-ab-8Hs">
+                            <rect key="frame" x="0.0" y="64" width="600" height="14"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="calendar_cell" rowHeight="62" id="qoK-k3-nZd" customClass="CalendarTableViewCell" customModule="Cranbrook_Kingswood" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="106" width="600" height="62"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qoK-k3-nZd" id="kIi-MZ-9lW">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="62"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6hA-ZG-tc3">
+                                            <rect key="frame" x="11" y="0.0" width="578" height="61"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stefan DeClerck Stefan DeClerck Stefan DeClerck Stefan DeClerc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wlw-VZ-wjz">
+                                                    <rect key="frame" x="22" y="7" width="542" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="sCe-se-wBn"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                                    <color key="textColor" red="0.1647058824" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stefan DeClerck Stefan DeClerck Stefan DeClerck Stefan DeClerck Stefan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nk-8n-7XI">
+                                                    <rect key="frame" x="22" y="32" width="542" height="23"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="23" id="GGY-Mh-8gT"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.58823529409999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BIB-Fs-lfL">
+                                                    <rect key="frame" x="0.0" y="0.0" width="5" height="61"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.58823529409999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="5" id="OjP-5X-oRT"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="3nk-8n-7XI" firstAttribute="leading" secondItem="BIB-Fs-lfL" secondAttribute="trailing" constant="17" id="0dB-Ga-g6e"/>
+                                                <constraint firstItem="Wlw-VZ-wjz" firstAttribute="top" secondItem="6hA-ZG-tc3" secondAttribute="top" constant="7" id="3P2-ox-S2R"/>
+                                                <constraint firstItem="BIB-Fs-lfL" firstAttribute="top" secondItem="6hA-ZG-tc3" secondAttribute="top" id="DHp-L9-yGW"/>
+                                                <constraint firstItem="3nk-8n-7XI" firstAttribute="top" secondItem="Wlw-VZ-wjz" secondAttribute="bottom" id="d9R-Eq-ih3"/>
+                                                <constraint firstAttribute="trailing" secondItem="Wlw-VZ-wjz" secondAttribute="trailing" constant="14" id="hkg-gI-PAe"/>
+                                                <constraint firstAttribute="bottom" secondItem="BIB-Fs-lfL" secondAttribute="bottom" id="jOi-UY-lzk"/>
+                                                <constraint firstItem="BIB-Fs-lfL" firstAttribute="leading" secondItem="6hA-ZG-tc3" secondAttribute="leading" id="jpk-00-cXJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="3nk-8n-7XI" secondAttribute="trailing" constant="14" id="nAi-dR-awB"/>
+                                                <constraint firstItem="Wlw-VZ-wjz" firstAttribute="leading" secondItem="BIB-Fs-lfL" secondAttribute="trailing" constant="17" id="tR5-3j-xHI"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="6hA-ZG-tc3" secondAttribute="trailing" constant="11" id="1pv-ws-SHl"/>
+                                        <constraint firstAttribute="bottom" secondItem="6hA-ZG-tc3" secondAttribute="bottom" constant="1" id="Aax-Xm-1aP"/>
+                                        <constraint firstItem="6hA-ZG-tc3" firstAttribute="leading" secondItem="kIi-MZ-9lW" secondAttribute="leading" constant="11" id="aOt-4O-yZu"/>
+                                        <constraint firstItem="6hA-ZG-tc3" firstAttribute="top" secondItem="kIi-MZ-9lW" secondAttribute="top" id="fT1-vr-U10"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="dateLabel" destination="3nk-8n-7XI" id="QwZ-aj-3sj"/>
+                                    <outlet property="titleLabel" destination="Wlw-VZ-wjz" id="DTT-HQ-loh"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="beh-cK-WjY" id="xMc-2e-jRy"/>
+                            <outlet property="delegate" destination="beh-cK-WjY" id="bz2-Sf-UhP"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Schedule" id="9Rr-aW-G2K"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OMm-HX-c42" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1229" y="-883"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="U1S-7g-zdX">

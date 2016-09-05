@@ -30,6 +30,8 @@ var isNetworkAvailable: Bool                                    = Bool()
 var studentGroupTermListArray: [StudentGroupTermStructure]?     = nil
 //
 var specificDateAssignments: [AssignmentDataStructure]?         = nil
+//
+var calendarTasksForDate: [CalendarItemDataStructure]?          = nil
 
 
 
