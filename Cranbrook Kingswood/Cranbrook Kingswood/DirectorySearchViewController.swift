@@ -12,7 +12,7 @@ import SwiftyJSON
 import Unbox
 import SwiftMessages
 
-class DirectorySearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+class DirectorySearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UITextFieldDelegate {
     
     // Search bar
     @IBOutlet weak var directorySearchBar: UISearchBar!
@@ -49,8 +49,15 @@ class DirectorySearchViewController: UIViewController, UITableViewDelegate, UITa
                 self.tableView.reloadData()
                 self.tableView.setContentOffset(CGPointZero, animated:true)
             }
+        }
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        if NetworkStatus.networkStatus.isConnectedToNetwork() {
+            searchDirectory(searchBar.text!)
+            ProgressHUD.show()
         } else {
-            ProgressHUD.dismiss()
             var config = SwiftMessages.Config()
             let error = MessageView.viewFromNib(layout: .CardView)
             error.configureContent(title: "Error", body: "No Network Connection.", iconImage: nil, iconText: nil, buttonImage: nil, buttonTitle: "Hide", buttonTapHandler: { _ in SwiftMessages.hide() })
@@ -60,12 +67,6 @@ class DirectorySearchViewController: UIViewController, UITableViewDelegate, UITa
             config.dimMode = .Gray(interactive: true)
             SwiftMessages.show(config: config, view: error)
         }
-    }
-    
-    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()
-        searchDirectory(searchBar.text!)
-        ProgressHUD.show()
     }
     
     override func viewDidAppear(animated: Bool) {

@@ -20,4 +20,6 @@ class TaskList {
     
     //  TODO: - 5: Make sure to check for reachability before any request method is called
     
+    //  TODO: - 6: Get keyboard to dismiss in directory search bar when tapping outside of view
+    
 }

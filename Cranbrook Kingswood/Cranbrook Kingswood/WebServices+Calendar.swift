@@ -78,7 +78,7 @@ extension WebServices {
         dateFormatter.dateFormat = "MM/dd/yyyy"
         returnString = dateFormatter.stringFromDate(date)
         returnString = returnString.stringByReplacingOccurrencesOfString("/", withString: "%2F", options: NSStringCompareOptions.LiteralSearch, range: nil)
-        //  returnString = "09%2F13%2F2016"
+          returnString = "09%2F13%2F2016"
         return returnString
     }
     
