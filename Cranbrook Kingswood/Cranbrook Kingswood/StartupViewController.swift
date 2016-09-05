@@ -97,7 +97,7 @@ class StartupViewController: UIViewController {
     func takeSegue(segue: startupSegueOptions) {
         self.performSegueWithIdentifier(segue.rawValue, sender: nil)
     }
-
+    
 }
 
 

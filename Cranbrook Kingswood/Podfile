@@ -11,5 +11,6 @@ target 'Cranbrook Kingswood' do
   pod 'Unbox'
   pod 'Fabric'
   pod 'Crashlytics'
+  pod 'SwiftMessages'
 
 end

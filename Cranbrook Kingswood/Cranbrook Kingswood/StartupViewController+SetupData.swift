@@ -36,24 +36,28 @@ extension StartupViewController {
     private func getStudentGroupTerm() {
         WebServices.service.getStudentGroupTermList({ (isRequestSuccessful) in
             self.getStudentClasses()
+            print("requested_student_group_term_list")
         })
     }
     
     private func getStudentClasses() {
         WebServices.service.getCurrentUserClasses(true) { (isRequestSuccessful) in
             self.getIdForCalendar()
+            print("requested_student_classes")
         }
     }
     
     private func getIdForCalendar() {
         WebServices.service.getCalendarIdForDate(date: NSDate()) { (isRequestSuccessful) in
             self.getEventsForCurrentDate()
+            print("requested_calendar_id")
         }
     }
     
     private func getEventsForCurrentDate() {
         WebServices.service.getCalendarTasksForDate(date: NSDate()) { (isRequestSuccessful) in
             self.takeSegue(.continuation)
+            print("request_current_day_calendar_events")
         }
     }
     
