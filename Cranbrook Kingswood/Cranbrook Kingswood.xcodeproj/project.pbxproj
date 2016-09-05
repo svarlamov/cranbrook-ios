@@ -62,6 +62,7 @@
 		D7F2AB3B1D7BCC2C005F8515 /* WebServices+Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F2AB3A1D7BCC2C005F8515 /* WebServices+Calendar.swift */; };
 		D7F2AB3D1D7BD3EF005F8515 /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F2AB3C1D7BD3EF005F8515 /* CalendarTableViewCell.swift */; };
 		D7F2AB411D7CAE9C005F8515 /* CalendarViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F2AB401D7CAE9C005F8515 /* CalendarViewController+TableView.swift */; };
+		D7F9991D1D7D47D300EABBD2 /* TaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F9991C1D7D47D300EABBD2 /* TaskList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -126,6 +127,7 @@
 		D7F2AB3A1D7BCC2C005F8515 /* WebServices+Calendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+Calendar.swift"; sourceTree = "<group>"; };
 		D7F2AB3C1D7BD3EF005F8515 /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarTableViewCell.swift; sourceTree = "<group>"; };
 		D7F2AB401D7CAE9C005F8515 /* CalendarViewController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CalendarViewController+TableView.swift"; sourceTree = "<group>"; };
+		D7F9991C1D7D47D300EABBD2 /* TaskList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TaskList.swift; path = ../TaskList.swift; sourceTree = "<group>"; };
 		F921898296A250D0E2257CAC /* Pods_Cranbrook_Kingswood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cranbrook_Kingswood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -225,6 +227,7 @@
 				A07468801D568DAD00E7ACC0 /* AppDelegate.swift */,
 				A0BD73111D56E58E00889331 /* Constants.swift */,
 				D7C10B321D70ED0800C9B66F /* Analytics.swift */,
+				D7F9991C1D7D47D300EABBD2 /* TaskList.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -540,6 +543,7 @@
 				D72CF32E1D7258A900B2116C /* DateListStructure.swift in Sources */,
 				D7B1BCEA1D7D041300D41BEE /* WebServices+CalendarID.swift in Sources */,
 				D7B35EE31D779BD100690868 /* StudentGroupTermStructure.swift in Sources */,
+				D7F9991D1D7D47D300EABBD2 /* TaskList.swift in Sources */,
 				D7B481BD1D7A309B0033C58D /* AssignmentDataStructure.swift in Sources */,
 				D72686011D7133F90081E4C7 /* WebServices+AssignmentDetail.swift in Sources */,
 				A09D75AE1D570F9A00B2AA74 /* DirectorySearchViewController.swift in Sources */,
