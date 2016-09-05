@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 import Unbox
+import SwiftMessages
 
 class DirectorySearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
@@ -50,6 +51,14 @@ class DirectorySearchViewController: UIViewController, UITableViewDelegate, UITa
             }
         } else {
             ProgressHUD.dismiss()
+            var config = SwiftMessages.Config()
+            let error = MessageView.viewFromNib(layout: .CardView)
+            error.configureContent(title: "Error", body: "No Network Connection.", iconImage: nil, iconText: nil, buttonImage: nil, buttonTitle: "Hide", buttonTapHandler: { _ in SwiftMessages.hide() })
+            config.presentationStyle = .Bottom
+            error.configureTheme(.Error, iconStyle: .Default)
+            config.interactiveHide = true
+            config.dimMode = .Gray(interactive: true)
+            SwiftMessages.show(config: config, view: error)
         }
     }
     

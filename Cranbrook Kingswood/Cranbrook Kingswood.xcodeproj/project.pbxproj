@@ -56,7 +56,6 @@
 		D7C6898A1D750E860088FCA5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C689891D750E860088FCA5 /* SystemConfiguration.framework */; };
 		D7CF021C1D7558B700145F4B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7CF021B1D7558B700145F4B /* CoreGraphics.framework */; };
 		D7CF021F1D755B1100145F4B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = D7CF021E1D755B1100145F4B /* Reachability.m */; };
-		D7CF02211D75B8FE00145F4B /* CranbrookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CF02201D75B8FE00145F4B /* CranbrookViewController.swift */; };
 		D7F2AB321D7BC662005F8515 /* CalendarItemDataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F2AB311D7BC662005F8515 /* CalendarItemDataStructure.swift */; };
 		D7F2AB351D7BC95B005F8515 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F2AB341D7BC95B005F8515 /* CalendarViewController.swift */; };
 		D7F2AB3B1D7BCC2C005F8515 /* WebServices+Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F2AB3A1D7BCC2C005F8515 /* WebServices+Calendar.swift */; };
@@ -121,7 +120,6 @@
 		D7CF021B1D7558B700145F4B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D7CF021D1D755B1100145F4B /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		D7CF021E1D755B1100145F4B /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		D7CF02201D75B8FE00145F4B /* CranbrookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CranbrookViewController.swift; sourceTree = "<group>"; };
 		D7F2AB311D7BC662005F8515 /* CalendarItemDataStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarItemDataStructure.swift; sourceTree = "<group>"; };
 		D7F2AB341D7BC95B005F8515 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		D7F2AB3A1D7BCC2C005F8515 /* WebServices+Calendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+Calendar.swift"; sourceTree = "<group>"; };
@@ -326,7 +324,6 @@
 		D7C10B281D70B39000C9B66F /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D7CF02201D75B8FE00145F4B /* CranbrookViewController.swift */,
 				A016B6E31D57FC7600A4A68D /* ViewControllerContainer.swift */,
 				A08F66F01D57204900FBE55E /* LoginViewController.swift */,
 				D7B35EE61D779DDC00690868 /* Startup */,
@@ -520,7 +517,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7C10B2B1D70B8D700C9B66F /* WebServices+ClassDetail.swift in Sources */,
-				D7CF02211D75B8FE00145F4B /* CranbrookViewController.swift in Sources */,
 				D7F2AB321D7BC662005F8515 /* CalendarItemDataStructure.swift in Sources */,
 				A0BD73101D56B9CA00889331 /* CranbrookAPIInfo.swift in Sources */,
 				D7B35EE51D779DD600690868 /* StartupViewController+SetupData.swift in Sources */,

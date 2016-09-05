@@ -73,7 +73,7 @@ class StartupViewController: UIViewController {
     func setupReachability() {
         self.reach = Reachability.reachabilityForInternetConnection()
         self.reach!.reachableOnWWAN = false
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(CranbrookViewController.reachabilityChanged(_:)), name: kReachabilityChangedNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(StartupViewController.reachabilityChanged(_:)), name: kReachabilityChangedNotification, object: nil)
         self.reach!.startNotifier()
     }
     

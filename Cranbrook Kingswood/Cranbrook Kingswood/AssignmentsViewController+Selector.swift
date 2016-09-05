@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 import Unbox
+import SwiftMessages
 
 extension AssignmentsViewController {
     
@@ -63,8 +64,20 @@ extension AssignmentsViewController {
     func scrollViewDidScroll(scrollView: UIScrollView) {}
     
     func getAssignmentsForDate(date date: NSDate) {
-        WebServices.service.getAssignmentsForDate(date: date) { (isRequestSuccessful) in
+        if NetworkStatus.networkStatus.isConnectedToNetwork() {
+            WebServices.service.getAssignmentsForDate(date: date) { (isRequestSuccessful) in
+                self.tableView.reloadData()
+            }
+        } else {
             self.tableView.reloadData()
+            var config = SwiftMessages.Config()
+            let error = MessageView.viewFromNib(layout: .CardView)
+            error.configureContent(title: "Error", body: "No Network Connection. Unable to Obtain Assignments", iconImage: nil, iconText: nil, buttonImage: nil, buttonTitle: "Hide", buttonTapHandler: { _ in SwiftMessages.hide() })
+            config.presentationStyle = .Bottom
+            error.configureTheme(.Error, iconStyle: .Default)
+            config.interactiveHide = true
+            config.dimMode = .Gray(interactive: true)
+            SwiftMessages.show(config: config, view: error)
         }
     }
     

@@ -18,7 +18,7 @@ enum SelectedTabOptions: String {
     case DirectorySearchTab     = "Directory Search Tab"
 }
 
-class ViewControllerContainer: CranbrookViewController {
+class ViewControllerContainer: UIViewController {
     
     //  Logout
     @IBOutlet weak var logoutButton: UIBarButtonItem!
