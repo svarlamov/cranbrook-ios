@@ -41,6 +41,12 @@ extension StartupViewController {
     
     private func getStudentClasses() {
         WebServices.service.getCurrentUserClasses(true) { (isRequestSuccessful) in
+            self.getIdForCalendar()
+        }
+    }
+    
+    private func getIdForCalendar() {
+        WebServices.service.getCalendarIdForDate(date: NSDate()) { (isRequestSuccessful) in
             self.getEventsForCurrentDate()
         }
     }

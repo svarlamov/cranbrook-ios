@@ -43,7 +43,6 @@
 		D72CF3291D72388A00B2116C /* AKPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72CF3281D72388A00B2116C /* AKPickerView.swift */; };
 		D72CF32E1D7258A900B2116C /* DateListStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72CF32D1D7258A900B2116C /* DateListStructure.swift */; };
 		D7B1BCEA1D7D041300D41BEE /* WebServices+CalendarID.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B1BCE91D7D041300D41BEE /* WebServices+CalendarID.swift */; };
-		D7B1BCEC1D7D043B00D41BEE /* CalendarIDDataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B1BCEB1D7D043B00D41BEE /* CalendarIDDataStructure.swift */; };
 		D7B35EE31D779BD100690868 /* StudentGroupTermStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B35EE21D779BD100690868 /* StudentGroupTermStructure.swift */; };
 		D7B35EE51D779DD600690868 /* StartupViewController+SetupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B35EE41D779DD600690868 /* StartupViewController+SetupData.swift */; };
 		D7B481BB1D79EF9B0033C58D /* WebServices+StudentGroupTerm.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B481BA1D79EF9B0033C58D /* WebServices+StudentGroupTerm.swift */; };
@@ -107,7 +106,6 @@
 		D72CF3281D72388A00B2116C /* AKPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKPickerView.swift; sourceTree = "<group>"; };
 		D72CF32D1D7258A900B2116C /* DateListStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateListStructure.swift; sourceTree = "<group>"; };
 		D7B1BCE91D7D041300D41BEE /* WebServices+CalendarID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+CalendarID.swift"; sourceTree = "<group>"; };
-		D7B1BCEB1D7D043B00D41BEE /* CalendarIDDataStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarIDDataStructure.swift; sourceTree = "<group>"; };
 		D7B35EE21D779BD100690868 /* StudentGroupTermStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentGroupTermStructure.swift; sourceTree = "<group>"; };
 		D7B35EE41D779DD600690868 /* StartupViewController+SetupData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StartupViewController+SetupData.swift"; sourceTree = "<group>"; };
 		D7B481BA1D79EF9B0033C58D /* WebServices+StudentGroupTerm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+StudentGroupTerm.swift"; sourceTree = "<group>"; };
@@ -317,7 +315,6 @@
 				D7B481BC1D7A309B0033C58D /* AssignmentDataStructure.swift */,
 				31C4DAA01D65649F00397716 /* SearchDataStructure.swift */,
 				D7F2AB311D7BC662005F8515 /* CalendarItemDataStructure.swift */,
-				D7B1BCEB1D7D043B00D41BEE /* CalendarIDDataStructure.swift */,
 				D72CF32D1D7258A900B2116C /* DateListStructure.swift */,
 			);
 			name = "Data Models";
@@ -545,7 +542,6 @@
 				D7B35EE31D779BD100690868 /* StudentGroupTermStructure.swift in Sources */,
 				D7B481BD1D7A309B0033C58D /* AssignmentDataStructure.swift in Sources */,
 				D72686011D7133F90081E4C7 /* WebServices+AssignmentDetail.swift in Sources */,
-				D7B1BCEC1D7D043B00D41BEE /* CalendarIDDataStructure.swift in Sources */,
 				A09D75AE1D570F9A00B2AA74 /* DirectorySearchViewController.swift in Sources */,
 				A016B6E41D57FC7600A4A68D /* ViewControllerContainer.swift in Sources */,
 				D7C10B331D70ED0800C9B66F /* Analytics.swift in Sources */,

@@ -32,7 +32,8 @@ var studentGroupTermListArray: [StudentGroupTermStructure]?     = nil
 var specificDateAssignments: [AssignmentDataStructure]?         = nil
 //
 var calendarTasksForDate: [CalendarItemDataStructure]?          = nil
-
+//
+var userCalendarId: String?                                     = nil
 
 
 
