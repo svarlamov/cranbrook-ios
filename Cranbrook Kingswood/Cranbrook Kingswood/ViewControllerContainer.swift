@@ -70,7 +70,7 @@ class ViewControllerContainer: CranbrookViewController {
         } else {
             var config = SwiftMessages.Config()
             let error = MessageView.viewFromNib(layout: .CardView)
-            error.configureContent(title: "Info", body: "No Schedule Today", iconImage: nil, iconText: nil, buttonImage: nil, buttonTitle: "Hide", buttonTapHandler: { _ in SwiftMessages.hide() })
+            error.configureContent(title: "Info", body: "Nothing Schedule Today", iconImage: nil, iconText: nil, buttonImage: nil, buttonTitle: "Hide", buttonTapHandler: { _ in SwiftMessages.hide() })
             config.presentationStyle = .Bottom
             error.configureTheme(.Warning, iconStyle: .Default)
             config.interactiveHide = true
