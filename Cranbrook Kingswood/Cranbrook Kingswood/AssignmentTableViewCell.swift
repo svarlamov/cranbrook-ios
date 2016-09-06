@@ -9,8 +9,6 @@
 import UIKit
 
 class AssignmentTableViewCell: UITableViewCell {
-
-    var assignmentData: AssignmentDataStructure = AssignmentDataStructure()
     
     @IBOutlet weak var cellContentView: ShadowView!
     @IBOutlet weak var assignmentTitleLabel: UILabel!

@@ -37,6 +37,11 @@ class AssignmentsViewController: UIViewController, AKPickerViewDataSource, AKPic
         setupPickerView()
     }
     
+    func setupTableView() {
+        self.tableView.estimatedRowHeight = 157.0
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+    }
+    
 }
 
 
