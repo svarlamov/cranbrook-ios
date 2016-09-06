@@ -62,6 +62,8 @@
 		D7F2AB3D1D7BD3EF005F8515 /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F2AB3C1D7BD3EF005F8515 /* CalendarTableViewCell.swift */; };
 		D7F2AB411D7CAE9C005F8515 /* CalendarViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F2AB401D7CAE9C005F8515 /* CalendarViewController+TableView.swift */; };
 		D7F9991D1D7D47D300EABBD2 /* TaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F9991C1D7D47D300EABBD2 /* TaskList.swift */; };
+		D7F999231D7E26B800EABBD2 /* AssignmentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7F999221D7E26B800EABBD2 /* AssignmentTableViewCell.xib */; };
+		D7F999251D7EF83500EABBD2 /* WebServices+AssignmentStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F999241D7EF83500EABBD2 /* WebServices+AssignmentStatus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -126,6 +128,8 @@
 		D7F2AB3C1D7BD3EF005F8515 /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarTableViewCell.swift; sourceTree = "<group>"; };
 		D7F2AB401D7CAE9C005F8515 /* CalendarViewController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CalendarViewController+TableView.swift"; sourceTree = "<group>"; };
 		D7F9991C1D7D47D300EABBD2 /* TaskList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TaskList.swift; path = ../TaskList.swift; sourceTree = "<group>"; };
+		D7F999221D7E26B800EABBD2 /* AssignmentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AssignmentTableViewCell.xib; sourceTree = "<group>"; };
+		D7F999241D7EF83500EABBD2 /* WebServices+AssignmentStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+AssignmentStatus.swift"; sourceTree = "<group>"; };
 		F921898296A250D0E2257CAC /* Pods_Cranbrook_Kingswood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cranbrook_Kingswood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -298,6 +302,7 @@
 				A09D75A71D570F1A00B2AA74 /* WebServices+CurrentClasses.swift */,
 				D7C10B2A1D70B8D700C9B66F /* WebServices+ClassDetail.swift */,
 				D72685FE1D7133F00081E4C7 /* WebServices+Assignments.swift */,
+				D7F999241D7EF83500EABBD2 /* WebServices+AssignmentStatus.swift */,
 				D72686001D7133F90081E4C7 /* WebServices+AssignmentDetail.swift */,
 				31375AFE1D6534CD00B07B29 /* WebServices+Search.swift */,
 				D7F2AB3A1D7BCC2C005F8515 /* WebServices+Calendar.swift */,
@@ -340,6 +345,7 @@
 			children = (
 				D72686071D7134630081E4C7 /* ClassesTableViewCell.swift */,
 				D72686051D71344D0081E4C7 /* AssignmentTableViewCell.swift */,
+				D7F999221D7E26B800EABBD2 /* AssignmentTableViewCell.xib */,
 				31CD30AA1D67BEB2001C4647 /* SearchResultTableViewCell.swift */,
 				D7F2AB3C1D7BD3EF005F8515 /* CalendarTableViewCell.swift */,
 				D7B481C91D7B2B950033C58D /* ShadowView.swift */,
@@ -432,6 +438,7 @@
 				A074688B1D568DAD00E7ACC0 /* LaunchScreen.storyboard in Resources */,
 				A07468881D568DAD00E7ACC0 /* Assets.xcassets in Resources */,
 				A07468861D568DAD00E7ACC0 /* Main.storyboard in Resources */,
+				D7F999231D7E26B800EABBD2 /* AssignmentTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,6 +526,7 @@
 				D7C10B2B1D70B8D700C9B66F /* WebServices+ClassDetail.swift in Sources */,
 				D7F2AB321D7BC662005F8515 /* CalendarItemDataStructure.swift in Sources */,
 				A0BD73101D56B9CA00889331 /* CranbrookAPIInfo.swift in Sources */,
+				D7F999251D7EF83500EABBD2 /* WebServices+AssignmentStatus.swift in Sources */,
 				D7B35EE51D779DD600690868 /* StartupViewController+SetupData.swift in Sources */,
 				31C4DAA11D65649F00397716 /* SearchDataStructure.swift in Sources */,
 				D72685FF1D7133F00081E4C7 /* WebServices+Assignments.swift in Sources */,

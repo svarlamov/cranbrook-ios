@@ -65,6 +65,7 @@ class ViewControllerContainer: UIViewController {
     }
     
     @IBAction func showCalendarButtonClicked(sender: AnyObject) {
+        Analytics.analytics.logCalendarSelection()
         if calendarTasksForDate?.count > 0 {
             self.performSegueWithIdentifier(calendarSegue, sender: nil)
         } else {

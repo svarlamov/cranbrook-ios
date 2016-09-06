@@ -721,72 +721,6 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                                 </view>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="search_cell" rowHeight="90" id="tY0-gl-5L3" customClass="SearchResultTableViewCell" customModule="Cranbrook_Kingswood" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="42" width="600" height="90"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tY0-gl-5L3" id="3M5-Wf-ivY">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="90"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vA0-JA-BpZ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="90"/>
-                                                    <subviews>
-                                                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3sJ-OX-z6R" customClass="ShadowView" customModule="Cranbrook_Kingswood" customModuleProvider="target">
-                                                            <rect key="frame" x="11" y="0.0" width="578" height="76"/>
-                                                            <subviews>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="default_user_icon" translatesAutoresizingMaskIntoConstraints="NO" id="53S-fc-nzv">
-                                                                    <rect key="frame" x="21" y="13" width="50" height="50"/>
-                                                                </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stefan DeClerck Stefan DeClerck Stefan DeClerck Stefan" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kG9-Y9-DcV">
-                                                                    <rect key="frame" x="87" y="13" width="451" height="28"/>
-                                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
-                                                                    <color key="textColor" red="0.1647058824" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stefan DeClerck Stefan DeClerck Stefan DeClerck Stefan De" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLm-Eg-R2r">
-                                                                    <rect key="frame" x="88" y="36" width="450" height="28"/>
-                                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
-                                                                    <color key="textColor" red="0.57647058819999997" green="0.59999999999999998" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="detail_indication_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="br8-K4-Uff">
-                                                                    <rect key="frame" x="554" y="24" width="9" height="28"/>
-                                                                </imageView>
-                                                            </subviews>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                                    <color key="value" red="0.4823529411764706" green="0.4823529411764706" blue="0.4823529411764706" alpha="1" colorSpace="calibratedRGB"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                                    <real key="value" value="2"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                                    <real key="value" value="0.10000000000000001"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
-                                                        </view>
-                                                    </subviews>
-                                                    <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <constraints>
-                                                        <constraint firstItem="3sJ-OX-z6R" firstAttribute="top" secondItem="vA0-JA-BpZ" secondAttribute="top" id="EzT-Nw-8hi"/>
-                                                        <constraint firstAttribute="trailing" secondItem="3sJ-OX-z6R" secondAttribute="trailing" constant="11" id="IL8-XQ-6WW"/>
-                                                        <constraint firstAttribute="bottom" secondItem="3sJ-OX-z6R" secondAttribute="bottom" constant="14" id="aVf-du-lOd"/>
-                                                        <constraint firstItem="3sJ-OX-z6R" firstAttribute="leading" secondItem="vA0-JA-BpZ" secondAttribute="leading" constant="11" id="mME-FX-fpg"/>
-                                                    </constraints>
-                                                </view>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <connections>
-                                            <outlet property="cellContentView" destination="3sJ-OX-z6R" id="GZI-3T-vnq"/>
-                                            <outlet property="detailLabel" destination="VLm-Eg-R2r" id="qXI-4I-sWr"/>
-                                            <outlet property="profileImageView" destination="53S-fc-nzv" id="lYY-Jm-20I"/>
-                                            <outlet property="titleLabel" destination="kG9-Y9-DcV" id="SDP-2f-hTw"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="U0p-sd-yg3" id="RII-9F-WJz"/>
                                     <outlet property="delegate" destination="U0p-sd-yg3" id="Jqa-Jh-cPE"/>
@@ -865,7 +799,7 @@
                                 <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="assignments_cell" id="JwW-te-VEp">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="assignment_cell" id="JwW-te-VEp">
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JwW-te-VEp" id="1bw-8P-BhG">
@@ -912,8 +846,6 @@
     </scenes>
     <resources>
         <image name="calendar_bar_button_icon" width="22" height="22"/>
-        <image name="default_user_icon" width="58" height="58"/>
-        <image name="detail_indication_arrow" width="78" height="219"/>
         <image name="table_view_shadow_2px" width="750" height="6"/>
     </resources>
     <inferredMetricsTieBreakers>

@@ -40,15 +40,6 @@ class Analytics {
         })
     }
     
-    //  Date Selection Method for Calendar
-    internal func calendarDateSelection(date: String) {
-        dispatch_async(dispatch_get_main_queue(),{
-            if self.isAnalyticsEnabled {
-                Answers.logCustomEventWithName("CalendarDateSelection", customAttributes: ["User":"\(userLoginInfo!.username)", "Date Selected":"\(date)"])
-            }
-        })
-    }
-    
     //  Sign Out Method
     internal func logSignOut(username: String) {
         dispatch_async(dispatch_get_main_queue(),{
@@ -81,6 +72,15 @@ class Analytics {
         dispatch_async(dispatch_get_main_queue(), {
             if self.isAnalyticsEnabled {
                 Answers.logCustomEventWithName("Tab Selection", customAttributes: ["Selected Tab":"\(selectedTab)"])
+            }
+        })
+    }
+    
+    //  Calendar Selected Analytics Method
+    internal func logCalendarSelection() {
+        dispatch_async(dispatch_get_main_queue(), {
+            if self.isAnalyticsEnabled {
+                Answers.logCustomEventWithName("Calendar Selected", customAttributes: ["User":"\(userLoginInfo!.username)"])
             }
         })
     }
