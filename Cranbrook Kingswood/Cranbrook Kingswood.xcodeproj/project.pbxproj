@@ -130,7 +130,6 @@
 		D7F9991C1D7D47D300EABBD2 /* TaskList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TaskList.swift; path = ../TaskList.swift; sourceTree = "<group>"; };
 		D7F999221D7E26B800EABBD2 /* AssignmentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AssignmentTableViewCell.xib; sourceTree = "<group>"; };
 		D7F999241D7EF83500EABBD2 /* WebServices+AssignmentStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+AssignmentStatus.swift"; sourceTree = "<group>"; };
-		D7F999261D7F010E00EABBD2 /* Mobile Design.sketch */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mobile Design.sketch"; sourceTree = "<group>"; };
 		F921898296A250D0E2257CAC /* Pods_Cranbrook_Kingswood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cranbrook_Kingswood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -215,7 +214,6 @@
 		A07468931D568DFD00E7ACC0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D7F999261D7F010E00EABBD2 /* Mobile Design.sketch */,
 				A07468871D568DAD00E7ACC0 /* Assets.xcassets */,
 				A07468891D568DAD00E7ACC0 /* LaunchScreen.storyboard */,
 				A074688C1D568DAD00E7ACC0 /* Info.plist */,
