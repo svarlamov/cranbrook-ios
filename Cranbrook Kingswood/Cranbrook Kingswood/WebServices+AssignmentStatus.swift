@@ -12,10 +12,10 @@ import Alamofire
 import SwiftyJSON
 import SwiftMessages
 
-enum AssingmentStatus: String {
-    case ToDo           = "-1"
-    case inProgress     = "0"
-    case completed      = "1"
+enum AssingmentStatus: Int {
+    case ToDo           = -1
+    case inProgress     = 0
+    case completed      = 1
 }
 
 extension WebServices {
