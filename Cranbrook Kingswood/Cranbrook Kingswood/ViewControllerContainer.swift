@@ -48,7 +48,7 @@ class ViewControllerContainer: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
-        setTab(.ClassesTab)
+        setTab(.AssignmentsTab)
     }
     
     func setupNavigationController() {

@@ -10,7 +10,7 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="157"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wgb-wY-s1o" id="8ZF-7L-U2R">
-                <rect key="frame" x="0.0" y="0.0" width="600" height="157"/>
+                <rect key="frame" x="0.0" y="0.0" width="600" height="156.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JmO-rA-IVL" customClass="ShadowView" customModule="Cranbrook_Kingswood" customModuleProvider="target">

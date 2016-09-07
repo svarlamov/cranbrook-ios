@@ -76,6 +76,11 @@ class DirectorySearchViewController: UIViewController, UITableViewDelegate, UITa
     
     func setupViews() {
         self.tabIndicationView.hidden = true
+        self.setupTableView()
+    }
+    
+    func setupTableView() {
+        
     }
     
     func setTab(tab: SearchDirectories, animated: Bool) {

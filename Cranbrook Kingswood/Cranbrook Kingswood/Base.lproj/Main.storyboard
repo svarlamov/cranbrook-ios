@@ -723,6 +723,103 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                                 </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="search_cell" rowHeight="90" id="u0c-PI-iIH" customClass="SearchResultTableViewCell" customModule="Cranbrook_Kingswood" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="42" width="600" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="u0c-PI-iIH" id="odf-DK-yZh">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="89.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WJ8-e2-mAD">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="90"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="by0-ao-Uga" customClass="ShadowView" customModule="Cranbrook_Kingswood" customModuleProvider="target">
+                                                            <rect key="frame" x="11" y="0.0" width="578" height="76"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stefan DeClerck Stefan DeClerck Stefan DeClerck Stefan" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zab-QP-6sQ">
+                                                                    <rect key="frame" x="87" y="13" width="451" height="28"/>
+                                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                                                                    <color key="textColor" red="0.1647058824" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Stefan DeClerck Stefan DeClerck Stefan DeClerck Stefan De" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Atz-xl-TTN">
+                                                                    <rect key="frame" x="88" y="42" width="450" height="21"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="21" id="gqp-Q6-GFt"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                                                    <color key="textColor" red="0.57647058819999997" green="0.59999999999999998" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="detail_indication_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="6Ul-0U-54s">
+                                                                    <rect key="frame" x="554" y="24" width="9" height="28"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="28" id="5UJ-J5-rmN"/>
+                                                                        <constraint firstAttribute="width" constant="9" id="NjH-nU-lTd"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_user_icon" translatesAutoresizingMaskIntoConstraints="NO" id="gVQ-EW-21y">
+                                                                    <rect key="frame" x="21" y="13" width="50" height="50"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="50" id="vOD-ig-ml7"/>
+                                                                        <constraint firstAttribute="height" constant="50" id="xWP-EF-JOQ"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstItem="gVQ-EW-21y" firstAttribute="top" secondItem="by0-ao-Uga" secondAttribute="top" constant="13" id="5Nl-J7-qQV"/>
+                                                                <constraint firstItem="zab-QP-6sQ" firstAttribute="leading" secondItem="gVQ-EW-21y" secondAttribute="trailing" constant="16" id="8es-V3-osn"/>
+                                                                <constraint firstItem="6Ul-0U-54s" firstAttribute="leading" secondItem="zab-QP-6sQ" secondAttribute="trailing" constant="16" id="CG9-Wm-1eG"/>
+                                                                <constraint firstItem="Atz-xl-TTN" firstAttribute="top" secondItem="zab-QP-6sQ" secondAttribute="bottom" constant="1" id="Dwk-sr-hKQ"/>
+                                                                <constraint firstItem="gVQ-EW-21y" firstAttribute="bottom" secondItem="Atz-xl-TTN" secondAttribute="bottom" id="HO6-6d-m1g"/>
+                                                                <constraint firstAttribute="bottom" secondItem="Atz-xl-TTN" secondAttribute="bottom" constant="13" id="Hhh-CB-d39"/>
+                                                                <constraint firstItem="gVQ-EW-21y" firstAttribute="leading" secondItem="by0-ao-Uga" secondAttribute="leading" constant="21" id="YSK-7b-wxB"/>
+                                                                <constraint firstItem="zab-QP-6sQ" firstAttribute="top" secondItem="by0-ao-Uga" secondAttribute="top" constant="13" id="ddo-qc-SiI"/>
+                                                                <constraint firstItem="Atz-xl-TTN" firstAttribute="top" secondItem="zab-QP-6sQ" secondAttribute="bottom" constant="1" id="fFL-VI-gla"/>
+                                                                <constraint firstItem="Atz-xl-TTN" firstAttribute="leading" secondItem="gVQ-EW-21y" secondAttribute="trailing" constant="17" id="gGM-0l-FUC"/>
+                                                                <constraint firstItem="6Ul-0U-54s" firstAttribute="leading" secondItem="Atz-xl-TTN" secondAttribute="trailing" constant="16" id="r0o-r7-FWV"/>
+                                                                <constraint firstItem="6Ul-0U-54s" firstAttribute="top" secondItem="by0-ao-Uga" secondAttribute="top" constant="24" id="s5s-gE-vfp"/>
+                                                                <constraint firstAttribute="trailing" secondItem="6Ul-0U-54s" secondAttribute="trailing" constant="15" id="xX3-IK-vqO"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                                    <color key="value" red="0.4823529412" green="0.4823529412" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                                    <real key="value" value="2"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                                    <real key="value" value="0.10000000000000001"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="by0-ao-Uga" firstAttribute="leading" secondItem="WJ8-e2-mAD" secondAttribute="leading" constant="11" id="2ex-xi-wRB"/>
+                                                        <constraint firstAttribute="trailing" secondItem="by0-ao-Uga" secondAttribute="trailing" constant="11" id="JIN-eU-jSN"/>
+                                                        <constraint firstItem="by0-ao-Uga" firstAttribute="top" secondItem="WJ8-e2-mAD" secondAttribute="top" id="KkP-zi-3SF"/>
+                                                        <constraint firstAttribute="bottom" secondItem="by0-ao-Uga" secondAttribute="bottom" constant="14" id="sTU-0l-pxh"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="WJ8-e2-mAD" firstAttribute="top" secondItem="odf-DK-yZh" secondAttribute="top" id="U0G-pZ-k71"/>
+                                                <constraint firstItem="WJ8-e2-mAD" firstAttribute="leading" secondItem="odf-DK-yZh" secondAttribute="leading" id="kKK-WU-zQb"/>
+                                                <constraint firstAttribute="trailing" secondItem="WJ8-e2-mAD" secondAttribute="trailing" id="r4R-Re-3gb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="cellContentView" destination="by0-ao-Uga" id="BO5-C1-TUS"/>
+                                            <outlet property="detailLabel" destination="Atz-xl-TTN" id="2oP-qC-XPH"/>
+                                            <outlet property="profileImageView" destination="gVQ-EW-21y" id="4kQ-pm-rbL"/>
+                                            <outlet property="titleLabel" destination="zab-QP-6sQ" id="vmt-h5-sRF"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="U0p-sd-yg3" id="RII-9F-WJz"/>
                                     <outlet property="delegate" destination="U0p-sd-yg3" id="Jqa-Jh-cPE"/>
@@ -1023,6 +1120,8 @@
     </scenes>
     <resources>
         <image name="calendar_bar_button_icon" width="22" height="22"/>
+        <image name="default_user_icon" width="58" height="58"/>
+        <image name="detail_indication_arrow" width="78" height="219"/>
         <image name="table_view_shadow_2px" width="750" height="6"/>
     </resources>
     <inferredMetricsTieBreakers>
