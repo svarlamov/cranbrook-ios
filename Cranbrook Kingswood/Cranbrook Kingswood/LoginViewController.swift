@@ -37,9 +37,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     private func signIn(username: String, password: String) {
-        
+        ProgressHUD.show()
         if isValidCredential(username, inputPassword: password) {
-            ProgressHUD.dismiss()
             if NetworkStatus.networkStatus.isConnectedToNetwork() {
                 WebServices.service.loginWithParameters(username: username, password: password, callBack: { (isLoginSuccessful) in
                     if isLoginSuccessful {
@@ -56,6 +55,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             }
             
         } else {
+            ProgressHUD.dismiss()
             self.displayLoginError(withMessage: "Error: Username and Password Blank")
             
         }
