@@ -42,6 +42,7 @@
 		D72686081D7134630081E4C7 /* ClassesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72686071D7134630081E4C7 /* ClassesTableViewCell.swift */; };
 		D72CF3291D72388A00B2116C /* AKPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72CF3281D72388A00B2116C /* AKPickerView.swift */; };
 		D72CF32E1D7258A900B2116C /* DateListStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72CF32D1D7258A900B2116C /* DateListStructure.swift */; };
+		D75C1EAA1D81D1D400F65A8D /* AssignmentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D75C1EA91D81D1D400F65A8D /* AssignmentTableViewCell.xib */; };
 		D7B1BCEA1D7D041300D41BEE /* WebServices+CalendarID.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B1BCE91D7D041300D41BEE /* WebServices+CalendarID.swift */; };
 		D7B35EE31D779BD100690868 /* StudentGroupTermStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B35EE21D779BD100690868 /* StudentGroupTermStructure.swift */; };
 		D7B35EE51D779DD600690868 /* StartupViewController+SetupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B35EE41D779DD600690868 /* StartupViewController+SetupData.swift */; };
@@ -62,7 +63,6 @@
 		D7F2AB3D1D7BD3EF005F8515 /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F2AB3C1D7BD3EF005F8515 /* CalendarTableViewCell.swift */; };
 		D7F2AB411D7CAE9C005F8515 /* CalendarViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F2AB401D7CAE9C005F8515 /* CalendarViewController+TableView.swift */; };
 		D7F9991D1D7D47D300EABBD2 /* TaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F9991C1D7D47D300EABBD2 /* TaskList.swift */; };
-		D7F999231D7E26B800EABBD2 /* AssignmentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7F999221D7E26B800EABBD2 /* AssignmentTableViewCell.xib */; };
 		D7F999251D7EF83500EABBD2 /* WebServices+AssignmentStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F999241D7EF83500EABBD2 /* WebServices+AssignmentStatus.swift */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +107,7 @@
 		D72686071D7134630081E4C7 /* ClassesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassesTableViewCell.swift; sourceTree = "<group>"; };
 		D72CF3281D72388A00B2116C /* AKPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKPickerView.swift; sourceTree = "<group>"; };
 		D72CF32D1D7258A900B2116C /* DateListStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateListStructure.swift; sourceTree = "<group>"; };
+		D75C1EA91D81D1D400F65A8D /* AssignmentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AssignmentTableViewCell.xib; sourceTree = "<group>"; };
 		D7B1BCE91D7D041300D41BEE /* WebServices+CalendarID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+CalendarID.swift"; sourceTree = "<group>"; };
 		D7B35EE21D779BD100690868 /* StudentGroupTermStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentGroupTermStructure.swift; sourceTree = "<group>"; };
 		D7B35EE41D779DD600690868 /* StartupViewController+SetupData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StartupViewController+SetupData.swift"; sourceTree = "<group>"; };
@@ -128,7 +129,6 @@
 		D7F2AB3C1D7BD3EF005F8515 /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarTableViewCell.swift; sourceTree = "<group>"; };
 		D7F2AB401D7CAE9C005F8515 /* CalendarViewController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CalendarViewController+TableView.swift"; sourceTree = "<group>"; };
 		D7F9991C1D7D47D300EABBD2 /* TaskList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TaskList.swift; path = ../TaskList.swift; sourceTree = "<group>"; };
-		D7F999221D7E26B800EABBD2 /* AssignmentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AssignmentTableViewCell.xib; sourceTree = "<group>"; };
 		D7F999241D7EF83500EABBD2 /* WebServices+AssignmentStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+AssignmentStatus.swift"; sourceTree = "<group>"; };
 		F921898296A250D0E2257CAC /* Pods_Cranbrook_Kingswood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cranbrook_Kingswood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -345,7 +345,7 @@
 			children = (
 				D72686071D7134630081E4C7 /* ClassesTableViewCell.swift */,
 				D72686051D71344D0081E4C7 /* AssignmentTableViewCell.swift */,
-				D7F999221D7E26B800EABBD2 /* AssignmentTableViewCell.xib */,
+				D75C1EA91D81D1D400F65A8D /* AssignmentTableViewCell.xib */,
 				31CD30AA1D67BEB2001C4647 /* SearchResultTableViewCell.swift */,
 				D7F2AB3C1D7BD3EF005F8515 /* CalendarTableViewCell.swift */,
 				D7B481C91D7B2B950033C58D /* ShadowView.swift */,
@@ -438,7 +438,7 @@
 				A074688B1D568DAD00E7ACC0 /* LaunchScreen.storyboard in Resources */,
 				A07468881D568DAD00E7ACC0 /* Assets.xcassets in Resources */,
 				A07468861D568DAD00E7ACC0 /* Main.storyboard in Resources */,
-				D7F999231D7E26B800EABBD2 /* AssignmentTableViewCell.xib in Resources */,
+				D75C1EAA1D81D1D400F65A8D /* AssignmentTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

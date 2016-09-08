@@ -34,7 +34,8 @@ class AssignmentsViewController: UIViewController, AKPickerViewDataSource, AKPic
     }
     
     func setupViews() {
-        setupPickerView()
+        self.setupPickerView()
+        self.setupTableView()
     }
     
     func setupTableView() {

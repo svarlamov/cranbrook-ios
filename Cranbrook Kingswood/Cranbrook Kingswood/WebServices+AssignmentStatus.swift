@@ -20,6 +20,14 @@ enum AssingmentStatus: Int {
 
 extension WebServices {
     
+    internal func UpdateAssignmentStatus(assignmentId assignmentId: String, toStatus status: AssingmentStatus, callBack: (isRequestSuccessful: Bool) -> Void) {
+        
+    }
+    
+    private func UpdateAssignmentStatusSubMethod(assignmentId: String, status: AssingmentStatus, callBack: (isRequestSuccessful: Bool) -> Void) {
+        
+    }
+    
 }
 
 
