@@ -47,6 +47,7 @@ struct AssignmentDataStructure {
     var shareDiscussion:                Bool?
     var shortDescription:               String?
     var showDiscussionInd:              Bool?
+    
 }
 
 extension AssignmentDataStructure: Unboxable {
@@ -85,9 +86,39 @@ extension AssignmentDataStructure: Unboxable {
         self.shareDiscussion                 = unboxer.unbox("share_discussion")
         self.shortDescription                = unboxer.unbox("short_description")
         self.showDiscussionInd               = unboxer.unbox("show_discussion_ind")
+        
+        if let checkedDescription = self.shortDescription {
+            
+            var finalString: String = String()
+            var editedString: String = checkedDescription
+            
+            if checkedDescription.rangeOfString("<div>") != nil {
+                editedString = editedString.stringByReplacingOccurrencesOfString("<div>", withString: " ", options: NSStringCompareOptions.LiteralSearch, range: nil)
+            }
+            
+            if checkedDescription.rangeOfString("</div>") != nil {
+                editedString = editedString.stringByReplacingOccurrencesOfString("</div>", withString: " ", options: NSStringCompareOptions.LiteralSearch, range: nil)
+            }
+            
+            if checkedDescription.rangeOfString("&#160;") != nil {
+                editedString = editedString.stringByReplacingOccurrencesOfString("&#160;", withString: " ", options: NSStringCompareOptions.LiteralSearch, range: nil)
+            }
+            
+            if checkedDescription.rangeOfString("<br>") != nil {
+                editedString = editedString.stringByReplacingOccurrencesOfString("<br>", withString: " ", options: NSStringCompareOptions.LiteralSearch, range: nil)
+            }
+            
+            if checkedDescription.rangeOfString("<br />") != nil {
+                editedString = editedString.stringByReplacingOccurrencesOfString("<br />", withString: " ", options: NSStringCompareOptions.LiteralSearch, range: nil)
+            }
+            
+            finalString = editedString
+            self.shortDescription = finalString
+            
+        }
+        
     }
 }
-
 
 
 
