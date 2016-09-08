@@ -42,7 +42,6 @@
 		D72686081D7134630081E4C7 /* ClassesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72686071D7134630081E4C7 /* ClassesTableViewCell.swift */; };
 		D72CF3291D72388A00B2116C /* AKPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72CF3281D72388A00B2116C /* AKPickerView.swift */; };
 		D72CF32E1D7258A900B2116C /* DateListStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72CF32D1D7258A900B2116C /* DateListStructure.swift */; };
-		D75C1EAA1D81D1D400F65A8D /* AssignmentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D75C1EA91D81D1D400F65A8D /* AssignmentTableViewCell.xib */; };
 		D7B1BCEA1D7D041300D41BEE /* WebServices+CalendarID.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B1BCE91D7D041300D41BEE /* WebServices+CalendarID.swift */; };
 		D7B35EE31D779BD100690868 /* StudentGroupTermStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B35EE21D779BD100690868 /* StudentGroupTermStructure.swift */; };
 		D7B35EE51D779DD600690868 /* StartupViewController+SetupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B35EE41D779DD600690868 /* StartupViewController+SetupData.swift */; };
@@ -107,7 +106,6 @@
 		D72686071D7134630081E4C7 /* ClassesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassesTableViewCell.swift; sourceTree = "<group>"; };
 		D72CF3281D72388A00B2116C /* AKPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKPickerView.swift; sourceTree = "<group>"; };
 		D72CF32D1D7258A900B2116C /* DateListStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateListStructure.swift; sourceTree = "<group>"; };
-		D75C1EA91D81D1D400F65A8D /* AssignmentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AssignmentTableViewCell.xib; sourceTree = "<group>"; };
 		D7B1BCE91D7D041300D41BEE /* WebServices+CalendarID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+CalendarID.swift"; sourceTree = "<group>"; };
 		D7B35EE21D779BD100690868 /* StudentGroupTermStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentGroupTermStructure.swift; sourceTree = "<group>"; };
 		D7B35EE41D779DD600690868 /* StartupViewController+SetupData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StartupViewController+SetupData.swift"; sourceTree = "<group>"; };
@@ -345,7 +343,6 @@
 			children = (
 				D72686071D7134630081E4C7 /* ClassesTableViewCell.swift */,
 				D72686051D71344D0081E4C7 /* AssignmentTableViewCell.swift */,
-				D75C1EA91D81D1D400F65A8D /* AssignmentTableViewCell.xib */,
 				31CD30AA1D67BEB2001C4647 /* SearchResultTableViewCell.swift */,
 				D7F2AB3C1D7BD3EF005F8515 /* CalendarTableViewCell.swift */,
 				D7B481C91D7B2B950033C58D /* ShadowView.swift */,
@@ -438,7 +435,6 @@
 				A074688B1D568DAD00E7ACC0 /* LaunchScreen.storyboard in Resources */,
 				A07468881D568DAD00E7ACC0 /* Assets.xcassets in Resources */,
 				A07468861D568DAD00E7ACC0 /* Main.storyboard in Resources */,
-				D75C1EAA1D81D1D400F65A8D /* AssignmentTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
