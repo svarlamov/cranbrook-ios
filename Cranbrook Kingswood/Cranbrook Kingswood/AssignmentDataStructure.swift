@@ -19,6 +19,7 @@ struct AssignmentDataStructure {
     var assignmentId:                   Int?
     var assignmentIndexId:              Int?
     var assignmentStatus:               Int?
+    var status:                         AssingmentStatus?
     var assignmentType:                 String?
     var dateAssigned:                   String?
     var dateAssignedTicks:              Int?
@@ -86,6 +87,16 @@ extension AssignmentDataStructure: Unboxable {
         self.shareDiscussion                 = unboxer.unbox("share_discussion")
         self.shortDescription                = unboxer.unbox("short_description")
         self.showDiscussionInd               = unboxer.unbox("show_discussion_ind")
+        
+        if let instanceAssignmentStatus = self.assignmentStatus {
+            if instanceAssignmentStatus == -1 {
+                self.status = AssingmentStatus.ToDo
+            } else if instanceAssignmentStatus == 0 {
+                self.status = AssingmentStatus.inProgress
+            } else if instanceAssignmentStatus == 1 {
+                self.status = AssingmentStatus.completed
+            }
+        }
         
         if let checkedDescription = self.shortDescription {
             
