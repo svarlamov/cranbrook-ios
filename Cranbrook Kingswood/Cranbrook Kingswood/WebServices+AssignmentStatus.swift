@@ -34,28 +34,30 @@ extension WebServices {
         let getAssignmentsForDateRequest: NSMutableURLRequest = self.createAssignmentStatusChangeRequest(assignmentId: assignmentId, forStatus: status)
         Alamofire.request(getAssignmentsForDateRequest).responseJSON { response in
             if let requestResponse: JSON = JSON(response.result.value!) {
-                let mainResponse: [NSDictionary] = requestResponse.rawValue as! [NSDictionary]
-                print(mainResponse)
+                let responseSuccess = requestResponse["WasVoid"].boolValue
+                if responseSuccess {
+                    callBack(isRequestSuccessful: true)
+                } else {
+                    callBack(isRequestSuccessful: false)
+                }
                 
             } else {
                 callBack(isRequestSuccessful: false)
             }
-            
         }
     }
     
-    private func createAssignmentsForDateRequestURL(assignmentId: String, status: AssingmentStatus) -> String {
+    private func createAssignmentsStatusRequestURL(assignmentId: String, status: AssingmentStatus) -> String {
         var returnString: String = String()
-        let urlDateString: String = setupDateString(date: forDate)
         returnString = "https://cranbrook.myschoolapp.com/api/DataDirect/AssignmentCenterAssignments/?format=json&filter=1&dateStart=\(urlDateString)&dateEnd=\(urlDateString)&persona=2&statusList=&sectionList="
         return returnString
     }
     
     private func createAssignmentStatusChangeRequest(assignmentId id: String, forStatus status: AssingmentStatus) -> NSMutableURLRequest {
-        let requestStringURL: String = createAssignmentsForDateRequestURL(forDate)
+        let requestStringURL: String = createAssignmentsStatusRequestURL(id, status: status)
         let requestUrl: NSURL = NSURL(string: requestStringURL)!
         let request = NSMutableURLRequest(URL: requestUrl)
-        request.HTTPMethod = "GET"
+        request.HTTPMethod = "POST"
         if let sessionToken = currentSessionInfo?.sessionToken {
             request.setValue("t=\(sessionToken)", forHTTPHeaderField: "Cookie")
         }
