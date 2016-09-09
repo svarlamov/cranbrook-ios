@@ -49,31 +49,22 @@ extension WebServices {
     
     private func createAssignmentsStatusRequestURL(assignmentId: String, status: AssingmentStatus) -> String {
         var returnString: String = String()
-        returnString = "https://cranbrook.myschoolapp.com/api/DataDirect/AssignmentCenterAssignments/?format=json&filter=1&dateStart=\(urlDateString)&dateEnd=\(urlDateString)&persona=2&statusList=&sectionList="
+        returnString = "https://cranbrook.myschoolapp.com/api/assignment2/assignmentstatusupdate/?format=json&assignmentIndexId=\(assignmentId)&assignmentStatus=\(String(status.rawValue))"
         return returnString
     }
     
     private func createAssignmentStatusChangeRequest(assignmentId id: String, forStatus status: AssingmentStatus) -> NSMutableURLRequest {
         let requestStringURL: String = createAssignmentsStatusRequestURL(id, status: status)
         let requestUrl: NSURL = NSURL(string: requestStringURL)!
+        let requestDictionary: NSDictionary = ["assignmentIndexId":Int(id)!, "assignmentStatus":status.rawValue]
         let request = NSMutableURLRequest(URL: requestUrl)
+        request.HTTPBody = try! NSJSONSerialization.dataWithJSONObject(requestDictionary, options: [])
         request.HTTPMethod = "POST"
         if let sessionToken = currentSessionInfo?.sessionToken {
             request.setValue("t=\(sessionToken)", forHTTPHeaderField: "Cookie")
         }
         return request
     }
-    
-    /*
-     let requestDictionary = [
-     "jsonrpc" : "2.0",
-     "id"      : 1,
-     "method"  : method,
-     "params"  : parameters
-     ]
-     
-     request.HTTPBody = try! NSJSONSerialization.dataWithJSONObject(requestDictionary, options: [])
- */
     
 }
 
