@@ -123,6 +123,14 @@ extension AssignmentDataStructure: Unboxable {
                 editedString = editedString.stringByReplacingOccurrencesOfString("<br />", withString: " ", options: NSStringCompareOptions.LiteralSearch, range: nil)
             }
             
+            if checkedDescription.rangeOfString("</b>") != nil {
+                editedString = editedString.stringByReplacingOccurrencesOfString("</b>", withString: " ", options: NSStringCompareOptions.LiteralSearch, range: nil)
+            }
+            
+            if checkedDescription.rangeOfString("<b>") != nil {
+                editedString = editedString.stringByReplacingOccurrencesOfString("<b>", withString: " ", options: NSStringCompareOptions.LiteralSearch, range: nil)
+            }
+            
             finalString = editedString
             self.shortDescription = finalString
             
