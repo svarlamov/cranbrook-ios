@@ -18,6 +18,8 @@ class AssignmentTableViewCell: UITableViewCell {
     @IBOutlet weak var inProgressButton: UIButton!
     @IBOutlet weak var completedButton: UIButton!
     
+    var theIndex: Int = Int()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         self.roundButtons()
@@ -36,19 +38,23 @@ class AssignmentTableViewCell: UITableViewCell {
     }
     
     @IBAction func toDoButtonPressed(sender: UIButton) {
-        
+        changeAssignmentStatus(toStatus: .ToDo)
     }
     
     @IBAction func inProgressButtonPressed(sender: UIButton) {
-        
+//        changeAssignmentStatus(toStatus: .InProgress)
     }
     
     @IBAction func completedButtonPressed(sender: UIButton) {
         
     }
     
-    func changeAssignmentStatus() {
-        
+    func changeAssignmentStatus(toStatus status: AssingmentStatus) {
+        WebServices.service.UpdateAssignmentStatus(assignmentId: String(specificDateAssignments![theIndex].assignmentId), toStatus: status) { (isRequestSuccessful) in
+            if isRequestSuccessful {
+                print("awesome")
+            }
+        }
     }
     
 }

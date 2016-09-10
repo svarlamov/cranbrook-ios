@@ -69,9 +69,6 @@ extension WebServices {
                     persistLoginData(instanceUsername, password: instancePassword)
                     callBack(isLoginSuccessful: true)
                     print("login_successful. student_id:\(studentID). session_token:\(sessionToken!)")
-                    WebServices.service.UpdateAssignmentStatus(assignmentId: "9517923", toStatus: .completed, callBack: { (isRequestSuccessful) in
-                        print("interesting")
-                    })
                     
                 } else {
                     Analytics.analytics.analyticsLogin(username, isSuccessful: false)

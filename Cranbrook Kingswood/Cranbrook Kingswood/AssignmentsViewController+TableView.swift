@@ -38,7 +38,9 @@ extension AssignmentsViewController {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(self.assignmentsCellIdentifier, forIndexPath: indexPath) as! AssignmentTableViewCell
+        cell.theIndex = indexPath.row
         var assignmentData: AssignmentDataStructure = AssignmentDataStructure()
+        cell.theIndex = indexPath.row
         if let assignment = specificDateAssignments?[indexPath.row] {
             assignmentData = assignment
         }
