@@ -27,6 +27,7 @@ extension AssignmentsViewController {
     
     func goToDateIndex() {
         if let dateIndex = self.indexOfCurrentDate() {
+            self.pickerIndex = dateIndex
             self.pickerView.scrollToItem(dateIndex)
             getAssignmentsForDate(date: self.mainDates[dateIndex])
         }
@@ -57,6 +58,7 @@ extension AssignmentsViewController {
     }
     
     func pickerView(pickerView: AKPickerView, didSelectItem item: Int) {
+        self.pickerIndex = item
         Analytics.analytics.assignmentDateSelection(self.dates[item])
         self.getAssignmentsForDate(date: self.mainDates[item])
     }

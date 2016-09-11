@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 import Unbox
+import PullToRefreshSwift
 
 class AssignmentsViewController: UIViewController, AKPickerViewDataSource, AKPickerViewDelegate, UITableViewDelegate, UITableViewDataSource {
     
@@ -17,6 +18,7 @@ class AssignmentsViewController: UIViewController, AKPickerViewDataSource, AKPic
     @IBOutlet var pickerView: AKPickerView!
     let dates = assignmentsDateList.mutableDateList
     let mainDates = assignmentsDateList.mutableNSDateList
+    var pickerIndex: Int = Int()
     
     //  Table view
     @IBOutlet weak var tableView: UITableView!
@@ -31,6 +33,15 @@ class AssignmentsViewController: UIViewController, AKPickerViewDataSource, AKPic
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
         goToDateIndex()
+        self.setupTableViewRefresh()
+    }
+    
+    func setupTableViewRefresh() {
+        self.tableView.addPullToRefresh({ [weak self] in
+            self!.getAssignmentsForDate(date: self!.mainDates[self!.pickerIndex])
+            self?.tableView.reloadData()
+            self?.tableView.stopPullToRefresh()
+        })
     }
     
     func setupViews() {
