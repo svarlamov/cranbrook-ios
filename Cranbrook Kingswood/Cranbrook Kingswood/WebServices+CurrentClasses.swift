@@ -34,13 +34,25 @@ extension WebServices {
                     let singularUserClass: CurrentUserClasses? = self.mapCurrentUserClasses(singularResponse)
                     currentStudentClassListArray.append(singularUserClass!)
                 }
-                studentClassArray = currentStudentClassListArray
+                studentClassArray = self.filterClasses(currentStudentClassListArray)
                 callBack(isRequestSuccessful: true)
             } else {
                 callBack(isRequestSuccessful: false)
             }
             
         }
+    }
+    
+    private func filterClasses(inputClasses: Array<CurrentUserClasses>) -> [CurrentUserClasses] {
+        var returnValue: [CurrentUserClasses] = [CurrentUserClasses]()
+        for classObject in inputClasses {
+            if let title = classObject.sectionIdentifier {
+                if title.rangeOfString("Cyber Learning Lab") != nil {} else {
+                    returnValue.append(classObject)
+                }
+            }
+        }
+        return returnValue
     }
     
     private func mapCurrentUserClasses(responseObject: NSDictionary) -> CurrentUserClasses? {

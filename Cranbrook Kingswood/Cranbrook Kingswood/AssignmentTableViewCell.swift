@@ -18,7 +18,7 @@ class AssignmentTableViewCell: UITableViewCell {
     @IBOutlet weak var inProgressButton: UIButton!
     @IBOutlet weak var completedButton: UIButton!
     
-    var theIndex: Int = Int()
+    var cellAssignmentId: String = String()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -42,15 +42,15 @@ class AssignmentTableViewCell: UITableViewCell {
     }
     
     @IBAction func inProgressButtonPressed(sender: UIButton) {
-//        changeAssignmentStatus(toStatus: .InProgress)
+        changeAssignmentStatus(toStatus: .inProgress)
     }
     
     @IBAction func completedButtonPressed(sender: UIButton) {
-        
+        changeAssignmentStatus(toStatus: .completed)
     }
     
     func changeAssignmentStatus(toStatus status: AssingmentStatus) {
-        WebServices.service.UpdateAssignmentStatus(assignmentId: String(specificDateAssignments![theIndex].assignmentId), toStatus: status) { (isRequestSuccessful) in
+        WebServices.service.UpdateAssignmentStatus(assignmentId: cellAssignmentId, toStatus: status) { (isRequestSuccessful) in
             if isRequestSuccessful {
                 print("awesome")
             }

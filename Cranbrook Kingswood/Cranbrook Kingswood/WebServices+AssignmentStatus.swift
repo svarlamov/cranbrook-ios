@@ -50,13 +50,15 @@ extension WebServices {
     private func createAssignmentsStatusRequestURL(assignmentId: String, status: AssingmentStatus) -> String {
         var returnString: String = String()
         returnString = "https://cranbrook.myschoolapp.com/api/assignment2/assignmentstatusupdate/?format=json&assignmentIndexId=\(assignmentId)&assignmentStatus=\(String(status.rawValue))"
+        //6106284
+        returnString = "https://cranbrook.myschoolapp.com/api/assignment2/assignmentstatusupdate/?format=json&assignmentIndexId=9543531&assignmentStatus=\(String(status.rawValue))"
         return returnString
     }
     
     private func createAssignmentStatusChangeRequest(assignmentId id: String, forStatus status: AssingmentStatus) -> NSMutableURLRequest {
         let requestStringURL: String = createAssignmentsStatusRequestURL(id, status: status)
         let requestUrl: NSURL = NSURL(string: requestStringURL)!
-        let requestDictionary: NSDictionary = ["assignmentIndexId":Int(id)!, "assignmentStatus":status.rawValue]
+        let requestDictionary: NSDictionary = ["assignmentIndexId":Int("9543531")!, "assignmentStatus":status.rawValue]
         let request = NSMutableURLRequest(URL: requestUrl)
         request.HTTPBody = try! NSJSONSerialization.dataWithJSONObject(requestDictionary, options: [])
         request.HTTPMethod = "POST"
