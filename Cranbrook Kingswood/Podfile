@@ -12,5 +12,5 @@ target 'Cranbrook Kingswood' do
   pod 'Fabric'
   pod 'Crashlytics'
   pod 'SwiftMessages'
-
+  pod 'PullToRefreshSwift'
 end

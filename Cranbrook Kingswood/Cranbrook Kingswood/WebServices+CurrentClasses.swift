@@ -27,17 +27,43 @@ extension WebServices {
         let currentUserClassesRequest: NSMutableURLRequest = createCurrentUserClassesRequest(forFirstSemester)
         var currentStudentClassListArray: [CurrentUserClasses] = [CurrentUserClasses]()
         Alamofire.request(currentUserClassesRequest).responseJSON { response in
-            if let currentClassesRequestResponse: JSON = JSON(response.result.value!) {
-                let currentClassesResponseArray: [NSDictionary] = currentClassesRequestResponse.rawValue as! [NSDictionary]
-                for objectResponse in currentClassesResponseArray {
-                    let singularResponse: NSDictionary = objectResponse
-                    let singularUserClass: CurrentUserClasses? = self.mapCurrentUserClasses(singularResponse)
-                    currentStudentClassListArray.append(singularUserClass!)
+            
+            if self.isRequestSuccessful(inputData: JSON(response.result.value!)) {
+                if let currentClassesRequestResponse: JSON = JSON(response.result.value!) {
+                    let currentClassesResponseArray: [NSDictionary] = currentClassesRequestResponse.rawValue as! [NSDictionary]
+                    for objectResponse in currentClassesResponseArray {
+                        let singularResponse: NSDictionary = objectResponse
+                        let singularUserClass: CurrentUserClasses? = self.mapCurrentUserClasses(singularResponse)
+                        currentStudentClassListArray.append(singularUserClass!)
+                    }
+                    studentClassArray?.removeAll()
+                    studentClassArray = self.filterClasses(currentStudentClassListArray)
+                    callBack(isRequestSuccessful: true)
+                } else {
+                    callBack(isRequestSuccessful: false)
                 }
-                studentClassArray = self.filterClasses(currentStudentClassListArray)
-                callBack(isRequestSuccessful: true)
             } else {
-                callBack(isRequestSuccessful: false)
+                let username: String = userLoginInfo!.username
+                let password: String = userLoginInfo!.password
+                WebServices.service.loginWithParameters(username: username, password: password, callBack: { (isLoginSuccessful) in
+                    if isLoginSuccessful {
+                        Alamofire.request(currentUserClassesRequest).responseJSON { response in
+                            if let currentClassesRequestResponse: JSON = JSON(response.result.value!) {
+                                let currentClassesResponseArray: [NSDictionary] = currentClassesRequestResponse.rawValue as! [NSDictionary]
+                                for objectResponse in currentClassesResponseArray {
+                                    let singularResponse: NSDictionary = objectResponse
+                                    let singularUserClass: CurrentUserClasses? = self.mapCurrentUserClasses(singularResponse)
+                                    currentStudentClassListArray.append(singularUserClass!)
+                                }
+                                studentClassArray?.removeAll()
+                                studentClassArray = self.filterClasses(currentStudentClassListArray)
+                                callBack(isRequestSuccessful: true)
+                            } else {
+                                callBack(isRequestSuccessful: false)
+                            }
+                        }
+                    }
+                })
             }
             
         }

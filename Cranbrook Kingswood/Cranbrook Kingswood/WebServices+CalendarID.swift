@@ -14,7 +14,7 @@ import SwiftyJSON
 extension WebServices {
     
     internal func getCalendarIdForDate(date date: NSDate, callBack: (isRequestSuccessful: Bool) -> Void) {
-        getCalendarIdForDateSubMethod(date) { (isRequestSuccessful) in
+        getCalendarIdForDateSubMethod(date) { (isRequestSuccessful) in 
             if isRequestSuccessful {
                 callBack(isRequestSuccessful: true)
             } else {

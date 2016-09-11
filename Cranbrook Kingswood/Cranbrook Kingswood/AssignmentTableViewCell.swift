@@ -52,7 +52,6 @@ class AssignmentTableViewCell: UITableViewCell {
     func changeAssignmentStatus(toStatus status: AssingmentStatus) {
         WebServices.service.UpdateAssignmentStatus(assignmentId: cellAssignmentId, toStatus: status) { (isRequestSuccessful) in
             if isRequestSuccessful {
-                print("awesome")
             }
         }
     }

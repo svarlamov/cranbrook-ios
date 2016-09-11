@@ -26,16 +26,38 @@ extension WebServices {
         
 		Alamofire.request(searchDirectoryRequest).responseJSON { response in
 			if let searchQueryResponse: JSON = JSON(response.result.value!) {
-				let searchResponseDictionary: NSArray = searchQueryResponse.rawValue as! NSArray
-				var returnSearchResultArray: [SearchResultResponse] = [SearchResultResponse]()
-				
-				for singularSearchResponseElement in searchResponseDictionary {
-					let singularResponse: NSDictionary = singularSearchResponseElement as! NSDictionary
-					let searchResult: SearchResultResponse? = self.mapDirectorySearchResult(singularResponse)
-					returnSearchResultArray.append(searchResult!)
-					
-				}
-				callBack(searchResponse: returnSearchResultArray)
+                
+                if !(self.isRequestSuccessful(inputData: JSON(response.result.value!))) {
+                    let username: String = userLoginInfo!.username
+                    let password: String = userLoginInfo!.password
+                    WebServices.service.loginWithParameters(username: username, password: password, callBack: { (isLoginSuccessful) in
+                        if isLoginSuccessful {
+                            Alamofire.request(searchDirectoryRequest).responseJSON { response in
+                                let searchResponseDictionary: NSArray = searchQueryResponse.rawValue as! NSArray
+                                var returnSearchResultArray: [SearchResultResponse] = [SearchResultResponse]()
+                                
+                                for singularSearchResponseElement in searchResponseDictionary {
+                                    let singularResponse: NSDictionary = singularSearchResponseElement as! NSDictionary
+                                    let searchResult: SearchResultResponse? = self.mapDirectorySearchResult(singularResponse)
+                                    returnSearchResultArray.append(searchResult!)
+                                    
+                                }
+                                callBack(searchResponse: returnSearchResultArray)
+                            }
+                        }
+                    })
+                } else {
+                    let searchResponseDictionary: NSArray = searchQueryResponse.rawValue as! NSArray
+                    var returnSearchResultArray: [SearchResultResponse] = [SearchResultResponse]()
+                    
+                    for singularSearchResponseElement in searchResponseDictionary {
+                        let singularResponse: NSDictionary = singularSearchResponseElement as! NSDictionary
+                        let searchResult: SearchResultResponse? = self.mapDirectorySearchResult(singularResponse)
+                        returnSearchResultArray.append(searchResult!)
+                        
+                    }
+                    callBack(searchResponse: returnSearchResultArray)
+                }
 				
 			}
 			

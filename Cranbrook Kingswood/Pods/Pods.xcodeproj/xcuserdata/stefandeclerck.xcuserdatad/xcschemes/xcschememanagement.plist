@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>PullToRefreshSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SwiftMessages-SwiftMessages.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,7 +42,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>247BA890262EAD1C5F60D91E74BC782B</key>
+		<key>6037A9EA5AEE754ACEB8CE3B4E424197</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -47,22 +52,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8714F53479808E623464671F9D8EF06D</key>
+		<key>7E8D400E9FE427AC35BEE3D74B385B56</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A7EFC579C5ADEC22BFC236F3A3C34968</key>
+		<key>96576DD5AEDCF3EF1FD5AEA879B00067</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BBBFC1E889DE0847EB0E97D2A7D87025</key>
+		<key>AA94AB4619F83A78E2226204E583D9DD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DA78B3B734B294D62293143A46DB359B</key>
+		<key>CA369BED01318297F26598C1B309E935</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F774D768898EA881A05A35CACD841721</key>
 		<dict>
 			<key>primary</key>
 			<true/>

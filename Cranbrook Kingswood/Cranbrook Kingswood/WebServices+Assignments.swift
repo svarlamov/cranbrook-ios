@@ -27,18 +27,43 @@ extension WebServices {
         let getAssignmentsForDateRequest: NSMutableURLRequest = createAssignmentsForDateRequest(forDate)
         var assignmentsForDateListArray: [AssignmentDataStructure] = [AssignmentDataStructure]()
         Alamofire.request(getAssignmentsForDateRequest).responseJSON { response in
-            if let assignmentRequestResponse: JSON = JSON(response.result.value!) {
-                let dateAssignmentResponseArray: [NSDictionary] = assignmentRequestResponse.rawValue as! [NSDictionary]
-                for responseObject in dateAssignmentResponseArray {
-                    let singularResponse: NSDictionary = responseObject
-                    let singularAssignment: AssignmentDataStructure? = self.mapAssignmentsForDate(singularResponse)
-                    assignmentsForDateListArray.append(singularAssignment!)
-                }
-                specificDateAssignments = nil
-                specificDateAssignments = assignmentsForDateListArray
-                callBack(isRequestSuccessful: true)
+            
+            if !(self.isRequestSuccessful(inputData: JSON(response.result.value!))) {
+                let username: String = userLoginInfo!.username
+                let password: String = userLoginInfo!.password
+                WebServices.service.loginWithParameters(username: username, password: password, callBack: { (isLoginSuccessful) in
+                    if isLoginSuccessful {
+                        Alamofire.request(getAssignmentsForDateRequest).responseJSON { response in
+                            if let assignmentRequestResponse: JSON = JSON(response.result.value!) {
+                                let dateAssignmentResponseArray: [NSDictionary] = assignmentRequestResponse.rawValue as! [NSDictionary]
+                                for responseObject in dateAssignmentResponseArray {
+                                    let singularResponse: NSDictionary = responseObject
+                                    let singularAssignment: AssignmentDataStructure? = self.mapAssignmentsForDate(singularResponse)
+                                    assignmentsForDateListArray.append(singularAssignment!)
+                                }
+                                specificDateAssignments = nil
+                                specificDateAssignments = assignmentsForDateListArray
+                                callBack(isRequestSuccessful: true)
+                            } else {
+                                callBack(isRequestSuccessful: false)
+                            }
+                        }
+                    }
+                })
             } else {
-                callBack(isRequestSuccessful: false)
+                if let assignmentRequestResponse: JSON = JSON(response.result.value!) {
+                    let dateAssignmentResponseArray: [NSDictionary] = assignmentRequestResponse.rawValue as! [NSDictionary]
+                    for responseObject in dateAssignmentResponseArray {
+                        let singularResponse: NSDictionary = responseObject
+                        let singularAssignment: AssignmentDataStructure? = self.mapAssignmentsForDate(singularResponse)
+                        assignmentsForDateListArray.append(singularAssignment!)
+                    }
+                    specificDateAssignments = nil
+                    specificDateAssignments = assignmentsForDateListArray
+                    callBack(isRequestSuccessful: true)
+                } else {
+                    callBack(isRequestSuccessful: false)
+                }
             }
             
         }

@@ -69,6 +69,7 @@ extension AssignmentsViewController {
                 self.tableView.reloadData()
             }
         } else {
+            specificDateAssignments?.removeAll()
             self.tableView.reloadData()
             var config = SwiftMessages.Config()
             let error = MessageView.viewFromNib(layout: .CardView)
