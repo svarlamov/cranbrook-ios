@@ -44,7 +44,7 @@ extension AssignmentsViewController {
             assignmentData = assignment
         }
         
-        if let id = assignmentData.assignmentId {
+        if let id = assignmentData.assignmentIndexId {
             cell.cellAssignmentId = String(id)
         }
         
