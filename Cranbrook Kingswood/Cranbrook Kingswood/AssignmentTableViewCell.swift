@@ -122,10 +122,15 @@ class AssignmentTableViewCell: UITableViewCell {
     }
     
     private func changeAssignmentForStatusAtIndex(status status: Int) {
+        var finalArray = [AssignmentDataStructure]?()
         for assignment in specificDateAssignments! {
+            var mainAssignment = assignment
             if let instanceId = assignment.assignmentIndexId {
                 if String(instanceId) == self.cellAssignmentId {
-                    
+                    mainAssignment.assignmentStatus = status
+                    finalArray?.append(mainAssignment)
+                } else {
+                    finalArray?.append(mainAssignment)
                 }
             }
         }
