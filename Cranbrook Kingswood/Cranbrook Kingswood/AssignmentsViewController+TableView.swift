@@ -41,6 +41,7 @@ extension AssignmentsViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier(self.assignmentsCellIdentifier, forIndexPath: indexPath) as! AssignmentTableViewCell
         cell.selectionStyle = .None;
         cell.layer.masksToBounds = true
+        cell.removeVisualButtonChanges()
         
         if let assignment = specificDateAssignments?[indexPath.row] {
             assignmentData = assignment
@@ -48,6 +49,14 @@ extension AssignmentsViewController {
         
         if let status = assignmentData.assignmentStatus {
             cell.assignmentStatus = status
+            switch status {
+            case 0:
+                cell.changeStatusButtons(toStatus: 0)
+            case -1:
+                cell.changeStatusButtons(toStatus: -1)
+            default:
+                cell.changeStatusButtons(toStatus: 1)
+            }
         }
         
         if let id = assignmentData.assignmentIndexId {

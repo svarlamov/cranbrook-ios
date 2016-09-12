@@ -88,6 +88,23 @@ class AssignmentTableViewCell: UITableViewCell {
         }
     }
     
+    func removeVisualButtonChanges() {
+        self.inProgressButton.backgroundColor = blueColor
+        self.inProgressButton.layer.borderWidth = 2
+        self.inProgressButton.layer.borderColor = blueColor.CGColor
+        self.inProgressButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        
+        self.toDoButton.backgroundColor = blueColor
+        self.toDoButton.layer.borderWidth = 2
+        self.toDoButton.layer.borderColor = blueColor.CGColor
+        self.toDoButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        
+        self.completedButton.backgroundColor = blueColor
+        self.completedButton.layer.borderWidth = 2
+        self.completedButton.layer.borderColor = blueColor.CGColor
+        self.completedButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+    }
+    
     @IBAction func toDoButtonPressed(sender: UIButton) {
         changeAssignmentStatus(toStatus: .ToDo)
         self.changeStatusButtons(toStatus: -1)
