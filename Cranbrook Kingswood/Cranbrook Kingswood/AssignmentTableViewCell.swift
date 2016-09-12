@@ -122,9 +122,13 @@ class AssignmentTableViewCell: UITableViewCell {
     }
     
     private func changeAssignmentForStatusAtIndex(status status: Int) {
-        var assignment: AssignmentDataStructure = specificDateAssignments![status]
-        assignment.assignmentStatus = status
-        specificDateAssignments![status] = assignment
+        for assignment in specificDateAssignments! {
+            if let instanceId = assignment.assignmentIndexId {
+                if String(instanceId) == self.cellAssignmentId {
+                    
+                }
+            }
+        }
     }
     
     func changeAssignmentStatus(toStatus status: AssingmentStatus) {
