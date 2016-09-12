@@ -11,7 +11,7 @@ import QuartzCore
 
 class ClassesTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var cellContentView: ShadowView!
+    @IBOutlet weak var cellContentView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var teacherLabel: UILabel!
     @IBOutlet weak var gradeLabel: UILabel!
@@ -22,8 +22,7 @@ class ClassesTableViewCell: UITableViewCell {
     }
     
     func setupViewCorner() {
-        self.cellContentView.layer.cornerRadius = 0.5
-        self.cellContentView.layer.masksToBounds = true
+        self.cellContentView.layer.cornerRadius = 1
     }
     
     override func setSelected(selected: Bool, animated: Bool) {

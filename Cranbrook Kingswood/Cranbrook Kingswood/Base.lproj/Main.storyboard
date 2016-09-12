@@ -472,13 +472,13 @@
                                                     <rect key="frame" x="11" y="0.0" width="578" height="102"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stefan DeClerck Stefan DeClerck Stefan DeClerck Stefan DeClerc" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ve-ar-JdM">
-                                                            <rect key="frame" x="22" y="7" width="542" height="25"/>
+                                                            <rect key="frame" x="18" y="7" width="545" height="25"/>
                                                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                                                             <color key="textColor" red="0.1647058824" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Stefan DeClerck Stefan DeClerck Stefan DeClerck Stefan DeClerck Stefan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQl-cB-kCN">
-                                                            <rect key="frame" x="22" y="32" width="542" height="23"/>
+                                                            <rect key="frame" x="18" y="32" width="545" height="23"/>
                                                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
                                                             <color key="textColor" red="0.0" green="0.58823529409999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -508,34 +508,24 @@
                                                             <color key="textColor" red="0.08235294118" green="0.16078431369999999" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SAT-dX-Dew">
-                                                            <rect key="frame" x="0.0" y="0.0" width="5" height="61"/>
-                                                            <color key="backgroundColor" red="0.0" green="0.58823529409999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="5" id="Rjh-3H-fcl"/>
-                                                            </constraints>
-                                                        </view>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="tT9-wg-Qiv" secondAttribute="trailing" constant="17" id="3e6-mK-Y5G"/>
-                                                        <constraint firstItem="5Ve-ar-JdM" firstAttribute="top" secondItem="g1N-YV-OBv" secondAttribute="top" constant="7" id="7fr-sC-rYJ"/>
-                                                        <constraint firstItem="SAT-dX-Dew" firstAttribute="top" secondItem="g1N-YV-OBv" secondAttribute="top" id="BNw-8G-H1Q"/>
-                                                        <constraint firstAttribute="trailing" secondItem="FQl-cB-kCN" secondAttribute="trailing" constant="14" id="FcO-pR-z8A"/>
-                                                        <constraint firstItem="KpC-ik-FeK" firstAttribute="top" secondItem="FQl-cB-kCN" secondAttribute="bottom" constant="6" id="Gw4-sd-ZZK"/>
-                                                        <constraint firstItem="SAT-dX-Dew" firstAttribute="leading" secondItem="g1N-YV-OBv" secondAttribute="leading" id="P44-PL-Odi"/>
+                                                        <constraint firstItem="KpC-ik-FeK" firstAttribute="top" secondItem="FQl-cB-kCN" secondAttribute="bottom" constant="6" id="Oj5-Yg-pNo"/>
+                                                        <constraint firstItem="FQl-cB-kCN" firstAttribute="leading" secondItem="g1N-YV-OBv" secondAttribute="leading" constant="18" id="QPw-pm-OIo"/>
                                                         <constraint firstAttribute="bottom" secondItem="9z1-6D-wYf" secondAttribute="bottom" constant="6" id="QTa-EQ-ejH"/>
                                                         <constraint firstAttribute="trailing" secondItem="KpC-ik-FeK" secondAttribute="trailing" id="RAf-fS-R62"/>
+                                                        <constraint firstItem="FQl-cB-kCN" firstAttribute="top" secondItem="5Ve-ar-JdM" secondAttribute="bottom" id="RK8-QF-cNC"/>
                                                         <constraint firstItem="9z1-6D-wYf" firstAttribute="leading" secondItem="g1N-YV-OBv" secondAttribute="leading" constant="17" id="SnP-cN-G33"/>
                                                         <constraint firstItem="tT9-wg-Qiv" firstAttribute="top" secondItem="KpC-ik-FeK" secondAttribute="bottom" constant="6" id="Ybe-o5-scf"/>
                                                         <constraint firstAttribute="bottom" secondItem="tT9-wg-Qiv" secondAttribute="bottom" constant="6" id="cjx-yG-nMR"/>
-                                                        <constraint firstItem="5Ve-ar-JdM" firstAttribute="leading" secondItem="SAT-dX-Dew" secondAttribute="trailing" constant="17" id="iob-Os-Hka"/>
                                                         <constraint firstItem="9z1-6D-wYf" firstAttribute="top" secondItem="KpC-ik-FeK" secondAttribute="bottom" constant="6" id="iyf-IS-4tt"/>
-                                                        <constraint firstItem="KpC-ik-FeK" firstAttribute="top" secondItem="SAT-dX-Dew" secondAttribute="bottom" id="rMC-2w-jWJ"/>
-                                                        <constraint firstItem="FQl-cB-kCN" firstAttribute="top" secondItem="5Ve-ar-JdM" secondAttribute="bottom" id="ryZ-Pd-1RQ"/>
+                                                        <constraint firstItem="5Ve-ar-JdM" firstAttribute="leading" secondItem="g1N-YV-OBv" secondAttribute="leading" constant="18" id="jx3-fc-vEJ"/>
+                                                        <constraint firstItem="5Ve-ar-JdM" firstAttribute="top" secondItem="g1N-YV-OBv" secondAttribute="top" constant="7" id="mcK-Zl-nio"/>
+                                                        <constraint firstAttribute="trailing" secondItem="FQl-cB-kCN" secondAttribute="trailing" constant="15" id="ogP-Oh-jyf"/>
                                                         <constraint firstItem="KpC-ik-FeK" firstAttribute="leading" secondItem="g1N-YV-OBv" secondAttribute="leading" id="swF-LN-wZ5"/>
-                                                        <constraint firstItem="FQl-cB-kCN" firstAttribute="leading" secondItem="SAT-dX-Dew" secondAttribute="trailing" constant="17" id="ubO-4S-Q5d"/>
-                                                        <constraint firstAttribute="trailing" secondItem="5Ve-ar-JdM" secondAttribute="trailing" constant="14" id="wre-fK-0rb"/>
+                                                        <constraint firstAttribute="trailing" secondItem="5Ve-ar-JdM" secondAttribute="trailing" constant="15" id="yWy-bv-39Y"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
