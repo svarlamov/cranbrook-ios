@@ -390,7 +390,13 @@
                             <outlet property="delegate" destination="beh-cK-WjY" id="bz2-Sf-UhP"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="TODAY" id="9Rr-aW-G2K"/>
+                    <navigationItem key="navigationItem" title="TODAY" id="9Rr-aW-G2K">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="oeC-1E-CXw">
+                            <connections>
+                                <action selector="setupTableViewRefresh" destination="beh-cK-WjY" id="zOS-4U-Xm9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OMm-HX-c42" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

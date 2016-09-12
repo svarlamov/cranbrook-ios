@@ -26,9 +26,6 @@ class CalendarViewController: UITableViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
-        self.setupTableViewRefresh()
-        self.loadCalendarData()
-        
     }
     
     private func loadCalendarData() {
@@ -64,26 +61,22 @@ class CalendarViewController: UITableViewController {
         return returnString
     }
     
-    func setupTableViewRefresh() {
-        self.tableView.addPullToRefresh({ [weak self] in
-            if NetworkStatus.networkStatus.isConnectedToNetwork() {
-                WebServices.service.getCalendarTasksForDate(date: NSDate()) { (isRequestSuccessful) in
-                    self?.tableView.reloadData()
-                    self?.tableView.stopPullToRefresh()
-                }
-            } else {
-                self?.tableView.reloadData()
-                self?.tableView.stopPullToRefresh()
-                var config = SwiftMessages.Config()
-                let error = MessageView.viewFromNib(layout: .CardView)
-                error.configureContent(title: "Error", body: "No Network Connection.", iconImage: nil, iconText: nil, buttonImage: nil, buttonTitle: "Hide", buttonTapHandler: { _ in SwiftMessages.hide() })
-                config.presentationStyle = .Bottom
-                error.configureTheme(.Error, iconStyle: .Default)
-                config.interactiveHide = true
-                config.dimMode = .Gray(interactive: true)
-                SwiftMessages.show(config: config, view: error)
+    @IBAction func setupTableViewRefresh() {
+        if NetworkStatus.networkStatus.isConnectedToNetwork() {
+            WebServices.service.getCalendarTasksForDate(date: NSDate()) { (isRequestSuccessful) in
+                self.tableView.reloadData()
             }
-        })
+        } else {
+            self.tableView.reloadData()
+            var config = SwiftMessages.Config()
+            let error = MessageView.viewFromNib(layout: .CardView)
+            error.configureContent(title: "Error", body: "No Network Connection.", iconImage: nil, iconText: nil, buttonImage: nil, buttonTitle: "Hide", buttonTapHandler: { _ in SwiftMessages.hide() })
+            config.presentationStyle = .Bottom
+            error.configureTheme(.Error, iconStyle: .Default)
+            config.interactiveHide = true
+            config.dimMode = .Gray(interactive: true)
+            SwiftMessages.show(config: config, view: error)
+        }
     }
     
 }
