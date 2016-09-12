@@ -42,6 +42,7 @@ extension AssignmentsViewController {
         cell.selectionStyle = .None;
         cell.layer.masksToBounds = true
         cell.removeVisualButtonChanges()
+        cell.assignmentIndexPath = indexPath.row
         
         if let assignment = specificDateAssignments?[indexPath.row] {
             assignmentData = assignment

@@ -19,6 +19,7 @@ class AssignmentTableViewCell: UITableViewCell {
     @IBOutlet weak var completedButton: UIButton!
     
     var cellAssignmentId: String = String()
+    var assignmentIndexPath: Int = Int()
     var assignmentStatus: Int? = Int()
     
     let blueColor: UIColor = UIColor(red: 0/255, green: 150/255, blue: 255/255, alpha: 1.0)
@@ -120,8 +121,16 @@ class AssignmentTableViewCell: UITableViewCell {
         self.changeStatusButtons(toStatus: 1)
     }
     
+    private func changeAssignmentForStatusAtIndex(status status: Int) {
+        var assignment: AssignmentDataStructure = specificDateAssignments![status]
+        assignment.assignmentStatus = status
+        specificDateAssignments![status] = assignment
+    }
+    
     func changeAssignmentStatus(toStatus status: AssingmentStatus) {
-        WebServices.service.UpdateAssignmentStatus(assignmentId: cellAssignmentId, toStatus: status) { (isRequestSuccessful) in }
+        WebServices.service.UpdateAssignmentStatus(assignmentId: cellAssignmentId, toStatus: status) { (isRequestSuccessful) in
+            self.changeAssignmentForStatusAtIndex(status: status.rawValue)
+        }
     }
     
 }
