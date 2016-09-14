@@ -378,7 +378,7 @@ public class SwiftMessages: PresenterDelegate {
     func hide(presenter presenter: Presenter) {
         dispatch_async(syncQueue) { [weak self] in
             guard let strongSelf = self else { return }
-            if let current = strongSelf.current where presenter === current {
+            if let current = strongSelf.current   where presenter === current {
                 strongSelf.hideCurrent()
             }
             strongSelf.queue = strongSelf.queue.filter { $0 !== presenter }
@@ -472,7 +472,7 @@ extension SwiftMessages {
             }
         }
         let arrayOfViews = resolvedBundle.loadNibNamed(name, owner: filesOwner, options: nil)
-        guard let view = arrayOfViews.flatMap( { $0 as? T} ).first else { throw Error.CannotLoadViewFromNib(nibName: name) }
+        guard let view = arrayOfViews.flatMap( { $0 as? T} ) else { throw Error.CannotLoadViewFromNib(nibName: name) }
         return view
     }
 }
