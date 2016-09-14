@@ -9,8 +9,6 @@
 import Foundation
 import Unbox
 
-//  TODO: - TaskList: 1
-
 //  MARK: - structure for singular assignment
 struct AssignmentDataStructure {
     var allowDiscussionAttachment:      Bool?
