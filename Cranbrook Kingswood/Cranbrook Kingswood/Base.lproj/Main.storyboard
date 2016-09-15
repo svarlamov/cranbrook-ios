@@ -443,16 +443,16 @@
                                 <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="GYX-tn-a1k">
-                                    <rect key="frame" x="0.0" y="0.0" width="1000" height="14"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="14"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="classes_cell" rowHeight="116" id="uXt-hv-tNR" customClass="ClassesTableViewCell" customModule="Cranbrook_Kingswood" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="42" width="1000" height="116"/>
+                                        <rect key="frame" x="0.0" y="42" width="414" height="116"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uXt-hv-tNR" id="X3Z-9j-xy6">
-                                            <frame key="frameInset" width="1000" height="116"/>
+                                            <frame key="frameInset" width="414" height="116"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g1N-YV-OBv" customClass="ShadowView" customModule="Cranbrook_Kingswood" customModuleProvider="target">
@@ -680,16 +680,16 @@
                                 <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="RUQ-Ac-AHf">
-                                    <rect key="frame" x="0.0" y="0.0" width="1000" height="14"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="14"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="search_cell" rowHeight="90" id="u0c-PI-iIH" customClass="SearchResultTableViewCell" customModule="Cranbrook_Kingswood" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="42" width="1000" height="90"/>
+                                        <rect key="frame" x="0.0" y="42" width="414" height="90"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="u0c-PI-iIH" id="odf-DK-yZh">
-                                            <frame key="frameInset" width="1000" height="90"/>
+                                            <frame key="frameInset" width="414" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WJ8-e2-mAD">
@@ -850,16 +850,16 @@
                                 <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="3iC-RO-WvM">
-                                    <rect key="frame" x="0.0" y="0.0" width="1000" height="14"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="14"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="assignment_cell" rowHeight="157" id="LUk-mY-xdK" customClass="AssignmentTableViewCell" customModule="Cranbrook_Kingswood" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="42" width="1000" height="157"/>
+                                        <rect key="frame" x="0.0" y="42" width="414" height="157"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LUk-mY-xdK" id="3dt-Bn-1Ht">
-                                            <frame key="frameInset" width="1000" height="157"/>
+                                            <frame key="frameInset" width="414" height="157"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Roa-bI-uST" customClass="ShadowView" customModule="Cranbrook_Kingswood" customModuleProvider="target">
