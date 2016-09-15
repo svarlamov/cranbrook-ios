@@ -48,7 +48,7 @@ class ViewControllerContainer: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
-        self.setTab(.ClassesTab)
+        self.setTab(selectedTab)
     }
     
     func setupNavigationController() {
@@ -101,6 +101,7 @@ class ViewControllerContainer: UIViewController {
     }
     
     func setupSelectedTab(tab: SelectedTabOptions, isAnimated: Bool) {
+        selectedTab = tab
         Analytics.analytics.logTabSelection(tab.rawValue)
         var animationDuration: NSTimeInterval = 0
         if (isAnimated) {
