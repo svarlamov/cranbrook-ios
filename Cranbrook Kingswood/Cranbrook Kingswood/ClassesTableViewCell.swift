@@ -18,11 +18,6 @@ class ClassesTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        setupViewCorner()
-    }
-    
-    func setupViewCorner() {
-        self.cellContentView.layer.cornerRadius = 1
     }
     
     override func setSelected(selected: Bool, animated: Bool) {
