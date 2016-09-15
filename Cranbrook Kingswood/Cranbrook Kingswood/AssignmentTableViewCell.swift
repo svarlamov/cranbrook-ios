@@ -116,7 +116,7 @@ class AssignmentTableViewCell: UITableViewCell {
         self.changeStatusButtons(toStatus: 1)
     }
     
-    private func changeAssignmentForStatusAtIndex(status status: Int) {
+    private func changeAssignmentForStatusAtIndex(status: Int) {
         var finalArray = [AssignmentDataStructure]?()
         for assignment in specificDateAssignments! {
             var mainAssignment = assignment
@@ -133,7 +133,7 @@ class AssignmentTableViewCell: UITableViewCell {
     
     func changeAssignmentStatus(toStatus status: AssingmentStatus) {
         WebServices.service.UpdateAssignmentStatus(assignmentId: cellAssignmentId, toStatus: status) { (isRequestSuccessful) in
-            self.changeAssignmentForStatusAtIndex(status: status.rawValue)
+            self.changeAssignmentForStatusAtIndex(status.rawValue)
         }
     }
     
