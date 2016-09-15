@@ -22,12 +22,6 @@ class SearchResultTableViewCell: UITableViewCell {
     
     func setupViews() {
         roundImageView()
-        setupViewCorner()
-    }
-    
-    func setupViewCorner() {
-        self.cellContentView.layer.cornerRadius = 0.5
-        self.cellContentView.layer.masksToBounds = true
     }
     
     func roundImageView() {

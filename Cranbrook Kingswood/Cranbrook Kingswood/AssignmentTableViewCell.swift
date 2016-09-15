@@ -26,12 +26,7 @@ class AssignmentTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.setupViewCorner()
-    }
-    
-    private func setupViewCorner() {
-        self.cellContentView.layer.cornerRadius = 0.5
-        self.cellContentView.layer.masksToBounds = false
+        cellContentView.cornerRadius = 0
     }
     
     func changeStatusButtons(toStatus status: Int) {
@@ -40,49 +35,49 @@ class AssignmentTableViewCell: UITableViewCell {
         self.completedButton.layer.cornerRadius = 5
         if status == 1 {
             self.completedButton.backgroundColor = UIColor.clearColor()
-            self.completedButton.layer.borderWidth = 2
+            self.completedButton.layer.borderWidth = 1
             self.completedButton.layer.borderColor = blueColor.CGColor
             self.completedButton.setTitleColor(blueColor, forState: .Normal)
             
             self.toDoButton.backgroundColor = blueColor
-            self.toDoButton.layer.borderWidth = 2
+            self.toDoButton.layer.borderWidth = 1
             self.toDoButton.layer.borderColor = blueColor.CGColor
             self.toDoButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
             
             self.inProgressButton.backgroundColor = blueColor
-            self.inProgressButton.layer.borderWidth = 2
+            self.inProgressButton.layer.borderWidth = 1
             self.inProgressButton.layer.borderColor = blueColor.CGColor
             self.inProgressButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
             
         } else if status == -1 {
             self.toDoButton.backgroundColor = UIColor.clearColor()
-            self.toDoButton.layer.borderWidth = 2
+            self.toDoButton.layer.borderWidth = 1
             self.toDoButton.layer.borderColor = blueColor.CGColor
             self.toDoButton.setTitleColor(blueColor, forState: .Normal)
             
             self.inProgressButton.backgroundColor = blueColor
-            self.inProgressButton.layer.borderWidth = 2
+            self.inProgressButton.layer.borderWidth = 1
             self.inProgressButton.layer.borderColor = blueColor.CGColor
             self.inProgressButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
             
             self.completedButton.backgroundColor = blueColor
-            self.completedButton.layer.borderWidth = 2
+            self.completedButton.layer.borderWidth = 1
             self.completedButton.layer.borderColor = blueColor.CGColor
             self.completedButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
             
         } else if status == 0 {
             self.inProgressButton.backgroundColor = UIColor.clearColor()
-            self.inProgressButton.layer.borderWidth = 2
+            self.inProgressButton.layer.borderWidth = 1
             self.inProgressButton.layer.borderColor = blueColor.CGColor
             self.inProgressButton.setTitleColor(blueColor, forState: .Normal)
             
             self.toDoButton.backgroundColor = blueColor
-            self.toDoButton.layer.borderWidth = 2
+            self.toDoButton.layer.borderWidth = 1
             self.toDoButton.layer.borderColor = blueColor.CGColor
             self.toDoButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
             
             self.completedButton.backgroundColor = blueColor
-            self.completedButton.layer.borderWidth = 2
+            self.completedButton.layer.borderWidth = 1
             self.completedButton.layer.borderColor = blueColor.CGColor
             self.completedButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
             
@@ -91,17 +86,17 @@ class AssignmentTableViewCell: UITableViewCell {
     
     func removeVisualButtonChanges() {
         self.inProgressButton.backgroundColor = blueColor
-        self.inProgressButton.layer.borderWidth = 2
+        self.inProgressButton.layer.borderWidth = 1
         self.inProgressButton.layer.borderColor = blueColor.CGColor
         self.inProgressButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         
         self.toDoButton.backgroundColor = blueColor
-        self.toDoButton.layer.borderWidth = 2
+        self.toDoButton.layer.borderWidth = 1
         self.toDoButton.layer.borderColor = blueColor.CGColor
         self.toDoButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         
         self.completedButton.backgroundColor = blueColor
-        self.completedButton.layer.borderWidth = 2
+        self.completedButton.layer.borderWidth = 1
         self.completedButton.layer.borderColor = blueColor.CGColor
         self.completedButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
     }
