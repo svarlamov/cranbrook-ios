@@ -33,6 +33,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - Login methods
     @IBAction func login(sender: UIButton) {
+        self.view.endEditing(true)
         signIn(usernameTextField.text!, password: passwordTextField.text!)
     }
     

@@ -53,7 +53,7 @@ class DirectorySearchViewController: UIViewController, UITableViewDelegate, UITa
     }
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()
+        self.view.endEditing(true)
         if NetworkStatus.networkStatus.isConnectedToNetwork() {
             searchDirectory(searchBar.text!)
             ProgressHUD.show()
@@ -76,6 +76,7 @@ class DirectorySearchViewController: UIViewController, UITableViewDelegate, UITa
     
     func setupViews() {
         self.tabIndicationView.hidden = true
+        self.hideKeyboardWhenTappedAround()
     }
     
     func setTab(tab: SearchDirectories, animated: Bool) {

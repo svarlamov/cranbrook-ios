@@ -44,6 +44,7 @@ class ViewControllerContainer: UIViewController {
         self.tabIndicationView.hidden = true
         setupNavigationController()
         setupLogoutButton()
+        self.hideKeyboardWhenTappedAround()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -65,6 +66,7 @@ class ViewControllerContainer: UIViewController {
     }
     
     @IBAction func showCalendarButtonClicked(sender: AnyObject) {
+        self.view.endEditing(true)
         Analytics.analytics.logCalendarSelection()
         if calendarTasksForDate?.count > 0 {
             self.performSegueWithIdentifier(calendarSegue, sender: nil)
@@ -93,10 +95,13 @@ class ViewControllerContainer: UIViewController {
     @IBAction func tabButtonPress(sender: UIButton) {
         if (sender.tag == 0) {
             setupSelectedTab(.ClassesTab, isAnimated: true)
+            self.view.endEditing(true)
         } else if (sender.tag == 1) {
             setupSelectedTab(.AssignmentsTab, isAnimated: true)
+            self.view.endEditing(true)
         } else if (sender.tag == 2) {
             setupSelectedTab(.DirectorySearchTab, isAnimated: true)
+            self.view.endEditing(true)
         }
     }
     
@@ -135,7 +140,7 @@ class ViewControllerContainer: UIViewController {
             self.setupSelectedTabLabel(tab)
         }, completion: nil)
     }
-	
+    
 	func setPageViewCurrentDisplay(tab: SelectedTabOptions) {
 		if (tab == .ClassesTab) {
 			classesViewContainer.hidden = false

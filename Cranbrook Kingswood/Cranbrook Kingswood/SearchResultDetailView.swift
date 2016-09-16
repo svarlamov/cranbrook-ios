@@ -8,6 +8,17 @@
 
 import UIKit
 
-class SearchResultDetailView: MessageView {
-
+class SearchResultDetailView: UIView {
+    
+    var searchItem: SearchResultResponse = SearchResultResponse()
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+    }
+    
 }
