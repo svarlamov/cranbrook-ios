@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,7 +16,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cranbrook Kingswood" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="747-4N-IGf">
@@ -74,7 +75,7 @@
                         <viewControllerLayoutGuide type="bottom" id="EOR-TV-4wg"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="shg-AU-2Pj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="6BT-wP-L6q">
@@ -155,7 +156,7 @@
                         <viewControllerLayoutGuide type="bottom" id="qH7-s8-MZl"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="TbR-ZT-Sew">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S5b-Ye-HgQ">
@@ -300,21 +301,21 @@
             <objects>
                 <tableViewController id="beh-cK-WjY" customClass="CalendarViewController" customModule="Cranbrook_Kingswood" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="61" sectionHeaderHeight="28" sectionFooterHeight="28" id="7SI-DX-wjG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="sectionIndexBackgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="THb-ab-8Hs">
-                            <rect key="frame" x="0.0" y="64" width="414" height="11"/>
+                            <rect key="frame" x="0.0" y="64" width="375" height="11"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="calendar_cell" rowHeight="61" id="Nj4-KC-NON" customClass="CalendarTableViewCell" customModule="Cranbrook_Kingswood" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="103" width="414" height="61"/>
+                                <rect key="frame" x="0.0" y="103" width="375" height="61"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nj4-KC-NON" id="O65-lU-RoP">
-                                    <frame key="frameInset" width="414" height="61"/>
+                                    <frame key="frameInset" width="375" height="61"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0zg-ck-wBc">
@@ -325,7 +326,7 @@
                                                     <color key="textColor" red="0.1647058824" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Stefan DeClerck Stefan DeClerck Stefan DeClerck Stefan DeClerck Stefan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hT5-a6-umw">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="247" ambiguous="YES" misplaced="YES" text="Stefan DeClerck Stefan DeClerck Stefan DeClerck Stefan DeClerck Stefan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hT5-a6-umw">
                                                     <frame key="frameInset" width="1000" height="1000"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.58823529409999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -436,23 +437,23 @@
                         <viewControllerLayoutGuide type="bottom" id="4Qt-Wp-bgy"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2Ey-FQ-BY5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="630"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="561"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="116" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RVP-er-uuC">
                                 <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="GYX-tn-a1k">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="14"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="14"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="classes_cell" rowHeight="116" id="uXt-hv-tNR" customClass="ClassesTableViewCell" customModule="Cranbrook_Kingswood" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="42" width="414" height="116"/>
+                                        <rect key="frame" x="0.0" y="42" width="375" height="116"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uXt-hv-tNR" id="X3Z-9j-xy6">
-                                            <frame key="frameInset" width="414" height="116"/>
+                                            <frame key="frameInset" width="375" height="116"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g1N-YV-OBv" customClass="ShadowView" customModule="Cranbrook_Kingswood" customModuleProvider="target">
@@ -568,7 +569,7 @@
                         <viewControllerLayoutGuide type="bottom" id="7ou-UY-4at"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="74t-Pb-wIu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="630"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="561"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="npK-xa-ZBU">
@@ -680,16 +681,16 @@
                                 <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="RUQ-Ac-AHf">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="14"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="14"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="search_cell" rowHeight="90" id="u0c-PI-iIH" customClass="SearchResultTableViewCell" customModule="Cranbrook_Kingswood" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="42" width="414" height="90"/>
+                                        <rect key="frame" x="0.0" y="42" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="u0c-PI-iIH" id="odf-DK-yZh">
-                                            <frame key="frameInset" width="414" height="90"/>
+                                            <frame key="frameInset" width="375" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WJ8-e2-mAD">
@@ -829,7 +830,7 @@
                         <viewControllerLayoutGuide type="bottom" id="ou3-0Z-gGm"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="j1n-UW-EgB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="630"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="561"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ksb-Bo-vuO" customClass="AKPickerView" customModule="Cranbrook_Kingswood" customModuleProvider="target">
@@ -850,16 +851,16 @@
                                 <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="3iC-RO-WvM">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="14"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="14"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="assignment_cell" rowHeight="157" id="0df-pY-cSI" customClass="AssignmentTableViewCell" customModule="Cranbrook_Kingswood" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="42" width="414" height="157"/>
+                                        <rect key="frame" x="0.0" y="42" width="375" height="157"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0df-pY-cSI" id="hZV-pm-r1a">
-                                            <frame key="frameInset" width="414" height="157"/>
+                                            <frame key="frameInset" width="375" height="157"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QGq-n1-w91" customClass="ShadowView" customModule="Cranbrook_Kingswood" customModuleProvider="target">

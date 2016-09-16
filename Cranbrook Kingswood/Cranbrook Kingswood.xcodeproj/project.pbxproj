@@ -42,6 +42,8 @@
 		D72686081D7134630081E4C7 /* ClassesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72686071D7134630081E4C7 /* ClassesTableViewCell.swift */; };
 		D72CF3291D72388A00B2116C /* AKPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72CF3281D72388A00B2116C /* AKPickerView.swift */; };
 		D72CF32E1D7258A900B2116C /* DateListStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72CF32D1D7258A900B2116C /* DateListStructure.swift */; };
+		D74772631D8C337200F69258 /* SearchResultDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74772621D8C337200F69258 /* SearchResultDetailView.swift */; };
+		D74772651D8C337E00F69258 /* SearchResultDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D74772641D8C337E00F69258 /* SearchResultDetailView.xib */; };
 		D7B1BCEA1D7D041300D41BEE /* WebServices+CalendarID.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B1BCE91D7D041300D41BEE /* WebServices+CalendarID.swift */; };
 		D7B35EE31D779BD100690868 /* StudentGroupTermStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B35EE21D779BD100690868 /* StudentGroupTermStructure.swift */; };
 		D7B35EE51D779DD600690868 /* StartupViewController+SetupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B35EE41D779DD600690868 /* StartupViewController+SetupData.swift */; };
@@ -105,6 +107,8 @@
 		D72686071D7134630081E4C7 /* ClassesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassesTableViewCell.swift; sourceTree = "<group>"; };
 		D72CF3281D72388A00B2116C /* AKPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKPickerView.swift; sourceTree = "<group>"; };
 		D72CF32D1D7258A900B2116C /* DateListStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateListStructure.swift; sourceTree = "<group>"; };
+		D74772621D8C337200F69258 /* SearchResultDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultDetailView.swift; sourceTree = "<group>"; };
+		D74772641D8C337E00F69258 /* SearchResultDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultDetailView.xib; sourceTree = "<group>"; };
 		D7B1BCE91D7D041300D41BEE /* WebServices+CalendarID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+CalendarID.swift"; sourceTree = "<group>"; };
 		D7B35EE21D779BD100690868 /* StudentGroupTermStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentGroupTermStructure.swift; sourceTree = "<group>"; };
 		D7B35EE41D779DD600690868 /* StartupViewController+SetupData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StartupViewController+SetupData.swift"; sourceTree = "<group>"; };
@@ -244,6 +248,7 @@
 				A09D75AD1D570F9A00B2AA74 /* DirectorySearchViewController.swift */,
 				31CD309C1D67ABC6001C4647 /* DirectorySearchViewController+TableView.swift */,
 				31CD309E1D67ACC7001C4647 /* DirectorySearchViewController+TabBar.swift */,
+				D74772611D8C335700F69258 /* Search Result Detail View */,
 			);
 			name = "Directory Search";
 			sourceTree = "<group>";
@@ -277,6 +282,15 @@
 				D71DEFEF1D76099A0006E6B6 /* NetworkStatus.swift */,
 			);
 			name = "Custom Classes";
+			sourceTree = "<group>";
+		};
+		D74772611D8C335700F69258 /* Search Result Detail View */ = {
+			isa = PBXGroup;
+			children = (
+				D74772621D8C337200F69258 /* SearchResultDetailView.swift */,
+				D74772641D8C337E00F69258 /* SearchResultDetailView.xib */,
+			);
+			name = "Search Result Detail View";
 			sourceTree = "<group>";
 		};
 		D7B35EE61D779DDC00690868 /* Startup */ = {
@@ -404,6 +418,7 @@
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = V8FVQ5687W;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -432,6 +447,7 @@
 			files = (
 				A074688B1D568DAD00E7ACC0 /* LaunchScreen.storyboard in Resources */,
 				A07468881D568DAD00E7ACC0 /* Assets.xcassets in Resources */,
+				D74772651D8C337E00F69258 /* SearchResultDetailView.xib in Resources */,
 				A07468861D568DAD00E7ACC0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -527,6 +543,7 @@
 				D7B481CA1D7B2B950033C58D /* ShadowView.swift in Sources */,
 				A09D75A81D570F1A00B2AA74 /* WebServices+CurrentClasses.swift in Sources */,
 				D7F2AB3B1D7BCC2C005F8515 /* WebServices+Calendar.swift in Sources */,
+				D74772631D8C337200F69258 /* SearchResultDetailView.swift in Sources */,
 				A07468991D568F7000E7ACC0 /* StartupViewController.swift in Sources */,
 				D71DEFED1D75F7A10006E6B6 /* ClassesViewController+TableView.swift in Sources */,
 				A08F66F11D57204900FBE55E /* LoginViewController.swift in Sources */,
@@ -691,8 +708,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = V8FVQ5687W;
 				INFOPLIST_FILE = "Cranbrook Kingswood/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stefandeclerck.Cranbrook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -712,10 +730,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = V8FVQ5687W;
 				INFOPLIST_FILE = "Cranbrook Kingswood/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stefandeclerck.Cranbrook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
