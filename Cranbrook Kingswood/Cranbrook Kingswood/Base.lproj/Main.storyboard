@@ -718,10 +718,17 @@
                                                                         <constraint firstAttribute="height" constant="50" id="xWP-EF-JOQ"/>
                                                                     </constraints>
                                                                 </imageView>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_user_icon" translatesAutoresizingMaskIntoConstraints="NO" id="VL7-NU-4S6">
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="50" id="hxb-qC-Ios"/>
+                                                                        <constraint firstAttribute="height" constant="50" id="nZj-ei-bZU"/>
+                                                                    </constraints>
+                                                                </imageView>
                                                             </subviews>
                                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstItem="gVQ-EW-21y" firstAttribute="top" secondItem="by0-ao-Uga" secondAttribute="top" constant="13" id="5Nl-J7-qQV"/>
+                                                                <constraint firstItem="VL7-NU-4S6" firstAttribute="top" secondItem="by0-ao-Uga" secondAttribute="top" constant="13" id="6Xx-82-GU2"/>
                                                                 <constraint firstItem="zab-QP-6sQ" firstAttribute="leading" secondItem="gVQ-EW-21y" secondAttribute="trailing" constant="16" id="8es-V3-osn"/>
                                                                 <constraint firstItem="6Ul-0U-54s" firstAttribute="leading" secondItem="zab-QP-6sQ" secondAttribute="trailing" constant="16" id="CG9-Wm-1eG"/>
                                                                 <constraint firstItem="Atz-xl-TTN" firstAttribute="top" secondItem="zab-QP-6sQ" secondAttribute="bottom" constant="1" id="Dwk-sr-hKQ"/>
@@ -730,7 +737,9 @@
                                                                 <constraint firstItem="gVQ-EW-21y" firstAttribute="leading" secondItem="by0-ao-Uga" secondAttribute="leading" constant="21" id="YSK-7b-wxB"/>
                                                                 <constraint firstItem="zab-QP-6sQ" firstAttribute="top" secondItem="by0-ao-Uga" secondAttribute="top" constant="13" id="ddo-qc-SiI"/>
                                                                 <constraint firstItem="Atz-xl-TTN" firstAttribute="top" secondItem="zab-QP-6sQ" secondAttribute="bottom" constant="1" id="fFL-VI-gla"/>
+                                                                <constraint firstItem="VL7-NU-4S6" firstAttribute="leading" secondItem="by0-ao-Uga" secondAttribute="leading" constant="21" id="fWm-ni-9bG"/>
                                                                 <constraint firstItem="Atz-xl-TTN" firstAttribute="leading" secondItem="gVQ-EW-21y" secondAttribute="trailing" constant="17" id="gGM-0l-FUC"/>
+                                                                <constraint firstAttribute="bottom" secondItem="VL7-NU-4S6" secondAttribute="bottom" constant="13" id="hub-Hg-Cq4"/>
                                                                 <constraint firstItem="6Ul-0U-54s" firstAttribute="leading" secondItem="Atz-xl-TTN" secondAttribute="trailing" constant="16" id="r0o-r7-FWV"/>
                                                                 <constraint firstItem="6Ul-0U-54s" firstAttribute="top" secondItem="by0-ao-Uga" secondAttribute="top" constant="24" id="s5s-gE-vfp"/>
                                                                 <constraint firstAttribute="trailing" secondItem="6Ul-0U-54s" secondAttribute="trailing" constant="15" id="xX3-IK-vqO"/>
@@ -767,6 +776,7 @@
                                         <connections>
                                             <outlet property="cellContentView" destination="by0-ao-Uga" id="BO5-C1-TUS"/>
                                             <outlet property="detailLabel" destination="Atz-xl-TTN" id="2oP-qC-XPH"/>
+                                            <outlet property="mainProfileImage" destination="VL7-NU-4S6" id="1VJ-hD-Uvn"/>
                                             <outlet property="profileImageView" destination="gVQ-EW-21y" id="4kQ-pm-rbL"/>
                                             <outlet property="titleLabel" destination="zab-QP-6sQ" id="vmt-h5-sRF"/>
                                         </connections>

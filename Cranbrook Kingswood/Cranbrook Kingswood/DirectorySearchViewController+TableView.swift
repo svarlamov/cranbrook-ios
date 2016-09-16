@@ -44,9 +44,9 @@ extension DirectorySearchViewController {
         cell.titleLabel.text = getTitleLabelNameText(searchResults![indexPath.row])
         cell.detailLabel.text = getDetailLabelText(searchResults![indexPath.row])
         if searchResults![indexPath.row].profileImage != nil {
-            cell.profileImageView.image = searchResults![indexPath.row].profileImage
+            cell.mainProfileImage.image = searchResults![indexPath.row].profileImage
         } else {
-            cell.profileImageView.image = UIImage(named: "default_user_icon")
+            cell.mainProfileImage.image = UIImage(named: "default_user_icon")
         }
         return cell
     }

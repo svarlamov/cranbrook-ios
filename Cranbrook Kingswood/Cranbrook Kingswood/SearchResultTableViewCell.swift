@@ -14,6 +14,7 @@ class SearchResultTableViewCell: UITableViewCell {
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var detailLabel: UILabel!
+    @IBOutlet weak var mainProfileImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,7 +22,12 @@ class SearchResultTableViewCell: UITableViewCell {
     }
     
     func setupViews() {
-        roundImageView()
+        self.roundImageView()
+        self.roundMainImageView()
+    }
+    
+    func roundMainImageView() {
+        self.mainProfileImage.layer.cornerRadius = self.mainProfileImage.frame.height/2
     }
     
     func roundImageView() {
