@@ -51,6 +51,9 @@ class DirectorySearchViewController: UIViewController, UITableViewDelegate, UITa
             }
         }
     }
+    @IBAction func screenSelection(sender: AnyObject) {
+        self.view.endEditing(true)
+    }
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         self.view.endEditing(true)
@@ -71,12 +74,11 @@ class DirectorySearchViewController: UIViewController, UITableViewDelegate, UITa
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
-        setTab(.Students, animated: false)
+        setTab(selectedSearchDirectory, animated: false)
     }
     
     func setupViews() {
         self.tabIndicationView.hidden = true
-        self.hideKeyboardWhenTappedAround()
     }
     
     func setTab(tab: SearchDirectories, animated: Bool) {
@@ -85,12 +87,15 @@ class DirectorySearchViewController: UIViewController, UITableViewDelegate, UITa
     
     @IBAction func directoryTabPressed(sender: UIButton) {
         if (sender.tag == 0) {
+            selectedSearchDirectory = SearchDirectories.Faculty
             setTab(.Faculty, animated: true)
             
         } else if (sender.tag == 1) {
+            selectedSearchDirectory = SearchDirectories.Students
             setTab(.Students, animated: true)
             
         } else if (sender.tag == 2) {
+            selectedSearchDirectory = SearchDirectories.Alumni
             setTab(.Alumni, animated: true)
             
         }

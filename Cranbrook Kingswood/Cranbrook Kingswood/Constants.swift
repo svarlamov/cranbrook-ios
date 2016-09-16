@@ -36,6 +36,8 @@ var calendarTasksForDate: [CalendarItemDataStructure]?          = nil
 var userCalendarId: String?                                     = nil
 //
 var selectedSearchResult: SearchResultResponse?                 = nil
+//
+var selectedSearchDirectory: SearchDirectories                  = SearchDirectories.Students
 
 
 

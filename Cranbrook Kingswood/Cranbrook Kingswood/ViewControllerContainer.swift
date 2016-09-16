@@ -44,7 +44,6 @@ class ViewControllerContainer: UIViewController {
         self.tabIndicationView.hidden = true
         setupNavigationController()
         setupLogoutButton()
-        self.hideKeyboardWhenTappedAround()
     }
     
     override func viewDidAppear(animated: Bool) {
