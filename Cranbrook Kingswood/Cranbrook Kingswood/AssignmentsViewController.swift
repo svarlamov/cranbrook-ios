@@ -33,15 +33,6 @@ class AssignmentsViewController: UIViewController, AKPickerViewDataSource, AKPic
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
         goToDateIndex()
-        self.setupTableViewRefresh()
-    }
-    
-    func setupTableViewRefresh() {
-        self.tableView.addPullToRefresh({ [weak self] in
-            self!.getAssignmentsForDate(date: self!.mainDates[self!.pickerIndex])
-            self?.tableView.reloadData()
-            self?.tableView.stopPullToRefresh()
-        })
     }
     
     func setupViews() {
