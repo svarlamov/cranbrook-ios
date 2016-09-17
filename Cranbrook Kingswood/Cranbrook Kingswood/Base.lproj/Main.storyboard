@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -432,16 +431,16 @@
                                 <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="GYX-tn-a1k">
-                                    <rect key="frame" x="0.0" y="0.0" width="1000" height="14"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="14"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="classes_cell" rowHeight="116" id="uXt-hv-tNR" customClass="ClassesTableViewCell" customModule="Cranbrook_Kingswood" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="42" width="1000" height="116"/>
+                                        <rect key="frame" x="0.0" y="42" width="375" height="116"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uXt-hv-tNR" id="X3Z-9j-xy6">
-                                            <frame key="frameInset" width="1000" height="116"/>
+                                            <frame key="frameInset" width="375" height="116"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g1N-YV-OBv" customClass="ShadowView" customModule="Cranbrook_Kingswood" customModuleProvider="target">
@@ -669,16 +668,16 @@
                                 <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="RUQ-Ac-AHf">
-                                    <rect key="frame" x="0.0" y="0.0" width="1000" height="14"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="14"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="search_cell" rowHeight="90" id="bmN-AW-ub2" customClass="SearchResultTableViewCell" customModule="Cranbrook_Kingswood" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="42" width="1000" height="90"/>
+                                        <rect key="frame" x="0.0" y="42" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bmN-AW-ub2" id="Luo-Jh-c08">
-                                            <frame key="frameInset" width="1000" height="90"/>
+                                            <frame key="frameInset" width="375" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="84Y-vQ-Rfq">
@@ -810,9 +809,9 @@
                                     <outlet property="delegate" destination="U0p-sd-yg3" id="Jqa-Jh-cPE"/>
                                 </connections>
                             </tableView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="table_view_shadow_2px" translatesAutoresizingMaskIntoConstraints="NO" id="ZPJ-x0-lye">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="table_view_shadow_2px" translatesAutoresizingMaskIntoConstraints="NO" id="ZPJ-x0-lye">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="6" id="98p-KK-M8C"/>
+                                    <constraint firstAttribute="height" constant="6" id="x56-b2-nEl"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -820,17 +819,18 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="npK-xa-ZBU" firstAttribute="top" secondItem="MlC-O9-r2k" secondAttribute="bottom" constant="-1" id="1qy-NI-iVo"/>
+                            <constraint firstItem="ZPJ-x0-lye" firstAttribute="leading" secondItem="74t-Pb-wIu" secondAttribute="leading" constant="-187.5" id="2kC-tE-mzZ"/>
                             <constraint firstAttribute="trailing" secondItem="3DB-Rp-376" secondAttribute="trailing" id="4iB-0N-zc8"/>
-                            <constraint firstItem="ZPJ-x0-lye" firstAttribute="top" secondItem="3DB-Rp-376" secondAttribute="bottom" constant="20" id="7RX-wN-Dbm"/>
                             <constraint firstItem="3DB-Rp-376" firstAttribute="leading" secondItem="74t-Pb-wIu" secondAttribute="leading" id="7uA-rd-qph"/>
                             <constraint firstItem="7ou-UY-4at" firstAttribute="top" secondItem="DaB-tl-Jyk" secondAttribute="bottom" id="Cq0-79-Trh"/>
-                            <constraint firstItem="ZPJ-x0-lye" firstAttribute="centerX" secondItem="74t-Pb-wIu" secondAttribute="centerX" id="EQo-Nr-SNy"/>
                             <constraint firstAttribute="trailing" secondItem="npK-xa-ZBU" secondAttribute="trailing" id="Jtc-4W-4Vc"/>
                             <constraint firstItem="3DB-Rp-376" firstAttribute="top" secondItem="MlC-O9-r2k" secondAttribute="bottom" constant="42" id="Rrs-ti-aEB"/>
+                            <constraint firstAttribute="trailing" secondItem="ZPJ-x0-lye" secondAttribute="trailing" constant="-187.5" id="Sjs-28-oGt"/>
                             <constraint firstItem="npK-xa-ZBU" firstAttribute="leading" secondItem="74t-Pb-wIu" secondAttribute="leading" id="nDW-mS-Ctt"/>
                             <constraint firstAttribute="trailing" secondItem="DaB-tl-Jyk" secondAttribute="trailing" id="sPB-tA-XTX"/>
                             <constraint firstItem="DaB-tl-Jyk" firstAttribute="top" secondItem="npK-xa-ZBU" secondAttribute="bottom" constant="2" id="sff-z8-jBX"/>
                             <constraint firstItem="DaB-tl-Jyk" firstAttribute="leading" secondItem="74t-Pb-wIu" secondAttribute="leading" id="xML-91-oZd"/>
+                            <constraint firstItem="ZPJ-x0-lye" firstAttribute="top" secondItem="3DB-Rp-376" secondAttribute="bottom" constant="20" id="zCR-oA-7ou"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="PNl-AP-ctv" appends="YES" id="K8W-uj-N8G"/>
@@ -1099,23 +1099,23 @@
                                     <outlet property="delegate" destination="Ew4-Mq-n3v" id="lXh-Xd-NjP"/>
                                 </connections>
                             </tableView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="table_view_shadow_2px" translatesAutoresizingMaskIntoConstraints="NO" id="lO7-9O-TbI">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="table_view_shadow_2px" translatesAutoresizingMaskIntoConstraints="NO" id="lO7-9O-TbI">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="750" id="FK0-Se-LhD"/>
-                                    <constraint firstAttribute="height" constant="6" id="Gbj-je-h76"/>
+                                    <constraint firstAttribute="height" constant="6" id="eIz-PK-DDf"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="lO7-9O-TbI" firstAttribute="leading" secondItem="j1n-UW-EgB" secondAttribute="leading" constant="-187.5" id="2qN-J7-OKq"/>
                             <constraint firstItem="ksb-Bo-vuO" firstAttribute="top" secondItem="s0g-b9-AEg" secondAttribute="bottom" id="BGp-31-mxd"/>
                             <constraint firstItem="ou3-0Z-gGm" firstAttribute="top" secondItem="sA6-v1-QgZ" secondAttribute="bottom" id="BlO-Vz-cRr"/>
+                            <constraint firstItem="lO7-9O-TbI" firstAttribute="top" secondItem="s0g-b9-AEg" secondAttribute="bottom" constant="36" id="EtZ-7o-c4q"/>
                             <constraint firstItem="sA6-v1-QgZ" firstAttribute="top" secondItem="s0g-b9-AEg" secondAttribute="bottom" constant="37" id="FC2-eB-SRJ"/>
                             <constraint firstItem="ksb-Bo-vuO" firstAttribute="leading" secondItem="j1n-UW-EgB" secondAttribute="leading" id="KfP-4h-YO7"/>
-                            <constraint firstItem="lO7-9O-TbI" firstAttribute="top" secondItem="s0g-b9-AEg" secondAttribute="bottom" constant="36" id="ObN-rT-Vgu"/>
                             <constraint firstAttribute="trailing" secondItem="sA6-v1-QgZ" secondAttribute="trailing" id="Q4O-Rx-dWm"/>
+                            <constraint firstAttribute="trailing" secondItem="lO7-9O-TbI" secondAttribute="trailing" constant="-187.5" id="XNa-7d-KDU"/>
                             <constraint firstItem="sA6-v1-QgZ" firstAttribute="leading" secondItem="j1n-UW-EgB" secondAttribute="leading" id="bFv-pG-5V4"/>
-                            <constraint firstItem="lO7-9O-TbI" firstAttribute="centerX" secondItem="j1n-UW-EgB" secondAttribute="centerX" id="isd-DT-NGm"/>
                             <constraint firstAttribute="trailing" secondItem="ksb-Bo-vuO" secondAttribute="trailing" id="my7-N0-e20"/>
                         </constraints>
                     </view>

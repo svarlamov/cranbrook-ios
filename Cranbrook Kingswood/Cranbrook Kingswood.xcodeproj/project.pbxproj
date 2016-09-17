@@ -860,7 +860,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "Cranbrook Kingswood/Cranbrook Kingswood-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 2.3;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -883,7 +883,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Cranbrook Kingswood/Cranbrook Kingswood-Bridging-Header.h";
 				SWIFT_VERSION = 2.3;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

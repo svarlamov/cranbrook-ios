@@ -297,7 +297,7 @@ static NSMutableArray* currentAlertArray = nil;
     CGFloat messageHeight = [message boundingRectWithSize:CGSizeMake(screenWidth - 40.f - _iconImageSize.height, CGFLOAT_MAX)
                                                   options:NSStringDrawingUsesLineFragmentOrigin
                                                attributes:@{NSParagraphStyleAttributeName : paragraphStyle,
-                                                            NSFontAttributeName : [UIFont fontWithName:@"AvenirNext" size:16.f]}
+                                                            NSFontAttributeName : [UIFont systemFontOfSize:16.f]}
                                                   context:nil].size.height;
     
     return ceilf(messageHeight);
