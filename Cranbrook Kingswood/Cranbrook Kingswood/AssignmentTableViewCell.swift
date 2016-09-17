@@ -103,16 +103,19 @@ class AssignmentTableViewCell: UITableViewCell {
     
     @IBAction func toDoButtonPressed(sender: UIButton) {
         changeAssignmentStatus(toStatus: .ToDo)
+        Analytics.analytics.logAssignmentStatusChanged("ToDo")
         self.changeStatusButtons(toStatus: -1)
     }
     
     @IBAction func inProgressButtonPressed(sender: UIButton) {
         changeAssignmentStatus(toStatus: .inProgress)
+        Analytics.analytics.logAssignmentStatusChanged("InProgress")
         self.changeStatusButtons(toStatus: 0)
     }
     
     @IBAction func completedButtonPressed(sender: UIButton) {
         changeAssignmentStatus(toStatus: .completed)
+        Analytics.analytics.logAssignmentStatusChanged("Completed")
         self.changeStatusButtons(toStatus: 1)
     }
     

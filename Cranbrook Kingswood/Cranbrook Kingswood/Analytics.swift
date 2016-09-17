@@ -85,6 +85,15 @@ class Analytics {
         })
     }
     
+    //  Assingment Status Changed Analytics Method
+    internal func logAssignmentStatusChanged(status: String) {
+        dispatch_async(dispatch_get_main_queue(), {
+            if self.isAnalyticsEnabled {
+                Answers.logCustomEventWithName("Assignment Status Changed", customAttributes: ["User":"\(userLoginInfo!.username)", "Status":"\(status)"])
+            }
+        })
+    }
+    
 }
 
 

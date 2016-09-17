@@ -57,7 +57,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             
         } else {
             ProgressHUD.dismiss()
-            self.displayLoginError(withMessage: "Error: Username and Password Blank")
+            self.displayLoginError(withMessage: "Error: Invalid Login Credentials")
             
         }
         
