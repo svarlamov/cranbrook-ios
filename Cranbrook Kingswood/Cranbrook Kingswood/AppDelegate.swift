@@ -10,6 +10,7 @@
 import UIKit
 import Fabric
 import Crashlytics
+import Rollout
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         Fabric.with([Crashlytics.self])
         Analytics.analytics.logUserSession()
+        Rollout.setupWithKey("57ddb79c8718e2f531cb2787")
         return true
     }
 

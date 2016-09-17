@@ -57,6 +57,10 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
 
+## Rollout.io
+
+See http://www.rollout.io/
+
 ## SwiftMessages
 
 Copyright (c) 2016 SwiftKick Mobile LLC
