@@ -43,6 +43,20 @@
 		D72CF3291D72388A00B2116C /* AKPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72CF3281D72388A00B2116C /* AKPickerView.swift */; };
 		D72CF32E1D7258A900B2116C /* DateListStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72CF32D1D7258A900B2116C /* DateListStructure.swift */; };
 		D74772631D8C337200F69258 /* SearchResultDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74772621D8C337200F69258 /* SearchResultDetailView.swift */; };
+		D7648D2B1D8CD7BB00C1D7C7 /* ArrayEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7648D1D1D8CD7BB00C1D7C7 /* ArrayEx.swift */; };
+		D7648D2C1D8CD7BB00C1D7C7 /* CGPointEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7648D1E1D8CD7BB00C1D7C7 /* CGPointEx.swift */; };
+		D7648D2D1D8CD7BB00C1D7C7 /* CGRectEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7648D1F1D8CD7BB00C1D7C7 /* CGRectEx.swift */; };
+		D7648D2E1D8CD7BB00C1D7C7 /* CircularGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7648D201D8CD7BB00C1D7C7 /* CircularGradientLayer.swift */; };
+		D7648D2F1D8CD7BB00C1D7C7 /* LiquidCircleEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7648D211D8CD7BB00C1D7C7 /* LiquidCircleEffect.swift */; };
+		D7648D301D8CD7BB00C1D7C7 /* LiquidLineEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7648D221D8CD7BB00C1D7C7 /* LiquidLineEffect.swift */; };
+		D7648D311D8CD7BB00C1D7C7 /* LiquidLoadEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7648D231D8CD7BB00C1D7C7 /* LiquidLoadEffect.swift */; };
+		D7648D321D8CD7BB00C1D7C7 /* LiquidLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7648D241D8CD7BB00C1D7C7 /* LiquidLoader.swift */; };
+		D7648D331D8CD7BB00C1D7C7 /* LiquidUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7648D251D8CD7BB00C1D7C7 /* LiquidUtil.swift */; };
+		D7648D341D8CD7BB00C1D7C7 /* LiquittableCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7648D261D8CD7BB00C1D7C7 /* LiquittableCircle.swift */; };
+		D7648D351D8CD7BB00C1D7C7 /* ObjC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7648D271D8CD7BB00C1D7C7 /* ObjC.swift */; };
+		D7648D361D8CD7BB00C1D7C7 /* SimpleCircleLiquidEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7648D281D8CD7BB00C1D7C7 /* SimpleCircleLiquidEngine.swift */; };
+		D7648D371D8CD7BB00C1D7C7 /* UIColorEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7648D291D8CD7BB00C1D7C7 /* UIColorEx.swift */; };
+		D7648D381D8CD7BB00C1D7C7 /* UIView+Grow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7648D2A1D8CD7BB00C1D7C7 /* UIView+Grow.swift */; };
 		D7B1BCEA1D7D041300D41BEE /* WebServices+CalendarID.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B1BCE91D7D041300D41BEE /* WebServices+CalendarID.swift */; };
 		D7B35EE31D779BD100690868 /* StudentGroupTermStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B35EE21D779BD100690868 /* StudentGroupTermStructure.swift */; };
 		D7B35EE51D779DD600690868 /* StartupViewController+SetupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B35EE41D779DD600690868 /* StartupViewController+SetupData.swift */; };
@@ -107,6 +121,20 @@
 		D72CF3281D72388A00B2116C /* AKPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKPickerView.swift; sourceTree = "<group>"; };
 		D72CF32D1D7258A900B2116C /* DateListStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateListStructure.swift; sourceTree = "<group>"; };
 		D74772621D8C337200F69258 /* SearchResultDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultDetailView.swift; sourceTree = "<group>"; };
+		D7648D1D1D8CD7BB00C1D7C7 /* ArrayEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayEx.swift; sourceTree = "<group>"; };
+		D7648D1E1D8CD7BB00C1D7C7 /* CGPointEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPointEx.swift; sourceTree = "<group>"; };
+		D7648D1F1D8CD7BB00C1D7C7 /* CGRectEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRectEx.swift; sourceTree = "<group>"; };
+		D7648D201D8CD7BB00C1D7C7 /* CircularGradientLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularGradientLayer.swift; sourceTree = "<group>"; };
+		D7648D211D8CD7BB00C1D7C7 /* LiquidCircleEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiquidCircleEffect.swift; sourceTree = "<group>"; };
+		D7648D221D8CD7BB00C1D7C7 /* LiquidLineEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiquidLineEffect.swift; sourceTree = "<group>"; };
+		D7648D231D8CD7BB00C1D7C7 /* LiquidLoadEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiquidLoadEffect.swift; sourceTree = "<group>"; };
+		D7648D241D8CD7BB00C1D7C7 /* LiquidLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiquidLoader.swift; sourceTree = "<group>"; };
+		D7648D251D8CD7BB00C1D7C7 /* LiquidUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiquidUtil.swift; sourceTree = "<group>"; };
+		D7648D261D8CD7BB00C1D7C7 /* LiquittableCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiquittableCircle.swift; sourceTree = "<group>"; };
+		D7648D271D8CD7BB00C1D7C7 /* ObjC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjC.swift; sourceTree = "<group>"; };
+		D7648D281D8CD7BB00C1D7C7 /* SimpleCircleLiquidEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleCircleLiquidEngine.swift; sourceTree = "<group>"; };
+		D7648D291D8CD7BB00C1D7C7 /* UIColorEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorEx.swift; sourceTree = "<group>"; };
+		D7648D2A1D8CD7BB00C1D7C7 /* UIView+Grow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Grow.swift"; sourceTree = "<group>"; };
 		D7B1BCE91D7D041300D41BEE /* WebServices+CalendarID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+CalendarID.swift"; sourceTree = "<group>"; };
 		D7B35EE21D779BD100690868 /* StudentGroupTermStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentGroupTermStructure.swift; sourceTree = "<group>"; };
 		D7B35EE41D779DD600690868 /* StartupViewController+SetupData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StartupViewController+SetupData.swift"; sourceTree = "<group>"; };
@@ -273,11 +301,12 @@
 		D72CF32A1D7257ED00B2116C /* Custom Classes */ = {
 			isa = PBXGroup;
 			children = (
-				D7CF02171D75586D00145F4B /* Reachability */,
-				A09D75BC1D5715C500B2AA74 /* ProgressHUD */,
 				A09D75A51D57042900B2AA74 /* DateComparison.swift */,
 				D72CF3281D72388A00B2116C /* AKPickerView.swift */,
 				D71DEFEF1D76099A0006E6B6 /* NetworkStatus.swift */,
+				D7648D1C1D8CD7A500C1D7C7 /* LiquidLoader */,
+				D7CF02171D75586D00145F4B /* Reachability */,
+				A09D75BC1D5715C500B2AA74 /* ProgressHUD */,
 			);
 			name = "Custom Classes";
 			sourceTree = "<group>";
@@ -288,6 +317,27 @@
 				D74772621D8C337200F69258 /* SearchResultDetailView.swift */,
 			);
 			name = "Search Result Detail View";
+			sourceTree = "<group>";
+		};
+		D7648D1C1D8CD7A500C1D7C7 /* LiquidLoader */ = {
+			isa = PBXGroup;
+			children = (
+				D7648D1D1D8CD7BB00C1D7C7 /* ArrayEx.swift */,
+				D7648D1E1D8CD7BB00C1D7C7 /* CGPointEx.swift */,
+				D7648D1F1D8CD7BB00C1D7C7 /* CGRectEx.swift */,
+				D7648D201D8CD7BB00C1D7C7 /* CircularGradientLayer.swift */,
+				D7648D211D8CD7BB00C1D7C7 /* LiquidCircleEffect.swift */,
+				D7648D221D8CD7BB00C1D7C7 /* LiquidLineEffect.swift */,
+				D7648D231D8CD7BB00C1D7C7 /* LiquidLoadEffect.swift */,
+				D7648D241D8CD7BB00C1D7C7 /* LiquidLoader.swift */,
+				D7648D251D8CD7BB00C1D7C7 /* LiquidUtil.swift */,
+				D7648D261D8CD7BB00C1D7C7 /* LiquittableCircle.swift */,
+				D7648D271D8CD7BB00C1D7C7 /* ObjC.swift */,
+				D7648D281D8CD7BB00C1D7C7 /* SimpleCircleLiquidEngine.swift */,
+				D7648D291D8CD7BB00C1D7C7 /* UIColorEx.swift */,
+				D7648D2A1D8CD7BB00C1D7C7 /* UIView+Grow.swift */,
+			);
+			name = LiquidLoader;
 			sourceTree = "<group>";
 		};
 		D7B35EE61D779DDC00690868 /* Startup */ = {
@@ -530,13 +580,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7C10B2B1D70B8D700C9B66F /* WebServices+ClassDetail.swift in Sources */,
+				D7648D2B1D8CD7BB00C1D7C7 /* ArrayEx.swift in Sources */,
 				D7F2AB321D7BC662005F8515 /* CalendarItemDataStructure.swift in Sources */,
 				A0BD73101D56B9CA00889331 /* CranbrookAPIInfo.swift in Sources */,
+				D7648D341D8CD7BB00C1D7C7 /* LiquittableCircle.swift in Sources */,
 				D7F999251D7EF83500EABBD2 /* WebServices+AssignmentStatus.swift in Sources */,
 				D7B35EE51D779DD600690868 /* StartupViewController+SetupData.swift in Sources */,
 				31C4DAA11D65649F00397716 /* SearchDataStructure.swift in Sources */,
+				D7648D2C1D8CD7BB00C1D7C7 /* CGPointEx.swift in Sources */,
 				D72685FF1D7133F00081E4C7 /* WebServices+Assignments.swift in Sources */,
 				D7B481CA1D7B2B950033C58D /* ShadowView.swift in Sources */,
+				D7648D381D8CD7BB00C1D7C7 /* UIView+Grow.swift in Sources */,
+				D7648D371D8CD7BB00C1D7C7 /* UIColorEx.swift in Sources */,
+				D7648D2F1D8CD7BB00C1D7C7 /* LiquidCircleEffect.swift in Sources */,
 				A09D75A81D570F1A00B2AA74 /* WebServices+CurrentClasses.swift in Sources */,
 				D7F2AB3B1D7BCC2C005F8515 /* WebServices+Calendar.swift in Sources */,
 				D74772631D8C337200F69258 /* SearchResultDetailView.swift in Sources */,
@@ -546,8 +602,13 @@
 				A07468811D568DAD00E7ACC0 /* AppDelegate.swift in Sources */,
 				A09D75A61D57042900B2AA74 /* DateComparison.swift in Sources */,
 				D72686081D7134630081E4C7 /* ClassesTableViewCell.swift in Sources */,
+				D7648D2D1D8CD7BB00C1D7C7 /* CGRectEx.swift in Sources */,
 				A09D75AC1D570F8B00B2AA74 /* ClassesViewController.swift in Sources */,
+				D7648D361D8CD7BB00C1D7C7 /* SimpleCircleLiquidEngine.swift in Sources */,
+				D7648D301D8CD7BB00C1D7C7 /* LiquidLineEffect.swift in Sources */,
+				D7648D351D8CD7BB00C1D7C7 /* ObjC.swift in Sources */,
 				A0BD73041D56972500889331 /* WebServices.swift in Sources */,
+				D7648D331D8CD7BB00C1D7C7 /* LiquidUtil.swift in Sources */,
 				31C4DA9D1D65644900397716 /* LoginDataStructure.swift in Sources */,
 				D71DEFF01D76099A0006E6B6 /* NetworkStatus.swift in Sources */,
 				D7F2AB3D1D7BD3EF005F8515 /* CalendarTableViewCell.swift in Sources */,
@@ -560,8 +621,10 @@
 				A016B6E41D57FC7600A4A68D /* ViewControllerContainer.swift in Sources */,
 				D7C10B331D70ED0800C9B66F /* Analytics.swift in Sources */,
 				D7C10B2D1D70BB9700C9B66F /* ClassDetailDataStructure.swift in Sources */,
+				D7648D321D8CD7BB00C1D7C7 /* LiquidLoader.swift in Sources */,
 				31CD30AB1D67BEB2001C4647 /* SearchResultTableViewCell.swift in Sources */,
 				31CD309D1D67ABC6001C4647 /* DirectorySearchViewController+TableView.swift in Sources */,
+				D7648D311D8CD7BB00C1D7C7 /* LiquidLoadEffect.swift in Sources */,
 				D71DEFE31D75F31B0006E6B6 /* AssignmentsViewController+Selector.swift in Sources */,
 				D7F2AB411D7CAE9C005F8515 /* CalendarViewController+TableView.swift in Sources */,
 				D72CF3291D72388A00B2116C /* AKPickerView.swift in Sources */,
@@ -576,6 +639,7 @@
 				D72686061D71344D0081E4C7 /* AssignmentTableViewCell.swift in Sources */,
 				31C4DA9F1D65647A00397716 /* ClassesDataStructure.swift in Sources */,
 				31375AFF1D6534CD00B07B29 /* WebServices+Search.swift in Sources */,
+				D7648D2E1D8CD7BB00C1D7C7 /* CircularGradientLayer.swift in Sources */,
 				A09D75AA1D570F8400B2AA74 /* AssignmentsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -706,7 +770,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = V8FVQ5687W;
 				INFOPLIST_FILE = "Cranbrook Kingswood/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stefandeclerck.Cranbrook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -730,7 +794,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = V8FVQ5687W;
 				INFOPLIST_FILE = "Cranbrook Kingswood/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stefandeclerck.Cranbrook;
 				PRODUCT_NAME = "$(TARGET_NAME)";

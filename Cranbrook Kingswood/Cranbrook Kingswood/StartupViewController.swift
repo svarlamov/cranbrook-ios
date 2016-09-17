@@ -25,7 +25,7 @@ enum loginCurrentUserStatusPrintOptions: String {
 class StartupViewController: UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var mainImage: UIImageView!
     
     //  Reachability
     var reach: Reachability?
@@ -33,14 +33,11 @@ class StartupViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupViews()
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
-        self.showActivityIndicator()
-        self.setupReachability()
-        self.checkForConnectionAtStart()
+        self.setupViews()
     }
     
     override func didReceiveMemoryWarning() {
@@ -57,16 +54,19 @@ class StartupViewController: UIViewController {
     
     func setupViews() {
         self.setupActivityIndicator()
+        self.setupReachability()
+        self.checkForConnectionAtStart()
     }
     
     func setupActivityIndicator() {
-        self.activityIndicator.hidden = true
-    }
-    
-    func showActivityIndicator() {
-        UIView.animateWithDuration(0.2) { 
-            self.activityIndicator.hidden = false
-        }
+        let lineMatColor = UIColor(red: 53 / 255.0, green: 75 / 255.0, blue: 160 / 255.0, alpha: 1.0)
+        let width: CGFloat = self.mainImage.frame.size.width - 10
+        let height: CGFloat = 20
+        let yPosition: CGFloat = self.mainImage.frame.origin.y + self.mainImage.frame.size.height + 17
+        let xPosition: CGFloat = self.mainImage.frame.origin.x + 15
+        let lineMatFrame = CGRect(x: xPosition, y: yPosition, width: width, height: height)
+        let lineMat = LiquidLoader(frame: lineMatFrame, effect: .Line(lineMatColor,4,1.0, UIColor.redColor()))
+        self.view.addSubview(lineMat)
     }
     
     //  MARK: - Reachability

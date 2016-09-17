@@ -19,16 +19,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="gu7-4O-hAB">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="OTk-PY-u2b"/>
-                                    <constraint firstAttribute="width" constant="20" id="vrc-4M-Hcr"/>
-                                </constraints>
-                            </activityIndicatorView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No network found" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ya-3l-WXX">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="7da-7b-bs1"/>
-                                    <constraint firstAttribute="width" constant="148" id="OGz-Uu-ltQ"/>
+                                    <constraint firstAttribute="width" constant="148" id="DkI-3B-pPI"/>
+                                    <constraint firstAttribute="height" constant="21" id="JmL-AJ-Ka6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
                                 <color key="textColor" red="0.70632340604026844" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -43,16 +37,14 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="3ya-3l-WXX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0R2-Gp-YM0"/>
-                            <constraint firstItem="gu7-4O-hAB" firstAttribute="top" secondItem="I2P-yR-hek" secondAttribute="bottom" constant="17" id="2Nk-Wz-m9B"/>
-                            <constraint firstItem="3ya-3l-WXX" firstAttribute="top" secondItem="gu7-4O-hAB" secondAttribute="bottom" constant="17" id="Ngj-BP-jdW"/>
+                            <constraint firstItem="3ya-3l-WXX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EHm-Tn-Nb4"/>
                             <constraint firstItem="I2P-yR-hek" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SZU-ha-0Mj"/>
-                            <constraint firstItem="gu7-4O-hAB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vKJ-iQ-ISN"/>
+                            <constraint firstItem="3ya-3l-WXX" firstAttribute="top" secondItem="I2P-yR-hek" secondAttribute="bottom" constant="54" id="i1p-Sa-KDE"/>
                             <constraint firstItem="I2P-yR-hek" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yY0-JB-09t"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="activityIndicator" destination="gu7-4O-hAB" id="J35-9f-6dr"/>
+                        <outlet property="mainImage" destination="I2P-yR-hek" id="JRp-tI-dcH"/>
                         <outlet property="networkMessageLabel" destination="3ya-3l-WXX" id="ifa-Sh-Tkb"/>
                         <segue destination="mIp-Sa-e7H" kind="presentation" identifier="ShowLoginViewController" modalTransitionStyle="crossDissolve" id="suC-Zd-F3g"/>
                         <segue destination="fhv-cY-TqV" kind="presentation" identifier="StartupCompleteSegue" modalTransitionStyle="crossDissolve" id="twR-EM-b5c"/>
@@ -440,16 +432,16 @@
                                 <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="GYX-tn-a1k">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="14"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1000" height="14"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="classes_cell" rowHeight="116" id="uXt-hv-tNR" customClass="ClassesTableViewCell" customModule="Cranbrook_Kingswood" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="42" width="375" height="116"/>
+                                        <rect key="frame" x="0.0" y="42" width="1000" height="116"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uXt-hv-tNR" id="X3Z-9j-xy6">
-                                            <frame key="frameInset" width="375" height="116"/>
+                                            <frame key="frameInset" width="1000" height="116"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g1N-YV-OBv" customClass="ShadowView" customModule="Cranbrook_Kingswood" customModuleProvider="target">
@@ -677,16 +669,16 @@
                                 <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="RUQ-Ac-AHf">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="14"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1000" height="14"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="search_cell" rowHeight="90" id="bmN-AW-ub2" customClass="SearchResultTableViewCell" customModule="Cranbrook_Kingswood" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="42" width="375" height="90"/>
+                                        <rect key="frame" x="0.0" y="42" width="1000" height="90"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bmN-AW-ub2" id="Luo-Jh-c08">
-                                            <frame key="frameInset" width="375" height="90"/>
+                                            <frame key="frameInset" width="1000" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="84Y-vQ-Rfq">
