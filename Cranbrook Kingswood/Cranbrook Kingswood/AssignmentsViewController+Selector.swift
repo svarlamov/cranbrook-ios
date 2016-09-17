@@ -10,7 +10,6 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 import Unbox
-import SwiftMessages
 
 extension AssignmentsViewController {
     
@@ -73,14 +72,7 @@ extension AssignmentsViewController {
         } else {
             specificDateAssignments?.removeAll()
             self.tableView.reloadData()
-            var config = SwiftMessages.Config()
-            let error = MessageView.viewFromNib(layout: .CardView)
-            error.configureContent(title: "Error", body: "No Network Connection. Unable to Obtain Assignments", iconImage: nil, iconText: nil, buttonImage: nil, buttonTitle: "Hide", buttonTapHandler: { _ in SwiftMessages.hide() })
-            config.presentationStyle = .Bottom
-            error.configureTheme(.Error, iconStyle: .Default)
-            config.interactiveHide = true
-            config.dimMode = .Gray(interactive: true)
-            SwiftMessages.show(config: config, view: error)
+            self.showNetworkAlert()
         }
     }
     

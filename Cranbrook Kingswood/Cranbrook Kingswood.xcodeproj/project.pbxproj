@@ -55,6 +55,7 @@
 		D733B9091D8DC23C002C0D80 /* isWarningIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D733B8FD1D8DC23C002C0D80 /* isWarningIcon@2x.png */; };
 		D733B90A1D8DC23C002C0D80 /* isWarningIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D733B8FE1D8DC23C002C0D80 /* isWarningIcon@3x.png */; };
 		D733B90D1D8DC243002C0D80 /* ISMessages.m in Sources */ = {isa = PBXBuildFile; fileRef = D733B90C1D8DC243002C0D80 /* ISMessages.m */; };
+		D733B90F1D8DC26F002C0D80 /* CranbrookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D733B90E1D8DC26F002C0D80 /* CranbrookViewController.swift */; };
 		D74772631D8C337200F69258 /* SearchResultDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74772621D8C337200F69258 /* SearchResultDetailView.swift */; };
 		D7648D2B1D8CD7BB00C1D7C7 /* ArrayEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7648D1D1D8CD7BB00C1D7C7 /* ArrayEx.swift */; };
 		D7648D2C1D8CD7BB00C1D7C7 /* CGPointEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7648D1E1D8CD7BB00C1D7C7 /* CGPointEx.swift */; };
@@ -147,6 +148,7 @@
 		D733B8FE1D8DC23C002C0D80 /* isWarningIcon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "isWarningIcon@3x.png"; sourceTree = "<group>"; };
 		D733B90B1D8DC243002C0D80 /* ISMessages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISMessages.h; sourceTree = "<group>"; };
 		D733B90C1D8DC243002C0D80 /* ISMessages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISMessages.m; sourceTree = "<group>"; };
+		D733B90E1D8DC26F002C0D80 /* CranbrookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CranbrookViewController.swift; sourceTree = "<group>"; };
 		D74772621D8C337200F69258 /* SearchResultDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultDetailView.swift; sourceTree = "<group>"; };
 		D7648D1D1D8CD7BB00C1D7C7 /* ArrayEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayEx.swift; sourceTree = "<group>"; };
 		D7648D1E1D8CD7BB00C1D7C7 /* CGPointEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPointEx.swift; sourceTree = "<group>"; };
@@ -450,6 +452,7 @@
 		D7C10B281D70B39000C9B66F /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D733B90E1D8DC26F002C0D80 /* CranbrookViewController.swift */,
 				A016B6E31D57FC7600A4A68D /* ViewControllerContainer.swift */,
 				A08F66F01D57204900FBE55E /* LoginViewController.swift */,
 				D7B35EE61D779DDC00690868 /* Startup */,
@@ -680,6 +683,7 @@
 				A09D75A61D57042900B2AA74 /* DateComparison.swift in Sources */,
 				D72686081D7134630081E4C7 /* ClassesTableViewCell.swift in Sources */,
 				D7648D2D1D8CD7BB00C1D7C7 /* CGRectEx.swift in Sources */,
+				D733B90F1D8DC26F002C0D80 /* CranbrookViewController.swift in Sources */,
 				A09D75AC1D570F8B00B2AA74 /* ClassesViewController.swift in Sources */,
 				D7648D361D8CD7BB00C1D7C7 /* SimpleCircleLiquidEngine.swift in Sources */,
 				D7648D301D8CD7BB00C1D7C7 /* LiquidLineEffect.swift in Sources */,

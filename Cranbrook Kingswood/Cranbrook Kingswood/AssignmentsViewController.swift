@@ -12,7 +12,7 @@ import SwiftyJSON
 import Unbox
 import PullToRefreshSwift
 
-class AssignmentsViewController: UIViewController, AKPickerViewDataSource, AKPickerViewDelegate, UITableViewDelegate, UITableViewDataSource {
+class AssignmentsViewController: CranbrookViewController, AKPickerViewDataSource, AKPickerViewDelegate, UITableViewDelegate, UITableViewDataSource {
     
     //  Picker view
     @IBOutlet var pickerView: AKPickerView!

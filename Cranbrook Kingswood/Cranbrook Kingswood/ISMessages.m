@@ -138,6 +138,7 @@ static NSMutableArray* currentAlertArray = nil;
     titleLabel.numberOfLines = 1.f;
     titleLabel.textColor = [UIColor whiteColor];
     titleLabel.font = [UIFont systemFontOfSize:15.f weight:UIFontWeightMedium];
+    [titleLabel setFont:[UIFont fontWithName:@"Avenir Next" size:16.f]];
     titleLabel.text = _titleString;
     [alertView addSubview:titleLabel];
     
@@ -148,6 +149,7 @@ static NSMutableArray* currentAlertArray = nil;
     messageLabel.numberOfLines = 0.f;
     messageLabel.textColor = [UIColor whiteColor];
     messageLabel.font = [UIFont systemFontOfSize:15.f];
+    [messageLabel setFont:[UIFont fontWithName:@"AvenirNext-Medium" size:16.f]];
     messageLabel.text = _messageString;
     [alertView addSubview:messageLabel];
     
@@ -295,7 +297,7 @@ static NSMutableArray* currentAlertArray = nil;
     CGFloat messageHeight = [message boundingRectWithSize:CGSizeMake(screenWidth - 40.f - _iconImageSize.height, CGFLOAT_MAX)
                                                   options:NSStringDrawingUsesLineFragmentOrigin
                                                attributes:@{NSParagraphStyleAttributeName : paragraphStyle,
-                                                            NSFontAttributeName : [UIFont systemFontOfSize:15.f]}
+                                                            NSFontAttributeName : [UIFont fontWithName:@"AvenirNext" size:16.f]}
                                                   context:nil].size.height;
     
     return ceilf(messageHeight);

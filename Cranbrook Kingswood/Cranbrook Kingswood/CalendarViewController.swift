@@ -10,7 +10,6 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import Unbox
-import SwiftMessages
 import PullToRefreshSwift
 
 class CalendarViewController: UITableViewController {
@@ -68,14 +67,7 @@ class CalendarViewController: UITableViewController {
             }
         } else {
             self.tableView.reloadData()
-            var config = SwiftMessages.Config()
-            let error = MessageView.viewFromNib(layout: .CardView)
-            error.configureContent(title: "Error", body: "No Network Connection.", iconImage: nil, iconText: nil, buttonImage: nil, buttonTitle: "Hide", buttonTapHandler: { _ in SwiftMessages.hide() })
-            config.presentationStyle = .Bottom
-            error.configureTheme(.Error, iconStyle: .Default)
-            config.interactiveHide = true
-            config.dimMode = .Gray(interactive: true)
-            SwiftMessages.show(config: config, view: error)
+            ISMessages.showCardAlertWithTitle("Error", message: "No Network Connection.", iconImage: nil, duration: 3, hideOnSwipe: true, hideOnTap: true, alertType: ISAlertType.Error, alertPosition: ISAlertPosition.Bottom)
         }
     }
     

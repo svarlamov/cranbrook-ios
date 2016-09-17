@@ -12,9 +12,8 @@ import SwiftyJSON
 import Unbox
 import QuartzCore
 import PullToRefreshSwift
-import SwiftMessages
 
-class ClassesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ClassesViewController: CranbrookViewController, UITableViewDataSource, UITableViewDelegate {
 
     //  Table view
     @IBOutlet weak var tableView: UITableView!
@@ -44,14 +43,7 @@ class ClassesViewController: UIViewController, UITableViewDataSource, UITableVie
                 }
             } else {
                 self?.tableView.stopPullToRefresh()
-                var config = SwiftMessages.Config()
-                let error = MessageView.viewFromNib(layout: .CardView)
-                error.configureContent(title: "Error", body: "No Network Connection.", iconImage: nil, iconText: nil, buttonImage: nil, buttonTitle: "Hide", buttonTapHandler: { _ in SwiftMessages.hide() })
-                config.presentationStyle = .Bottom
-                error.configureTheme(.Error, iconStyle: .Default)
-                config.interactiveHide = true
-                config.dimMode = .Gray(interactive: true)
-                SwiftMessages.show(config: config, view: error)
+                self?.showNetworkAlert()
             }
         })
     }

@@ -31,7 +31,7 @@ extension ClassesViewController {
             self.tableView.backgroundView = noDataLabel
             return 0;
         } else {
-            self.tableView.backgroundView = nil
+            //  self.tableView.backgroundView = nil
             return (studentClassArray?.count)!
         }
     }

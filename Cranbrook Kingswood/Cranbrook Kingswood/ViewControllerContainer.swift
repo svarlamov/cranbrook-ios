@@ -10,7 +10,6 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 import Unbox
-import SwiftMessages
 
 enum SelectedTabOptions: String {
     case ClassesTab             = "Classes Tab"
@@ -18,7 +17,7 @@ enum SelectedTabOptions: String {
     case DirectorySearchTab     = "Directory Search Tab"
 }
 
-class ViewControllerContainer: UIViewController {
+class ViewControllerContainer: CranbrookViewController {
     
     //  Logout
     @IBOutlet weak var logoutButton: UIBarButtonItem!
@@ -70,14 +69,7 @@ class ViewControllerContainer: UIViewController {
         if calendarTasksForDate?.count > 0 {
             self.performSegueWithIdentifier(calendarSegue, sender: nil)
         } else {
-            var config = SwiftMessages.Config()
-            let error = MessageView.viewFromNib(layout: .CardView)
-            error.configureContent(title: "Info", body: "Nothing Schedule Today", iconImage: nil, iconText: nil, buttonImage: nil, buttonTitle: "Hide", buttonTapHandler: { _ in SwiftMessages.hide() })
-            config.presentationStyle = .Bottom
-            error.configureTheme(.Warning, iconStyle: .Default)
-            config.interactiveHide = true
-            config.dimMode = .Gray(interactive: true)
-            SwiftMessages.show(config: config, view: error)
+            self.showCalendarAlert()
         }
     }
     
