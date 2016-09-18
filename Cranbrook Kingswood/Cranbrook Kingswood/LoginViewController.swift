@@ -34,6 +34,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Login methods
     @IBAction func login(sender: UIButton) {
         self.view.endEditing(true)
+        selectedTab = SelectedTabOptions.ClassesTab
         signIn(usernameTextField.text!, password: passwordTextField.text!)
     }
     

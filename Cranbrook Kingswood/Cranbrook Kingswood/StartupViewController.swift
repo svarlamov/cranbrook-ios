@@ -53,6 +53,11 @@ class StartupViewController: UIViewController {
     }
     
     func setupViews() {
+        if RemoteConfig.config.isAppAvailable() {
+            print("aweomse")
+        } else {
+            print("fuck")
+        }
         self.setupActivityIndicator()
         self.setupReachability()
         self.checkForConnectionAtStart()

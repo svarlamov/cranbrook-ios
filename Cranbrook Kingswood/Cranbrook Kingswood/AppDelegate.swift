@@ -11,6 +11,7 @@ import UIKit
 import Fabric
 import Crashlytics
 import Rollout
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,9 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow? 
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        FIRApp.configure()
         Fabric.with([Crashlytics.self])
         Analytics.analytics.logUserSession()
         Rollout.setupWithKey("57ddb79c8718e2f531cb2787")
+        RemoteConfig.config.setupData()
         return true
     }
 
