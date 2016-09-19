@@ -5,3 +5,4 @@
 #import "ProgressHUD.h"
 #import "Reachability.h"
 #import "ISMessages.h"
+#import "RMTConfig.h"

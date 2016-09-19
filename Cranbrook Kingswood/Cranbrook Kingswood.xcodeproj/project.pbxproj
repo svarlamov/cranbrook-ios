@@ -58,7 +58,6 @@
 		D733B90F1D8DC26F002C0D80 /* CranbrookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D733B90E1D8DC26F002C0D80 /* CranbrookViewController.swift */; };
 		D733B9111D8DF428002C0D80 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D733B9101D8DF427002C0D80 /* GoogleService-Info.plist */; };
 		D733B9131D8DF834002C0D80 /* RemoteConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D733B9121D8DF834002C0D80 /* RemoteConfig.swift */; };
-		D733B9161D8DFA42002C0D80 /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = D733B9151D8DFA42002C0D80 /* RemoteConfigDefaults.plist */; };
 		D74772631D8C337200F69258 /* SearchResultDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74772621D8C337200F69258 /* SearchResultDetailView.swift */; };
 		D7648D2B1D8CD7BB00C1D7C7 /* ArrayEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7648D1D1D8CD7BB00C1D7C7 /* ArrayEx.swift */; };
 		D7648D2C1D8CD7BB00C1D7C7 /* CGPointEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7648D1E1D8CD7BB00C1D7C7 /* CGPointEx.swift */; };
@@ -74,6 +73,8 @@
 		D7648D361D8CD7BB00C1D7C7 /* SimpleCircleLiquidEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7648D281D8CD7BB00C1D7C7 /* SimpleCircleLiquidEngine.swift */; };
 		D7648D371D8CD7BB00C1D7C7 /* UIColorEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7648D291D8CD7BB00C1D7C7 /* UIColorEx.swift */; };
 		D7648D381D8CD7BB00C1D7C7 /* UIView+Grow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7648D2A1D8CD7BB00C1D7C7 /* UIView+Grow.swift */; };
+		D7905E9D1D901F890017752F /* RMTConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = D7905E9C1D901F890017752F /* RMTConfig.m */; };
+		D7905EB91D90230A0017752F /* RemoteConfigDataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7905EB81D90230A0017752F /* RemoteConfigDataStructure.swift */; };
 		D7B1BCEA1D7D041300D41BEE /* WebServices+CalendarID.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B1BCE91D7D041300D41BEE /* WebServices+CalendarID.swift */; };
 		D7B35EE31D779BD100690868 /* StudentGroupTermStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B35EE21D779BD100690868 /* StudentGroupTermStructure.swift */; };
 		D7B35EE51D779DD600690868 /* StartupViewController+SetupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B35EE41D779DD600690868 /* StartupViewController+SetupData.swift */; };
@@ -154,7 +155,6 @@
 		D733B90E1D8DC26F002C0D80 /* CranbrookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CranbrookViewController.swift; sourceTree = "<group>"; };
 		D733B9101D8DF427002C0D80 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D733B9121D8DF834002C0D80 /* RemoteConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteConfig.swift; sourceTree = "<group>"; };
-		D733B9151D8DFA42002C0D80 /* RemoteConfigDefaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RemoteConfigDefaults.plist; sourceTree = "<group>"; };
 		D74772621D8C337200F69258 /* SearchResultDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultDetailView.swift; sourceTree = "<group>"; };
 		D7648D1D1D8CD7BB00C1D7C7 /* ArrayEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayEx.swift; sourceTree = "<group>"; };
 		D7648D1E1D8CD7BB00C1D7C7 /* CGPointEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPointEx.swift; sourceTree = "<group>"; };
@@ -170,6 +170,9 @@
 		D7648D281D8CD7BB00C1D7C7 /* SimpleCircleLiquidEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleCircleLiquidEngine.swift; sourceTree = "<group>"; };
 		D7648D291D8CD7BB00C1D7C7 /* UIColorEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorEx.swift; sourceTree = "<group>"; };
 		D7648D2A1D8CD7BB00C1D7C7 /* UIView+Grow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Grow.swift"; sourceTree = "<group>"; };
+		D7905E9B1D901F890017752F /* RMTConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMTConfig.h; sourceTree = "<group>"; };
+		D7905E9C1D901F890017752F /* RMTConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMTConfig.m; sourceTree = "<group>"; };
+		D7905EB81D90230A0017752F /* RemoteConfigDataStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteConfigDataStructure.swift; sourceTree = "<group>"; };
 		D7B1BCE91D7D041300D41BEE /* WebServices+CalendarID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+CalendarID.swift"; sourceTree = "<group>"; };
 		D7B35EE21D779BD100690868 /* StudentGroupTermStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentGroupTermStructure.swift; sourceTree = "<group>"; };
 		D7B35EE41D779DD600690868 /* StartupViewController+SetupData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StartupViewController+SetupData.swift"; sourceTree = "<group>"; };
@@ -291,7 +294,7 @@
 				A07468801D568DAD00E7ACC0 /* AppDelegate.swift */,
 				A0BD73111D56E58E00889331 /* Constants.swift */,
 				D7C10B321D70ED0800C9B66F /* Analytics.swift */,
-				D733B9141D8DFA22002C0D80 /* Remote Configuration */,
+				D733B9121D8DF834002C0D80 /* RemoteConfig.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				A09D75A51D57042900B2AA74 /* DateComparison.swift */,
 				D72CF3281D72388A00B2116C /* AKPickerView.swift */,
 				D71DEFEF1D76099A0006E6B6 /* NetworkStatus.swift */,
+				D7905E9A1D901F820017752F /* Remote Config */,
 				D733B8F01D8DC228002C0D80 /* ISMessages */,
 				D7648D1C1D8CD7A500C1D7C7 /* LiquidLoader */,
 				D7CF02171D75586D00145F4B /* Reachability */,
@@ -386,15 +390,6 @@
 			name = Assets;
 			sourceTree = "<group>";
 		};
-		D733B9141D8DFA22002C0D80 /* Remote Configuration */ = {
-			isa = PBXGroup;
-			children = (
-				D733B9121D8DF834002C0D80 /* RemoteConfig.swift */,
-				D733B9151D8DFA42002C0D80 /* RemoteConfigDefaults.plist */,
-			);
-			name = "Remote Configuration";
-			sourceTree = "<group>";
-		};
 		D74772611D8C335700F69258 /* Search Result Detail View */ = {
 			isa = PBXGroup;
 			children = (
@@ -422,6 +417,15 @@
 				D7648D2A1D8CD7BB00C1D7C7 /* UIView+Grow.swift */,
 			);
 			name = LiquidLoader;
+			sourceTree = "<group>";
+		};
+		D7905E9A1D901F820017752F /* Remote Config */ = {
+			isa = PBXGroup;
+			children = (
+				D7905E9B1D901F890017752F /* RMTConfig.h */,
+				D7905E9C1D901F890017752F /* RMTConfig.m */,
+			);
+			name = "Remote Config";
 			sourceTree = "<group>";
 		};
 		D7B35EE61D779DDC00690868 /* Startup */ = {
@@ -462,6 +466,7 @@
 				31C4DAA01D65649F00397716 /* SearchDataStructure.swift */,
 				D7F2AB311D7BC662005F8515 /* CalendarItemDataStructure.swift */,
 				D72CF32D1D7258A900B2116C /* DateListStructure.swift */,
+				D7905EB81D90230A0017752F /* RemoteConfigDataStructure.swift */,
 			);
 			name = "Data Models";
 			sourceTree = "<group>";
@@ -586,7 +591,6 @@
 				D733B90A1D8DC23C002C0D80 /* isWarningIcon@3x.png in Resources */,
 				D733B9001D8DC23C002C0D80 /* isErrorIcon@2x.png in Resources */,
 				D733B9051D8DC23C002C0D80 /* isSuccessIcon.png in Resources */,
-				D733B9161D8DFA42002C0D80 /* RemoteConfigDefaults.plist in Resources */,
 				D733B9091D8DC23C002C0D80 /* isWarningIcon@2x.png in Resources */,
 				A07468881D568DAD00E7ACC0 /* Assets.xcassets in Resources */,
 				D733B9111D8DF428002C0D80 /* GoogleService-Info.plist in Resources */,
@@ -740,6 +744,7 @@
 				A0BD73041D56972500889331 /* WebServices.swift in Sources */,
 				D7648D331D8CD7BB00C1D7C7 /* LiquidUtil.swift in Sources */,
 				31C4DA9D1D65644900397716 /* LoginDataStructure.swift in Sources */,
+				D7905EB91D90230A0017752F /* RemoteConfigDataStructure.swift in Sources */,
 				D71DEFF01D76099A0006E6B6 /* NetworkStatus.swift in Sources */,
 				D7F2AB3D1D7BD3EF005F8515 /* CalendarTableViewCell.swift in Sources */,
 				D72CF32E1D7258A900B2116C /* DateListStructure.swift in Sources */,
@@ -755,6 +760,7 @@
 				D7648D321D8CD7BB00C1D7C7 /* LiquidLoader.swift in Sources */,
 				31CD30AB1D67BEB2001C4647 /* SearchResultTableViewCell.swift in Sources */,
 				31CD309D1D67ABC6001C4647 /* DirectorySearchViewController+TableView.swift in Sources */,
+				D7905E9D1D901F890017752F /* RMTConfig.m in Sources */,
 				D7648D311D8CD7BB00C1D7C7 /* LiquidLoadEffect.swift in Sources */,
 				D71DEFE31D75F31B0006E6B6 /* AssignmentsViewController+Selector.swift in Sources */,
 				D7F2AB411D7CAE9C005F8515 /* CalendarViewController+TableView.swift in Sources */,

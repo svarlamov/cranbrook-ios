@@ -11,7 +11,6 @@ import UIKit
 import Fabric
 import Crashlytics
 import Rollout
-import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -35,9 +34,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func setup() {
         
-        //  Firebase configuration
-        FIRApp.configure()
-        RemoteConfig.config.setupData()
+        //  Setup remote configuration
+        RemoteConfig.config.getRemoteData()
         
         //  Crashlytics and Answers Fabric.io configuration
         Fabric.with([Crashlytics.self])
