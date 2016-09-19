@@ -19,11 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow? 
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        FIRApp.configure()
-        Fabric.with([Crashlytics.self])
-        Analytics.analytics.logUserSession()
-        Rollout.setupWithKey("57ddb79c8718e2f531cb2787")
-        RemoteConfig.config.setupData()
+        self.setup()
         return true
     }
 
@@ -36,6 +32,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidBecomeActive(application: UIApplication) {}
 
     func applicationWillTerminate(application: UIApplication) {}
+    
+    func setup() {
+        
+        //  Firebase configuration
+        FIRApp.configure()
+        RemoteConfig.config.setupData()
+        
+        //  Crashlytics and Answers Fabric.io configuration
+        Fabric.with([Crashlytics.self])
+        Analytics.analytics.logUserSession()
+        
+        //  Rollout configuration
+        Rollout.setupWithKey("57ddb79c8718e2f531cb2787")
+        
+    }
     
 }
 
