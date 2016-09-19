@@ -60,15 +60,4 @@ class CalendarViewController: UITableViewController {
         return returnString
     }
     
-    @IBAction func setupTableViewRefresh() {
-        if NetworkStatus.networkStatus.isConnectedToNetwork() {
-            WebServices.service.getCalendarTasksForDate(date: NSDate()) { (isRequestSuccessful) in
-                self.tableView.reloadData()
-            }
-        } else {
-            self.tableView.reloadData()
-            ISMessages.showCardAlertWithTitle("Error", message: "No Network Connection.", iconImage: nil, duration: 3, hideOnSwipe: true, hideOnTap: true, alertType: ISAlertType.Error, alertPosition: ISAlertPosition.Bottom)
-        }
-    }
-    
 }

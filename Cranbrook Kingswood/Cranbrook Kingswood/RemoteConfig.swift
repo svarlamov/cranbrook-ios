@@ -13,7 +13,9 @@ class RemoteConfig {
     static let config = RemoteConfig()
     
     internal func getRemoteData() {
+        
         RMTConfig.startWithURL("https://docs.google.com/spreadsheets/d/1bMUl_zVnUxvrB8ch7Xv8k92IWFdtgGikdALR_8vt8KU/pub?output=csv")
+        
     }
     
 }

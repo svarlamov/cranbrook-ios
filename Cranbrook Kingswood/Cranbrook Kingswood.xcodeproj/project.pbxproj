@@ -75,6 +75,7 @@
 		D7648D381D8CD7BB00C1D7C7 /* UIView+Grow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7648D2A1D8CD7BB00C1D7C7 /* UIView+Grow.swift */; };
 		D7905E9D1D901F890017752F /* RMTConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = D7905E9C1D901F890017752F /* RMTConfig.m */; };
 		D7905EB91D90230A0017752F /* RemoteConfigDataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7905EB81D90230A0017752F /* RemoteConfigDataStructure.swift */; };
+		D7AD2DDB1D906AEE00D70242 /* WebServices+RemoteConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD2DDA1D906AEE00D70242 /* WebServices+RemoteConfig.swift */; };
 		D7B1BCEA1D7D041300D41BEE /* WebServices+CalendarID.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B1BCE91D7D041300D41BEE /* WebServices+CalendarID.swift */; };
 		D7B35EE31D779BD100690868 /* StudentGroupTermStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B35EE21D779BD100690868 /* StudentGroupTermStructure.swift */; };
 		D7B35EE51D779DD600690868 /* StartupViewController+SetupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B35EE41D779DD600690868 /* StartupViewController+SetupData.swift */; };
@@ -173,6 +174,7 @@
 		D7905E9B1D901F890017752F /* RMTConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMTConfig.h; sourceTree = "<group>"; };
 		D7905E9C1D901F890017752F /* RMTConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMTConfig.m; sourceTree = "<group>"; };
 		D7905EB81D90230A0017752F /* RemoteConfigDataStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteConfigDataStructure.swift; sourceTree = "<group>"; };
+		D7AD2DDA1D906AEE00D70242 /* WebServices+RemoteConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+RemoteConfig.swift"; sourceTree = "<group>"; };
 		D7B1BCE91D7D041300D41BEE /* WebServices+CalendarID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+CalendarID.swift"; sourceTree = "<group>"; };
 		D7B35EE21D779BD100690868 /* StudentGroupTermStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentGroupTermStructure.swift; sourceTree = "<group>"; };
 		D7B35EE41D779DD600690868 /* StartupViewController+SetupData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StartupViewController+SetupData.swift"; sourceTree = "<group>"; };
@@ -441,6 +443,7 @@
 			isa = PBXGroup;
 			children = (
 				A0BD73031D56972500889331 /* WebServices.swift */,
+				D7AD2DDA1D906AEE00D70242 /* WebServices+RemoteConfig.swift */,
 				A0BD73091D56B27A00889331 /* WebServices+Login.swift */,
 				D7B481BA1D79EF9B0033C58D /* WebServices+StudentGroupTerm.swift */,
 				A09D75A71D570F1A00B2AA74 /* WebServices+CurrentClasses.swift */,
@@ -740,6 +743,7 @@
 				A09D75AC1D570F8B00B2AA74 /* ClassesViewController.swift in Sources */,
 				D7648D361D8CD7BB00C1D7C7 /* SimpleCircleLiquidEngine.swift in Sources */,
 				D7648D301D8CD7BB00C1D7C7 /* LiquidLineEffect.swift in Sources */,
+				D7AD2DDB1D906AEE00D70242 /* WebServices+RemoteConfig.swift in Sources */,
 				D7648D351D8CD7BB00C1D7C7 /* ObjC.swift in Sources */,
 				A0BD73041D56972500889331 /* WebServices.swift in Sources */,
 				D7648D331D8CD7BB00C1D7C7 /* LiquidUtil.swift in Sources */,
