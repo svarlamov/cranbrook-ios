@@ -49,6 +49,7 @@ extension WebServices {
                     if isLoginSuccessful {
                         Alamofire.request(currentUserClassesRequest).responseJSON { response in
                             if let currentClassesRequestResponse: JSON = JSON(response.result.value!) {
+                                //currentClassesRequestResponse.rawValue["Error"]
                                 let currentClassesResponseArray: [NSDictionary] = currentClassesRequestResponse.rawValue as! [NSDictionary]
                                 for objectResponse in currentClassesResponseArray {
                                     let singularResponse: NSDictionary = objectResponse

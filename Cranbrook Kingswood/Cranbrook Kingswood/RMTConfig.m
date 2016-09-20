@@ -77,7 +77,11 @@ static NSDictionary *RMTMapCSVDataToDictionary(NSData *data) {
         
         [keyToValue setObject:val forKey:key];
     }
-    
+    NSLog(@"==========================================");
+    NSLog(@"==========================================");
+    NSLog(@"%@", keyToValue.copy);
+    NSLog(@"==========================================");
+    NSLog(@"==========================================");
     return keyToValue.copy;
 }
 
@@ -174,6 +178,13 @@ static NSString *RMTGetAppVersion() {
         _instance.debug_forcingValues = [NSMutableDictionary dictionary];
     });
     return _instance;
+}
+
+- (NSURL *)createRemoteURL:(NSURL *)URL queryString:(NSString *)queryString {
+    NSString *urlStr = URL.absoluteString;
+    NSString *resStr = [NSString stringWithFormat:@"%@%@%@", urlStr, [urlStr rangeOfString:@"?"].length > 0 ? @"&" : @"?", queryString];
+    
+    return [NSURL URLWithString:resStr];
 }
 
 - (void)startWithURL:(NSString *)URL {

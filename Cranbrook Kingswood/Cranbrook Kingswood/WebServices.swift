@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 import Unbox
-    
+
 class WebServices {
     
     static let service = WebServices()
