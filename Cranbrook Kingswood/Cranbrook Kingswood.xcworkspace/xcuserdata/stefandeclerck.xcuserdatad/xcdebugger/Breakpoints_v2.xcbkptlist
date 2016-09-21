@@ -15,7 +15,23 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "39"
             endingLineNumber = "39"
-            landmarkName = "getCurrentUserClassesSubMethod(forFirstSemester:callBack:)"
+            landmarkName = "getCurrentUserClassesSubMethod(_:callBack:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Cranbrook Kingswood/WebServices+CurrentClasses.swift"
+            timestampString = "496167765.191305"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "getCurrentUserClassesSubMethod(_:callBack:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
