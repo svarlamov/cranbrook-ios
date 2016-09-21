@@ -27,48 +27,19 @@ extension WebServices {
         let getCalendarTasksForDateRequest: NSMutableURLRequest = createCalendarTasksForDateRequest(forDate)
         var getTasksForCalendarDateListArray: [CalendarItemDataStructure] = [CalendarItemDataStructure]()
         Alamofire.request(getCalendarTasksForDateRequest).responseJSON { response in
-            
-            if !(self.isRequestSuccessful(inputData: JSON(response.result.value!))) {
-                let username: String = userLoginInfo!.username
-                let password: String = userLoginInfo!.password
-                WebServices.service.loginWithParameters(username: username, password: password, callBack: { (isLoginSuccessful) in
-                    if isLoginSuccessful {
-                        Alamofire.request(getCalendarTasksForDateRequest).responseJSON { response in
-                            if let calendarRequestResponse: JSON = JSON(response.result.value!) {
-                                let dateCalendarResponseArray: [NSDictionary] = calendarRequestResponse.rawValue as! [NSDictionary]
-                                for responseObject in dateCalendarResponseArray {
-                                    let singularResponse: NSDictionary = responseObject
-                                    let singularAssignment: CalendarItemDataStructure? = self.mapCalendarTasksForDate(singularResponse)
-                                    getTasksForCalendarDateListArray.append(singularAssignment!)
-                                }
-                                calendarTasksForDate = nil
-                                calendarTasksForDate = getTasksForCalendarDateListArray
-                                callBack(isRequestSuccessful: true)
-                            } else {
-                                callBack(isRequestSuccessful: false)
-                            }
-                        }
-                    }
-                })
-            } else {
-                if let calendarRequestResponse: JSON = JSON(response.result.value!) {
-                    let dateCalendarResponseArray: [NSDictionary] = calendarRequestResponse.rawValue as! [NSDictionary]
-                    for responseObject in dateCalendarResponseArray {
-                        let singularResponse: NSDictionary = responseObject
-                        let singularAssignment: CalendarItemDataStructure? = self.mapCalendarTasksForDate(singularResponse)
-                        getTasksForCalendarDateListArray.append(singularAssignment!)
-                    }
-                    calendarTasksForDate = nil
-                    calendarTasksForDate = getTasksForCalendarDateListArray
-                    callBack(isRequestSuccessful: true)
-                } else {
-                    callBack(isRequestSuccessful: false)
+            if let calendarRequestResponse: JSON = JSON(response.result.value!) {
+                let dateCalendarResponseArray: [NSDictionary] = calendarRequestResponse.rawValue as! [NSDictionary]
+                for responseObject in dateCalendarResponseArray {
+                    let singularResponse: NSDictionary = responseObject
+                    let singularAssignment: CalendarItemDataStructure? = self.mapCalendarTasksForDate(singularResponse)
+                    getTasksForCalendarDateListArray.append(singularAssignment!)
                 }
+                calendarTasksForDate = nil
+                calendarTasksForDate = getTasksForCalendarDateListArray
+                callBack(isRequestSuccessful: true)
+            } else {
+                callBack(isRequestSuccessful: false)
             }
-            
-            
-            
-            
         }
     }
     

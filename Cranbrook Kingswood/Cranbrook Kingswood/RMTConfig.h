@@ -17,7 +17,6 @@ BOOL RMTBool(NSString *key, BOOL defaultBool);
 @interface RMTConfig : NSObject
 
 + (void)startWithURL:(NSString *)URL;
-+ (NSURL *)createRemoteURL:(NSURL *)URL queryString:(NSString *)queryString;
 
 /**
  *  These method do nothing on production build.

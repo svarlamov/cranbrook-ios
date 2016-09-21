@@ -27,7 +27,6 @@ extension WebServices {
         let getAssignmentsForDateRequest: NSMutableURLRequest = createAssignmentsForDateRequest(forDate)
         var assignmentsForDateListArray: [AssignmentDataStructure] = [AssignmentDataStructure]()
         Alamofire.request(getAssignmentsForDateRequest).responseJSON { response in
-            print(response)
             if let assignmentRequestResponse: JSON = JSON(response.result.value!) {
                 let dateAssignmentResponseArray: [NSDictionary] = assignmentRequestResponse.rawValue as! [NSDictionary]
                 for responseObject in dateAssignmentResponseArray {

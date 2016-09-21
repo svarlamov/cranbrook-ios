@@ -40,6 +40,9 @@ class ClassesViewController: CranbrookViewController, UITableViewDataSource, UIT
                 WebServices.service.getCurrentUserClasses(true) { (isRequestSuccessful) in
                     self?.tableView.reloadData()
                     self?.tableView.stopPullToRefresh()
+                    if !isRequestSuccessful {
+                        self!.showRequestError()
+                    }
                 }
             } else {
                 self?.tableView.stopPullToRefresh()
