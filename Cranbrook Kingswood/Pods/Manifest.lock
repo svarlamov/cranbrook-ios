@@ -1,6 +1,6 @@
 PODS:
   - Alamofire (3.4.1)
-  - Crashlytics (3.8.2):
+  - Crashlytics (3.8.1):
     - Fabric (~> 1.6.3)
   - Fabric (1.6.8)
   - Firebase/Analytics (3.5.2):
@@ -51,7 +51,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
-  Crashlytics: 27acca95a01b042a8294291dd6dff27f8f6af6d7
+  Crashlytics: 4391d8df0b125345e9f209c5db6e7f40a6a8435d
   Fabric: 5755268d0171435ab167e3d0878a28a777deaf10
   Firebase: 94e63112efcad75226c0356a8f3032397b8547c9
   FirebaseAnalytics: d968d4d5f6aeb795cd64144337bcd233e530efc6

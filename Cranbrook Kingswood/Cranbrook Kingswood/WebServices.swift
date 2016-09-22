@@ -39,13 +39,12 @@ class WebServices {
         return "\(WebServices.prefix)\(endpoint)"
     }
     
-    func isNetworkRequestSuccessful(inputData data: JSON) -> Bool {
+    func isRequestSuccessful(inputData data: JSON) -> Bool {
         let response: JSON = data
-        if response.rawValue["ErrorType"] != nil {
-            print("request_error: \(response.rawValue["ErrorType"])")
+        if let error = response["ErrorType"].string {
+            print("request_error: \(error)")
             return false
         } else {
-            print("network_request_sucessful")
             return true
         }
     }

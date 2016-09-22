@@ -106,16 +106,6 @@ extension WebServices {
         return ["From": "", "Username": "\(username)", "Password": "\(password)", "remember": "false", "InterfaceSource": "WebApp"]
     }
     
-    internal func resetCurrentUserSession(callBack: (isLoginSuccessful: Bool) -> Void) {
-        self.loginWithParameters(username: userLoginInfo!.username, password: userLoginInfo!.password) { (isLoginSuccessful) in
-            if isLoginSuccessful {
-                callBack(isLoginSuccessful: true)
-            } else {
-                callBack(isLoginSuccessful: false)
-            }
-        }
-    }
-    
 }
 
 

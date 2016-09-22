@@ -27,35 +27,33 @@ extension WebServices {
         let currentUserClassesRequest: NSMutableURLRequest = createCurrentUserClassesRequest(forFirstSemester)
         var currentStudentClassListArray: [CurrentUserClasses] = [CurrentUserClasses]()
         Alamofire.request(currentUserClassesRequest).responseJSON { response in
-        
-            if let currentClassesRequestResponse: JSON = JSON(response.result.value!) {
-                if self.isNetworkRequestSuccessful(inputData: currentClassesRequestResponse) {
-                    let currentClassesResponseArray: [NSDictionary] = currentClassesRequestResponse.rawValue as! [NSDictionary]
-                    for objectResponse in currentClassesResponseArray {
-                        let singularResponse: NSDictionary = objectResponse
-                        let singularUserClass: CurrentUserClasses? = self.mapCurrentUserClasses(singularResponse)
-                        currentStudentClassListArray.append(singularUserClass!)
-                    }
-                    studentClassArray?.removeAll()
-                    studentClassArray = self.filterClasses(currentStudentClassListArray)
-                    callBack(isRequestSuccessful: true)
-                } else {
-                    self.resetCurrentUserSession({ (isLoginSuccessful) in
-                        if isLoginSuccessful {
-                            self.getCurrentUserClassesSubMethod(forFirstSemester, callBack: { (isRequestSuccessful) in
-                                if isRequestSuccessful {
-                                    callBack(isRequestSuccessful: true)
-                                } else {
-                                    callBack(isRequestSuccessful: false)
-                                }
-                            })
-                        } else {
+            
+            if self.isRequestSuccessful(inputData: JSON(response.result.value!)) {
+                Alamofire.request(currentUserClassesRequest).responseJSON { response in
+                    if let currentClassesRequestResponse: JSON = JSON(response.result.value!) {
+                        if currentClassesRequestResponse.rawValue["Error"] != nil {
+                            print("=======================")
+                            print("=======================")
+                            print("======Error======")
+                            print("=======================")
+                            print("=======================")
                             callBack(isRequestSuccessful: false)
+                        } else {
+                            let currentClassesResponseArray: [NSDictionary] = currentClassesRequestResponse.rawValue as! [NSDictionary]
+                            for objectResponse in currentClassesResponseArray {
+                                let singularResponse: NSDictionary = objectResponse
+                                let singularUserClass: CurrentUserClasses? = self.mapCurrentUserClasses(singularResponse)
+                                currentStudentClassListArray.append(singularUserClass!)
+                            }
+                            studentClassArray?.removeAll()
+                            studentClassArray = self.filterClasses(currentStudentClassListArray)
+                            callBack(isRequestSuccessful: true)
                         }
-                    })
+                        callBack(isRequestSuccessful: false)
+                    } else {
+                        callBack(isRequestSuccessful: false)
+                    }
                 }
-            } else {
-                callBack(isRequestSuccessful: false)
             }
             
         }
