@@ -122,8 +122,12 @@ extension AssignmentDataStructure: Unboxable {
                 editedString = editedString.stringByReplacingOccurrencesOfString("<i>", withString: " ", options: NSStringCompareOptions.LiteralSearch, range: nil)
             }
             
-            if checkedDescription.rangeOfString("</i") != nil {
+            if checkedDescription.rangeOfString("</i>") != nil {
                 editedString = editedString.stringByReplacingOccurrencesOfString("</i>", withString: " ", options: NSStringCompareOptions.LiteralSearch, range: nil)
+            }
+            
+            if checkedDescription.rangeOfString("&#65279;") != nil {
+                editedString = editedString.stringByReplacingOccurrencesOfString("&#65279;", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
             }
             
             finalString = editedString
