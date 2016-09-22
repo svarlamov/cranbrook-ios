@@ -28,15 +28,31 @@ extension WebServices {
         var assignmentsForDateListArray: [AssignmentDataStructure] = [AssignmentDataStructure]()
         Alamofire.request(getAssignmentsForDateRequest).responseJSON { response in
             if let assignmentRequestResponse: JSON = JSON(response.result.value!) {
-                let dateAssignmentResponseArray: [NSDictionary] = assignmentRequestResponse.rawValue as! [NSDictionary]
-                for responseObject in dateAssignmentResponseArray {
-                    let singularResponse: NSDictionary = responseObject
-                    let singularAssignment: AssignmentDataStructure? = self.mapAssignmentsForDate(singularResponse)
-                    assignmentsForDateListArray.append(singularAssignment!)
+                if self.isNetworkRequestSuccessful(inputData: assignmentRequestResponse) {
+                    let dateAssignmentResponseArray: [NSDictionary] = assignmentRequestResponse.rawValue as! [NSDictionary]
+                    for responseObject in dateAssignmentResponseArray {
+                        let singularResponse: NSDictionary = responseObject
+                        let singularAssignment: AssignmentDataStructure? = self.mapAssignmentsForDate(singularResponse)
+                        assignmentsForDateListArray.append(singularAssignment!)
+                    }
+                    specificDateAssignments = nil
+                    specificDateAssignments = assignmentsForDateListArray
+                    callBack(isRequestSuccessful: true)
+                } else {
+                    self.resetCurrentUserSession({ (isLoginSuccessful) in
+                        if isLoginSuccessful {
+                            self.getAssignmentsForDateSubMethod(forDate, callBack: { (isRequestSuccessful) in
+                                if isRequestSuccessful {
+                                    callBack(isRequestSuccessful: true)
+                                } else {
+                                    callBack(isRequestSuccessful: false)
+                                }
+                            })
+                        } else {
+                            callBack(isRequestSuccessful: false)
+                        }
+                    })
                 }
-                specificDateAssignments = nil
-                specificDateAssignments = assignmentsForDateListArray
-                callBack(isRequestSuccessful: true)
             } else {
                 callBack(isRequestSuccessful: false)
             }
