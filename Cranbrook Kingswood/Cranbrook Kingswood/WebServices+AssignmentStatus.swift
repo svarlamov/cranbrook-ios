@@ -33,7 +33,7 @@ extension WebServices {
         let getAssignmentsForDateRequest: NSMutableURLRequest = self.createAssignmentStatusChangeRequest(assignmentId: assignmentId, forStatus: status)
         Alamofire.request(getAssignmentsForDateRequest).responseJSON { response in
             if let requestResponse: JSON = JSON(response.result.value!) {
-                let responseSuccess = requestResponse["WasVoid"].boolValue
+                let responseSuccess = requestResponse["\(self.assignmentStatusWasVoidKey)"].boolValue
                 if responseSuccess {
                     callBack(isRequestSuccessful: true)
                 } else {
@@ -48,14 +48,14 @@ extension WebServices {
     
     private func createAssignmentsStatusRequestURL(assignmentId: String, status: AssingmentStatus) -> String {
         var returnString: String = String()
-        returnString = "https://cranbrook.myschoolapp.com/api/assignment2/assignmentstatusupdate/?format=json&assignmentIndexId=\(assignmentId)&assignmentStatus=\(String(status.rawValue))"
+        returnString = "\(self.assignmentStatusEndpoint)\(assignmentId)&assignmentStatus=\(String(status.rawValue))"
         return returnString
     }
     
     private func createAssignmentStatusChangeRequest(assignmentId id: String, forStatus status: AssingmentStatus) -> NSMutableURLRequest {
         let requestStringURL: String = createAssignmentsStatusRequestURL(id, status: status)
         let requestUrl: NSURL = NSURL(string: requestStringURL)!
-        let requestDictionary: NSDictionary = ["assignmentIndexId":Int(id)!, "assignmentStatus":status.rawValue]
+        let requestDictionary: NSDictionary = ["\(self.assignmentStatusKey)":Int(id)!, "\(self.assignmentStatusMainKey)":status.rawValue]
         let request = NSMutableURLRequest(URL: requestUrl)
         request.HTTPBody = try! NSJSONSerialization.dataWithJSONObject(requestDictionary, options: [])
         request.HTTPMethod = "POST"

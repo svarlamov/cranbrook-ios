@@ -63,7 +63,7 @@ extension WebServices {
         var returnValue: [CurrentUserClasses] = [CurrentUserClasses]()
         for classObject in inputClasses {
             if let title = classObject.sectionIdentifier {
-                if title.rangeOfString("Cyber Learning Lab") != nil {} else {
+                if title.rangeOfString("\(self.currentClassesRemovedClassTitle)") != nil {} else {
                     returnValue.append(classObject)
                 }
             }
@@ -106,7 +106,7 @@ extension WebServices {
                 durationID = durationId
             }
         }
-        returnString = "https://cranbrook.myschoolapp.com/api/datadirect/ParentStudentUserAcademicGroupsGet?userId=\(userid)&schoolYearLabel=2016+-+2017&memberLevel=3&persona=2&durationList=\(durationID)&markingPeriodId="
+        returnString = "\(self.currentClassesEndpoint)\(userid)&schoolYearLabel=\(self.currentClassesSchoolYearLabel)&memberLevel=\(self.currentClassesMemeberLevel)&persona=\(self.currentClassesPersona)&durationList=\(durationID)&markingPeriodId="
         return returnString
     }
     

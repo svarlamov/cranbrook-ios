@@ -57,15 +57,15 @@ extension WebServices {
         Alamofire.request(.POST, requestURL, parameters: loginParameters, encoding: .JSON, headers: loginHeaders).responseJSON { response in
             
             if let loginResponse: JSON = JSON(response.result.value!) {
-                let isLoginSuccessful = loginResponse["LoginSuccessful"].boolValue
+                let isLoginSuccessful = loginResponse["\(self.loginSuccessKey)"].boolValue
                 
                 if isLoginSuccessful {
                     Analytics.analytics.analyticsLogin(username, isSuccessful: true)
-                    let studentID = loginResponse["CurrentUserForExpired"].stringValue
+                    let studentID = loginResponse["\(self.loginCurrentUserForExpired)"].stringValue
                     let sessionToken = self.getKeyForUserSession(data: response)
                     currentSessionInfo = CurrentLoggedInUserInfo(userId: studentID, sessionToken: sessionToken!)
-                    let instanceUsername: String = loginParameters["Username"]!
-                    let instancePassword: String = loginParameters["Password"]!
+                    let instanceUsername: String = loginParameters["\(self.loginUsernameKey)"]!
+                    let instancePassword: String = loginParameters["\(self.loginPasswordKey)"]!
                     persistLoginData(instanceUsername, password: instancePassword)
                     callBack(isLoginSuccessful: true)
                     print("login_successful. student_id:\(studentID). session_token:\(sessionToken!)")

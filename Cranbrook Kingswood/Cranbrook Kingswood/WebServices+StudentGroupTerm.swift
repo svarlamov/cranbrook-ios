@@ -72,7 +72,7 @@ extension WebServices {
         if let mainUserId: String = currentSessionInfo?.userId {
             userid = mainUserId
         }
-        returnString = "https://cranbrook.myschoolapp.com/api/DataDirect/StudentGroupTermList/?studentUserId=\(userid)&schoolYearLabel=2016+-+2017&personaId=2"
+        returnString = "\(self.studentGroupTermEndPoint)\(userid)&schoolYearLabel=\(self.studentGroupTermSchoolYearLabel)&personaId=\(self.studentGruopTermPersonaId)"
         return returnString
     }
     

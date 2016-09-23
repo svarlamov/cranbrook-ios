@@ -67,14 +67,14 @@ extension WebServices {
         let urlDateString: String = setupCalendarDateString(date: forDate)
         var calendarId: String = String()
         if let id = userCalendarId {calendarId = id}
-        returnString = "https://cranbrook.myschoolapp.com/api/mycalendar/schedule?startDate=\(urlDateString)&endDate=\(urlDateString)&scheduleString=\(calendarId)_2"
+        returnString = "\(self.calendarEndPoint)\(urlDateString)&endDate=\(urlDateString)&scheduleString=\(calendarId)_2"
         return returnString
     }
     
     private func setupCalendarDateString(date date: NSDate) -> String {
         var returnString: String = String()
         let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "MM/dd/yyyy"
+        dateFormatter.dateFormat = "\(self.calendarDateFormat)"
         returnString = dateFormatter.stringFromDate(date)
         returnString = returnString.stringByReplacingOccurrencesOfString("/", withString: "%2F", options: NSStringCompareOptions.LiteralSearch, range: nil)
         return returnString

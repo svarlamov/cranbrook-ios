@@ -31,7 +31,7 @@ extension WebServices {
                 if dateCalendarIdResponseArray.count > 0 {
                     let singularCalendarItem: NSDictionary = dateCalendarIdResponseArray[0]
                     if singularCalendarItem.count > 0 {
-                        let id: Int = (singularCalendarItem["CalendarUserId"] as! Int)
+                        let id: Int = (singularCalendarItem["\(self.calendarIdUserId)"] as! Int)
                         userCalendarId = "\(id)"
                         callBack(isRequestSuccessful: true)
                     }
@@ -59,14 +59,14 @@ extension WebServices {
     private func createCalendarIdForDateRequestURL(forDate: NSDate) -> String {
         var returnString: String = String()
         let urlDateString: String = setupCalendarIdString(date: forDate)
-        returnString = "https://cranbrook.myschoolapp.com/api/mycalendar/list/?startDate=\(urlDateString)&endDate=\(urlDateString)&settingsTypeId=1"
+        returnString = "\(self.calendarIdEndpoint)\(urlDateString)&endDate=\(urlDateString)&settingsTypeId=\(self.calendarIdSettingsTypeId)"
         return returnString
     }
     
     private func setupCalendarIdString(date date: NSDate) -> String {
         var returnString: String = String()
         let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "MM/dd/yyyy"
+        dateFormatter.dateFormat = "\(self.calendarIdDateFormat)"
         returnString = dateFormatter.stringFromDate(date)
         returnString = returnString.stringByReplacingOccurrencesOfString("/", withString: "%2F", options: NSStringCompareOptions.LiteralSearch, range: nil)
         return returnString

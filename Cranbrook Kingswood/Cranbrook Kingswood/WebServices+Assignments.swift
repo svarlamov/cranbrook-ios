@@ -65,14 +65,14 @@ extension WebServices {
     private func createAssignmentsForDateRequestURL(forDate: NSDate) -> String {
         var returnString: String = String()
         let urlDateString: String = setupAssignmentDateString(date: forDate)
-        returnString = "https://cranbrook.myschoolapp.com/api/DataDirect/AssignmentCenterAssignments/?format=json&filter=1&dateStart=\(urlDateString)&dateEnd=\(urlDateString)&persona=2&statusList=&sectionList="
+        returnString = "\(self.assignmentsEndPoint)\(urlDateString)&dateEnd=\(urlDateString)&persona=\(self.assignmentsPersonaID)&statusList=&sectionList="
         return returnString
     }
     
     private func setupAssignmentDateString(date date: NSDate) -> String {
         var returnString: String = String()
         let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "MM/dd/yyyy"
+        dateFormatter.dateFormat = "\(self.assignmentsDateFormat)"
         returnString = dateFormatter.stringFromDate(date)
         returnString = returnString.stringByReplacingOccurrencesOfString("/", withString: "%2F", options: NSStringCompareOptions.LiteralSearch, range: nil)
         return returnString
