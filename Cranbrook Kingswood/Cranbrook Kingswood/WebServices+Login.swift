@@ -50,7 +50,17 @@ func recoverLastLoggedInState() -> Bool {
 
 extension WebServices {
     
-    internal func loginWithParameters(username username:String, password:String, callBack: (isLoginSuccessful: Bool) -> Void) {
+    internal func loginWithParameters(username username: String, password: String, callBack: (isLoginSuccessful: Bool) -> Void) {
+        self.loginWithParametersSubMethod(username: username, password: password) { (isLoginSuccessful) in
+            if isLoginSuccessful {
+                callBack(isLoginSuccessful: true)
+            } else {
+                callBack(isLoginSuccessful: false)
+            }
+        }
+    }
+    
+    private func loginWithParametersSubMethod(username username:String, password:String, callBack: (isLoginSuccessful: Bool) -> Void) {
         let loginParameters: [String: String] = createLoginParameters(username: username, password: password)
         let requestURL: String = endpointPath(self.loginEndpoint)
         

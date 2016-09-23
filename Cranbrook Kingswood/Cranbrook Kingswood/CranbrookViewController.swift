@@ -26,7 +26,7 @@ class CranbrookViewController: UIViewController {
     }
     
     internal func showRequestError() {
-        ISMessages.showCardAlertWithTitle("Error", message: "Unable to Get Data.", iconImage: nil, duration: 3, hideOnSwipe: true, hideOnTap: true, alertType: ISAlertType.Error, alertPosition: ISAlertPosition.Bottom)
+        ISMessages.showCardAlertWithTitle("Error", message: "Unable to Perform Network Request.", iconImage: nil, duration: 3, hideOnSwipe: true, hideOnTap: true, alertType: ISAlertType.Error, alertPosition: ISAlertPosition.Bottom)
     }
     
     internal func showCalendarAlert() {
