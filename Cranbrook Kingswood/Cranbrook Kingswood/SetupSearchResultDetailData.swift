@@ -42,13 +42,6 @@ extension DirectorySearchViewController {
     
     private func getAddressText(inputData: SearchResultResponse) -> String {
         var outputString: String = ""
-        /*
-         self.addressLine1           = unboxer.unbox("AddressLine1")
-         self.addressLine2           = unboxer.unbox("AddressLine2")
-         self.city                   = unboxer.unbox("City")
-         self.state                  = unboxer.unbox("State")
-         self.zip                    = unboxer.unbox("Zip")
-        */
         if let addressLineOne = inputData.addressLine1 {
             outputString = addressLineOne
         }
@@ -87,6 +80,8 @@ extension DirectorySearchViewController {
         var outputString: String = ""
         if let cellPhone = inputData.cellPhone {
             outputString = "\(cellPhone)"
+        } else if let homePhone = inputData.homePhone {
+            outputString = "\(homePhone)"
         } else {
             outputString = "--"
         }

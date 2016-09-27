@@ -103,7 +103,7 @@
                             </subviews>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstItem="XQR-rW-iUj" firstAttribute="top" secondItem="vMt-Tc-djx" secondAttribute="top" constant="7" id="0zw-n9-mob"/>
+                                <constraint firstItem="XQR-rW-iUj" firstAttribute="top" secondItem="vMt-Tc-djx" secondAttribute="top" constant="8" id="0zw-n9-mob"/>
                                 <constraint firstItem="nHl-QA-jOR" firstAttribute="top" secondItem="43H-Qu-bAe" secondAttribute="bottom" constant="5" id="21Z-FA-Te1"/>
                                 <constraint firstItem="piq-7g-Ol0" firstAttribute="leading" secondItem="vMt-Tc-djx" secondAttribute="leading" constant="4" id="275-FG-p8x"/>
                                 <constraint firstAttribute="trailing" secondItem="Bgi-sC-avs" secondAttribute="trailing" constant="8" id="6xl-rU-5o2"/>
@@ -116,7 +116,7 @@
                                 <constraint firstAttribute="trailing" secondItem="Cad-kI-MCn" secondAttribute="trailing" constant="8" id="HSB-IX-T1w"/>
                                 <constraint firstItem="43H-Qu-bAe" firstAttribute="top" secondItem="f7r-EA-AC2" secondAttribute="bottom" constant="5" id="HiO-iA-eXI"/>
                                 <constraint firstItem="t6J-O3-vxs" firstAttribute="leading" secondItem="vMt-Tc-djx" secondAttribute="leading" constant="4" id="KIz-kL-twf"/>
-                                <constraint firstItem="Cad-kI-MCn" firstAttribute="top" secondItem="XQR-rW-iUj" secondAttribute="bottom" id="KkK-Bx-rcC"/>
+                                <constraint firstItem="Cad-kI-MCn" firstAttribute="top" secondItem="XQR-rW-iUj" secondAttribute="bottom" constant="-1" id="KkK-Bx-rcC"/>
                                 <constraint firstItem="Cad-kI-MCn" firstAttribute="leading" secondItem="vMt-Tc-djx" secondAttribute="leading" constant="5" id="LC9-1n-XPK"/>
                                 <constraint firstItem="43H-Qu-bAe" firstAttribute="top" secondItem="Bgi-sC-avs" secondAttribute="bottom" constant="5" id="M55-xB-o5n"/>
                                 <constraint firstItem="43H-Qu-bAe" firstAttribute="leading" secondItem="vMt-Tc-djx" secondAttribute="leading" constant="-10" id="XsS-jM-uti"/>
@@ -127,7 +127,7 @@
                                 <constraint firstItem="lnf-Su-ggC" firstAttribute="top" secondItem="piq-7g-Ol0" secondAttribute="bottom" constant="3" id="dyM-ce-1sU"/>
                                 <constraint firstItem="piq-7g-Ol0" firstAttribute="top" secondItem="43H-Qu-bAe" secondAttribute="bottom" constant="5" id="fK9-zJ-0bf"/>
                                 <constraint firstAttribute="trailing" secondItem="dDs-Hf-2xs" secondAttribute="trailing" constant="-10" id="jSB-w9-aTt"/>
-                                <constraint firstItem="t6J-O3-vxs" firstAttribute="top" secondItem="lnf-Su-ggC" secondAttribute="bottom" constant="6" id="jqH-Ji-6jt"/>
+                                <constraint firstItem="t6J-O3-vxs" firstAttribute="top" secondItem="lnf-Su-ggC" secondAttribute="bottom" constant="5" id="jqH-Ji-6jt"/>
                                 <constraint firstItem="XQR-rW-iUj" firstAttribute="leading" secondItem="vMt-Tc-djx" secondAttribute="leading" constant="5" id="nzo-aU-mFV"/>
                                 <constraint firstItem="zVW-3l-Sw4" firstAttribute="leading" secondItem="t6J-O3-vxs" secondAttribute="trailing" constant="32" id="o7r-xG-wcZ"/>
                                 <constraint firstAttribute="bottom" secondItem="zVW-3l-Sw4" secondAttribute="bottom" constant="4" id="omZ-HY-PzY"/>
@@ -183,12 +183,12 @@
             <connections>
                 <outlet property="addressLabel" destination="zVW-3l-Sw4" id="NbI-Co-pfi"/>
                 <outlet property="backgroundView" destination="rec-Zn-bJ5" id="ktQ-NU-M5d"/>
-                <outlet property="headerLabel" destination="zVW-3l-Sw4" id="CI3-KY-yme"/>
+                <outlet property="headerLabel" destination="XQR-rW-iUj" id="jcR-8s-ecU"/>
                 <outlet property="phoneNumberOne" destination="Bgi-sC-avs" id="wgG-6n-V9v"/>
                 <outlet property="phoneNumberTow" destination="nHl-QA-jOR" id="0D3-EN-swk"/>
                 <outlet property="subTitleLabel" destination="Cad-kI-MCn" id="ihJ-4w-HXe"/>
             </connections>
-            <point key="canvasLocation" x="304" y="566"/>
+            <point key="canvasLocation" x="205" y="570"/>
         </view>
     </objects>
 </document>
