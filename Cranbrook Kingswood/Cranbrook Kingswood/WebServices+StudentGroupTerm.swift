@@ -59,7 +59,7 @@ extension WebServices {
         let requestStringURL: String = createStudentGroupTermRequestURL()
         let requestUrl = NSURL(string: requestStringURL)!
         let request = NSMutableURLRequest(URL: requestUrl)
-        request.HTTPMethod = "GET"
+        request.HTTPMethod = RequestType.GET.rawValue
         if let sessionToken = currentSessionInfo?.sessionToken {
             request.setValue("t=\(sessionToken)", forHTTPHeaderField: "Cookie")
         }

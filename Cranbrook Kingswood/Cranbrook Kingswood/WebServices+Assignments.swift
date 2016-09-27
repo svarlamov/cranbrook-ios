@@ -55,7 +55,7 @@ extension WebServices {
         let requestStringURL: String = createAssignmentsForDateRequestURL(forDate)
         let requestUrl: NSURL = NSURL(string: requestStringURL)!
         let request = NSMutableURLRequest(URL: requestUrl)
-        request.HTTPMethod = "GET"
+        request.HTTPMethod = RequestType.GET.rawValue
         if let sessionToken = currentSessionInfo?.sessionToken {
             request.setValue("t=\(sessionToken)", forHTTPHeaderField: "Cookie")
         }

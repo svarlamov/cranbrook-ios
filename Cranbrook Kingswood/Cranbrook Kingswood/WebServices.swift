@@ -11,6 +11,11 @@ import Alamofire
 import SwiftyJSON
 import Unbox
 
+enum RequestType: String {
+    case POST = "POST"
+    case GET = "GET"
+}
+
 class WebServices {
     
     static let service = WebServices()

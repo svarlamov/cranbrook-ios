@@ -58,7 +58,7 @@ extension WebServices {
         let requestDictionary: NSDictionary = ["\(self.assignmentStatusKey)":Int(id)!, "\(self.assignmentStatusMainKey)":status.rawValue]
         let request = NSMutableURLRequest(URL: requestUrl)
         request.HTTPBody = try! NSJSONSerialization.dataWithJSONObject(requestDictionary, options: [])
-        request.HTTPMethod = "POST"
+        request.HTTPMethod = RequestType.POST.rawValue
         if let sessionToken = currentSessionInfo?.sessionToken {
             request.setValue("t=\(sessionToken)", forHTTPHeaderField: "Cookie")
         }

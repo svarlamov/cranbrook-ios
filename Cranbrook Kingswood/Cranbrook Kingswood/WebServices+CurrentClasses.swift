@@ -32,11 +32,6 @@ extension WebServices {
                 Alamofire.request(currentUserClassesRequest).responseJSON { response in
                     if let currentClassesRequestResponse: JSON = JSON(response.result.value!) {
                         if currentClassesRequestResponse.rawValue["Error"] != nil {
-                            print("=======================")
-                            print("=======================")
-                            print("======Error======")
-                            print("=======================")
-                            print("=======================")
                             callBack(isRequestSuccessful: false)
                         } else {
                             let currentClassesResponseArray: [NSDictionary] = currentClassesRequestResponse.rawValue as! [NSDictionary]
@@ -83,7 +78,7 @@ extension WebServices {
         let requestStringURL: String = createCurrentUserClassesRequestURL(forFirstSemester)
         let requestUrl: NSURL = NSURL(string: requestStringURL)!
         let request = NSMutableURLRequest(URL: requestUrl)
-        request.HTTPMethod = "GET"
+        request.HTTPMethod = RequestType.GET.rawValue
         if let sessionToken = currentSessionInfo?.sessionToken {
             request.setValue("t=\(sessionToken)", forHTTPHeaderField: "Cookie")
         }
