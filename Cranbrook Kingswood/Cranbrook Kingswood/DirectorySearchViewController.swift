@@ -97,7 +97,12 @@ class DirectorySearchViewController: CranbrookViewController, UITableViewDelegat
     func popupDetailView() {
         let view: SearchResultDetailView = try! SwiftMessages.viewFromNib()
         view.configureDropShadow()
-        var detailData: SearchDetailDataStructure = setupDetailViewData()
+        let detailData: SearchDetailDataStructure = setupDetailViewData()
+        view.headerLabel.text = detailData.headerLabelText
+        view.subTitleLabel.text = detailData.subTitleLabelText
+        view.phoneNumberOne.text = detailData.phoneNumberOneText
+        view.phoneNumberTow.text = detailData.phoneNumberTwoText
+        view.addressLabel.text = detailData.addressText
         var config = SwiftMessages.Config()
         config.presentationContext = .Window(windowLevel: UIWindowLevelStatusBar)
         config.duration = .Forever
