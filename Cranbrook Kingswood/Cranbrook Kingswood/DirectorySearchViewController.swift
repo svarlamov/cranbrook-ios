@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 import Unbox
+import SwiftMessages
 
 class DirectorySearchViewController: CranbrookViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UITextFieldDelegate {
     
@@ -91,6 +92,17 @@ class DirectorySearchViewController: CranbrookViewController, UITableViewDelegat
             setTab(.Alumni, animated: true)
             
         }
+    }
+    
+    func popupDetailView() {
+        let view: SearchResultDetailView = try! SwiftMessages.viewFromNib()
+        view.configureDropShadow()
+        var config = SwiftMessages.Config()
+        config.presentationContext = .Window(windowLevel: UIWindowLevelStatusBar)
+        config.duration = .Forever
+        config.presentationStyle = .Bottom
+        config.dimMode = .Gray(interactive: true)
+        SwiftMessages.show(config: config, view: view)
     }
     
 }

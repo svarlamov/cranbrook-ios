@@ -6,9 +6,11 @@
 [![Platform](https://img.shields.io/cocoapods/p/SwiftMessages.svg?style=flat)](http://cocoadocs.org/docsets/SwiftMessages)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
-SwiftMessages is an iOS library for displaying brief messages in the form of a status bar across the top or bottom of the screen.
+SwiftMessages is a message bar library for iOS. It's very flexible. And written in Swift.
 
-In addition to providing numerous layouts, themes and configuration options, SwiftMessages allows you to fully customize the view:
+Message bars can be displayed across the top or bottom of the screen, over or under the status bar, or behind navigation bars and tab bars. There's an interactive dismiss gesture. You can dim the background if you like. And much more!
+
+In addition to numerous configuration options, SwiftMessages provides several attractive layouts and themes. But SwiftMessages was also built to be designer-friendly, which means you can fully and easily customize the view:
 
 * Copy one of the included nib files into your project and change it.
 * Subclass `MessageView` and add elements, etc.
@@ -21,25 +23,44 @@ Try exploring [the demo app](./Demo/Demo.xcworkspace) to get a feel for the exte
 </p>
 
 <p align="center">
-	<a href="http://goo.gl/C9ymRD"><img src="./Demo/appetize.png" /></a>
+	<a href="http://goo.gl/KXw4nD"><img src="./Demo/appetize.png" /></a>
 </p>
 
 ## Installation
 
 ### CocoaPods
 
-Add the following line to your Podfile:
+Add one of the following lines to your Podfile depending on your Swift version:
+
+````ruby
+# Swift 3.0 & Xcode 8
+pod 'SwiftMessages'
+
+# Swift 2.3 & Xcode 8
+pod 'SwiftMessages', '~> 2.0.0'
+
+# Swift 2.2 & Xcode 7.3.1
+pod 'SwiftMessages', '~> 1.1.3'
+````
+Note that Swift 2.3 and Swift 3.0 require CocoaPods 1.1.0, which is in beta as of September 20, 2016. CocoaPods 1.1.0 beta can be installed with the following command:
 
 ````
-pod 'SwiftMessages'
+sudo gem install cocoapods --pre
 ````
 
 ### Carthage
 
-Add the following line to your Cartfile:
+Add one of the following lines to your Cartfile depending on your Swift version:
 
-````
+````ruby
+# Swift 3.0 & Xcode 8
 github "SwiftKickMobile/SwiftMessages"
+
+# Swift 2.3 & Xcode 8
+github "SwiftKickMobile/SwiftMessages" ~> 2.0.0
+
+# Swift 2.2 & Xcode 7.3.1
+github "SwiftKickMobile/SwiftMessages" ~> 1.1.4
 ````
 
 ## Usage
@@ -111,7 +132,7 @@ config.preferredStatusBarStyle = .LightContent
 SwiftMessages.show(config: config, view: view)
 ````
 
-Specify global configuration options:
+Specify default configuration options:
 
 ````swift
 SwiftMessages.defaultConfig.presentationStyle = .Bottom
@@ -139,17 +160,21 @@ Because they are optional, you can freely omit the ones you don't need.
 
 **The easiest way to customize `MessageView` is to drag-and-drop one of the pre-defined nib files into your project and make changes.** SwiftMessages always searches the main bundle for nib files first, so it is not necessary to rename the file or make a different API call. However, there are some OS-specific considerations to be aware of:
 
-* **iOS 9+** When using one of the `UIStackView` layouts, MessageView.nib or CardView.nib, as a starting point, you can simply delete elements from the nib file or hide them — no need to adjust the Auto Layout constraints.
+* **iOS 9+** When using one of the `UIStackView` layouts, MessageView.nib, CardView.nib or TabView.nib, as a starting point, you can simply delete elements from the nib file or hide them — no need to adjust the Auto Layout constraints.
 * **iOS 8** When using MessageViewIOS8.nib, you'll delete the unwanted elements and fix up the Auto Layout constraints. Or just create your own nib from scratch, which is much like creating a custom `UITableViewCell` or `UICollectionViewCell` — set the base view's class to `MessageView` or whatever subclass or view class you're using and wire up the outlets.
 
-To facilitate the use of nib-based layouts, `MessageView` provides some type-safe convenience methods for loading the pre-defined nibs. In addition, the `SwiftMessages` class provides some generic loading methods:
+To facilitate the use of nib-based layouts, `MessageView` provides some type-safe convenience methods for loading the pre-defined nibs:
 
 ````swift
 // Instantiate MessageView from one of the provided nibs in a type-safe way.
 // SwiftMessages searches the main bundle first, so you easily copy the nib into
 // your project and modify it while still using this type-safe call.
 let view = MessageView.viewFromNib(layout: .CardView)
+````
 
+In addition, the `SwiftMessages` class provides some generic loading methods:
+
+````swift
 // Instantiate MessageView from a named nib.
 let view: MessageView = try! SwiftMessages.viewFromNib(named: "MyCustomNib")
 
@@ -169,7 +194,7 @@ messageView.tapHandler = { _ in SwiftMessages.hide() }
 
 ### Message Queueing
 
-You can call `SwiftMessages.show()` as many times as you like. SwiftMessages maintains a queue shows messages in order, one at a time. If your view implements the `Identifiable` protocol (as `MessageView` does), duplicate messages are removed. The pause between messages can be adjusted:
+You can call `SwiftMessages.show()` as many times as you like. SwiftMessages maintains a queue and shows messages one at a time. If your view implements the `Identifiable` protocol (like `MessageView`), duplicate messages will be removed automatically. The pause between messages can be adjusted:
 
 ````swift
 SwiftMessages.pauseBetweenMessages = 1.0
@@ -195,6 +220,9 @@ let otherMessages = SwiftMessages()
 SwiftMessages.show(...)
 otherMessages.show(...)
 ````
+
+## About SwiftKick Mobile
+We make apps real nice! [Get in touch](mailto:tim@swiftkick.it) if you need one.
 
 ## License
 

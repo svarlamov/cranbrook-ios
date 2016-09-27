@@ -7,18 +7,14 @@
 //
 
 import UIKit
+import SwiftMessages
 
-class SearchResultDetailView: UIView {
+class SearchResultDetailView: MessageView {
     
-    var searchItem: SearchResultResponse = SearchResultResponse()
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-    }
+    @IBOutlet weak var headerLabel: UILabel!
+    @IBOutlet weak var subTitleLabel: UILabel!
+    @IBOutlet weak var phoneNumberOne: UILabel!
+    @IBOutlet weak var phoneNumberTow: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
     
 }

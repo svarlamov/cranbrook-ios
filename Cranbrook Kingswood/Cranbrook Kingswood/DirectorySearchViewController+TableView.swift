@@ -32,6 +32,7 @@ extension DirectorySearchViewController {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         selectedSearchResult = searchResults![indexPath.row]
+        self.popupDetailView()
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
