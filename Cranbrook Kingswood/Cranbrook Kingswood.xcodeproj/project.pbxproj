@@ -33,6 +33,7 @@
 		A0BD73101D56B9CA00889331 /* CranbrookAPIInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BD730F1D56B9CA00889331 /* CranbrookAPIInfo.swift */; };
 		A0BD73121D56E58E00889331 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BD73111D56E58E00889331 /* Constants.swift */; };
 		D71625BC1D9A9E9800714019 /* SearchResultDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D71625BB1D9A9E9800714019 /* SearchResultDetailView.xib */; };
+		D71625BE1D9AA77300714019 /* SetupSearchResultDetailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71625BD1D9AA77300714019 /* SetupSearchResultDetailData.swift */; };
 		D71DEFE31D75F31B0006E6B6 /* AssignmentsViewController+Selector.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71DEFE21D75F31B0006E6B6 /* AssignmentsViewController+Selector.swift */; };
 		D71DEFE91D75F5F90006E6B6 /* AssignmentsViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71DEFE81D75F5F80006E6B6 /* AssignmentsViewController+TableView.swift */; };
 		D71DEFED1D75F7A10006E6B6 /* ClassesViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71DEFEC1D75F7A10006E6B6 /* ClassesViewController+TableView.swift */; };
@@ -130,6 +131,7 @@
 		B3DD1C0F8761A3660B544FB4 /* Pods-Cranbrook Kingswood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cranbrook Kingswood.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cranbrook Kingswood/Pods-Cranbrook Kingswood.debug.xcconfig"; sourceTree = "<group>"; };
 		BC1DCB26B33F435898567871 /* Pods-Cranbrook Kingswood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cranbrook Kingswood.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cranbrook Kingswood/Pods-Cranbrook Kingswood.release.xcconfig"; sourceTree = "<group>"; };
 		D71625BB1D9A9E9800714019 /* SearchResultDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultDetailView.xib; sourceTree = "<group>"; };
+		D71625BD1D9AA77300714019 /* SetupSearchResultDetailData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupSearchResultDetailData.swift; sourceTree = "<group>"; };
 		D71DEFE21D75F31B0006E6B6 /* AssignmentsViewController+Selector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AssignmentsViewController+Selector.swift"; sourceTree = "<group>"; };
 		D71DEFE81D75F5F80006E6B6 /* AssignmentsViewController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AssignmentsViewController+TableView.swift"; sourceTree = "<group>"; };
 		D71DEFEC1D75F7A10006E6B6 /* ClassesViewController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ClassesViewController+TableView.swift"; sourceTree = "<group>"; };
@@ -396,6 +398,7 @@
 			isa = PBXGroup;
 			children = (
 				D74772621D8C337200F69258 /* SearchResultDetailView.swift */,
+				D71625BD1D9AA77300714019 /* SetupSearchResultDetailData.swift */,
 				D71625BB1D9A9E9800714019 /* SearchResultDetailView.xib */,
 			);
 			name = "Search Result Detail View";
@@ -722,6 +725,7 @@
 				A0BD73101D56B9CA00889331 /* CranbrookAPIInfo.swift in Sources */,
 				D7648D341D8CD7BB00C1D7C7 /* LiquittableCircle.swift in Sources */,
 				D7F999251D7EF83500EABBD2 /* WebServices+AssignmentStatus.swift in Sources */,
+				D71625BE1D9AA77300714019 /* SetupSearchResultDetailData.swift in Sources */,
 				D7B35EE51D779DD600690868 /* StartupViewController+SetupData.swift in Sources */,
 				31C4DAA11D65649F00397716 /* SearchDataStructure.swift in Sources */,
 				D7648D2C1D8CD7BB00C1D7C7 /* CGPointEx.swift in Sources */,
