@@ -66,10 +66,14 @@ class ViewControllerContainer: CranbrookViewController {
     @IBAction func showCalendarButtonClicked(sender: AnyObject) {
         self.view.endEditing(true)
         Analytics.analytics.logCalendarSelection()
-        if calendarTasksForDate?.count > 0 {
-            self.performSegueWithIdentifier(calendarSegue, sender: nil)
-        } else {
-            self.showCalendarAlert()
+        ProgressHUD.show()
+        WebServices.service.getCalendarTasksForDate(date: NSDate()) { (isRequestSuccessful) in
+            ProgressHUD.dismiss()
+            if calendarTasksForDate?.count > 0 {
+                self.performSegueWithIdentifier(self.calendarSegue, sender: nil)
+            } else {
+                self.showCalendarAlert()
+            }
         }
     }
     
