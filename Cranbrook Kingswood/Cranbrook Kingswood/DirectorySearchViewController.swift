@@ -43,6 +43,7 @@ class DirectorySearchViewController: CranbrookViewController, UITableViewDelegat
     func searchDirectory(searchQuery: String) {
         if NetworkStatus.networkStatus.isConnectedToNetwork() {
             WebServices.service.searchDirectory(query: searchQuery, directory: self.currentSearchDirectory) { (searchResponse) in
+                self.view.userInteractionEnabled = true
                 self.emptyTableViewText = "No search results"
                 searchResults = searchResponse!
                 ProgressHUD.dismiss()
@@ -59,6 +60,7 @@ class DirectorySearchViewController: CranbrookViewController, UITableViewDelegat
         self.view.endEditing(true)
         if NetworkStatus.networkStatus.isConnectedToNetwork() {
             searchDirectory(searchBar.text!)
+            self.view.userInteractionEnabled = false
             ProgressHUD.show()
         } else {
             self.showNetworkAlert()
