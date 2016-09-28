@@ -19,6 +19,7 @@ extension ClassesViewController {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        WebServices.service.getGradeBookForClass(studentClassArray![indexPath.row]) { (isRequestSuccessful) in}
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
