@@ -39,7 +39,6 @@
 		D71DEFED1D75F7A10006E6B6 /* ClassesViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71DEFEC1D75F7A10006E6B6 /* ClassesViewController+TableView.swift */; };
 		D71DEFF01D76099A0006E6B6 /* NetworkStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71DEFEF1D76099A0006E6B6 /* NetworkStatus.swift */; };
 		D72685FF1D7133F00081E4C7 /* WebServices+Assignments.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72685FE1D7133F00081E4C7 /* WebServices+Assignments.swift */; };
-		D72686011D7133F90081E4C7 /* WebServices+AssignmentDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72686001D7133F90081E4C7 /* WebServices+AssignmentDetail.swift */; };
 		D72686061D71344D0081E4C7 /* AssignmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72686051D71344D0081E4C7 /* AssignmentTableViewCell.swift */; };
 		D72686081D7134630081E4C7 /* ClassesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72686071D7134630081E4C7 /* ClassesTableViewCell.swift */; };
 		D72CF3291D72388A00B2116C /* AKPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72CF3281D72388A00B2116C /* AKPickerView.swift */; };
@@ -137,7 +136,6 @@
 		D71DEFEC1D75F7A10006E6B6 /* ClassesViewController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ClassesViewController+TableView.swift"; sourceTree = "<group>"; };
 		D71DEFEF1D76099A0006E6B6 /* NetworkStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkStatus.swift; sourceTree = "<group>"; };
 		D72685FE1D7133F00081E4C7 /* WebServices+Assignments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+Assignments.swift"; sourceTree = "<group>"; };
-		D72686001D7133F90081E4C7 /* WebServices+AssignmentDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+AssignmentDetail.swift"; sourceTree = "<group>"; };
 		D72686051D71344D0081E4C7 /* AssignmentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentTableViewCell.swift; sourceTree = "<group>"; };
 		D72686071D7134630081E4C7 /* ClassesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassesTableViewCell.swift; sourceTree = "<group>"; };
 		D72CF3281D72388A00B2116C /* AKPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKPickerView.swift; sourceTree = "<group>"; };
@@ -453,7 +451,6 @@
 				D7C10B2A1D70B8D700C9B66F /* WebServices+ClassDetail.swift */,
 				D72685FE1D7133F00081E4C7 /* WebServices+Assignments.swift */,
 				D7F999241D7EF83500EABBD2 /* WebServices+AssignmentStatus.swift */,
-				D72686001D7133F90081E4C7 /* WebServices+AssignmentDetail.swift */,
 				31375AFE1D6534CD00B07B29 /* WebServices+Search.swift */,
 				D7F2AB3A1D7BCC2C005F8515 /* WebServices+Calendar.swift */,
 				D7B1BCE91D7D041300D41BEE /* WebServices+CalendarID.swift */,
@@ -759,7 +756,6 @@
 				D7B1BCEA1D7D041300D41BEE /* WebServices+CalendarID.swift in Sources */,
 				D7B35EE31D779BD100690868 /* StudentGroupTermStructure.swift in Sources */,
 				D7B481BD1D7A309B0033C58D /* AssignmentDataStructure.swift in Sources */,
-				D72686011D7133F90081E4C7 /* WebServices+AssignmentDetail.swift in Sources */,
 				A09D75AE1D570F9A00B2AA74 /* DirectorySearchViewController.swift in Sources */,
 				A016B6E41D57FC7600A4A68D /* ViewControllerContainer.swift in Sources */,
 				D733B9131D8DF834002C0D80 /* RemoteConfig.swift in Sources */,

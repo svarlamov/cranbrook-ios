@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -283,7 +283,7 @@
             </objects>
             <point key="canvasLocation" x="-1978" y="-883"/>
         </scene>
-        <!--TODAY-->
+        <!--Today-->
         <scene sceneID="7OC-4R-4st">
             <objects>
                 <tableViewController id="beh-cK-WjY" customClass="CalendarViewController" customModule="Cranbrook_Kingswood" customModuleProvider="target" sceneMemberID="viewController">
@@ -360,7 +360,7 @@
                             <outlet property="delegate" destination="beh-cK-WjY" id="bz2-Sf-UhP"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="TODAY" id="9Rr-aW-G2K"/>
+                    <navigationItem key="navigationItem" title="Today" id="9Rr-aW-G2K"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OMm-HX-c42" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -662,16 +662,16 @@
                                 <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="RUQ-Ac-AHf">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="14"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1000" height="14"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="search_cell" rowHeight="90" id="bmN-AW-ub2" customClass="SearchResultTableViewCell" customModule="Cranbrook_Kingswood" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="42" width="375" height="90"/>
+                                        <rect key="frame" x="0.0" y="42" width="1000" height="90"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bmN-AW-ub2" id="Luo-Jh-c08">
-                                            <frame key="frameInset" width="375" height="90"/>
+                                            <frame key="frameInset" width="1000" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="84Y-vQ-Rfq">
