@@ -23,7 +23,7 @@ extension ClassesViewController {
             if NetworkStatus.networkStatus.isConnectedToNetwork() {
                 WebServices.service.getGradeBookForClass(studentClassArray![indexPath.row], callBack: { (isRequestSuccessful) in
                     if isRequestSuccessful {
-                        
+                        self.performSegueWithIdentifier(self.detailSegueKey, sender: nil)
                     } else {
                         self.showRequestError()
                     }

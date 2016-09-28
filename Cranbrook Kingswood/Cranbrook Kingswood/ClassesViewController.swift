@@ -20,6 +20,9 @@ class ClassesViewController: CranbrookViewController, UITableViewDataSource, UIT
     let classesCellIdentifier: String = "classes_cell"
     var emptyTableViewText: String = "No Classes"
     
+    //  Segue
+    var detailSegueKey: String = "show_class_grade_book_view_controller"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()

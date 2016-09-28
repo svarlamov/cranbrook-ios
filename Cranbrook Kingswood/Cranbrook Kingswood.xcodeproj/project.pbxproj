@@ -79,7 +79,6 @@
 		D7B0DEB11D9C55400084C74C /* GroupParsedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B0DEB01D9C55400084C74C /* GroupParsedData.swift */; };
 		D7B0DEB31D9C6DF10084C74C /* ClassGradeBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B0DEB21D9C6DF10084C74C /* ClassGradeBookViewController.swift */; };
 		D7B0DEB61D9C6E180084C74C /* ClassGradeBookViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B0DEB51D9C6E180084C74C /* ClassGradeBookViewController+TableView.swift */; };
-		D7B0DEB81D9C6E360084C74C /* ClassGradeBookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7B0DEB71D9C6E360084C74C /* ClassGradeBookTableViewCell.xib */; };
 		D7B0DEBA1D9C6E4C0084C74C /* ClassGradeBookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B0DEB91D9C6E4C0084C74C /* ClassGradeBookTableViewCell.swift */; };
 		D7B1BCEA1D7D041300D41BEE /* WebServices+CalendarID.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B1BCE91D7D041300D41BEE /* WebServices+CalendarID.swift */; };
 		D7B35EE31D779BD100690868 /* StudentGroupTermStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B35EE21D779BD100690868 /* StudentGroupTermStructure.swift */; };
@@ -183,7 +182,6 @@
 		D7B0DEB01D9C55400084C74C /* GroupParsedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupParsedData.swift; sourceTree = "<group>"; };
 		D7B0DEB21D9C6DF10084C74C /* ClassGradeBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassGradeBookViewController.swift; sourceTree = "<group>"; };
 		D7B0DEB51D9C6E180084C74C /* ClassGradeBookViewController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ClassGradeBookViewController+TableView.swift"; sourceTree = "<group>"; };
-		D7B0DEB71D9C6E360084C74C /* ClassGradeBookTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClassGradeBookTableViewCell.xib; sourceTree = "<group>"; };
 		D7B0DEB91D9C6E4C0084C74C /* ClassGradeBookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassGradeBookTableViewCell.swift; sourceTree = "<group>"; };
 		D7B1BCE91D7D041300D41BEE /* WebServices+CalendarID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+CalendarID.swift"; sourceTree = "<group>"; };
 		D7B35EE21D779BD100690868 /* StudentGroupTermStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentGroupTermStructure.swift; sourceTree = "<group>"; };
@@ -268,7 +266,6 @@
 			isa = PBXGroup;
 			children = (
 				A07468841D568DAD00E7ACC0 /* Main.storyboard */,
-				D7B0DEB71D9C6E360084C74C /* ClassGradeBookTableViewCell.xib */,
 				A07468921D568DF800E7ACC0 /* Code */,
 				A07468931D568DFD00E7ACC0 /* Supporting Files */,
 			);
@@ -619,7 +616,6 @@
 				D733B9031D8DC23C002C0D80 /* isInfoIcon@2x.png in Resources */,
 				D733B9081D8DC23C002C0D80 /* isWarningIcon.png in Resources */,
 				D733B9041D8DC23C002C0D80 /* isInfoIcon@3x.png in Resources */,
-				D7B0DEB81D9C6E360084C74C /* ClassGradeBookTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
