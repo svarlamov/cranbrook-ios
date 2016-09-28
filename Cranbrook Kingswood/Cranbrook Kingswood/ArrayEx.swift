@@ -2,7 +2,7 @@
 //  ArrayEx.swift
 //  Ampdot
 //
-//  Created by Takuma Yoshida on 2015/06/02.
+//  Created by Stefan DeClerck on 2015/06/02.
 //  Copyright (c) 2015年 Uniface, Inc. All rights reserved.
 //
 

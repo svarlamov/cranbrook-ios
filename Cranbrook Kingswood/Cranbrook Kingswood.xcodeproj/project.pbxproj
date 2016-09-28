@@ -76,6 +76,11 @@
 		D7648D381D8CD7BB00C1D7C7 /* UIView+Grow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7648D2A1D8CD7BB00C1D7C7 /* UIView+Grow.swift */; };
 		D7905E9D1D901F890017752F /* RMTConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = D7905E9C1D901F890017752F /* RMTConfig.m */; };
 		D7905EB91D90230A0017752F /* RemoteConfigDataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7905EB81D90230A0017752F /* RemoteConfigDataStructure.swift */; };
+		D7B0DEB11D9C55400084C74C /* GroupParsedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B0DEB01D9C55400084C74C /* GroupParsedData.swift */; };
+		D7B0DEB31D9C6DF10084C74C /* ClassGradeBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B0DEB21D9C6DF10084C74C /* ClassGradeBookViewController.swift */; };
+		D7B0DEB61D9C6E180084C74C /* ClassGradeBookViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B0DEB51D9C6E180084C74C /* ClassGradeBookViewController+TableView.swift */; };
+		D7B0DEB81D9C6E360084C74C /* ClassGradeBookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7B0DEB71D9C6E360084C74C /* ClassGradeBookTableViewCell.xib */; };
+		D7B0DEBA1D9C6E4C0084C74C /* ClassGradeBookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B0DEB91D9C6E4C0084C74C /* ClassGradeBookTableViewCell.swift */; };
 		D7B1BCEA1D7D041300D41BEE /* WebServices+CalendarID.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B1BCE91D7D041300D41BEE /* WebServices+CalendarID.swift */; };
 		D7B35EE31D779BD100690868 /* StudentGroupTermStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B35EE21D779BD100690868 /* StudentGroupTermStructure.swift */; };
 		D7B35EE51D779DD600690868 /* StartupViewController+SetupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B35EE41D779DD600690868 /* StartupViewController+SetupData.swift */; };
@@ -175,6 +180,11 @@
 		D7905E9B1D901F890017752F /* RMTConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMTConfig.h; sourceTree = "<group>"; };
 		D7905E9C1D901F890017752F /* RMTConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMTConfig.m; sourceTree = "<group>"; };
 		D7905EB81D90230A0017752F /* RemoteConfigDataStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteConfigDataStructure.swift; sourceTree = "<group>"; };
+		D7B0DEB01D9C55400084C74C /* GroupParsedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupParsedData.swift; sourceTree = "<group>"; };
+		D7B0DEB21D9C6DF10084C74C /* ClassGradeBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassGradeBookViewController.swift; sourceTree = "<group>"; };
+		D7B0DEB51D9C6E180084C74C /* ClassGradeBookViewController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ClassGradeBookViewController+TableView.swift"; sourceTree = "<group>"; };
+		D7B0DEB71D9C6E360084C74C /* ClassGradeBookTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClassGradeBookTableViewCell.xib; sourceTree = "<group>"; };
+		D7B0DEB91D9C6E4C0084C74C /* ClassGradeBookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassGradeBookTableViewCell.swift; sourceTree = "<group>"; };
 		D7B1BCE91D7D041300D41BEE /* WebServices+CalendarID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+CalendarID.swift"; sourceTree = "<group>"; };
 		D7B35EE21D779BD100690868 /* StudentGroupTermStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentGroupTermStructure.swift; sourceTree = "<group>"; };
 		D7B35EE41D779DD600690868 /* StartupViewController+SetupData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StartupViewController+SetupData.swift"; sourceTree = "<group>"; };
@@ -258,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				A07468841D568DAD00E7ACC0 /* Main.storyboard */,
+				D7B0DEB71D9C6E360084C74C /* ClassGradeBookTableViewCell.xib */,
 				A07468921D568DF800E7ACC0 /* Code */,
 				A07468931D568DFD00E7ACC0 /* Supporting Files */,
 			);
@@ -280,6 +291,7 @@
 		A07468931D568DFD00E7ACC0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D733B8F21D8DC233002C0D80 /* ISMessages Assets */,
 				A07468871D568DAD00E7ACC0 /* Assets.xcassets */,
 				A07468891D568DAD00E7ACC0 /* LaunchScreen.storyboard */,
 				A074688C1D568DAD00E7ACC0 /* Info.plist */,
@@ -343,14 +355,15 @@
 		D72CF32A1D7257ED00B2116C /* Custom Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D7B0DEB01D9C55400084C74C /* GroupParsedData.swift */,
 				A09D75A51D57042900B2AA74 /* DateComparison.swift */,
 				D72CF3281D72388A00B2116C /* AKPickerView.swift */,
 				D71DEFEF1D76099A0006E6B6 /* NetworkStatus.swift */,
-				D7905E9A1D901F820017752F /* Remote Config */,
-				D733B8F01D8DC228002C0D80 /* ISMessages */,
 				D7648D1C1D8CD7A500C1D7C7 /* LiquidLoader */,
+				D7905E9A1D901F820017752F /* Remote Config */,
 				D7CF02171D75586D00145F4B /* Reachability */,
 				A09D75BC1D5715C500B2AA74 /* ProgressHUD */,
+				D733B8F01D8DC228002C0D80 /* ISMessages */,
 			);
 			name = "Custom Classes";
 			sourceTree = "<group>";
@@ -358,22 +371,13 @@
 		D733B8F01D8DC228002C0D80 /* ISMessages */ = {
 			isa = PBXGroup;
 			children = (
-				D733B8F21D8DC233002C0D80 /* Assets */,
-				D733B8F11D8DC22E002C0D80 /* Classes */,
+				D733B90B1D8DC243002C0D80 /* ISMessages.h */,
+				D733B90C1D8DC243002C0D80 /* ISMessages.m */,
 			);
 			name = ISMessages;
 			sourceTree = "<group>";
 		};
-		D733B8F11D8DC22E002C0D80 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				D733B90B1D8DC243002C0D80 /* ISMessages.h */,
-				D733B90C1D8DC243002C0D80 /* ISMessages.m */,
-			);
-			name = Classes;
-			sourceTree = "<group>";
-		};
-		D733B8F21D8DC233002C0D80 /* Assets */ = {
+		D733B8F21D8DC233002C0D80 /* ISMessages Assets */ = {
 			isa = PBXGroup;
 			children = (
 				D733B8F31D8DC23C002C0D80 /* isErrorIcon.png */,
@@ -389,7 +393,7 @@
 				D733B8FD1D8DC23C002C0D80 /* isWarningIcon@2x.png */,
 				D733B8FE1D8DC23C002C0D80 /* isWarningIcon@3x.png */,
 			);
-			name = Assets;
+			name = "ISMessages Assets";
 			sourceTree = "<group>";
 		};
 		D74772611D8C335700F69258 /* Search Result Detail View */ = {
@@ -430,6 +434,15 @@
 				D7905E9C1D901F890017752F /* RMTConfig.m */,
 			);
 			name = "Remote Config";
+			sourceTree = "<group>";
+		};
+		D7B0DEB41D9C6DF70084C74C /* Class Grade Book */ = {
+			isa = PBXGroup;
+			children = (
+				D7B0DEB21D9C6DF10084C74C /* ClassGradeBookViewController.swift */,
+				D7B0DEB51D9C6E180084C74C /* ClassGradeBookViewController+TableView.swift */,
+			);
+			name = "Class Grade Book";
 			sourceTree = "<group>";
 		};
 		D7B35EE61D779DDC00690868 /* Startup */ = {
@@ -482,6 +495,7 @@
 				A08F66F01D57204900FBE55E /* LoginViewController.swift */,
 				D7B35EE61D779DDC00690868 /* Startup */,
 				D71DEFEE1D75F7CA0006E6B6 /* Classes */,
+				D7B0DEB41D9C6DF70084C74C /* Class Grade Book */,
 				D71DEFEB1D75F6D00006E6B6 /* Assignments */,
 				D71DEFEA1D75F6C10006E6B6 /* Directory Search */,
 				D7F2AB331D7BC8E2005F8515 /* Calendar */,
@@ -493,6 +507,7 @@
 			isa = PBXGroup;
 			children = (
 				D72686071D7134630081E4C7 /* ClassesTableViewCell.swift */,
+				D7B0DEB91D9C6E4C0084C74C /* ClassGradeBookTableViewCell.swift */,
 				D72686051D71344D0081E4C7 /* AssignmentTableViewCell.swift */,
 				31CD30AA1D67BEB2001C4647 /* SearchResultTableViewCell.swift */,
 				D7F2AB3C1D7BD3EF005F8515 /* CalendarTableViewCell.swift */,
@@ -604,6 +619,7 @@
 				D733B9031D8DC23C002C0D80 /* isInfoIcon@2x.png in Resources */,
 				D733B9081D8DC23C002C0D80 /* isWarningIcon.png in Resources */,
 				D733B9041D8DC23C002C0D80 /* isInfoIcon@3x.png in Resources */,
+				D7B0DEB81D9C6E360084C74C /* ClassGradeBookTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -741,6 +757,7 @@
 				A09D75A61D57042900B2AA74 /* DateComparison.swift in Sources */,
 				D72686081D7134630081E4C7 /* ClassesTableViewCell.swift in Sources */,
 				D7648D2D1D8CD7BB00C1D7C7 /* CGRectEx.swift in Sources */,
+				D7B0DEBA1D9C6E4C0084C74C /* ClassGradeBookTableViewCell.swift in Sources */,
 				D733B90F1D8DC26F002C0D80 /* CranbrookViewController.swift in Sources */,
 				A09D75AC1D570F8B00B2AA74 /* ClassesViewController.swift in Sources */,
 				D7648D361D8CD7BB00C1D7C7 /* SimpleCircleLiquidEngine.swift in Sources */,
@@ -752,6 +769,7 @@
 				D7905EB91D90230A0017752F /* RemoteConfigDataStructure.swift in Sources */,
 				D71DEFF01D76099A0006E6B6 /* NetworkStatus.swift in Sources */,
 				D7F2AB3D1D7BD3EF005F8515 /* CalendarTableViewCell.swift in Sources */,
+				D7B0DEB61D9C6E180084C74C /* ClassGradeBookViewController+TableView.swift in Sources */,
 				D72CF32E1D7258A900B2116C /* DateListStructure.swift in Sources */,
 				D7B1BCEA1D7D041300D41BEE /* WebServices+CalendarID.swift in Sources */,
 				D7B35EE31D779BD100690868 /* StudentGroupTermStructure.swift in Sources */,
@@ -766,8 +784,10 @@
 				31CD309D1D67ABC6001C4647 /* DirectorySearchViewController+TableView.swift in Sources */,
 				D7905E9D1D901F890017752F /* RMTConfig.m in Sources */,
 				D7648D311D8CD7BB00C1D7C7 /* LiquidLoadEffect.swift in Sources */,
+				D7B0DEB11D9C55400084C74C /* GroupParsedData.swift in Sources */,
 				D71DEFE31D75F31B0006E6B6 /* AssignmentsViewController+Selector.swift in Sources */,
 				D7F2AB411D7CAE9C005F8515 /* CalendarViewController+TableView.swift in Sources */,
+				D7B0DEB31D9C6DF10084C74C /* ClassGradeBookViewController.swift in Sources */,
 				D72CF3291D72388A00B2116C /* AKPickerView.swift in Sources */,
 				A0BD730A1D56B27B00889331 /* WebServices+Login.swift in Sources */,
 				D71DEFE91D75F5F90006E6B6 /* AssignmentsViewController+TableView.swift in Sources */,

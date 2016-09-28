@@ -2,8 +2,8 @@
 //  LiquidCircleLoader.swift
 //  LiquidLoading
 //
-//  Created by Takuma Yoshida on 2015/08/21.
-//  Copyright (c) 2015年 yoavlt. All rights reserved.
+//  Created by Stefan DeClerck on 2015/08/21.
+//  Copyright (c) 2016 Stefan DeClerck. All rights reserved.
 //
 
 import Foundation

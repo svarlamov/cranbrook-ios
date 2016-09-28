@@ -36,7 +36,8 @@ extension WebServices {
                         classGradeBookArray.append(mainResult)
                     }
                 }
-                print(classGradeBookArray)
+                gradeBookForSelectedClass = GroupParsedData.groupParsedData.groupClassGradeBookData(forData: classGradeBookArray)
+                print(gradeBookForSelectedClass)
                 callBack(isRequestSuccessful: true)
             } else {
                 callBack(isRequestSuccessful: false)

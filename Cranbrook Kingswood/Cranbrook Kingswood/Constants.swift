@@ -40,6 +40,21 @@ var selectedSearchResult: SearchResultResponse?                 = nil
 var selectedSearchDirectory: SearchDirectories                  = SearchDirectories.Students
 //
 var remoteConfigData: RemoteConfigDataStructure?                = nil
+//
+var gradeBookForSelectedClass: [[CurrentUserClassDetail]]?      = nil
 
-
-
+func setupLogout() {
+    currentSessionInfo = nil
+    studentClassArray = nil
+    searchResults = nil
+    selectedTab = SelectedTabOptions.ClassesTab
+    userLoginInfo = nil
+    classDetailsArray = nil
+    studentGroupTermListArray = nil
+    specificDateAssignments = nil
+    calendarTasksForDate = nil
+    userCalendarId = nil
+    selectedSearchResult = nil
+    selectedSearchDirectory = SearchDirectories.Students
+    gradeBookForSelectedClass = nil
+}

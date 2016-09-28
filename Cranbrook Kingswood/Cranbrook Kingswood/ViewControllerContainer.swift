@@ -84,6 +84,7 @@ class ViewControllerContainer: CranbrookViewController {
     @IBAction func logout(sender: UIButton) {
         Analytics.analytics.logSignOut(userLoginInfo!.username)
         destroyPersistedLoginData()
+        setupLogout()
         self.performSegueWithIdentifier(self.logoutSegue, sender: nil)
     }
     

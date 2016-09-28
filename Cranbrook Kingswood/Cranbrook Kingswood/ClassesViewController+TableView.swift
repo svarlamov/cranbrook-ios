@@ -19,7 +19,19 @@ extension ClassesViewController {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        WebServices.service.getGradeBookForClass(studentClassArray![indexPath.row]) { (isRequestSuccessful) in}
+        if studentClassArray![indexPath.row].cumGrade != nil {
+            if NetworkStatus.networkStatus.isConnectedToNetwork() {
+                WebServices.service.getGradeBookForClass(studentClassArray![indexPath.row], callBack: { (isRequestSuccessful) in
+                    if isRequestSuccessful {
+                        
+                    } else {
+                        self.showRequestError()
+                    }
+                })
+            } else {
+                self.showNetworkAlert()
+            }
+        }
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -32,7 +44,6 @@ extension ClassesViewController {
             self.tableView.backgroundView = noDataLabel
             return 0;
         } else {
-            //  self.tableView.backgroundView = nil
             return (studentClassArray?.count)!
         }
     }
