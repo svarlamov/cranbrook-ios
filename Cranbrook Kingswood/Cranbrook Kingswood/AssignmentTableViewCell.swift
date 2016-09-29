@@ -29,7 +29,9 @@ class AssignmentTableViewCell: UITableViewCell {
         cellContentView.cornerRadius = 0
     }
     
-// TODO: - make sure that there is a network error when no network
+//  TODO: - make sure that there is a network error when no network
+    
+//  TODO: - does not change status value in assignment at selected index path
     
     func changeStatusButtons(toStatus status: Int) {
         self.toDoButton.layer.cornerRadius = 5
@@ -104,21 +106,27 @@ class AssignmentTableViewCell: UITableViewCell {
     }
     
     @IBAction func toDoButtonPressed(sender: UIButton) {
-        changeAssignmentStatus(toStatus: .ToDo)
-        Analytics.analytics.logAssignmentStatusChanged("ToDo")
-        self.changeStatusButtons(toStatus: -1)
+        if NetworkStatus.networkStatus.isConnectedToNetwork() {
+            changeAssignmentStatus(toStatus: .ToDo)
+            Analytics.analytics.logAssignmentStatusChanged("ToDo")
+            self.changeStatusButtons(toStatus: -1)
+        }
     }
     
     @IBAction func inProgressButtonPressed(sender: UIButton) {
-        changeAssignmentStatus(toStatus: .inProgress)
-        Analytics.analytics.logAssignmentStatusChanged("InProgress")
-        self.changeStatusButtons(toStatus: 0)
+        if NetworkStatus.networkStatus.isConnectedToNetwork() {
+            changeAssignmentStatus(toStatus: .inProgress)
+            Analytics.analytics.logAssignmentStatusChanged("InProgress")
+            self.changeStatusButtons(toStatus: 0)
+        }
     }
     
     @IBAction func completedButtonPressed(sender: UIButton) {
-        changeAssignmentStatus(toStatus: .completed)
-        Analytics.analytics.logAssignmentStatusChanged("Completed")
-        self.changeStatusButtons(toStatus: 1)
+        if NetworkStatus.networkStatus.isConnectedToNetwork() {
+            changeAssignmentStatus(toStatus: .completed)
+            Analytics.analytics.logAssignmentStatusChanged("Completed")
+            self.changeStatusButtons(toStatus: 1)
+        }
     }
     
     private func changeAssignmentForStatusAtIndex(status: Int) {
