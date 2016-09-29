@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>HockeySDK-HockeySDKResources.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Cranbrook Kingswood.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,7 +47,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>6037A9EA5AEE754ACEB8CE3B4E424197</key>
+		<key>130C97145AF5FEEA74CE8BD1B2F16F2F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3C014F737BF0E4D82F49D1E8DBB98C79</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6F5C6DA2A68783C85968EC10DACFE579</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>72263A115E8004D01F9F88259C3403AF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,27 +72,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7E8D400E9FE427AC35BEE3D74B385B56</key>
+		<key>7E63584A01E844BBEE9C0DA5AA1FD724</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>96576DD5AEDCF3EF1FD5AEA879B00067</key>
+		<key>CE3D9E1A9F8240F7F1C24D20F954FCDF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AA94AB4619F83A78E2226204E583D9DD</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CA369BED01318297F26598C1B309E935</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F774D768898EA881A05A35CACD841721</key>
+		<key>E0A1DB785BE6F92D93B3F2FDB46523F0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

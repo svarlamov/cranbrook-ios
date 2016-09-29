@@ -31,7 +31,7 @@ NSString *RMTString(NSString *key, NSString *defaultValue) {
 NSInteger RMTInt(NSString *key, NSInteger defaultInt) {
     NSString *val = [RMTConfig stringForKey:key];
     if (val == nil) {
-        RMTLog(@"Returning default value: %ld for key: %@", defaultInt, key);
+        RMTLog(@"Returning default value: %ld for key: %@", (long)defaultInt, key);
         return defaultInt;
     }
     return [val integerValue];

@@ -16,4 +16,5 @@ target 'Cranbrook Kingswood' do
   pod 'Crashlytics'
   pod 'SwiftMessages', '~> 2.0.0'
   pod 'PullToRefreshSwift'
+  pod 'HockeySDK', '~> 4.1.1'
 end
