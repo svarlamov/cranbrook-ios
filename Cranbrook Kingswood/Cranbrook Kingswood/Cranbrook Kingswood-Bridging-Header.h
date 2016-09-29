@@ -6,4 +6,6 @@
 #import "Reachability.h"
 #import "ISMessages.h"
 #import "RMTConfig.h"
-#import <HockeySDK/HockeySDK.h>
+#import "DismissAnimation.h"
+#import "PresentedAnimation.h"
+#import "SwipeUpInteractiveTransition.h"

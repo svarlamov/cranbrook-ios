@@ -8,6 +8,7 @@ target 'Cranbrook Kingswood' do
   # Pods for Cranbrook Kingswood
   pod 'Firebase/Core'
   pod 'Firebase/RemoteConfig'
+  pod 'HockeySDK', '~> 4.1.1' 
   pod 'SwiftyJSON'
   pod 'Alamofire', '~> 3.4'  
   pod 'Rollout.io', '~> 1.3.1'
@@ -16,5 +17,4 @@ target 'Cranbrook Kingswood' do
   pod 'Crashlytics'
   pod 'SwiftMessages', '~> 2.0.0'
   pod 'PullToRefreshSwift'
-  pod 'HockeySDK', '~> 4.1.1'
 end

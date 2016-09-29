@@ -60,6 +60,9 @@
 		D733B9111D8DF428002C0D80 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D733B9101D8DF427002C0D80 /* GoogleService-Info.plist */; };
 		D733B9131D8DF834002C0D80 /* RemoteConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D733B9121D8DF834002C0D80 /* RemoteConfig.swift */; };
 		D74772631D8C337200F69258 /* SearchResultDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74772621D8C337200F69258 /* SearchResultDetailView.swift */; };
+		D755622A1D9DBB9D006B9222 /* DismissAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D75562251D9DBB9D006B9222 /* DismissAnimation.m */; };
+		D755622B1D9DBB9D006B9222 /* PresentedAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D75562271D9DBB9D006B9222 /* PresentedAnimation.m */; };
+		D755622C1D9DBB9D006B9222 /* SwipeUpInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = D75562291D9DBB9D006B9222 /* SwipeUpInteractiveTransition.m */; };
 		D7648D2B1D8CD7BB00C1D7C7 /* ArrayEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7648D1D1D8CD7BB00C1D7C7 /* ArrayEx.swift */; };
 		D7648D2C1D8CD7BB00C1D7C7 /* CGPointEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7648D1E1D8CD7BB00C1D7C7 /* CGPointEx.swift */; };
 		D7648D2D1D8CD7BB00C1D7C7 /* CGRectEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7648D1F1D8CD7BB00C1D7C7 /* CGRectEx.swift */; };
@@ -162,6 +165,12 @@
 		D733B9101D8DF427002C0D80 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D733B9121D8DF834002C0D80 /* RemoteConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteConfig.swift; sourceTree = "<group>"; };
 		D74772621D8C337200F69258 /* SearchResultDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultDetailView.swift; sourceTree = "<group>"; };
+		D75562241D9DBB9D006B9222 /* DismissAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DismissAnimation.h; sourceTree = "<group>"; };
+		D75562251D9DBB9D006B9222 /* DismissAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DismissAnimation.m; sourceTree = "<group>"; };
+		D75562261D9DBB9D006B9222 /* PresentedAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentedAnimation.h; sourceTree = "<group>"; };
+		D75562271D9DBB9D006B9222 /* PresentedAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentedAnimation.m; sourceTree = "<group>"; };
+		D75562281D9DBB9D006B9222 /* SwipeUpInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeUpInteractiveTransition.h; sourceTree = "<group>"; };
+		D75562291D9DBB9D006B9222 /* SwipeUpInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeUpInteractiveTransition.m; sourceTree = "<group>"; };
 		D7648D1D1D8CD7BB00C1D7C7 /* ArrayEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayEx.swift; sourceTree = "<group>"; };
 		D7648D1E1D8CD7BB00C1D7C7 /* CGPointEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPointEx.swift; sourceTree = "<group>"; };
 		D7648D1F1D8CD7BB00C1D7C7 /* CGRectEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRectEx.swift; sourceTree = "<group>"; };
@@ -356,6 +365,7 @@
 				A09D75A51D57042900B2AA74 /* DateComparison.swift */,
 				D72CF3281D72388A00B2116C /* AKPickerView.swift */,
 				D71DEFEF1D76099A0006E6B6 /* NetworkStatus.swift */,
+				D75562231D9DBB92006B9222 /* Swipe Dismiss */,
 				D7648D1C1D8CD7A500C1D7C7 /* LiquidLoader */,
 				D7905E9A1D901F820017752F /* Remote Config */,
 				D7CF02171D75586D00145F4B /* Reachability */,
@@ -401,6 +411,19 @@
 				D71625BB1D9A9E9800714019 /* SearchResultDetailView.xib */,
 			);
 			name = "Search Result Detail View";
+			sourceTree = "<group>";
+		};
+		D75562231D9DBB92006B9222 /* Swipe Dismiss */ = {
+			isa = PBXGroup;
+			children = (
+				D75562241D9DBB9D006B9222 /* DismissAnimation.h */,
+				D75562251D9DBB9D006B9222 /* DismissAnimation.m */,
+				D75562261D9DBB9D006B9222 /* PresentedAnimation.h */,
+				D75562271D9DBB9D006B9222 /* PresentedAnimation.m */,
+				D75562281D9DBB9D006B9222 /* SwipeUpInteractiveTransition.h */,
+				D75562291D9DBB9D006B9222 /* SwipeUpInteractiveTransition.m */,
+			);
+			name = "Swipe Dismiss";
 			sourceTree = "<group>";
 		};
 		D7648D1C1D8CD7A500C1D7C7 /* LiquidLoader */ = {
@@ -548,7 +571,6 @@
 				D7B481C21D7A35000033C58D /* ShellScript */,
 				D7F2AB301D7B980C005F8515 /* ShellScript */,
 				FCE822EEA0693891A741DE0B /* Rollout.io post-build */,
-				D74B66571D9D4FCA00F6603A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -668,19 +690,6 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		D74B66571D9D4FCA00F6603A /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "FILE=\"${SRCROOT}/HockeySDK-iOS/BuildAgent\"\nif [ -f \"$FILE\" ]; then\n\"$FILE\"\nfi";
-		};
 		D7B481C21D7A35000033C58D /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -759,17 +768,20 @@
 				D7648D2F1D8CD7BB00C1D7C7 /* LiquidCircleEffect.swift in Sources */,
 				A09D75A81D570F1A00B2AA74 /* WebServices+CurrentClasses.swift in Sources */,
 				D7F2AB3B1D7BCC2C005F8515 /* WebServices+Calendar.swift in Sources */,
+				D755622B1D9DBB9D006B9222 /* PresentedAnimation.m in Sources */,
 				D74772631D8C337200F69258 /* SearchResultDetailView.swift in Sources */,
 				A07468991D568F7000E7ACC0 /* StartupViewController.swift in Sources */,
 				D71DEFED1D75F7A10006E6B6 /* ClassesViewController+TableView.swift in Sources */,
 				A08F66F11D57204900FBE55E /* LoginViewController.swift in Sources */,
 				A07468811D568DAD00E7ACC0 /* AppDelegate.swift in Sources */,
+				D755622C1D9DBB9D006B9222 /* SwipeUpInteractiveTransition.m in Sources */,
 				A09D75A61D57042900B2AA74 /* DateComparison.swift in Sources */,
 				D72686081D7134630081E4C7 /* ClassesTableViewCell.swift in Sources */,
 				D7648D2D1D8CD7BB00C1D7C7 /* CGRectEx.swift in Sources */,
 				D7B0DEBA1D9C6E4C0084C74C /* ClassGradeBookTableViewCell.swift in Sources */,
 				D733B90F1D8DC26F002C0D80 /* CranbrookViewController.swift in Sources */,
 				A09D75AC1D570F8B00B2AA74 /* ClassesViewController.swift in Sources */,
+				D755622A1D9DBB9D006B9222 /* DismissAnimation.m in Sources */,
 				D7648D361D8CD7BB00C1D7C7 /* SimpleCircleLiquidEngine.swift in Sources */,
 				D7648D301D8CD7BB00C1D7C7 /* LiquidLineEffect.swift in Sources */,
 				D7648D351D8CD7BB00C1D7C7 /* ObjC.swift in Sources */,

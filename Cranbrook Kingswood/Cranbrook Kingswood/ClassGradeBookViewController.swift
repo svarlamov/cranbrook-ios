@@ -10,16 +10,21 @@ import Foundation
 
 class classGradeBookViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    //  Table View
     @IBOutlet weak var tableView: UITableView!
     let cellIdentifier: String = "classes_grade_book_cell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupTableView()
+        self.setupViews()
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
+    }
+    
+    func setupViews() {
+        self.setupTableView()
     }
     
     func setupTableView() {

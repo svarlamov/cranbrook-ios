@@ -41,8 +41,10 @@ class DirectorySearchViewController: CranbrookViewController, UITableViewDelegat
     }
     
     func searchDirectory(searchQuery: String) {
+        var searchText: String = searchQuery
+        searchText = searchText.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
         if NetworkStatus.networkStatus.isConnectedToNetwork() {
-            WebServices.service.searchDirectory(query: searchQuery, directory: self.currentSearchDirectory) { (searchResponse) in
+            WebServices.service.searchDirectory(query: searchText, directory: self.currentSearchDirectory) { (searchResponse) in
                 self.view.userInteractionEnabled = true
                 self.emptyTableViewText = "No search results"
                 searchResults = searchResponse!
