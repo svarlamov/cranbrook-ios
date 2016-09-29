@@ -58,7 +58,7 @@ extension ClassesViewController {
             cell.teacherLabel.text = groupOwnerTitleName
         }
         if let titleGrade = studentClassArray![indexPath.row].cumGrade {
-            cell.gradeLabel.text = titleGrade
+            cell.gradeLabel.text = "\(titleGrade)"
         } else {
             cell.gradeLabel.text = "--"
         }

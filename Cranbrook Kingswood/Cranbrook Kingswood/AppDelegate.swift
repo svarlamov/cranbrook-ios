@@ -34,9 +34,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func setup() {
         
-        //  Setup Beta Testing Through HockeyApp
-        self.setupHockeyApp()
-        
         //  Setup remote configuration
         RemoteConfig.config.getRemoteData()
         
@@ -47,13 +44,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //  Rollout configuration
         Rollout.setupWithKey("57ddb79c8718e2f531cb2787")
         
-    }
-    
-    func setupHockeyApp() {
-        BITHockeyManager.sharedHockeyManager().configureWithIdentifier("86fca75433854717b583bea2cd3ee8f1")
-        BITHockeyManager.sharedHockeyManager().startManager()
-        BITHockeyManager.sharedHockeyManager().authenticator.authenticateInstallation()
-
     }
     
 }
