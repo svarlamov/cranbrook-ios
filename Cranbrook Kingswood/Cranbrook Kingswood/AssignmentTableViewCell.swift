@@ -127,18 +127,15 @@ class AssignmentTableViewCell: UITableViewCell {
         }
     }
     
-//  TODO: - does not change status value in assignment at selected index path
-    
     private func changeAssignmentForStatusAtIndex(status: Int) {
-        let finalArray = specificDateAssignments
-        for assignment in finalArray! {
+        var index: Int = 0
+        for assignment in specificDateAssignments! {
             if let instanceId = assignment.assignmentIndexId {
                 if String(instanceId) == self.cellAssignmentId {
-                    let indexOfEquatableObject: Int = specificDateAssignments!.indexOf({ (assignment) -> Bool in
-                        
-                    })!
+                    specificDateAssignments![index].assignmentStatus = status
                 }
             }
+            index += 1
         }
     }
     
