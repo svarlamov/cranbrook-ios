@@ -29,8 +29,6 @@ class AssignmentTableViewCell: UITableViewCell {
         cellContentView.cornerRadius = 0
     }
     
-//  TODO: - make sure that there is a network error when no network
-    
     func changeStatusButtons(toStatus status: Int) {
         self.toDoButton.layer.cornerRadius = 5
         self.inProgressButton.layer.cornerRadius = 5
