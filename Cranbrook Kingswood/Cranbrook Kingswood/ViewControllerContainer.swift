@@ -121,7 +121,7 @@ class ViewControllerContainer: CranbrookViewController {
                 self.tabIndicationView.center.x = self.assignmentsTabLabel.center.x
                 
             } else if (tab == .DirectorySearchTab) {
-                self.tabIndicationView.frame = CGRectMake(self.tabIndicationView.frame.origin.x, self.tabIndicationView.frame.origin.y, 69, self.tabIndicationView.frame.size.height)
+                self.tabIndicationView.frame = CGRectMake(self.tabIndicationView.frame.origin.x, self.tabIndicationView.frame.origin.y, 90, self.tabIndicationView.frame.size.height)
                 self.tabIndicationView.center.x = self.searchTabLabel.center.x
                 
             }

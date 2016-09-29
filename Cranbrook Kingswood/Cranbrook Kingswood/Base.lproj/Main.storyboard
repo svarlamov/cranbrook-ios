@@ -166,7 +166,7 @@
                                         <color key="textColor" red="0.63921568627450975" green="0.63921568627450975" blue="0.68235294117647061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Classes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CEM-ub-pvd">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grades" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CEM-ub-pvd">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="27" id="SmC-4m-2Ol"/>
                                         </constraints>
@@ -174,7 +174,7 @@
                                         <color key="textColor" red="0.63921568627450975" green="0.63921568627450975" blue="0.68235294117647061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGN-Iv-rpi">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Directory" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGN-Iv-rpi">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="79M-47-LZl"/>
                                         </constraints>
@@ -187,11 +187,6 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.0" green="0.58823529411764708" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qtt-Xr-oWW">
-                                        <connections>
-                                            <action selector="tabButtonPress:" destination="UcJ-G7-kI3" eventType="touchUpInside" id="k91-Vo-hsK"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfY-mH-ifT">
                                         <connections>
                                             <action selector="tabButtonPress:" destination="UcJ-G7-kI3" eventType="touchUpInside" id="Ixl-lW-lht"/>
@@ -200,6 +195,11 @@
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bv-8Q-EOC">
                                         <connections>
                                             <action selector="tabButtonPress:" destination="UcJ-G7-kI3" eventType="touchUpInside" id="GBm-yR-yhv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qtt-Xr-oWW">
+                                        <connections>
+                                            <action selector="tabButtonPress:" destination="UcJ-G7-kI3" eventType="touchUpInside" id="k91-Vo-hsK"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1291,6 +1291,6 @@
         <image name="table_view_shadow_2px" width="750" height="6"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BVR-do-nOz"/>
+        <segue reference="Xqp-fM-tlL"/>
     </inferredMetricsTieBreakers>
 </document>
