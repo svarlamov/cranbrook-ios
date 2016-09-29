@@ -31,8 +31,6 @@ class AssignmentTableViewCell: UITableViewCell {
     
 //  TODO: - make sure that there is a network error when no network
     
-//  TODO: - does not change status value in assignment at selected index path
-    
     func changeStatusButtons(toStatus status: Int) {
         self.toDoButton.layer.cornerRadius = 5
         self.inProgressButton.layer.cornerRadius = 5
@@ -129,16 +127,16 @@ class AssignmentTableViewCell: UITableViewCell {
         }
     }
     
+//  TODO: - does not change status value in assignment at selected index path
+    
     private func changeAssignmentForStatusAtIndex(status: Int) {
-        var finalArray = [AssignmentDataStructure]?()
-        for assignment in specificDateAssignments! {
-            var mainAssignment = assignment
+        let finalArray = specificDateAssignments
+        for assignment in finalArray! {
             if let instanceId = assignment.assignmentIndexId {
                 if String(instanceId) == self.cellAssignmentId {
-                    mainAssignment.assignmentStatus = status
-                    finalArray?.append(mainAssignment)
-                } else {
-                    finalArray?.append(mainAssignment)
+                    let indexOfEquatableObject: Int = specificDateAssignments!.indexOf({ (assignment) -> Bool in
+                        
+                    })!
                 }
             }
         }
