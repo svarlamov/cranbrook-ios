@@ -59,7 +59,9 @@ extension ClassesViewController {
         }
         if let titleGrade = studentClassArray![indexPath.row].cumGrade {
             cell.gradeLabel.text = "\(titleGrade)"
+            cell.gradeLabel.textColor = UIColor(red: 0.0, green: 0.48, blue: 1.0, alpha: 1.0)
         } else {
+            cell.gradeLabel.textColor = UIColor(red: 21/255, green: 41/255, blue: 53/255, alpha: 1.0)
             cell.gradeLabel.text = "--"
         }
         return cell
