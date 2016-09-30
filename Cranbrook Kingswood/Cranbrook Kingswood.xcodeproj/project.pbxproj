@@ -511,8 +511,8 @@
 			isa = PBXGroup;
 			children = (
 				D733B90E1D8DC26F002C0D80 /* CranbrookViewController.swift */,
-				A016B6E31D57FC7600A4A68D /* ViewControllerContainer.swift */,
 				A08F66F01D57204900FBE55E /* LoginViewController.swift */,
+				A016B6E31D57FC7600A4A68D /* ViewControllerContainer.swift */,
 				D7B35EE61D779DDC00690868 /* Startup */,
 				D71DEFEE1D75F7CA0006E6B6 /* Classes */,
 				D7B0DEB41D9C6DF70084C74C /* Class Grade Book */,

@@ -9,7 +9,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>CFAlertViewController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>HockeySDK-HockeySDKResources.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>PMAlertController-PMAlertController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>PMAlertController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -47,22 +62,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>130C97145AF5FEEA74CE8BD1B2F16F2F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>3C014F737BF0E4D82F49D1E8DBB98C79</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6F5C6DA2A68783C85968EC10DACFE579</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>72263A115E8004D01F9F88259C3403AF</key>
+		<key>6865275E734380C652178D257F7CFC1A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,17 +77,42 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7E63584A01E844BBEE9C0DA5AA1FD724</key>
+		<key>7B76D3B43978EC2EA0E74E83A8018EBC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CE3D9E1A9F8240F7F1C24D20F954FCDF</key>
+		<key>A0AEE8D8529FCF8D7E522202A158BC66</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E0A1DB785BE6F92D93B3F2FDB46523F0</key>
+		<key>B3F3AECBBF6788319BBE2B77C8B99C92</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C2AB96F7E8DD8856CD05BD74C0ABBF9C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C64E0155B6F34A74242E3D22F6E7BB5D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E5AB1C0293AFBBE30818EC1F7565FA51</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ECB6D90C6766CFCA9E67587BC56D6FA5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F5D9B53C3B0D107EEEAC0410B9CF6C48</key>
 		<dict>
 			<key>primary</key>
 			<true/>

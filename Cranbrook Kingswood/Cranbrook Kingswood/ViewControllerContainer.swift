@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 import Unbox
+import CFAlertViewController
 
 enum SelectedTabOptions: String {
     case ClassesTab             = "Classes Tab"
@@ -82,6 +83,26 @@ class ViewControllerContainer: CranbrookViewController {
     }
     
     @IBAction func logout(sender: UIButton) {
+        self.displayLogoutAlert()
+    }
+    
+    func displayLogoutAlert() {
+        let titleText: String = "Alert"
+        let descriptionTest: String = "Are you sure you want to log out?"
+        let alertButtonColor: UIColor = UIColor(red: 255/255, green: 75/255, blue: 75/255, alpha: 1.0)
+        let cancelButtonColor: UIColor = UIColor.grayColor()
+        let logoutAlert: CFAlertViewController = CFAlertViewController.alertControllerWithTitle(titleText, message: descriptionTest, textAlignment: NSTextAlignment.Center, preferredStyle: CFAlertControllerStyle.Alert, didDismissAlertHandler: nil)
+        logoutAlert.shouldDismissOnBackgroundTap = false
+        let logoutButton: CFAlertAction = CFAlertAction(title: "LOG OUT", style: CFAlertActionStyle.Destructive, alignment: CFAlertActionAlignment.Justified, color: alertButtonColor) { (logoutButton) in
+            self.logout()
+        }!
+        let cancelButton: CFAlertAction = CFAlertAction(title: "CANCEL", style: CFAlertActionStyle.Cancel, alignment: CFAlertActionAlignment.Justified, color: cancelButtonColor, handler: nil)!
+        logoutAlert.addAction(logoutButton)
+        logoutAlert.addAction(cancelButton)
+        presentViewController(logoutAlert, animated: true, completion: nil)
+    }
+    
+    func logout() {
         Analytics.analytics.logSignOut(userLoginInfo!.username)
         destroyPersistedLoginData()
         setupLogout()
