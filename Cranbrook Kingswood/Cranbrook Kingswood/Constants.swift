@@ -42,6 +42,8 @@ var selectedSearchDirectory: SearchDirectories                  = SearchDirector
 var remoteConfigData: RemoteConfigDataStructure?                = nil
 //
 var gradeBookForSelectedClass: [[CurrentUserClassDetail]]?      = nil
+//
+var assignmentDetailData: AssignmentDetailDataStructure?        = nil
 
 func setupLogout() {
     currentSessionInfo = nil
@@ -57,4 +59,5 @@ func setupLogout() {
     selectedSearchResult = nil
     selectedSearchDirectory = SearchDirectories.Students
     gradeBookForSelectedClass = nil
+    assignmentDetailData = nil
 }

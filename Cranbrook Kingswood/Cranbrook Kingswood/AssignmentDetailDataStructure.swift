@@ -65,6 +65,10 @@ extension AssignmentDetailDataStructure: Unboxable {
                 editedString = editedString.stringByReplacingOccurrencesOfString("</i>", withString: " ", options: NSStringCompareOptions.LiteralSearch, range: nil)
             }
             
+            if checkedDescription.rangeOfString("\\") != nil {
+                editedString = editedString.stringByReplacingOccurrencesOfString("\\", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+            }
+            
             finalString = editedString
             self.title = finalString
             
@@ -77,6 +81,10 @@ extension AssignmentDetailDataStructure: Unboxable {
             
             if checkedDescription.rangeOfString("<div>") != nil {
                 editedString = editedString.stringByReplacingOccurrencesOfString("<div>", withString: " ", options: NSStringCompareOptions.LiteralSearch, range: nil)
+            }
+            
+            if checkedDescription.rangeOfString("\\") != nil {
+                editedString = editedString.stringByReplacingOccurrencesOfString("\\", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
             }
             
             if checkedDescription.rangeOfString("</div>") != nil {

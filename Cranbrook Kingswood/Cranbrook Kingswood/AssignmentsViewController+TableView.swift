@@ -19,6 +19,12 @@ extension AssignmentsViewController {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        if let assignmentIndexId = specificDateAssignments![indexPath.row].assignmentIndexId {
+            let assignmentId: String = "\(assignmentIndexId)"
+            WebServices.service.getDetailDataForAssignment(forAssignmentId: assignmentId, callBack: { (isRequestSuccessful) in
+                
+            })
+        }
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
