@@ -97,6 +97,8 @@
 		D7C6898A1D750E860088FCA5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C689891D750E860088FCA5 /* SystemConfiguration.framework */; };
 		D7CF021C1D7558B700145F4B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7CF021B1D7558B700145F4B /* CoreGraphics.framework */; };
 		D7CF021F1D755B1100145F4B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = D7CF021E1D755B1100145F4B /* Reachability.m */; };
+		D7DCFB331D9EDCA100B5A604 /* WebServices+AssignmentDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DCFB321D9EDCA100B5A604 /* WebServices+AssignmentDetail.swift */; };
+		D7DCFB351D9EDCB900B5A604 /* AssignmentDetailDataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DCFB341D9EDCB900B5A604 /* AssignmentDetailDataStructure.swift */; };
 		D7F2AB321D7BC662005F8515 /* CalendarItemDataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F2AB311D7BC662005F8515 /* CalendarItemDataStructure.swift */; };
 		D7F2AB351D7BC95B005F8515 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F2AB341D7BC95B005F8515 /* CalendarViewController.swift */; };
 		D7F2AB3B1D7BCC2C005F8515 /* WebServices+Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F2AB3A1D7BCC2C005F8515 /* WebServices+Calendar.swift */; };
@@ -207,6 +209,8 @@
 		D7CF021B1D7558B700145F4B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D7CF021D1D755B1100145F4B /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		D7CF021E1D755B1100145F4B /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		D7DCFB321D9EDCA100B5A604 /* WebServices+AssignmentDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+AssignmentDetail.swift"; sourceTree = "<group>"; };
+		D7DCFB341D9EDCB900B5A604 /* AssignmentDetailDataStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentDetailDataStructure.swift; sourceTree = "<group>"; };
 		D7F2AB311D7BC662005F8515 /* CalendarItemDataStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarItemDataStructure.swift; sourceTree = "<group>"; };
 		D7F2AB341D7BC95B005F8515 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		D7F2AB3A1D7BCC2C005F8515 /* WebServices+Calendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+Calendar.swift"; sourceTree = "<group>"; };
@@ -483,6 +487,7 @@
 				A09D75A71D570F1A00B2AA74 /* WebServices+CurrentClasses.swift */,
 				D7C10B2A1D70B8D700C9B66F /* WebServices+ClassDetail.swift */,
 				D72685FE1D7133F00081E4C7 /* WebServices+Assignments.swift */,
+				D7DCFB321D9EDCA100B5A604 /* WebServices+AssignmentDetail.swift */,
 				D7F999241D7EF83500EABBD2 /* WebServices+AssignmentStatus.swift */,
 				31375AFE1D6534CD00B07B29 /* WebServices+Search.swift */,
 				D7F2AB3A1D7BCC2C005F8515 /* WebServices+Calendar.swift */,
@@ -499,6 +504,7 @@
 				31C4DA9E1D65647A00397716 /* ClassesDataStructure.swift */,
 				D7C10B2C1D70BB9700C9B66F /* ClassDetailDataStructure.swift */,
 				D7B481BC1D7A309B0033C58D /* AssignmentDataStructure.swift */,
+				D7DCFB341D9EDCB900B5A604 /* AssignmentDetailDataStructure.swift */,
 				31C4DAA01D65649F00397716 /* SearchDataStructure.swift */,
 				D7F2AB311D7BC662005F8515 /* CalendarItemDataStructure.swift */,
 				D72CF32D1D7258A900B2116C /* DateListStructure.swift */,
@@ -804,6 +810,7 @@
 				D7648D321D8CD7BB00C1D7C7 /* LiquidLoader.swift in Sources */,
 				31CD30AB1D67BEB2001C4647 /* SearchResultTableViewCell.swift in Sources */,
 				31CD309D1D67ABC6001C4647 /* DirectorySearchViewController+TableView.swift in Sources */,
+				D7DCFB351D9EDCB900B5A604 /* AssignmentDetailDataStructure.swift in Sources */,
 				D7905E9D1D901F890017752F /* RMTConfig.m in Sources */,
 				D7648D311D8CD7BB00C1D7C7 /* LiquidLoadEffect.swift in Sources */,
 				D7B0DEB11D9C55400084C74C /* GroupParsedData.swift in Sources */,
@@ -811,6 +818,7 @@
 				D7F2AB411D7CAE9C005F8515 /* CalendarViewController+TableView.swift in Sources */,
 				D7B0DEB31D9C6DF10084C74C /* ClassGradeBookViewController.swift in Sources */,
 				D72CF3291D72388A00B2116C /* AKPickerView.swift in Sources */,
+				D7DCFB331D9EDCA100B5A604 /* WebServices+AssignmentDetail.swift in Sources */,
 				A0BD730A1D56B27B00889331 /* WebServices+Login.swift in Sources */,
 				D71DEFE91D75F5F90006E6B6 /* AssignmentsViewController+TableView.swift in Sources */,
 				D7B481BB1D79EF9B0033C58D /* WebServices+StudentGroupTerm.swift in Sources */,
