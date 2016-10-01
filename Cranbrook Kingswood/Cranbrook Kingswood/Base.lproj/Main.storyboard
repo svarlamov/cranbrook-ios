@@ -434,7 +434,7 @@
                                         <rect key="frame" x="0.0" y="42" width="375" height="116"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5hF-bp-AF9" id="OFF-Vo-xrq">
-                                            <frame key="frameInset" width="375" height="115"/>
+                                            <frame key="frameInset" width="375" height="116"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZS-va-fFe" customClass="ShadowView" customModule="Cranbrook_Kingswood" customModuleProvider="target">
@@ -831,16 +831,16 @@
                                 <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="RUQ-Ac-AHf">
-                                    <rect key="frame" x="0.0" y="0.0" width="1000" height="14"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="14"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="search_cell" rowHeight="90" id="bmN-AW-ub2" customClass="SearchResultTableViewCell" customModule="Cranbrook_Kingswood" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="42" width="1000" height="90"/>
+                                        <rect key="frame" x="0.0" y="42" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bmN-AW-ub2" id="Luo-Jh-c08">
-                                            <frame key="frameInset" width="1000" height="90"/>
+                                            <frame key="frameInset" width="375" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="84Y-vQ-Rfq">
@@ -1052,16 +1052,16 @@
                                 <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="3iC-RO-WvM">
-                                    <rect key="frame" x="0.0" y="0.0" width="1000" height="14"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="14"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="assignment_cell" rowHeight="157" id="0df-pY-cSI" customClass="AssignmentTableViewCell" customModule="Cranbrook_Kingswood" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="42" width="1000" height="157"/>
+                                        <rect key="frame" x="0.0" y="42" width="375" height="157"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0df-pY-cSI" id="hZV-pm-r1a">
-                                            <frame key="frameInset" width="1000" height="157"/>
+                                            <frame key="frameInset" width="375" height="157"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QGq-n1-w91" customClass="ShadowView" customModule="Cranbrook_Kingswood" customModuleProvider="target">
@@ -1285,11 +1285,152 @@
                     <connections>
                         <outlet property="pickerView" destination="ksb-Bo-vuO" id="CID-VS-est"/>
                         <outlet property="tableView" destination="sA6-v1-QgZ" id="bjV-Ux-mtq"/>
+                        <segue destination="a1d-ez-wMg" kind="presentation" identifier="show_assignment_detail_view_controller" id="IUb-6T-NBb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MMl-S2-r3E" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1229" y="-146"/>
+        </scene>
+        <!--Assignment Detail View Controller-->
+        <scene sceneID="NAs-7E-cSv">
+            <objects>
+                <viewController id="a1d-ez-wMg" customClass="assignmentDetailViewController" customModule="Cranbrook_Kingswood" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oGY-aS-EwM"/>
+                        <viewControllerLayoutGuide type="bottom" id="nTA-Ve-fqx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mJP-L6-uCr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QbD-9W-0oP" customClass="ShadowView" customModule="Cranbrook_Kingswood" customModuleProvider="target">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxQ-6S-eXV">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Apm-hV-oFz"/>
+                                            <constraint firstAttribute="width" constant="71" id="Evj-86-VaU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                        <state key="normal" title="Dismiss"/>
+                                        <connections>
+                                            <action selector="dismissViewController" destination="a1d-ez-wMg" eventType="touchUpInside" id="vuO-tH-Dtn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="EGI-l4-PXh"/>
+                                    <constraint firstAttribute="bottom" secondItem="dxQ-6S-eXV" secondAttribute="bottom" id="IaA-65-PBG"/>
+                                    <constraint firstAttribute="trailing" secondItem="dxQ-6S-eXV" secondAttribute="trailing" constant="8" id="gl4-IX-aOw"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="77" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fta-YX-h7U">
+                                <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="P2M-0P-4PX">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="14"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="assignment_detail_cell" rowHeight="77" id="bYH-2w-WrH" customClass="assignmentDetailTableViewCell" customModule="Cranbrook_Kingswood" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="42" width="375" height="77"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bYH-2w-WrH" id="dZE-z8-NLl">
+                                            <frame key="frameInset" width="375" height="76"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Zd-4l-YZN" customClass="ShadowView" customModule="Cranbrook_Kingswood" customModuleProvider="target">
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Stefan DeClerck Stefan DeClerck Ste" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0o-Mr-Sfz">
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                                            <color key="textColor" red="0.1647058824" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Stefan DeClerck Stefan DeClerck Stefan " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbB-HJ-485">
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                                            <color key="textColor" red="0.38543821589999999" green="0.39317425560000002" blue="0.40614527090000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="kbB-HJ-485" firstAttribute="leading" secondItem="2Zd-4l-YZN" secondAttribute="leading" constant="18" id="3fV-6o-c03"/>
+                                                        <constraint firstAttribute="trailing" secondItem="kbB-HJ-485" secondAttribute="trailing" constant="15" id="4uW-p1-ISX"/>
+                                                        <constraint firstItem="U0o-Mr-Sfz" firstAttribute="leading" secondItem="2Zd-4l-YZN" secondAttribute="leading" constant="18" id="9hB-Ne-jAu"/>
+                                                        <constraint firstItem="kbB-HJ-485" firstAttribute="top" secondItem="U0o-Mr-Sfz" secondAttribute="bottom" constant="2" id="TuN-qg-WYM"/>
+                                                        <constraint firstAttribute="bottom" secondItem="kbB-HJ-485" secondAttribute="bottom" constant="6" id="eIy-Z2-sup"/>
+                                                        <constraint firstItem="kbB-HJ-485" firstAttribute="top" secondItem="U0o-Mr-Sfz" secondAttribute="bottom" constant="2" id="tkp-WH-mRH"/>
+                                                        <constraint firstItem="U0o-Mr-Sfz" firstAttribute="top" secondItem="2Zd-4l-YZN" secondAttribute="top" constant="7" id="tmy-E5-Ulf"/>
+                                                        <constraint firstAttribute="trailing" secondItem="U0o-Mr-Sfz" secondAttribute="trailing" constant="15" id="usf-TA-5fu"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                            <color key="value" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                            <real key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                            <real key="value" value="0.5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="2Zd-4l-YZN" firstAttribute="top" secondItem="dZE-z8-NLl" secondAttribute="top" id="9cv-Eb-aGu"/>
+                                                <constraint firstItem="2Zd-4l-YZN" firstAttribute="leading" secondItem="dZE-z8-NLl" secondAttribute="leading" constant="11" id="O9g-yG-Iam"/>
+                                                <constraint firstAttribute="bottom" secondItem="2Zd-4l-YZN" secondAttribute="bottom" constant="14.5" id="U01-8w-9rN"/>
+                                                <constraint firstAttribute="trailing" secondItem="2Zd-4l-YZN" secondAttribute="trailing" constant="11" id="ZPy-DP-dle"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="cellContentView" destination="2Zd-4l-YZN" id="BVv-Jk-9df"/>
+                                            <outlet property="descriptionLabel" destination="kbB-HJ-485" id="0Go-Rj-n8l"/>
+                                            <outlet property="titleLabel" destination="U0o-Mr-Sfz" id="iLs-EN-M5x"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="a1d-ez-wMg" id="EPQ-8p-yj8"/>
+                                    <outlet property="delegate" destination="a1d-ez-wMg" id="qGj-P8-tfH"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="fta-YX-h7U" secondAttribute="trailing" id="1ew-iB-XtE"/>
+                            <constraint firstItem="fta-YX-h7U" firstAttribute="top" secondItem="QbD-9W-0oP" secondAttribute="bottom" id="Kgy-w3-iEu"/>
+                            <constraint firstItem="nTA-Ve-fqx" firstAttribute="top" secondItem="fta-YX-h7U" secondAttribute="bottom" id="fP5-2w-AHf"/>
+                            <constraint firstItem="QbD-9W-0oP" firstAttribute="leading" secondItem="mJP-L6-uCr" secondAttribute="leading" id="glM-93-eBh"/>
+                            <constraint firstItem="fta-YX-h7U" firstAttribute="leading" secondItem="mJP-L6-uCr" secondAttribute="leading" id="qVK-gp-qg0"/>
+                            <constraint firstItem="QbD-9W-0oP" firstAttribute="top" secondItem="mJP-L6-uCr" secondAttribute="top" id="wm0-HI-ux8"/>
+                            <constraint firstAttribute="trailing" secondItem="QbD-9W-0oP" secondAttribute="trailing" id="yTh-2R-bdm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="fta-YX-h7U" id="WYb-XL-yPe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lMG-5h-tsG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1230" y="484"/>
         </scene>
     </scenes>
     <resources>

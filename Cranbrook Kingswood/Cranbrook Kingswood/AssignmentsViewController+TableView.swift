@@ -21,9 +21,17 @@ extension AssignmentsViewController {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         if let assignmentIndexId = specificDateAssignments![indexPath.row].assignmentIndexId {
             let assignmentId: String = "\(assignmentIndexId)"
-            WebServices.service.getDetailDataForAssignment(forAssignmentId: assignmentId, callBack: { (isRequestSuccessful) in
-                
-            })
+            if NetworkStatus.networkStatus.isConnectedToNetwork() {
+                WebServices.service.getDetailDataForAssignment(forAssignmentId: assignmentId, callBack: { (isRequestSuccessful) in
+                    if assignmentDetailData?.description == "" || assignmentDetailData?.description == nil {
+                        self.showAssignmentDetailAlert()
+                    } else {
+                        self.performSegueWithIdentifier("show_assignment_detail_view_controller", sender: nil)
+                    }
+                })
+            } else {
+                self.showNetworkAlert()
+            }
         }
     }
     

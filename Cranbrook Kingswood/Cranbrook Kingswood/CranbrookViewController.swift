@@ -30,7 +30,11 @@ class CranbrookViewController: UIViewController {
     }
     
     internal func showCalendarAlert() {
-        ISMessages.showCardAlertWithTitle("Info", message: "Nothing Schedule Today.", iconImage: nil, duration: 3, hideOnSwipe: true, hideOnTap: true, alertType: ISAlertType.Warning, alertPosition: ISAlertPosition.Bottom)
+        ISMessages.showCardAlertWithTitle("Info", message: "Nothing Scheduled Today.", iconImage: nil, duration: 3, hideOnSwipe: true, hideOnTap: true, alertType: ISAlertType.Warning, alertPosition: ISAlertPosition.Bottom)
+    }
+    
+    internal func showAssignmentDetailAlert() {
+        ISMessages.showCardAlertWithTitle("Info", message: "No Description for This Assignment.", iconImage: nil, duration: 3, hideOnSwipe: true, hideOnTap: true, alertType: ISAlertType.Warning, alertPosition: ISAlertPosition.Bottom)
     }
 
 }
