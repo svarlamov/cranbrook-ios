@@ -15,11 +15,15 @@ extension AssignmentsViewController {
     
     func indexOfCurrentDate() -> Int? {
         let calendar: NSCalendar = NSCalendar.currentCalendar()
-        for date in mainDates {
-            if calendar.isDateInToday(date) {
-                let indexOfDate: Int = mainDates.indexOf(date)!
-                return indexOfDate
+        if lastSelectedAssignmentDateIndex == nil {
+            for date in mainDates {
+                if calendar.isDateInToday(date) {
+                    let indexOfDate: Int = mainDates.indexOf(date)!
+                    return indexOfDate
+                }
             }
+        } else {
+            return lastSelectedAssignmentDateIndex!
         }
         return nil
     }
@@ -58,6 +62,7 @@ extension AssignmentsViewController {
     
     func pickerView(pickerView: AKPickerView, didSelectItem item: Int) {
         self.pickerIndex = item
+        lastSelectedAssignmentDateIndex = item
         Analytics.analytics.assignmentDateSelection(self.dates[item])
         self.getAssignmentsForDate(date: self.mainDates[item])
     }
