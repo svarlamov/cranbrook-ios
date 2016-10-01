@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '9C1FE76FEDBF299C83B6CD381791AF2C'
-               BlueprintName = 'PullToRefreshSwift'
+               BlueprintIdentifier = 'EE57040B0F2FD9464A60DBE1F82FE001'
+               BlueprintName = 'Kanna'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'PullToRefreshSwift.framework'>
+               BuildableName = 'Kanna.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

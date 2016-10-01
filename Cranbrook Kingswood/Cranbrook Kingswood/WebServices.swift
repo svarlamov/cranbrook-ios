@@ -49,6 +49,10 @@ class WebServices {
     var currentClassesRemovedClassTitle: String = "Cyber Learning Lab"
     
     
+    //  Class Detail
+    var classDetailEndopint: String = "https://cranbrook.myschoolapp.com/api/datadirect/GradeBookPerformanceAssignmentStudentList/?sectionId="
+    
+    
     //  Assignments
     var assignmentsEndPoint: String = "https://cranbrook.myschoolapp.com/api/DataDirect/AssignmentCenterAssignments/?format=json&filter=1&dateStart="
     var assignmentsPersonaID: String = "2"

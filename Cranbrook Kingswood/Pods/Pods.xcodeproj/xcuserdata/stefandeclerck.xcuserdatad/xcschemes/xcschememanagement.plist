@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Kanna.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>PMAlertController-PMAlertController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -62,12 +67,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>388DC2AF77ADF5C091B5E45971BA26AE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>3C014F737BF0E4D82F49D1E8DBB98C79</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6865275E734380C652178D257F7CFC1A</key>
+		<key>49A9A6F66C61CD9D1A40D74FD828B0D6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -77,17 +87,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7B76D3B43978EC2EA0E74E83A8018EBC</key>
+		<key>917F334D0B87D8285A6CD88793B7DA37</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A0AEE8D8529FCF8D7E522202A158BC66</key>
+		<key>937C667B921D3A3E8F134E75A1D303DE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B3F3AECBBF6788319BBE2B77C8B99C92</key>
+		<key>9C1FE76FEDBF299C83B6CD381791AF2C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,7 +107,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C64E0155B6F34A74242E3D22F6E7BB5D</key>
+		<key>E4DC764EB78A9F5114633A847F50C15A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -112,7 +122,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F5D9B53C3B0D107EEEAC0410B9CF6C48</key>
+		<key>EE57040B0F2FD9464A60DBE1F82FE001</key>
 		<dict>
 			<key>primary</key>
 			<true/>

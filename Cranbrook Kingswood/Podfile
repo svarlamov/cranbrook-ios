@@ -6,6 +6,7 @@ target 'Cranbrook Kingswood' do
   use_frameworks!
 
   # Pods for Cranbrook Kingswood
+  pod 'Kanna', '~> 1.1.0'
   pod 'CFAlertViewController'
   pod 'PMAlertController' , '~> 1.1.0'
   pod 'Firebase/Core'

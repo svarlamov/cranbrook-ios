@@ -76,7 +76,7 @@ extension WebServices {
         if let info = currentSessionInfo?.userId {
             studentUserId = info
         }
-        let urlString = "https://cranbrook.myschoolapp.com/api/datadirect/GradeBookPerformanceAssignmentStudentList/?sectionId=\(sectionId)&markingPeriodId=\(markingPeriodId)&studentUserId=\(studentUserId)"
+        let urlString = "\(self.classDetailEndopint)\(sectionId)&markingPeriodId=\(markingPeriodId)&studentUserId=\(studentUserId)"
         returnURL = NSURL(string: urlString)!
         return returnURL
     }
