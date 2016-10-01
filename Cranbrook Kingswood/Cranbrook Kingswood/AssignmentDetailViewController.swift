@@ -14,6 +14,9 @@ class assignmentDetailViewController: UIViewController, UITableViewDataSource, U
     @IBOutlet weak var tableView: UITableView!
     let cellIdentifier: String = "assignment_detail_cell"
     
+    //  Dismiss
+    @IBOutlet var swipeToDismiss: UISwipeGestureRecognizer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
@@ -35,6 +38,10 @@ class assignmentDetailViewController: UIViewController, UITableViewDataSource, U
         self.tableView.estimatedRowHeight = 77.0
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.reloadData()
+    }
+    
+    @IBAction func swipedToDismiss(sender: AnyObject) {
+        self.dismissViewController()
     }
     
 }

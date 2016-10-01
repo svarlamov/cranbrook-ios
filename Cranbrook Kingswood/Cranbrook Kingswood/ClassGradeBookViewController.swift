@@ -37,4 +37,7 @@ class classGradeBookViewController: UIViewController, UITableViewDelegate, UITab
         self.dismissViewControllerAnimated(true) {}
     }
     
+    @IBAction func swipedToDismiss(sender: AnyObject) {
+        self.dismissViewController()
+    }
 }

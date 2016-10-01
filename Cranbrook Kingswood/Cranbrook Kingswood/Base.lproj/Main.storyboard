@@ -579,6 +579,7 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="JGF-qz-ObO"/>
                                     <constraint firstAttribute="trailing" secondItem="g72-lw-SAh" secondAttribute="trailing" constant="8" id="dUM-W9-gVO"/>
@@ -598,6 +599,9 @@
                                         <real key="value" value="0.5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="wAN-Nx-z0W" appends="YES" id="5ZN-7t-i2f"/>
+                                </connections>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="92" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fyu-67-oWi">
                                 <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -707,6 +711,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qaf-fx-bBO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer delaysTouchesEnded="NO" direction="down" id="wAN-Nx-z0W">
+                    <connections>
+                        <action selector="swipedToDismiss:" destination="Aiq-r2-602" id="3n9-iZ-sil"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1978" y="484"/>
         </scene>
@@ -1319,6 +1328,7 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="EGI-l4-PXh"/>
                                     <constraint firstAttribute="bottom" secondItem="dxQ-6S-eXV" secondAttribute="bottom" id="IaA-65-PBG"/>
@@ -1338,6 +1348,9 @@
                                         <real key="value" value="0.5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="jyG-eY-4gA" appends="YES" id="np7-kN-d8I"/>
+                                </connections>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="77" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fta-YX-h7U">
                                 <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1425,10 +1438,16 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="swipeToDismiss" destination="jyG-eY-4gA" id="mfH-f9-12z"/>
                         <outlet property="tableView" destination="fta-YX-h7U" id="WYb-XL-yPe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lMG-5h-tsG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer delaysTouchesEnded="NO" direction="down" id="jyG-eY-4gA">
+                    <connections>
+                        <action selector="swipedToDismiss:" destination="a1d-ez-wMg" id="AHn-Ct-482"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1230" y="484"/>
         </scene>
