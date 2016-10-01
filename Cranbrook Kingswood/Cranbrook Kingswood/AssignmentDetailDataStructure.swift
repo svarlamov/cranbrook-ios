@@ -26,100 +26,14 @@ extension AssignmentDetailDataStructure: Unboxable {
         
         if let checkedDescription = self.title {
             
-            var finalString: String = String()
-            var editedString: String = checkedDescription
-            
-            if checkedDescription.rangeOfString("<div>") != nil {
-                editedString = editedString.stringByReplacingOccurrencesOfString("<div>", withString: " ", options: NSStringCompareOptions.LiteralSearch, range: nil)
-            }
-            
-            if checkedDescription.rangeOfString("</div>") != nil {
-                editedString = editedString.stringByReplacingOccurrencesOfString("</div>", withString: " ", options: NSStringCompareOptions.LiteralSearch, range: nil)
-            }
-            
-            if checkedDescription.rangeOfString("&#160;") != nil {
-                editedString = editedString.stringByReplacingOccurrencesOfString("&#160;", withString: " ", options: NSStringCompareOptions.LiteralSearch, range: nil)
-            }
-            
-            if checkedDescription.rangeOfString("<br>") != nil {
-                editedString = editedString.stringByReplacingOccurrencesOfString("<br>", withString: " ", options: NSStringCompareOptions.LiteralSearch, range: nil)
-            }
-            
-            if checkedDescription.rangeOfString("<br />") != nil {
-                editedString = editedString.stringByReplacingOccurrencesOfString("<br />", withString: " ", options: NSStringCompareOptions.LiteralSearch, range: nil)
-            }
-            
-            if checkedDescription.rangeOfString("</b>") != nil {
-                editedString = editedString.stringByReplacingOccurrencesOfString("</b>", withString: " ", options: NSStringCompareOptions.LiteralSearch, range: nil)
-            }
-            
-            if checkedDescription.rangeOfString("<b>") != nil {
-                editedString = editedString.stringByReplacingOccurrencesOfString("<b>", withString: " ", options: NSStringCompareOptions.LiteralSearch, range: nil)
-            }
-            
-            if checkedDescription.rangeOfString("<i>") != nil {
-                editedString = editedString.stringByReplacingOccurrencesOfString("<i>", withString: " ", options: NSStringCompareOptions.LiteralSearch, range: nil)
-            }
-            
-            if checkedDescription.rangeOfString("</i") != nil {
-                editedString = editedString.stringByReplacingOccurrencesOfString("</i>", withString: " ", options: NSStringCompareOptions.LiteralSearch, range: nil)
-            }
-            
-            if checkedDescription.rangeOfString("\\") != nil {
-                editedString = editedString.stringByReplacingOccurrencesOfString("\\", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
-            }
-            
-            finalString = editedString
+            let finalString: String = String(htmlEncodedString: checkedDescription)
             self.title = finalString
             
         }
         
         if let checkedDescription = self.description {
             
-            var finalString: String = String()
-            var editedString: String = checkedDescription
-            
-            if checkedDescription.rangeOfString("<div>") != nil {
-                editedString = editedString.stringByReplacingOccurrencesOfString("<div>", withString: " ", options: NSStringCompareOptions.LiteralSearch, range: nil)
-            }
-            
-            if checkedDescription.rangeOfString("\\") != nil {
-                editedString = editedString.stringByReplacingOccurrencesOfString("\\", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
-            }
-            
-            if checkedDescription.rangeOfString("</div>") != nil {
-                editedString = editedString.stringByReplacingOccurrencesOfString("</div>", withString: " ", options: NSStringCompareOptions.LiteralSearch, range: nil)
-            }
-            
-            if checkedDescription.rangeOfString("&#160;") != nil {
-                editedString = editedString.stringByReplacingOccurrencesOfString("&#160;", withString: " ", options: NSStringCompareOptions.LiteralSearch, range: nil)
-            }
-            
-            if checkedDescription.rangeOfString("<br>") != nil {
-                editedString = editedString.stringByReplacingOccurrencesOfString("<br>", withString: " ", options: NSStringCompareOptions.LiteralSearch, range: nil)
-            }
-            
-            if checkedDescription.rangeOfString("<br />") != nil {
-                editedString = editedString.stringByReplacingOccurrencesOfString("<br />", withString: " ", options: NSStringCompareOptions.LiteralSearch, range: nil)
-            }
-            
-            if checkedDescription.rangeOfString("</b>") != nil {
-                editedString = editedString.stringByReplacingOccurrencesOfString("</b>", withString: " ", options: NSStringCompareOptions.LiteralSearch, range: nil)
-            }
-            
-            if checkedDescription.rangeOfString("<b>") != nil {
-                editedString = editedString.stringByReplacingOccurrencesOfString("<b>", withString: " ", options: NSStringCompareOptions.LiteralSearch, range: nil)
-            }
-            
-            if checkedDescription.rangeOfString("<i>") != nil {
-                editedString = editedString.stringByReplacingOccurrencesOfString("<i>", withString: " ", options: NSStringCompareOptions.LiteralSearch, range: nil)
-            }
-            
-            if checkedDescription.rangeOfString("</i") != nil {
-                editedString = editedString.stringByReplacingOccurrencesOfString("</i>", withString: " ", options: NSStringCompareOptions.LiteralSearch, range: nil)
-            }
-            
-            finalString = editedString
+            let finalString: String = String(htmlEncodedString: checkedDescription)
             self.description = finalString
             
         }
