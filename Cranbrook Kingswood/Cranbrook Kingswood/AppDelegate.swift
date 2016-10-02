@@ -16,7 +16,9 @@ import OneSignal
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow? 
+    var window: UIWindow?
+    let rolloutAuthKey: String = "57ddb79c8718e2f531cb2787"
+    let oneSignalAuthKey: String = "6ec774da-d1f1-49cc-ae2a-5ba34cb14782"
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
@@ -28,22 +30,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let notificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: nil)
         application.registerForRemoteNotifications()
         application.registerUserNotificationSettings(notificationSettings)
-        OneSignal.initWithLaunchOptions(launchOptions, appId: "6ec774da-d1f1-49cc-ae2a-5ba34cb14782")
+        OneSignal.initWithLaunchOptions(launchOptions, appId: self.oneSignalAuthKey)
         
         return true
     }
 
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {}
+    
+    func applicationWillEnterForeground(application: UIApplication) {}
+    
     func applicationWillResignActive(application: UIApplication) {}
 
     func applicationDidEnterBackground(application: UIApplication) {}
 
-    func applicationWillEnterForeground(application: UIApplication) {}
-
     func applicationDidBecomeActive(application: UIApplication) {}
 
     func applicationWillTerminate(application: UIApplication) {}
-    
-    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) { print(userInfo) }
     
     func setup() {
         
@@ -55,7 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Analytics.analytics.logUserSession()
         
         //  Rollout configuration
-        Rollout.setupWithKey("57ddb79c8718e2f531cb2787")
+        Rollout.setupWithKey(self.rolloutAuthKey)
         
     }
     

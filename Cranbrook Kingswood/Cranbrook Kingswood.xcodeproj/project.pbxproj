@@ -34,6 +34,7 @@
 		A0BD73121D56E58E00889331 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BD73111D56E58E00889331 /* Constants.swift */; };
 		D71625BC1D9A9E9800714019 /* SearchResultDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D71625BB1D9A9E9800714019 /* SearchResultDetailView.xib */; };
 		D71625BE1D9AA77300714019 /* SetupSearchResultDetailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71625BD1D9AA77300714019 /* SetupSearchResultDetailData.swift */; };
+		D7178A881DA1AF6700D4E17A /* WebServices+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7178A871DA1AF6700D4E17A /* WebServices+Error.swift */; };
 		D71DEFE31D75F31B0006E6B6 /* AssignmentsViewController+Selector.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71DEFE21D75F31B0006E6B6 /* AssignmentsViewController+Selector.swift */; };
 		D71DEFE91D75F5F90006E6B6 /* AssignmentsViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71DEFE81D75F5F80006E6B6 /* AssignmentsViewController+TableView.swift */; };
 		D71DEFED1D75F7A10006E6B6 /* ClassesViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71DEFEC1D75F7A10006E6B6 /* ClassesViewController+TableView.swift */; };
@@ -144,6 +145,7 @@
 		D71625BB1D9A9E9800714019 /* SearchResultDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultDetailView.xib; sourceTree = "<group>"; };
 		D71625BD1D9AA77300714019 /* SetupSearchResultDetailData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupSearchResultDetailData.swift; sourceTree = "<group>"; };
 		D7178A861DA195B000D4E17A /* Cranbrook Kingswood.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Cranbrook Kingswood.entitlements"; sourceTree = "<group>"; };
+		D7178A871DA1AF6700D4E17A /* WebServices+Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebServices+Error.swift"; sourceTree = "<group>"; };
 		D71DEFE21D75F31B0006E6B6 /* AssignmentsViewController+Selector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AssignmentsViewController+Selector.swift"; sourceTree = "<group>"; };
 		D71DEFE81D75F5F80006E6B6 /* AssignmentsViewController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AssignmentsViewController+TableView.swift"; sourceTree = "<group>"; };
 		D71DEFEC1D75F7A10006E6B6 /* ClassesViewController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ClassesViewController+TableView.swift"; sourceTree = "<group>"; };
@@ -501,6 +503,7 @@
 			isa = PBXGroup;
 			children = (
 				A0BD73031D56972500889331 /* WebServices.swift */,
+				D7178A871DA1AF6700D4E17A /* WebServices+Error.swift */,
 				A0BD73091D56B27A00889331 /* WebServices+Login.swift */,
 				D7B481BA1D79EF9B0033C58D /* WebServices+StudentGroupTerm.swift */,
 				A09D75A71D570F1A00B2AA74 /* WebServices+CurrentClasses.swift */,
@@ -809,6 +812,7 @@
 				D71DEFED1D75F7A10006E6B6 /* ClassesViewController+TableView.swift in Sources */,
 				A08F66F11D57204900FBE55E /* LoginViewController.swift in Sources */,
 				A07468811D568DAD00E7ACC0 /* AppDelegate.swift in Sources */,
+				D7178A881DA1AF6700D4E17A /* WebServices+Error.swift in Sources */,
 				D755622C1D9DBB9D006B9222 /* SwipeUpInteractiveTransition.m in Sources */,
 				A09D75A61D57042900B2AA74 /* DateComparison.swift in Sources */,
 				D72686081D7134630081E4C7 /* ClassesTableViewCell.swift in Sources */,
