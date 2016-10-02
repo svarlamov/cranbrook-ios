@@ -88,7 +88,12 @@ class StartupViewController: UIViewController {
     func ifConnectionIsAvailable(isAvailable isAvailable: Bool) {
         if isAvailable {
             self.networkMessageLabel.hidden = true
-            login()
+            if RemoteConfig.config.isAppAvailable() == true {
+                self.login()
+            } else {
+                self.networkMessageLabel.hidden = false
+                self.networkMessageLabel.text = "App Not Available"
+            }
         } else {
             self.networkMessageLabel.hidden = false
         }

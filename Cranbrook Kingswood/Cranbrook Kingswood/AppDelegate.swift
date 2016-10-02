@@ -11,6 +11,7 @@ import UIKit
 import Fabric
 import Crashlytics
 import Rollout
+import OneSignal
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,7 +19,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow? 
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        //  Setup data
         self.setup()
+        
+        //  Setup Remote Notifications
+        let notificationTypes: UIUserNotificationType = [UIUserNotificationType.Alert, UIUserNotificationType.Badge, UIUserNotificationType.Sound]
+        let notificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: nil)
+        application.registerForRemoteNotifications()
+        application.registerUserNotificationSettings(notificationSettings)
+        OneSignal.initWithLaunchOptions(launchOptions, appId: "6ec774da-d1f1-49cc-ae2a-5ba34cb14782")
+        
         return true
     }
 
@@ -31,6 +42,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidBecomeActive(application: UIApplication) {}
 
     func applicationWillTerminate(application: UIApplication) {}
+    
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) { print(userInfo) }
     
     func setup() {
         

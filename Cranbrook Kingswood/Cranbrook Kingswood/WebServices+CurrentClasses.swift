@@ -14,7 +14,8 @@ import Unbox
 extension WebServices {
     
     internal func getCurrentUserClasses(forFirstSemester: Bool, callBack: (isRequestSuccessful: Bool) -> Void) {
-        getCurrentUserClassesSubMethod(forFirstSemester) { (isRequestSuccessful) in
+        let shouldGetForFirstSemester: Bool = RemoteConfig.config.getGradesForFirstSemester()
+        getCurrentUserClassesSubMethod(shouldGetForFirstSemester) { (isRequestSuccessful) in
             if isRequestSuccessful {
                 callBack(isRequestSuccessful: true)
             } else {

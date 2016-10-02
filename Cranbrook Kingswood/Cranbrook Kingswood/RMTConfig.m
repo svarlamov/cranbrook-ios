@@ -77,11 +77,7 @@ static NSDictionary *RMTMapCSVDataToDictionary(NSData *data) {
         
         [keyToValue setObject:val forKey:key];
     }
-    NSLog(@"==========================================");
-    NSLog(@"==========================================");
-    NSLog(@"%@", keyToValue.copy);
-    NSLog(@"==========================================");
-    NSLog(@"==========================================");
+    
     return keyToValue.copy;
 }
 

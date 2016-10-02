@@ -26,7 +26,6 @@ class AssignmentTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        cellContentView.cornerRadius = 0
     }
     
     func changeStatusButtons(toStatus status: Int) {

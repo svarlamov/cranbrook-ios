@@ -78,7 +78,6 @@
 		D7648D371D8CD7BB00C1D7C7 /* UIColorEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7648D291D8CD7BB00C1D7C7 /* UIColorEx.swift */; };
 		D7648D381D8CD7BB00C1D7C7 /* UIView+Grow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7648D2A1D8CD7BB00C1D7C7 /* UIView+Grow.swift */; };
 		D7905E9D1D901F890017752F /* RMTConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = D7905E9C1D901F890017752F /* RMTConfig.m */; };
-		D7905EB91D90230A0017752F /* RemoteConfigDataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7905EB81D90230A0017752F /* RemoteConfigDataStructure.swift */; };
 		D7A2A21C1DA025AA00C1BB59 /* HTMLConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A2A21B1DA025AA00C1BB59 /* HTMLConverter.swift */; };
 		D7A2A21F1DA030E500C1BB59 /* AssignmentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A2A21E1DA030E500C1BB59 /* AssignmentDetailViewController.swift */; };
 		D7A2A2211DA030F600C1BB59 /* AssignmentDetailViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A2A2201DA030F600C1BB59 /* AssignmentDetailViewController+TableView.swift */; };
@@ -144,6 +143,7 @@
 		BC1DCB26B33F435898567871 /* Pods-Cranbrook Kingswood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cranbrook Kingswood.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cranbrook Kingswood/Pods-Cranbrook Kingswood.release.xcconfig"; sourceTree = "<group>"; };
 		D71625BB1D9A9E9800714019 /* SearchResultDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultDetailView.xib; sourceTree = "<group>"; };
 		D71625BD1D9AA77300714019 /* SetupSearchResultDetailData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupSearchResultDetailData.swift; sourceTree = "<group>"; };
+		D7178A861DA195B000D4E17A /* Cranbrook Kingswood.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Cranbrook Kingswood.entitlements"; sourceTree = "<group>"; };
 		D71DEFE21D75F31B0006E6B6 /* AssignmentsViewController+Selector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AssignmentsViewController+Selector.swift"; sourceTree = "<group>"; };
 		D71DEFE81D75F5F80006E6B6 /* AssignmentsViewController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AssignmentsViewController+TableView.swift"; sourceTree = "<group>"; };
 		D71DEFEC1D75F7A10006E6B6 /* ClassesViewController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ClassesViewController+TableView.swift"; sourceTree = "<group>"; };
@@ -193,7 +193,6 @@
 		D7648D2A1D8CD7BB00C1D7C7 /* UIView+Grow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Grow.swift"; sourceTree = "<group>"; };
 		D7905E9B1D901F890017752F /* RMTConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMTConfig.h; sourceTree = "<group>"; };
 		D7905E9C1D901F890017752F /* RMTConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMTConfig.m; sourceTree = "<group>"; };
-		D7905EB81D90230A0017752F /* RemoteConfigDataStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteConfigDataStructure.swift; sourceTree = "<group>"; };
 		D7A2A21B1DA025AA00C1BB59 /* HTMLConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTMLConverter.swift; sourceTree = "<group>"; };
 		D7A2A21E1DA030E500C1BB59 /* AssignmentDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentDetailViewController.swift; sourceTree = "<group>"; };
 		D7A2A2201DA030F600C1BB59 /* AssignmentDetailViewController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AssignmentDetailViewController+TableView.swift"; sourceTree = "<group>"; };
@@ -316,6 +315,7 @@
 				D733B9101D8DF427002C0D80 /* GoogleService-Info.plist */,
 				A0BD730F1D56B9CA00889331 /* CranbrookAPIInfo.swift */,
 				A09D75B81D57159900B2AA74 /* Cranbrook Kingswood-Bridging-Header.h */,
+				D7178A861DA195B000D4E17A /* Cranbrook Kingswood.entitlements */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -527,7 +527,6 @@
 				31C4DAA01D65649F00397716 /* SearchDataStructure.swift */,
 				D7F2AB311D7BC662005F8515 /* CalendarItemDataStructure.swift */,
 				D72CF32D1D7258A900B2116C /* DateListStructure.swift */,
-				D7905EB81D90230A0017752F /* RemoteConfigDataStructure.swift */,
 			);
 			name = "Data Models";
 			sourceTree = "<group>";
@@ -622,6 +621,14 @@
 						DevelopmentTeam = V8FVQ5687W;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -817,7 +824,6 @@
 				D7A2A21F1DA030E500C1BB59 /* AssignmentDetailViewController.swift in Sources */,
 				D7648D331D8CD7BB00C1D7C7 /* LiquidUtil.swift in Sources */,
 				31C4DA9D1D65644900397716 /* LoginDataStructure.swift in Sources */,
-				D7905EB91D90230A0017752F /* RemoteConfigDataStructure.swift in Sources */,
 				D71DEFF01D76099A0006E6B6 /* NetworkStatus.swift in Sources */,
 				D7F2AB3D1D7BD3EF005F8515 /* CalendarTableViewCell.swift in Sources */,
 				D7B0DEB61D9C6E180084C74C /* ClassGradeBookViewController+TableView.swift in Sources */,
@@ -981,6 +987,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Cranbrook Kingswood/Cranbrook Kingswood.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1005,6 +1012,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Cranbrook Kingswood/Cranbrook Kingswood.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
