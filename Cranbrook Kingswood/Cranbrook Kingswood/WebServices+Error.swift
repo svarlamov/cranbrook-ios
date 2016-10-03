@@ -26,7 +26,8 @@ extension WebServices {
         let request: NSMutableURLRequest = createErrorCheckingRequest()
         Alamofire.request(request).responseJSON { response in
             if let requestResponse: JSON = JSON(response.result.value!) {
-                if requestResponse.rawValue["Error"] != nil {
+                let requestResponseDictionary: NSDictionary = requestResponse.rawValue as! NSDictionary
+                if requestResponseDictionary["Error"] != nil {
                     let username: String = userLoginInfo!.username
                     let password: String = userLoginInfo!.password
                     WebServices.service.loginWithParameters(username: username, password: password, callBack: { (isLoginSuccessful) in

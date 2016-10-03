@@ -96,6 +96,14 @@ class WebServices {
         }
     }
     
+    func reAuthenticateUser(callBack: (isReAuthenticationSuccessful: Bool) -> Void) {
+        let username: String = userLoginInfo!.username
+        let password: String = userLoginInfo!.password
+        WebServices.service.loginWithParameters(username: username, password: password, callBack: { (isLoginSuccessful) in
+            callBack(isReAuthenticationSuccessful: true)
+        })
+    }
+    
 }
 
 

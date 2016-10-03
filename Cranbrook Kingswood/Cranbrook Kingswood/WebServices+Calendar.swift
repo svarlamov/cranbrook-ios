@@ -28,6 +28,36 @@ extension WebServices {
         var getTasksForCalendarDateListArray: [CalendarItemDataStructure] = [CalendarItemDataStructure]()
         Alamofire.request(getCalendarTasksForDateRequest).responseJSON { response in
             if let calendarRequestResponse: JSON = JSON(response.result.value!) {
+                if self.isRequestSuccessful(inputData: calendarRequestResponse) {
+                    let dateCalendarResponseArray: [NSDictionary] = calendarRequestResponse.rawValue as! [NSDictionary]
+                    for responseObject in dateCalendarResponseArray {
+                        let singularResponse: NSDictionary = responseObject
+                        let singularAssignment: CalendarItemDataStructure? = self.mapCalendarTasksForDate(singularResponse)
+                        getTasksForCalendarDateListArray.append(singularAssignment!)
+                    }
+                    calendarTasksForDate = nil
+                    calendarTasksForDate = getTasksForCalendarDateListArray
+                    callBack(isRequestSuccessful: true)
+                } else {
+                    self.reAuthenticateUser({ (isReAuthenticationSuccessful) in
+                        self.getCalendarErrorHandler(forDate: forDate, callBack: { (isRequestSuccessful) in
+                            callBack(isRequestSuccessful: true)
+                        })
+                    })
+                }
+            } else {
+                callBack(isRequestSuccessful: false)
+            }
+        }
+    }
+    
+    private func getCalendarErrorHandler(forDate date: NSDate, callBack: (isRequestSuccessful: Bool) -> Void ) {
+        let getCalendarTasksForDateRequest: NSMutableURLRequest = createCalendarTasksForDateRequest(date)
+        var getTasksForCalendarDateListArray: [CalendarItemDataStructure] = [CalendarItemDataStructure]()
+        Alamofire.request(getCalendarTasksForDateRequest).responseJSON { response in
+            if let calendarRequestResponse: JSON = JSON(response.result.value!) {
+                
+                
                 let dateCalendarResponseArray: [NSDictionary] = calendarRequestResponse.rawValue as! [NSDictionary]
                 for responseObject in dateCalendarResponseArray {
                     let singularResponse: NSDictionary = responseObject

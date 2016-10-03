@@ -46,12 +46,6 @@ extension StartupViewController {
     
     private func getIdForCalendar() {
         WebServices.service.getCalendarIdForDate(date: NSDate()) { (isRequestSuccessful) in
-            self.getEventsForCurrentDate()
-        }
-    }
-    
-    private func getEventsForCurrentDate() {
-        WebServices.service.getCalendarTasksForDate(date: NSDate()) { (isRequestSuccessful) in
             self.takeSegue(.continuation)
         }
     }
