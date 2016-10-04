@@ -33,6 +33,30 @@ extension WebServices {
         let getAssignmentsForDateRequest: NSMutableURLRequest = self.createAssignmentStatusChangeRequest(assignmentId: assignmentId, forStatus: status)
         Alamofire.request(getAssignmentsForDateRequest).responseJSON { response in
             if let requestResponse: JSON = JSON(response.result.value!) {
+                if self.isRequestSuccessful(inputData: requestResponse) {
+                    let responseSuccess = requestResponse["\(self.assignmentStatusWasVoidKey)"].boolValue
+                    if responseSuccess {
+                        callBack(isRequestSuccessful: true)
+                    } else {
+                        callBack(isRequestSuccessful: false)
+                    }
+                } else {
+                    self.reAuthenticateUser({ (isReAuthenticationSuccessful) in
+                        self.updateAssignmentStatusErrorHandling(assignmentId, status: status, callBack: { (isRequestSuccessful) in
+                            callBack(isRequestSuccessful: true)
+                        })
+                    })
+                }
+            } else {
+                callBack(isRequestSuccessful: false)
+            }
+        }
+    }
+    
+    private func updateAssignmentStatusErrorHandling(assignmentId: String, status: AssingmentStatus, callBack: (isRequestSuccessful: Bool) -> Void) {
+        let getAssignmentsForDateRequest: NSMutableURLRequest = self.createAssignmentStatusChangeRequest(assignmentId: assignmentId, forStatus: status)
+        Alamofire.request(getAssignmentsForDateRequest).responseJSON { response in
+            if let requestResponse: JSON = JSON(response.result.value!) {
                 let responseSuccess = requestResponse["\(self.assignmentStatusWasVoidKey)"].boolValue
                 if responseSuccess {
                     callBack(isRequestSuccessful: true)

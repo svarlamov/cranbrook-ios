@@ -28,6 +28,35 @@ extension WebServices {
         var classGradeBookArray: [CurrentUserClassDetail] = [CurrentUserClassDetail]()
         Alamofire.request(classGradeBookNetworkRequest).responseJSON { response in
             if let classGradeBookResponse: JSON = JSON(response.result.value!) {
+                if self.isRequestSuccessful(inputData: classGradeBookResponse) {
+                    let classGradeBookDictionaryArray: [NSDictionary] = classGradeBookResponse.rawValue as! [NSDictionary]
+                    for responseElement in classGradeBookDictionaryArray {
+                        let singularResponse: NSDictionary = responseElement
+                        let singularGradeBookItem: CurrentUserClassDetail? = self.mapClassGradeBookReponse(singularResponse)
+                        if let mainResult = singularGradeBookItem {
+                            classGradeBookArray.append(mainResult)
+                        }
+                    }
+                    gradeBookForSelectedClass = GroupParsedData.groupParsedData.groupClassGradeBookData(forData: classGradeBookArray)
+                    callBack(isRequestSuccessful: true)
+                } else {
+                    self.reAuthenticateUser({ (isReAuthenticationSuccessful) in
+                        self.getGradeBookForClassErrorHandler(data, callBack: { (isRequestSuccessful) in
+                            callBack(isRequestSuccessful: true)
+                        })
+                    })
+                }
+            } else {
+                callBack(isRequestSuccessful: false)
+            }
+        }
+    }
+    
+    private func getGradeBookForClassErrorHandler(data: CurrentUserClasses, callBack: (isRequestSuccessful: Bool) -> Void) {
+        let classGradeBookNetworkRequest: NSMutableURLRequest = createGradeBookRequest(fromData: data)
+        var classGradeBookArray: [CurrentUserClassDetail] = [CurrentUserClassDetail]()
+        Alamofire.request(classGradeBookNetworkRequest).responseJSON { response in
+            if let classGradeBookResponse: JSON = JSON(response.result.value!) {
                 let classGradeBookDictionaryArray: [NSDictionary] = classGradeBookResponse.rawValue as! [NSDictionary]
                 for responseElement in classGradeBookDictionaryArray {
                     let singularResponse: NSDictionary = responseElement

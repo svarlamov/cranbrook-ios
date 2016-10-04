@@ -28,6 +28,34 @@ extension WebServices {
         var assignmentsForDateListArray: [AssignmentDataStructure] = [AssignmentDataStructure]()
         Alamofire.request(getAssignmentsForDateRequest).responseJSON { response in
             if let assignmentRequestResponse: JSON = JSON(response.result.value!) {
+                if self.isRequestSuccessful(inputData: assignmentRequestResponse) {
+                    let dateAssignmentResponseArray: [NSDictionary] = assignmentRequestResponse.rawValue as! [NSDictionary]
+                    for responseObject in dateAssignmentResponseArray {
+                        let singularResponse: NSDictionary = responseObject
+                        let singularAssignment: AssignmentDataStructure? = self.mapAssignmentsForDate(singularResponse)
+                        assignmentsForDateListArray.append(singularAssignment!)
+                    }
+                    specificDateAssignments = nil
+                    specificDateAssignments = assignmentsForDateListArray
+                    callBack(isRequestSuccessful: true)
+                } else {
+                    self.reAuthenticateUser({ (isReAuthenticationSuccessful) in
+                        self.getAssignmentsForDateErrorHandling(forDate, callBack: { (isRequestSuccessful) in
+                            callBack(isRequestSuccessful: true)
+                        })
+                    })
+                }
+            } else {
+                callBack(isRequestSuccessful: false)
+            }
+        }
+    }
+    
+    private func getAssignmentsForDateErrorHandling(forDate: NSDate, callBack: (isRequestSuccessful: Bool) -> Void) {
+        let getAssignmentsForDateRequest: NSMutableURLRequest = createAssignmentsForDateRequest(forDate)
+        var assignmentsForDateListArray: [AssignmentDataStructure] = [AssignmentDataStructure]()
+        Alamofire.request(getAssignmentsForDateRequest).responseJSON { response in
+            if let assignmentRequestResponse: JSON = JSON(response.result.value!) {
                 let dateAssignmentResponseArray: [NSDictionary] = assignmentRequestResponse.rawValue as! [NSDictionary]
                 for responseObject in dateAssignmentResponseArray {
                     let singularResponse: NSDictionary = responseObject

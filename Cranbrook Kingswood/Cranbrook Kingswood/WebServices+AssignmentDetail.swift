@@ -27,6 +27,30 @@ extension WebServices {
         let getAssignmentDetailRequest: NSMutableURLRequest = createDetailAssignmentRequest(forAssignmentId: id)
         Alamofire.request(getAssignmentDetailRequest).responseJSON { response in
             if let assignmentDetailRequestResponse: JSON = JSON(response.result.value!) {
+                if self.isRequestSuccessful(inputData: assignmentDetailRequestResponse) {
+                    let dateAssignmentResponseArray: [NSDictionary] = assignmentDetailRequestResponse.rawValue as! [NSDictionary]
+                    let mainData: NSDictionary = dateAssignmentResponseArray[0]
+                    let singularData: AssignmentDetailDataStructure? = self.mapAssignmentDetailData(mainData)
+                    assignmentDetailData = nil
+                    assignmentDetailData = singularData
+                    callBack(isRequestSuccessful: true)
+                } else {
+                    self.reAuthenticateUser({ (isReAuthenticationSuccessful) in
+                        self.getDetailDataForAssignmentErrorHandling(id, callBack: { (isRequestSuccessful) in
+                            callBack(isRequestSuccessful: true)
+                        })
+                    })
+                }
+            } else {
+                callBack(isRequestSuccessful: false)
+            }
+        }
+    }
+    
+    private func getDetailDataForAssignmentErrorHandling(id: String, callBack: (isRequestSuccessful: Bool) -> Void) {
+        let getAssignmentDetailRequest: NSMutableURLRequest = createDetailAssignmentRequest(forAssignmentId: id)
+        Alamofire.request(getAssignmentDetailRequest).responseJSON { response in
+            if let assignmentDetailRequestResponse: JSON = JSON(response.result.value!) {
                 let dateAssignmentResponseArray: [NSDictionary] = assignmentDetailRequestResponse.rawValue as! [NSDictionary]
                 let mainData: NSDictionary = dateAssignmentResponseArray[0]
                 let singularData: AssignmentDetailDataStructure? = self.mapAssignmentDetailData(mainData)
