@@ -26,7 +26,37 @@ extension WebServices {
         
 		Alamofire.request(searchDirectoryRequest).responseJSON { response in
 			if let searchQueryResponse: JSON = JSON(response.result.value!) {
-                
+                if self.isRequestSuccessful(inputData: searchQueryResponse) {
+                    let searchResponseDictionary: NSArray = searchQueryResponse.rawValue as! NSArray
+                    var returnSearchResultArray: [SearchResultResponse] = [SearchResultResponse]()
+                    
+                    for singularSearchResponseElement in searchResponseDictionary {
+                        let singularResponse: NSDictionary = singularSearchResponseElement as! NSDictionary
+                        let searchResult: SearchResultResponse? = self.mapDirectorySearchResult(singularResponse)
+                        returnSearchResultArray.append(searchResult!)
+                        
+                    }
+                    callBack(searchResponse: returnSearchResultArray)
+                } else {
+                    self.reAuthenticateUser({ (isReAuthenticationSuccessful) in
+                        self.searchDirectoryErrorHandling(query: query, directory: directory, callBack: { (searchResponseForError) in
+                            callBack(searchResponse: searchResponseForError)
+                        })
+                    })
+                }
+			}
+			
+		}
+		
+	}
+    
+    private func searchDirectoryErrorHandling(query query: String, directory: SearchDirectories, callBack: (searchResponseForError: [SearchResultResponse]?) -> Void) {
+        Analytics.analytics.logSearch(query)
+        let searchRequestUrl: String = searchUrlForDirectorySearch(query, directory: directory)
+        let searchDirectoryRequest: NSMutableURLRequest = createSearchRequestWithUrl(searchRequestUrl)
+        
+        Alamofire.request(searchDirectoryRequest).responseJSON { response in
+            if let searchQueryResponse: JSON = JSON(response.result.value!) {
                 let searchResponseDictionary: NSArray = searchQueryResponse.rawValue as! NSArray
                 var returnSearchResultArray: [SearchResultResponse] = [SearchResultResponse]()
                 
@@ -36,13 +66,12 @@ extension WebServices {
                     returnSearchResultArray.append(searchResult!)
                     
                 }
-                callBack(searchResponse: returnSearchResultArray)
-				
-			}
-			
-		}
-		
-	}
+                callBack(searchResponseForError: returnSearchResultArray)
+            }
+            
+        }
+        
+    }
 	
 	private func addSingularSearchResultToArray(result: SearchResultResponse?) {
 		searchResults?.append(result!)
