@@ -839,16 +839,16 @@
                                 <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="RUQ-Ac-AHf">
-                                    <rect key="frame" x="0.0" y="0.0" width="1000" height="14"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="14"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="search_cell" rowHeight="90" id="bmN-AW-ub2" customClass="SearchResultTableViewCell" customModule="Cranbrook_Kingswood" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="42" width="1000" height="90"/>
+                                        <rect key="frame" x="0.0" y="42" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bmN-AW-ub2" id="Luo-Jh-c08">
-                                            <frame key="frameInset" width="1000" height="90"/>
+                                            <frame key="frameInset" width="375" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="84Y-vQ-Rfq">
@@ -1118,7 +1118,7 @@
                                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </state>
                                                             <connections>
-                                                                <action selector="completedButtonPressedWithSender:" destination="Aqk-a2-hM6" eventType="touchUpInside" id="kLO-bG-Bks"/>
+                                                                <action selector="completedButtonPressedWithSender:" destination="Aqk-a2-hM6" eventType="touchDown" id="XF8-SC-7Nx"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgK-tz-KYu">
@@ -1131,7 +1131,7 @@
                                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </state>
                                                             <connections>
-                                                                <action selector="toDoButtonPressedWithSender:" destination="Aqk-a2-hM6" eventType="touchUpInside" id="r3h-zW-cND"/>
+                                                                <action selector="toDoButtonPressedWithSender:" destination="Aqk-a2-hM6" eventType="touchDown" id="oG9-dY-eWP"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UsK-pm-fai">
@@ -1144,7 +1144,7 @@
                                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </state>
                                                             <connections>
-                                                                <action selector="inProgressButtonPressedWithSender:" destination="Aqk-a2-hM6" eventType="touchUpInside" id="pTk-W8-UmB"/>
+                                                                <action selector="inProgressButtonPressedWithSender:" destination="Aqk-a2-hM6" eventType="touchDown" id="FUW-Er-bmj"/>
                                                             </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Participation" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yi0-12-CJV">
@@ -1214,13 +1214,13 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <outlet property="assignmentClassLabel" destination="mlo-7s-xba" id="bea-SU-mVH"/>
-                                            <outlet property="assignmentTitleLabel" destination="6xS-Xv-8fN" id="Kw2-X8-kN8"/>
-                                            <outlet property="assignmentTypeLabel" destination="Yi0-12-CJV" id="SOS-il-eOF"/>
-                                            <outlet property="cellContentView" destination="ZVQ-5m-nOH" id="jiX-BJ-GJ2"/>
-                                            <outlet property="completedButton" destination="k2K-iW-Loz" id="ka7-gG-Xvo"/>
-                                            <outlet property="inProgressButton" destination="UsK-pm-fai" id="tHs-I2-S4Q"/>
-                                            <outlet property="toDoButton" destination="sgK-tz-KYu" id="9fS-Rn-QIe"/>
+                                            <outlet property="assignmentClassLabel" destination="mlo-7s-xba" id="3Vf-EO-89d"/>
+                                            <outlet property="assignmentTitleLabel" destination="6xS-Xv-8fN" id="ISX-m4-Pnh"/>
+                                            <outlet property="assignmentTypeLabel" destination="Yi0-12-CJV" id="CUc-Fm-mYT"/>
+                                            <outlet property="cellContentView" destination="ZVQ-5m-nOH" id="a7k-eY-Oyt"/>
+                                            <outlet property="completedButton" destination="k2K-iW-Loz" id="HUi-B2-cer"/>
+                                            <outlet property="inProgressButton" destination="UsK-pm-fai" id="Fcv-GF-vth"/>
+                                            <outlet property="toDoButton" destination="sgK-tz-KYu" id="sTv-Kh-cMR"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

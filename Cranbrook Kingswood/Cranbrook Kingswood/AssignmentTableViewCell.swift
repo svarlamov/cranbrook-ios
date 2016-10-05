@@ -100,7 +100,7 @@ class AssignmentTableViewCell: UITableViewCell {
         self.completedButton.setTitleColor(blueColor, forState: .Normal)
     }
     
-    @IBAction func toDoButtonPressed(sender: UIButton) {
+    @IBAction func toDoButtonPressed() {
         if NetworkStatus.networkStatus.isConnectedToNetwork() {
             changeAssignmentStatus(toStatus: .ToDo)
             Analytics.analytics.logAssignmentStatusChanged("ToDo")
@@ -108,7 +108,7 @@ class AssignmentTableViewCell: UITableViewCell {
         }
     }
     
-    @IBAction func inProgressButtonPressed(sender: UIButton) {
+    @IBAction func inProgressButtonPressed() {
         if NetworkStatus.networkStatus.isConnectedToNetwork() {
             changeAssignmentStatus(toStatus: .inProgress)
             Analytics.analytics.logAssignmentStatusChanged("InProgress")
@@ -116,7 +116,7 @@ class AssignmentTableViewCell: UITableViewCell {
         }
     }
     
-    @IBAction func completedButtonPressed(sender: UIButton) {
+    @IBAction func completedButtonPressed() {
         if NetworkStatus.networkStatus.isConnectedToNetwork() {
             changeAssignmentStatus(toStatus: .completed)
             Analytics.analytics.logAssignmentStatusChanged("Completed")
