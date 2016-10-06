@@ -26,6 +26,7 @@ extension AssignmentsViewController {
                     if assignmentDetailData?.description == "" || assignmentDetailData?.description == nil {
                         self.showAssignmentDetailAlert()
                     } else {
+                        Analytics.analytics.logAssignmentDetailSelected()
                         self.performSegueWithIdentifier("show_assignment_detail_view_controller", sender: nil)
                     }
                 })

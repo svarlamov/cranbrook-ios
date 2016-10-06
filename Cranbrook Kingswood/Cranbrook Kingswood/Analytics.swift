@@ -94,6 +94,15 @@ class Analytics {
         })
     }
     
+    //  Assingment Detail Selected
+    internal func logAssignmentDetailSelected() {
+        dispatch_async(dispatch_get_main_queue(), {
+            if self.isAnalyticsEnabled {
+                Answers.logCustomEventWithName("Assignment Detail Selected", customAttributes: ["User":"\(userLoginInfo!.username)"])
+            }
+        })
+    }
+    
 }
 
 
